@@ -2,6 +2,8 @@ name: Build deck
 on:
   push:
     tags: ["v*"]
+  release:
+    types: [published]
   workflow_dispatch:
 permissions:
   contents: write
@@ -18,7 +20,14 @@ jobs:
         working-directory: source
       - name: Bundle CSVs and media
         run: cd source/out && zip -r ../../sipe_csv_and_media.zip csv media
-      - name: Publish release
+      - name: Keep the build as a downloadable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sipe-deck
+          path: |
+            source/out/*.apkg
+            sipe_csv_and_media.zip
+      - name: Attach to release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
