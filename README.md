@@ -1,7 +1,8 @@
-# Eppy's CAT PYQ — the **sipe** Anki deck
+# sipe
 
-Every CAT previous-year question as an interactive Anki card, with a worked solution for each one.
-You tap an option and see straight away whether you're right; the answer side then gives a step-by-step solution, a shortcut, the key formula, and why the other options are wrong.
+**Free, interactive CAT preparation in Anki.** It starts with every CAT previous-year question (VARC, DILR and QA) as a card you can solve, with a step-by-step solution for each one. More mocks, deeper explanations and new practice material will follow.
+
+Tap an option and see straight away whether you're right. The answer side gives a step-by-step solution, a shortcut, the key formula, and why the other options are wrong.
 
 ![A QA card's solution](docs/img/qa-solution.png)
 
@@ -71,6 +72,7 @@ Tags follow the same tree (`sipe::Section::QA`, `sipe::Topic::QA::Algebra::Quadr
 | 11–14 | CAT 2020, 2019, 2018, 2017 | |
 | 15–17 | CAT 1991–2008 | |
 | 18 | v1.0: complete formula library, final review | |
+| Later | More mocks, extended explanations, extra practice sets | planned |
 
 ## More
 
