@@ -1,11 +1,7 @@
-# Install on Windows, Mac or Linux (free)
+# Installing on Windows, Mac or Linux
 
-1. Go to **apps.ankiweb.net** and download Anki for your system. Get the latest version.
-2. Install and open it.
-3. Download `sipe.apkg` from the latest release on this repository's **Releases** page.
-4. Double-click the file, or in Anki choose **File ▸ Import…** and pick it.
-5. Open **sipe ▸ 00 Start Here**.
+1. Download Anki from [apps.ankiweb.net](https://apps.ankiweb.net) and install it.
+2. Download `sipe.apkg` from the [latest release](https://github.com/epabafree/sipe/releases/latest).
+3. Double-click the file, or use File ▸ Import in Anki.
 
-**Optional: sync with your phone or tablet.** Create a free account at **ankiweb.net**, then press **Sync** in Anki (top of the main window) and sign in. Your progress then follows you to AnkiDroid, AnkiMobile or AnkiWeb.
-
-Desktop is the most complete experience: keyboard shortcuts (1–4 picks an option) and the widest layout, with the passage beside the question.
+To keep your phone or tablet in step, create a free account at [ankiweb.net](https://ankiweb.net) and press Sync.

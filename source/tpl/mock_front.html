@@ -36,7 +36,7 @@ SIPE.ready(function () {
       '</div>' +
       '<div id="mk-setup"></div>' +
       (done ? '<p class="small" style="margin-top:10px"><a href="#" id="mk-resetprog">Start this paper afresh</a> (clears the practice ticks on this device; your Anki reviews aren’t touched)</p>' : '') +
-      '<p class="toolnote">This card is a practice space. Use it whenever you like, then simply close it; there’s nothing to rate.</p>' +
+      '<p class="toolnote">Close this card when you’re done. It doesn’t need to be rated.</p>' +
       '</div>';
     host.querySelector('#mk-practice').onclick = function () { practice(); };
     host.querySelector('#mk-mock').onclick = function () { mockSetup(); };

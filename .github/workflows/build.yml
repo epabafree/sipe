@@ -1,37 +1,68 @@
-name: Build deck
+name: Build and release
+
+# Every push to main builds the deck. If the newest version in CHANGELOG.md
+# has no release yet, the build is published as that release.
 on:
   push:
-    tags: ["v*"]
-  release:
-    types: [published]
+    branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - run: pip install genanki
-      - run: python build.py
+
+      - name: Build
         working-directory: source
+        run: python -W ignore build.py
+
       - name: Bundle CSVs and media
-        run: cd source/out && zip -r ../../sipe_csv_and_media.zip csv media
-      - name: Keep the build as a downloadable artifact
-        uses: actions/upload-artifact@v4
+        run: cd source/out && zip -qr ../../sipe_csv_and_media.zip csv media
+
+      - uses: actions/upload-artifact@v4
         with:
           name: sipe-deck
           path: |
-            source/out/*.apkg
+            source/out/sipe.apkg
             sipe_csv_and_media.zip
-      - name: Attach to release
-        if: startsWith(github.ref, 'refs/tags/')
+
+      - name: Read version from changelog
+        id: version
+        run: |
+          version=$(grep -m1 -oP '^## \Kv[0-9]+\.[0-9]+\.[0-9]+' CHANGELOG.md)
+          echo "tag=$version" >> "$GITHUB_OUTPUT"
+          # release notes: the section under that heading, up to the next "## "
+          awk -v v="$version" '
+            $0 ~ "^## "v { on=1; next }
+            on && /^## / { exit }
+            on { print }
+          ' CHANGELOG.md > notes.md
+          if gh release view "$version" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Publish release
+        if: steps.version.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: ${{ steps.version.outputs.tag }}
+          target_commitish: ${{ github.sha }}
+          body_path: notes.md
           files: |
-            source/out/*.apkg
+            source/out/sipe.apkg
             sipe_csv_and_media.zip
-          body_path: CHANGELOG.md

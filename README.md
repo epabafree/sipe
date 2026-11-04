@@ -1,89 +1,71 @@
 # sipe
 
-**Free, interactive CAT preparation in Anki.** It starts with every CAT previous-year question (VARC, DILR and QA) as a card you can solve, with a step-by-step solution for each one. More mocks, deeper explanations and new practice material will follow.
+An Anki deck of CAT previous-year questions. Each question is an interactive card: pick an option (or type the answer for TITA questions), then flip it for a worked solution.
 
-Tap an option and see straight away whether you're right. The answer side gives a step-by-step solution, a shortcut, the key formula, and why the other options are wrong.
+<p align="center"><img src="docs/img/qa-solution.png" width="440" alt="A QA card after answering"></p>
 
-![A QA card's solution](docs/img/qa-solution.png)
+## What's in it
 
-## What's included so far
+| Paper | VARC | DILR | QA | Total |
+| --- | ---: | ---: | ---: | ---: |
+| CAT 2023 Slot 1 | 24 | 20 | 22 | 66 |
+| CAT 2023 Slot 2 | 24 | 20 | 22 | 66 |
+| CAT 2023 Slot 3 | 24 | 20 | 22 | 66 |
+| CAT 2022 Slot 1 | 24 | 20 | 22 | 66 |
+| | | | | **264** |
 
-| Release | Contents | Questions |
-| --- | --- | --- |
-| **CAT 2023 Slots 1, 2 and 3** | Three full papers: 24 VARC · 20 DILR · 22 QA each, in the original order | 198 |
-| **CAT 2022 Slot 1** | Full paper, 66 questions, in the order of the actual exam | 66 |
-| Set cards | 16 RC passages and 16 DILR sets, each as one card with all its questions | 32 |
-| Practice by topic | One practice card per topic area, gathering every question on it from all papers | 9 |
-| Formulas & concepts | QA and DILR formulas and techniques, VARC question-type approaches | 62 |
-| Papers & mocks | Practice navigator + optional timed mock, one per paper | 4 |
-| Start Here | Welcome guide and the Study Planner | 2 |
+Alongside the question cards there are set cards (a whole RC passage or DILR set on one card), formula and technique cards, a practice card for each topic area, and a card for each paper with a practice mode and a timed mock.
 
-Coming next: CAT 2022 Slots 2 and 3, then 2021, 2020–2017 and 1991–2008. See the [roadmap](#roadmap).
+## Installing
 
-## Quick start
+1. Install Anki: [desktop](docs/install-desktop.md), [Android](docs/install-android.md) or [iPad/iPhone](docs/install-ipad.md).
+2. Download `sipe.apkg` from the [latest release](https://github.com/epabafree/sipe/releases/latest).
+3. Import it. No add-ons are needed.
 
-1. Install Anki for your device: [Windows / Mac / Linux](docs/install-desktop.md) · [Android](docs/install-android.md) · [iPad & iPhone](docs/install-ipad.md).
-2. Download `sipe.apkg` from the latest **Release** (right-hand side of this page).
-3. Double-click it, or use **File ▸ Import** in Anki. No add-ons are needed.
-4. Open **sipe ▸ 00 Start Here**, then choose a paper, for example **sipe ▸ 03 Quantitative Aptitude ▸ 2023 ▸ Slot 1**.
+If you're upgrading from v0.4 or earlier, read [updating](docs/updating.md) first; the deck layout changed in v0.5.
 
-## Features
-
-| | |
-| --- | --- |
-| **Interactive questions** | Tap an option, press 1–4, or type the answer for TITA questions. You see right or wrong at once. → [Solving cards](docs/using-the-cards.md) |
-| **Solutions you can follow** | Numbered steps, properly typeset maths, tables and redrawn diagrams for DILR, quoted passage evidence for VARC. |
-| **Quiet toolbar** | Timer (show / hide / off), calculator, text size and font, step-by-step solutions, Light / Dark / Auto, all on the card. → [Toolbar and tools](docs/toolbar-and-tools.md) |
-| **Handy extras** | Cross out options, highlight passages, “Need a nudge?” for a first-step hint. |
-| **Set cards** | A whole RC passage or DILR set on one card, as in the exam. → [Set cards](docs/set-cards.md) |
-| **Papers & mocks** | **Practice** mode lets you move freely through a paper and answer anything again; **Timed mock** gives exam conditions and a CAT-style score. → [Papers](docs/papers-practice-and-mock.md) |
-| **Practice by topic** | Every question on a topic, from every paper, in one place, each labelled with its paper. Redo questions as often as you like. → [Practice by topic](docs/practice-by-topic.md) |
-| **Mistake flags** | Red = concept gap, Orange = silly mistake, Blue = too slow, Green = new trick. → [Flags](docs/flags.md) |
-| **Study Planner** | Tick topics, years, flags or “got wrong recently” and copy a ready-made search. No Anki search syntax needed. → [Study Planner](docs/study-planner.md) |
-| **Formulas & concepts** | Formulas by topic, with what each symbol means, when to use it, a trap and a quick example. → [Formula cards](docs/formula-cards.md) |
-| **Safe updates** | Importing a newer release updates cards and keeps your progress. → [Updating](docs/updating.md) |
-
-<p>
-<img src="docs/img/varc-dark.png" width="49%" alt="VARC card in dark mode">
-<img src="docs/img/practice.png" width="49%" alt="Practice navigator">
-</p>
-
-## Deck layout
+## Layout
 
 ```
 sipe
-├── 00 Start Here                               Welcome guide, Study Planner
-├── 01 Verbal Ability & Reading Comprehension   2022 ▸ Slot 1 · 2023 ▸ Slots 1–3 · Whole passages
-├── 02 Data Interpretation & Logical Reasoning  2022 ▸ Slot 1 · 2023 ▸ Slots 1–3 · Whole sets
-├── 03 Quantitative Aptitude                    2022 ▸ Slot 1 · 2023 ▸ Slots 1–3
-├── 04 Practice by Topic                        one practice card per topic area
-├── 05 Formulas & Concepts                      by section and topic
-└── 06 Papers & Mocks                           CAT 2022 ▸ Slot 1 · CAT 2023 ▸ Slots 1–3
+├── 00 Start Here                              guide and Study Planner
+├── 01 Verbal Ability & Reading Comprehension  by year and slot, then whole passages
+├── 02 Data Interpretation & Logical Reasoning by year and slot, then whole sets
+├── 03 Quantitative Aptitude                   by year and slot
+├── 04 Practice by Topic
+├── 05 Formulas & Concepts
+└── 06 Papers & Mocks
 ```
 
-Tags follow the same tree (`sipe::Section::QA`, `sipe::Topic::QA::Algebra::Quadratic_Equations`, `sipe::Year::2023`, `sipe::Paper::2023_S1`, `sipe::Format::TITA`, …) so the [Study Planner](docs/study-planner.md) can pull any combination together.
+Every card is tagged (`sipe::Topic::QA::Algebra::Quadratic_Equations`, `sipe::Paper::2023_S1`, `sipe::Format::TITA` and so on), which is what the Study Planner and the topic cards use.
+
+<p>
+<img src="docs/img/varc-dark.png" width="32%" alt="A VARC card in dark mode">
+<img src="docs/img/topic-practice.png" width="32%" alt="Topic practice card">
+<img src="docs/img/set-card.png" width="32%" alt="A DILR set card">
+</p>
+
+## Notes on the content
+
+Questions, options, passages and data are kept as printed. Clear misprints are fixed, and each fix is listed in the [changelog](CHANGELOG.md). Answers are checked against the official keys. Solutions are written for this deck rather than copied from the source.
+
+The source groups the 2021 and 2022 questions by topic rather than by paper, so they have been put back into exam order using the official response sheets. Where a question's position couldn't be confirmed, the changelog says so.
+
+Difficulty labels are estimates, not official data.
+
+## Documentation
+
+- [Solving a card](docs/using-the-cards.md) · [Toolbar](docs/toolbar-and-tools.md) · [Set cards](docs/set-cards.md)
+- [Papers and mocks](docs/papers-practice-and-mock.md) · [Practice by topic](docs/practice-by-topic.md) · [Study Planner](docs/study-planner.md)
+- [Formula cards](docs/formula-cards.md) · [Flags](docs/flags.md)
+- [Updating](docs/updating.md) · [CSV import](docs/csv-import.md) · [FAQ](docs/faq.md) · [Building from source](docs/building.md)
 
 ## Roadmap
 
-For 2021 and 2022 the source groups questions by topic, not by paper. Questions are put back into the order of the actual exam using the official response sheets; where a position couldn’t be confirmed, it is noted in the changelog.
+- CAT 2022 Slots 2 and 3
+- CAT 2021, all three slots
+- CAT 2017–2020
+- CAT 1991–2008 (mostly DILR and QA)
+- More mocks and longer explanations after that
 
-
-| # | Batch | Status |
-| --- | --- | --- |
-| 0 | Pilot | ✓ |
-| 1 | This repository and docs | ✓ |
-| 2 | CAT 2023 Slot 1 (full paper) | ✓ |
-| 3–4 | CAT 2023 Slots 2 and 3 | ✓ |
-| 5 | CAT 2022 Slot 1, new deck layout, practice by topic | ✓ |
-| 6–10 | CAT 2022 Slots 2–3 and CAT 2021, one release per slot | next |
-| 11–14 | CAT 2020, 2019, 2018, 2017 | |
-| 15–17 | CAT 1991–2008 | |
-| 18 | v1.0: complete formula library, final review | |
-| Later | More mocks, extended explanations, extra practice sets | planned |
-
-## More
-
-- [CSV import (alternative to the .apkg)](docs/csv-import.md)
-- [FAQ and troubleshooting](docs/faq.md)
-- [Building the deck from source](docs/building.md)
-- [Changelog](CHANGELOG.md)
+Found a mistake? Open an issue with the ID printed at the bottom of the answer side, e.g. `2023-S1-QA-07`.

@@ -183,11 +183,11 @@ def ref_fields(r):
 # ---------------- guide ----------------
 ICON = lambda d: f'<span class="ic"><svg viewBox="0 0 24 24">{d}</svg></span>'
 WELCOME = f"""
-<p>Welcome. sipe holds the questions from past CAT papers as cards you can actually solve, each with a worked solution written to be read slowly. You can start straight away; everything else on this page is there for when you want it.</p>
+<p>sipe has the questions from past CAT papers as cards you can solve, each with a worked solution. You can start straight away; the rest of this page explains the extras.</p>
 <h2>How the decks are laid out</h2>
 <div class="tbl"><table>
 <tr><td class="rh">01 · 02 · 03</td><td style="text-align:left;white-space:normal">One deck per section, then by year and slot, for example <span class="path">03 Quantitative Aptitude ▸ 2023 ▸ Slot 1</span>. Questions come in the original exam order. Whole RC passages and DILR sets, with all their questions on one card, sit at the end of their section.</td></tr>
-<tr><td class="rh">04 Practice by Topic</td><td style="text-align:left;white-space:normal">Pick a topic, say <span class="path">Quantitative Aptitude ▸ Algebra</span>, and every matching question from all the papers is gathered in one place. Each one shows the paper it came from.</td></tr>
+<tr><td class="rh">04 Practice by Topic</td><td style="text-align:left;white-space:normal">Every question on a topic, say <span class="path">Quantitative Aptitude ▸ Algebra</span>, from all the papers, with the source paper shown on each.</td></tr>
 <tr><td class="rh">05 Formulas &amp; Concepts</td><td style="text-align:left;white-space:normal">Short reference cards: the formula, what each symbol means, when it helps, and a quick example. For VARC, the approach for each question type.</td></tr>
 <tr><td class="rh">06 Papers &amp; Mocks</td><td style="text-align:left;white-space:normal">One card per paper. <b>Practice</b> lets you move freely through the paper and check answers as you go; <b>Timed mock</b> gives you exam conditions and a CAT-style score.</td></tr>
 </table></div>
@@ -198,7 +198,7 @@ WELCOME = f"""
 <li>Rate the card as usual. If you got it wrong, <b>Again</b> brings it back soon.</li></ol>
 <h2>Coming back to questions you’ve already done</h2>
 <p>Anki normally hides a card until it’s due. To redo something whenever you like, use the practice cards instead: a paper in <span class="path">06 Papers &amp; Mocks</span>, or a topic in <span class="path">04 Practice by Topic</span>. They keep their own ticks, have a <b>Try again</b> button on every question, and a link to start afresh. Nothing you do there changes your reviews.</p>
-<p class="small">These practice cards are tools rather than flashcards: open one, use it as long as you like, and simply close it. There’s nothing to rate, and it will be waiting for you next time.</p>
+<p class="small">Paper and topic cards don’t need to be rated. Close them when you’re done and they stay available.</p>
 <h2>The small toolbar (top right)</h2>
 <div class="gtool">{ICON('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9.5 2.5h5"/>')}<div><b>Timer</b>: runs while you solve and shows your time on the answer side. Tap to hide it, or turn it off in <b>Aa</b>. There are no targets.</div></div>
 <div class="gtool">{ICON('<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7.5h7"/>')}<div><b>Calculator</b>: a basic one, much like the on-screen calculator in the exam.</div></div>

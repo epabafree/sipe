@@ -1,23 +1,19 @@
-# Papers: practice and timed mock
+# Papers and mocks
 
-Each paper has its own card in **sipe ▸ 06 Papers & Mocks**, for example **CAT 2023 ▸ Slot 1**. Clicking that deck opens the paper straight away.
-
-These cards are practice spaces rather than flashcards. Open one, use it as long as you like, and simply close it; there’s nothing to rate, and it will be there next time. Both sides of the card show the same page, so flipping it by accident changes nothing.
+Each paper has its own deck under `06 Papers & Mocks`, holding a single card. The card has two modes.
 
 ## Practice
-![Practice navigator](img/practice.png)
-- Move freely: question palette, Previous / Next, section tabs. Any question, any time, as often as you like.
-- **Start this paper afresh** clears the ticks on that device whenever you want a clean run. No deck reset is needed.
-- Answer and get instant feedback, then read the full solution on the same screen. **Try again** resets a question.
-- The palette remembers what you got right (green) or wrong (red) last time on that device.
-- Practice **doesn't touch your Anki review schedule**.
+
+![Practice mode](img/practice.png)
+
+Move between questions with the palette or Previous / Next, answer them in any order and read each solution as you go. Try again resets a question, and "Start this paper afresh" clears everything. The palette remembers what you got right or wrong on that device. Nothing here affects your Anki reviews.
 
 ## Timed mock
-![Mock result](img/mock-result.png)
-- Timer options: none; real CAT (40 minutes per section, sections lock in order); or one overall timer you set.
-- Exam-style screen: palette (answered / not answered / marked / not visited), mark for review, clear response.
-- Result: CAT scoring (+3 / −1, no penalty on TITA), section table, a **by-topic** table showing where marks went, time per question, and a review of every solution.
-- Your last 20 scores per paper are saved on that device.
 
-## Revisiting with the normal question cards
-Prefer the regular cards? In the [Study Planner](study-planner.md) use the **Revisit a paper** recipe. It builds a temporary deck with every card of a paper in exam order, done or not, and tells you to switch off rescheduling so your intervals stay as they are.
+![Mock result](img/mock-result.png)
+
+Choose no timer, the real CAT timing (40 minutes per section, sections locked in order) or a single overall timer. The screen works like the exam: palette, mark for review, clear response. At the end you get a CAT-style score (+3, −1 for a wrong MCQ, no penalty on TITA), a breakdown by section and topic, time per question and every solution. The last 20 attempts per paper are kept on the device.
+
+Paper cards aren't meant to be rated. Open one, use it, and close it, and it stays available. Both sides show the same page.
+
+To redo a paper with the normal question cards instead, use the "Revisit a paper" recipe in the [Study Planner](study-planner.md).

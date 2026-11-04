@@ -1,18 +1,13 @@
-# Updating to a new release
+# Updating
 
-Every card has a permanent ID. Importing a newer `.apkg` **updates** existing cards (fixes, better solutions) and **adds** new ones. Your review history, intervals and flags stay.
+Importing a newer `sipe.apkg` updates existing notes and adds new ones. Review history and flags are kept.
 
-1. Download the new `.apkg` from **Releases**.
-2. Import it (File ▸ Import). If Anki asks how to handle updates, choose to update existing notes.
-3. Sync, if you use more than one device.
+1. Download `sipe.apkg` from the [latest release](https://github.com/epabafree/sipe/releases/latest).
+2. Import it. If Anki asks, choose to update existing notes.
+3. Sync if you use more than one device.
 
-## Moving to v0.5 (new deck layout)
+## Upgrading to v0.5 or later from v0.4 or earlier
 
-v0.5 reorganised the decks: full section names, numbered so they stay in order, plus **Practice by Topic** and **Papers & Mocks**. Anki keeps existing cards in whichever deck they are already in when you import, so the new layout only appears on a fresh import:
+v0.5 changed the deck layout. Anki doesn't move existing cards into new decks on import, so the new layout only appears on a fresh install. Delete the `sipe` deck (and the old `Mock Tests` deck if you have one from the pilot), then import. This resets your review history for the deck.
 
-1. In Anki, delete the old **sipe** deck (gear icon ▸ Delete). If you still have a **Mock Tests** deck from the pilot, delete that too.
-2. Import `sipe.apkg` from the latest release.
-
-This resets your review history for sipe. Future releases keep the same layout, so later updates won’t need this step.
-
-**Note for pilot users:** the early pilot used a different deck name (“CAT PYQ”). Delete that old deck before importing.
+The very first pilot used the deck name "CAT PYQ"; delete that too if it's still there.

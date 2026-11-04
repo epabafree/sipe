@@ -38,7 +38,7 @@ SIPE.ready(function () {
         (tried ? '<span class="small">' + tried + ' tried here so far, ' + right + ' right</span>' : '') +
       '</div>' +
       (Object.keys(prog).length ? '<p class="small" style="margin-top:12px"><a href="#" id="tp-reset">Start this topic afresh</a> (clears the ticks on this device; your Anki reviews aren’t touched)</p>' : '') +
-      '</div><p class="toolnote">This card is a practice space. Use it whenever you like, then simply close it; there’s nothing to rate.</p></div>';
+      '</div><p class="toolnote">Close this card when you’re done. It doesn’t need to be rated.</p></div>';
     host.querySelectorAll('.pchip').forEach(function (b) { b.onclick = function () {
       var k = b.getAttribute('data-k'), v = b.getAttribute('data-v');
       if (k === 'sub') { st.sub = v || null; if (st.paper && !counts(st.sub, st.paper)) st.paper = ''; } else st.paper = v;
