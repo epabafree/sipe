@@ -383,6 +383,36 @@ F("DILR-LR-006", "DILR", "LR::Mathematical_Reasoning", "Weighted aggregate score
   r"\(40 - 60w = 4 \Rightarrow w = 0.6\)", ["2023-S3-DILR-11", "2023-S3-DILR-12", "2023-S3-DILR-13", "2023-S3-DILR-14", "2023-S3-DILR-15"])
 
 
+# ---------------- added with CAT 2022 Slot 1 ----------------
+F("QA-MOD-002", "QA", "Modern_Maths::Set_Theory", "Overlaps of three sets",
+  "How many people can like all three things, at most and at least",
+  r"\[x_1 + 2x_2 + 3x_3 = n(A) + n(B) + n(C)\]\[x_1 + x_2 + x_3 \le \text{total}\]",
+  [(r"\(x_k\)", "people in exactly \(k\) of the sets")],
+  "Questions asking for the largest or smallest possible overlap of three groups.",
+  "The largest overlap can’t exceed the smallest set. For the smallest, push as many people as possible into exactly two sets.",
+  r"\(73 + 80 + 52 = 205\) likes among 100 students: at least 5 like all three", ["2022-S1-QA-15"])
+F("QA-ALG-016", "QA", "Algebra::Inequalities_and_Absolute_Value", "Absolute values as distances",
+  r"Sums like \(|x - p| + |x - q|\)",
+  r"\[|x - p| + |x - q| \ge |p - q|\]",
+  [(r"\(p, q\)", "two points on the number line")],
+  "Read each term as a distance on the number line. The sum is constant, and smallest, for every x between the two points.",
+  r"Write \(|x + a|\) as \(|x - (-a)|\) before reading off the point.",
+  r"\(|x + 1| + |x - 1| = 2\) for every \(x\) from \(-1\) to \(1\)", ["2022-S1-QA-12", "2022-S1-QA-21"])
+F("QA-ALG-017", "QA", "Algebra::Functions", "The greatest integer function",
+  r"Sums or equations involving \([x]\)",
+  r"\[[x] = k \iff k \le x < k + 1\]",
+  [(r"\([x]\)", "the largest integer not more than \(x\)")],
+  "Find the values of n where the expression crosses a whole number; the function is constant between them.",
+  r"For negative numbers, \([-1.2] = -2\), not \(-1\).",
+  r"\(\left[\tfrac{n + 5}{25}\right] = 1\) for \(n = 20\) to \(44\)", ["2022-S1-QA-20"])
+F("QA-MOD-003", "QA", "Modern_Maths::Permutations_and_Combinations", "Sharing identical things",
+  "Identical objects given to different people",
+  r"\[\#\{y_1 + \dots + y_k = n,\ y_i \ge 1\} = \binom{n - 1}{k - 1} \qquad \#\{y_i \ge 0\} = \binom{n + k - 1}{k - 1}\]",
+  [(r"\(n\)", "number of identical objects"), (r"\(k\)", "number of people")],
+  "Any “in how many ways can n identical things be shared” question. Conditions like “even numbers only” become a substitution first.",
+  "Check whether each person must get at least one; the two formulas differ.",
+  r"20 balloons, even amounts, at least 2 each: \(\binom{9}{3} = 84\)", ["2022-S1-QA-22"])
+
 for r in REF:
     extra = {"VARC-RC-001": ["2023-S1-VARC-09", "2023-S1-VARC-11", "2023-S1-VARC-13", "2023-S1-VARC-16"], "VARC-VA-001": ["2023-S1-VARC-18"],
              "VARC-VA-002": ["2023-S1-VARC-20"], "VARC-VA-003": ["2023-S1-VARC-22"], "VARC-VA-004": ["2023-S1-VARC-24"],
@@ -390,5 +420,9 @@ for r in REF:
              "QA-ARI-001": ["2023-S3-QA-11"], "QA-ARI-003": ["2023-S2-QA-09"], "QA-ARI-004": ["2023-S2-QA-13", "2023-S2-QA-15", "2023-S3-QA-10"],
              "QA-ARI-007": ["2023-S2-QA-14"], "QA-ARI-009": ["2023-S2-QA-10"], "QA-ARI-008": ["2023-S3-QA-13", "2023-S3-QA-15"],
              "QA-ALG-007": ["2023-S2-QA-19"], "QA-GEO-003": ["2023-S2-QA-18"], "QA-NUM-001": ["2023-S2-QA-04"],
-             "DILR-LR-002": ["2023-S2-DILR-06"]}.get(r["rid"], [])
+             "DILR-LR-002": ["2023-S2-DILR-06", "2022-S1-DILR-06"], "QA-ALG-004": ["2023-S1-QA-06", "2023-S2-QA-02", "2023-S3-QA-05", "2022-S1-QA-02"],
+             "DILR-LR-003": ["2022-S1-DILR-01", "2022-S1-DILR-02", "2022-S1-DILR-03", "2022-S1-DILR-04", "2022-S1-DILR-05"],
+             "QA-ARI-004": ["2023-S2-QA-13", "2023-S2-QA-15", "2023-S3-QA-10", "2022-S1-QA-03", "2022-S1-QA-08"], "QA-ARI-012": ["2022-S1-QA-05"],
+             "QA-ALG-012": ["2022-S1-QA-14"], "QA-NUM-001": ["2023-S2-QA-04", "2022-S1-QA-04"], "QA-ARI-013": ["2022-S1-QA-17"],
+             "DILR-LR-006": ["2022-S1-DILR-16"]}.get(r["rid"], [])
     r["seen"] += [x for x in extra if x not in r["seen"]]

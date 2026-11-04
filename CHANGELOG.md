@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.5.0 — CAT 2022 Slot 1, new layout, practice by topic
+- **CAT 2022 Slot 1**: all 66 questions (24 VARC, 20 DILR, 22 QA) with worked solutions, 8 set cards and a redrawn metro map. VARC and DILR follow the exam order exactly; seven QA questions (Q2, 3, 12, 13, 14, 19, 21) are placed in their slots by best match, as the response sheet doesn’t show their text.
+- **New deck layout**: full section names, numbered so they stay in order: 00 Start Here, 01–03 the sections (whole passages and sets at the end of each), 04 Practice by Topic, 05 Formulas & Concepts, 06 Papers & Mocks. See [Updating](docs/updating.md) for moving over.
+- **Practice by topic**: one practice card per topic area, gathering every question on it from all papers, with topic and paper filters, a source label on every question, Try again, and a fresh start whenever you like.
+- **Papers & Mocks**: each paper now has its own deck, so opening the deck opens the paper. Practice and topic cards show the same page on both sides and say plainly that there’s nothing to rate.
+- **Calmer cards**: the flag reminder is gone from answer sides; “Not quite. The answer is …” instead of a dash; “Easy to miss” instead of “Trap to avoid”. New solutions are written in a fuller, gentler style.
+- 4 new formula cards (overlaps of three sets, absolute values as distances, the greatest integer function, sharing identical things).
+- Source corrections: “Rashida” → “Rasheeda” and “How among” → “Who among” in the tokens set; a few joined words (work-from-home, non-tangibles, get-together).
+
+
 ## v0.4.0 — CAT 2023 Slots 2 and 3 (batches 3 and 4)
 - Two more full papers: CAT 2023 Slot 2 and Slot 3, 66 questions each (24 VARC, 20 DILR, 22 QA), in original order. The deck now has all 198 questions of CAT 2023.
 - 16 new set cards (8 RC passages, 8 DILR sets), with full set solutions and tables; a redrawn street map for the Slot 3 police-patrol set.

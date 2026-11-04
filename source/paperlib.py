@@ -26,13 +26,13 @@ class Paper:
     def rc(self, qno, pkey, subtype, ans, diff, hint, solution, concept, why_rows, q=None, opts=None):
         sid, title, genre = self.passages[pkey]
         Q = self.Q["VARC"][qno]
-        self.ITEMS.append(dict(section="VARC", qno=qno, slot=self.slot, set_id=sid, set_title=title, directions=RC_DIR,
+        self.ITEMS.append(dict(section="VARC", qno=qno, slot=self.slot, year=self.year, set_id=sid, set_title=title, directions=RC_DIR,
                                context=self.html_paras(self.P[pkey]), question=q or Q["q"], options=opts or Q["opts"], qtype="MCQ",
                                answer=ans, topic=[f"VARC::RC::{genre}", f"Subtype::RC::{subtype}"], difficulty=diff))
         self.SOL["VARC"][qno] = dict(hint=p(hint), solution=solution, concept=STRAT[concept] if concept in STRAT else concept, why=why(why_rows))
 
     def va(self, qno, qhtml, opts, qtype, ans, sub, diff, hint, solution, concept, why_rows, why_title=None):
-        self.ITEMS.append(dict(section="VARC", qno=qno, slot=self.slot, set_id="", set_title="", directions="", context="",
+        self.ITEMS.append(dict(section="VARC", qno=qno, slot=self.slot, year=self.year, set_id="", set_title="", directions="", context="",
                                question=qhtml, options=opts, qtype=qtype, answer=ans, topic=[f"VARC::VA::{sub}"], difficulty=diff))
         d = dict(hint=p(hint), solution=solution, concept=STRAT[concept], why=why(why_rows))
         if why_title: d["why_title"] = why_title
@@ -74,14 +74,14 @@ class Paper:
 
     def dq(self, qno, q, opts, qtype, ans, diff, hint, solution, why_rows=None):
         s = self._set
-        self.ITEMS.append(dict(section="DILR", qno=qno, slot=self.slot, set_id=s["sid"], set_title=s["title"], directions=s["directions"],
+        self.ITEMS.append(dict(section="DILR", qno=qno, slot=self.slot, year=self.year, set_id=s["sid"], set_title=s["title"], directions=s["directions"],
                                context=s["context"], question=q, options=opts, qtype=qtype, answer=ans, topic=[s["topic"]], difficulty=diff))
         self.SOL["DILR"][qno] = dict(hint=p(hint), solution=solution, setsol=s["setsol"], shortcut=s["shortcut"], concept=s["concept"],
                              why=why(why_rows) if why_rows else "")
 
     # ---------- QA ----------
     def qa(self, qno, q, opts, qtype, ans, topics, diff, hint, solution, shortcut="", concept="", why_rows=None):
-        self.ITEMS.append(dict(section="QA", qno=qno, slot=self.slot, set_id="", set_title="", directions="", context="",
+        self.ITEMS.append(dict(section="QA", qno=qno, slot=self.slot, year=self.year, set_id="", set_title="", directions="", context="",
                                question=q, options=opts, qtype=qtype, answer=ans, topic=[f"QA::{t}" for t in topics], difficulty=diff))
         self.SOL["QA"][qno] = dict(hint=p(hint), solution=solution, shortcut=p(shortcut) if shortcut and not shortcut.startswith("<") else shortcut,
                              concept=concept, why=why(why_rows) if why_rows else "")

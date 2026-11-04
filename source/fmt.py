@@ -14,7 +14,7 @@ def final(x):
     return f'<div class="final">{x}</div>'
 
 def trap(x):
-    return f'<div class="trap"><b>Trap to avoid:</b> {x}</div>'
+    return f'<div class="trap"><b>Easy to miss:</b> {x}</div>'
 
 def ev(p, text):
     return f'<div class="ev"><span class="p">¶{p}</span>“{text}”</div>'

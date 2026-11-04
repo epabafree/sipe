@@ -120,7 +120,7 @@ q(17, r"A quadrilateral ABCD is inscribed in a circle such that \(AB : CD = 2 : 
   r"<p>\(2 : 1\) uses only the first similarity; \(5 : 8\) inverts the answer; \(1 : 2\) inverts the side ratio.</p>",
   r"<p><b>Formula to remember:</b> for a cyclic quadrilateral, \(\dfrac{AE}{EC} = \dfrac{AB \cdot AD}{CB \cdot CD} = \dfrac{2 \cdot 4}{5 \cdot 1} = \dfrac85\).</p>",
   r"\[\frac{AE}{EC} = \frac{AB\cdot AD}{CB\cdot CD}\quad\text{(cyclic quadrilateral)}\]",
-  ["Geometry::Circles", "Geometry::Quadrilaterals"], "Medium")
+  ["Geometry::Circles", "Geometry::Polygons_and_Quadrilaterals"], "Medium")
 
 q(18, r"Let C be the circle \(x^2 + y^2 + 4x - 6y - 3 = 0\) and L be the locus of the point of intersection of a pair of tangents to C with the angle between the two tangents equal to \(60^\circ\). Then, the point at which L touches the line \(x = 6\) is",
   [r"\((6, 6)\)", r"\((6, 4)\)", r"\((6, 8)\)", r"\((6, 3)\)"], "MCQ", "4",

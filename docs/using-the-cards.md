@@ -20,4 +20,4 @@
 
 Then rate the card as usual (**Again** if you got it wrong). Anki brings it back at the right time.
 
-**Going back to questions you've done:** see [Papers](papers-practice-and-mock.md).
+**Going back to questions you've done:** see [Papers](papers-practice-and-mock.md) and [Practice by topic](practice-by-topic.md).

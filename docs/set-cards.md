@@ -6,7 +6,7 @@ A **set card** puts a whole RC passage or DILR set on one card, with all its que
 
 - Answer each question on the card; each responds instantly.
 - The answer side shows your score for the set (“You got 3 of 4 right”), every question's answer and explanation, and the full set solution for DILR.
-- Set cards live in **sipe ▸ Sets ▸ VARC / DILR**. The paper decks keep single-question cards, so you can:
+- Set cards sit at the end of each section: **01 Verbal Ability & Reading Comprehension ▸ Whole passages** and **02 Data Interpretation & Logical Reasoning ▸ Whole sets**. The year decks keep single-question cards, so you can:
   - solve in paper order with the question cards,
-  - practise whole passages from **Sets**, or
+  - practise whole passages and sets from those decks, or
   - shuffle single questions for random revision (Study Planner ▸ order “Shuffled”).

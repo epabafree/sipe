@@ -12,7 +12,9 @@
 
 **Can I study only my mistakes?** Yes: use the [flags](flags.md) and the [Study Planner](study-planner.md) recipes.
 
-**I want to re-solve a whole paper.** Use **Papers ▸ Practice**, or the **Revisit a paper** recipe.
+**I want to re-solve a whole paper, or redo one topic.** Open the paper in **06 Papers & Mocks** and choose **Practice**, or open a topic in **04 Practice by Topic**. Both let you answer any question again as often as you like, and neither changes your reviews.
+
+**I rated a practice card by accident.** No harm done. It will come back when it’s due, and in the meantime you can open it from **Browse** (select it and choose Preview), or with the Study Planner’s **Revisit a paper** recipe.
 
 **Difficulty labels?** They're estimates, made while writing the solutions, not official data.
 

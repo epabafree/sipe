@@ -1,0 +1,94 @@
+<div id="tp" class="sipe mock" data-tid="{{TopicID}}">
+  <div class="top"><div class="meta"><span class="sec">{{SectionName}}</span><span class="dot">·</span><span>{{Title}}</span></div>%%TOOLBAR%%</div>
+  <div id="tp-app"><div class="block">Loading…</div></div>
+</div>
+<script type="application/json" id="tp-data">{{DataJSON}}</script>
+<script>%%COMMON%%</script>
+<script>
+SIPE.ready(function () {
+  var S = window.SIPE, root = document.getElementById('tp'), host = document.getElementById('tp-app');
+  if (!root || !host) return;
+  S.apply(); S.toolbar(root);
+  var tb = root.querySelector('[data-act=timer]'); if (tb) tb.style.display = 'none';
+  var TID = (root.getAttribute('data-tid') || 'topic').trim();
+  var D; try { D = JSON.parse(document.getElementById('tp-data').textContent); } catch (e) { host.innerHTML = '<div class="block">Could not read this topic’s questions.</div>'; return; }
+  var PROG = 'sipe:topicprog:' + TID, VIEW = 'sipe:topicview:' + TID;
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  var st = (window.__sipeTopic && window.__sipeTopic.tid === TID) ? window.__sipeTopic : { tid: TID, sub: null, paper: '', i: 0, live: {}, view: 'menu' };
+  window.__sipeTopic = st;
+  try { var sv = JSON.parse(sessionStorage.getItem(VIEW) || 'null'); if (sv && st.view === 'menu' && !st.touched) { st.sub = sv.sub; st.paper = sv.paper || ''; } } catch (e) {}
+  function save() { try { sessionStorage.setItem(VIEW, JSON.stringify({ sub: st.sub, paper: st.paper })); } catch (e) {} }
+  function list() {
+    return D.questions.filter(function (q) { return (!st.sub || q.subs.indexOf(st.sub) >= 0) && (!st.paper || q.paper === st.paper); });
+  }
+  function counts(sub, paper) { return D.questions.filter(function (q) { return (!sub || q.subs.indexOf(sub) >= 0) && (!paper || q.paper === paper); }).length; }
+  var papers = []; D.questions.forEach(function (q) { if (papers.indexOf(q.paper) < 0) papers.push(q.paper); });
+
+  function menu() {
+    st.view = 'menu';
+    var prog = S.lsGet(PROG) || {}, L = list(), tried = L.filter(function (q) { return prog[q.id]; }).length, right = L.filter(function (q) { return prog[q.id] === 'c'; }).length;
+    var chip = function (kind, val, label, n) { var on = ((kind === 'sub' ? st.sub : st.paper) || '') === val; return '<button type="button" class="pchip' + (on ? ' on' : '') + '" data-k="' + kind + '" data-v="' + esc(val) + '">' + label + ' <span class="cnt">' + n + '</span></button>'; };
+    host.innerHTML = '<div class="read"><div class="block">' +
+      '<h4>' + esc(D.title) + '</h4>' +
+      '<p class="small">' + esc(D.intro) + '</p>' +
+      (D.subs.length > 1 ? '<div class="pl-sub">Topic</div><div class="pchips">' + chip('sub', '', 'All', D.questions.length) + D.subs.map(function (s) { return chip('sub', s.key, esc(s.label), counts(s.key, '')); }).join('') + '</div>' : '') +
+      (papers.length > 1 ? '<div class="pl-sub">Paper</div><div class="pchips">' + chip('paper', '', 'All papers', counts(st.sub, '')) + papers.map(function (p) { return chip('paper', p, esc(p), counts(st.sub, p)); }).filter(function (h, i) { return counts(st.sub, papers[i]); }).join('') + '</div>' : '') +
+      '<div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap; align-items:center">' +
+        '<button class="btn" id="tp-go"' + (L.length ? '' : ' disabled') + '>' + (tried && tried < L.length ? 'Continue' : 'Start') + ' · ' + L.length + ' question' + (L.length === 1 ? '' : 's') + '</button>' +
+        (tried ? '<span class="small">' + tried + ' tried here so far, ' + right + ' right</span>' : '') +
+      '</div>' +
+      (Object.keys(prog).length ? '<p class="small" style="margin-top:12px"><a href="#" id="tp-reset">Start this topic afresh</a> (clears the ticks on this device; your Anki reviews aren’t touched)</p>' : '') +
+      '</div><p class="toolnote">This card is a practice space. Use it whenever you like, then simply close it; there’s nothing to rate.</p></div>';
+    host.querySelectorAll('.pchip').forEach(function (b) { b.onclick = function () {
+      var k = b.getAttribute('data-k'), v = b.getAttribute('data-v');
+      if (k === 'sub') { st.sub = v || null; if (st.paper && !counts(st.sub, st.paper)) st.paper = ''; } else st.paper = v;
+      st.touched = true; st.i = 0; save(); menu(); }; });
+    var go = host.querySelector('#tp-go'); if (go) go.onclick = function () {
+      var p = S.lsGet(PROG) || {}, L2 = list(), first = 0;
+      for (var i = 0; i < L2.length; i++) { if (!p[L2[i].id]) { first = i; break; } }
+      st.i = first; render(); };
+    var rs = host.querySelector('#tp-reset'); if (rs) rs.onclick = function (e) { e.preventDefault(); S.lsSet(PROG, {}); st.live = {}; menu(); };
+  }
+
+  function render() {
+    st.view = 'q';
+    var L = list(); if (!L.length) return menu();
+    st.i = Math.max(0, Math.min(L.length - 1, st.i));
+    var q = L[st.i], prog = S.lsGet(PROG) || {}, live = st.live[q.id], al = String(q.answer).split('|');
+    var pal = L.map(function (x, i) { var p = prog[x.id]; return '<button class="pb ' + (p === 'c' ? 'a' : p === 'w' ? 'na' : 'nv') + (i === st.i ? ' cur' : '') + '" data-i="' + i + '" title="' + esc(x.src) + '">' + (i + 1) + '</button>'; }).join('');
+    var opts = q.qtype === 'TITA'
+      ? '<div class="tita"><label>Type your answer</label><input id="tp-in" type="text" autocomplete="off" value="' + esc(live ? live.v : '') + '"' + (live ? ' disabled class="' + (live.r ? 'ok' : 'no') + '"' : '') + '><button type="button" class="btn" id="tp-check"' + (live ? ' style="display:none"' : '') + '>Check</button></div>'
+      : '<div class="opts">' + q.options.map(function (o, i) { var k = String(i + 1), cls = '';
+          if (live) { if (al.indexOf(k) >= 0) cls = ' correct'; else if (String(live.v) === k) cls = ' wrong'; }
+          return '<button type="button" class="opt' + cls + '" data-k="' + k + '"' + (live ? ' disabled' : '') + '><span class="key">' + k + '</span><span class="txt">' + o + '</span></button>'; }).join('') + '</div>';
+    var ctx = q.context ? '<details class="ctx" open><summary>' + q.set_title + '</summary>' + (q.directions ? '<div class="dir">' + q.directions + '</div>' : '') + '<div class="ctx-body hl-area">' + q.context + '</div></details>' : '';
+    var fb = live ? (live.r ? '<span class="good">✓ Correct</span>' : '<span class="bad">Not quite. The answer is ' + (q.qtype === 'TITA' ? esc(al[0]) : 'option ' + al.join(' or ')) + '.</span>') : '';
+    var sol = live ? '<div class="block" style="margin-top:14px"><h4>Solution</h4>' + q.solution + '</div>' + (q.shortcut ? '<div class="block tip"><h4>Shortcut</h4>' + q.shortcut + '</div>' : '') : '';
+    host.innerHTML =
+      '<div class="mk-bar"><div class="small"><b>' + esc(st.sub ? (D.subs.filter(function (s) { return s.key === st.sub; })[0] || {}).label || D.title : D.title) + '</b> · ' + (st.i + 1) + ' of ' + L.length + '</div><button class="btn ghost small" id="tp-menu">Topic menu</button></div>' +
+      '<div class="mk-body"><div class="mk-main"><div class="layout' + (q.context ? ' has-ctx' : '') + '">' + ctx +
+      '<section class="qpane' + (live ? ' locked' : '') + '"><div class="src">' + esc(q.src) + (q.label ? ' · ' + esc(q.label) : '') + '</div><div class="question hl-area">' + q.question + '</div>' + opts +
+      '<div class="feedback">' + fb + '</div>' + (live ? '<button type="button" class="btn ghost small" id="tp-retry" style="margin-top:10px">Try again</button>' : '') + sol + '</section></div>' +
+      '<div class="mk-nav"><button class="btn ghost" id="tp-prev">◀ Previous</button><button class="btn" id="tp-next">Next ▶</button></div></div>' +
+      '<aside class="mk-pal"><div class="pal-grid">' + pal + '</div>' +
+      '<div class="legend"><span><i class="pb a"></i>Right last time</span><span><i class="pb na"></i>Wrong last time</span><span><i class="pb nv"></i>Not tried</span></div></aside></div>';
+    var check = function (v) {
+      var r = S.isRight(q.qtype, q.answer, v); st.live[q.id] = { v: v, r: r };
+      var p = S.lsGet(PROG) || {}; p[q.id] = r ? 'c' : 'w'; S.lsSet(PROG, p); render();
+    };
+    host.querySelectorAll('.opt').forEach(function (b) { b.addEventListener('click', function () { if (b.__lp) { b.__lp = false; return; } if (!st.live[q.id]) check(b.getAttribute('data-k')); }); });
+    S.crossOut(Array.prototype.slice.call(host.querySelectorAll('.opt'))); S.highlighter(host);
+    var inp = document.getElementById('tp-in'), go = document.getElementById('tp-check');
+    if (inp) inp.onkeydown = function (e) { e.stopPropagation(); if (e.key === 'Enter' && inp.value.trim()) check(inp.value.trim()); };
+    if (go) go.onclick = function () { if (inp.value.trim()) check(inp.value.trim()); };
+    var rt = document.getElementById('tp-retry'); if (rt) rt.onclick = function () { delete st.live[q.id]; render(); };
+    host.querySelector('#tp-prev').onclick = function () { st.i--; render(); top(); };
+    host.querySelector('#tp-next').onclick = function () { st.i++; render(); top(); };
+    host.querySelector('#tp-menu').onclick = menu;
+    host.querySelectorAll('.pb[data-i]').forEach(function (b) { b.onclick = function () { st.i = +b.getAttribute('data-i'); render(); }; });
+    S.typeset(host); S.stepMode(host);
+  }
+  function top() { try { host.scrollIntoView({ block: 'start' }); } catch (e) {} }
+  if (st.view === 'q') render(); else menu();
+});
+</script>

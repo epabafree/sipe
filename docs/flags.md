@@ -13,4 +13,4 @@ Anki's coloured flags are used for four meanings. They sync to all your devices,
 - **Clear a flag** by pressing the same shortcut again (or choosing “no flag”) once you've fixed the mistake.
 - **Revise by flag:** in the Study Planner, use the recipes “Fix concept gaps”, “Silly-mistake drill”, “Speed work” or “Tricks to revise”.
 
-A card can't set a flag by itself (Anki doesn't allow it), so flagging is one tap or one shortcut. Every answer side has a reminder.
+Flags are entirely optional, and the cards don’t mention them, to keep the answer side calm. A card can't set a flag by itself (Anki doesn't allow it), so flagging is one tap or one shortcut.

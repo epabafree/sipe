@@ -1,10 +1,13 @@
 # Papers: practice and timed mock
 
-Each paper has one card in **sipe ▸ Papers** with two modes.
+Each paper has its own card in **sipe ▸ 06 Papers & Mocks**, for example **CAT 2023 ▸ Slot 1**. Clicking that deck opens the paper straight away.
+
+These cards are practice spaces rather than flashcards. Open one, use it as long as you like, and simply close it; there’s nothing to rate, and it will be there next time. Both sides of the card show the same page, so flipping it by accident changes nothing.
 
 ## Practice
 ![Practice navigator](img/practice.png)
 - Move freely: question palette, Previous / Next, section tabs. Any question, any time, as often as you like.
+- **Start this paper afresh** clears the ticks on that device whenever you want a clean run. No deck reset is needed.
 - Answer and get instant feedback, then read the full solution on the same screen. **Try again** resets a question.
 - The palette remembers what you got right (green) or wrong (red) last time on that device.
 - Practice **doesn't touch your Anki review schedule**.

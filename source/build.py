@@ -30,7 +30,7 @@ def tpl(name):
 
 def model(mid, name, fields, qf, af, sort=0):
     return genanki.Model(mid, name, fields=[{"name": f} for f in fields],
-                         templates=[{"name": "Card", "qfmt": tpl(qf), "afmt": af if af.startswith("<") else tpl(af)}],
+                         templates=[{"name": "Card", "qfmt": tpl(qf), "afmt": af if af.startswith(("<", "{{")) else tpl(af)}],
                          css=CSS, sort_field_index=sort)
 
 Q_FIELDS = ["QID", "Section", "SectionName", "Paper", "QNo", "QType", "SetID", "SetTitle", "Directions", "Context", "Question",
@@ -45,13 +45,25 @@ MOCK_FIELDS = ["MockID", "Title", "DataJSON"]
 M_Q = model(1841100001, "sipe · Question", Q_FIELDS, "q_front.html", "q_back.html")
 M_SET = model(1841100002, "sipe · Set", SET_FIELDS, "set_front.html", "set_back.html")
 M_REF = model(1841100003, "sipe · Formula & Technique", REF_FIELDS, "ref_front.html", "ref_back.html")
-M_GUIDE = model(1841100004, "sipe · Guide", GUIDE_FIELDS, "guide_front.html", '<div class="sipe"><div class="read"><p class="small">Nothing to reveal: this is a guide card.</p></div></div>')
-M_PLAN = model(1841100005, "sipe · Study Planner", PLAN_FIELDS, "planner_front.html", '<div class="sipe"><div class="read"><p class="small">Nothing to reveal: copy your search from the front.</p></div></div>')
-M_MOCK = model(1841100006, "sipe · Mock Test", MOCK_FIELDS, "mock_front.html", '<div class="sipe"><div class="read"><p class="small">This card only holds the timed paper. Your question cards track your progress.</p></div></div>')
+# Tool cards show the same page on both sides, so flipping one by accident changes nothing.
+M_GUIDE = model(1841100004, "sipe · Guide", GUIDE_FIELDS, "guide_front.html", "{{FrontSide}}")
+M_PLAN = model(1841100005, "sipe · Study Planner", PLAN_FIELDS, "planner_front.html", "{{FrontSide}}")
+M_MOCK = model(1841100006, "sipe · Mock Test", MOCK_FIELDS, "mock_front.html", "{{FrontSide}}")
+TOPIC_FIELDS = ["TopicID", "Title", "SectionName", "DataJSON"]
+M_TOPIC = model(1841100007, "sipe · Topic Practice", TOPIC_FIELDS, "topic_front.html", "{{FrontSide}}")
+
+# Top-level layout. Numbers keep the decks in this order in every Anki app.
+D_START = f"{ROOT}::00 Start Here"
+D_SEC = {"VARC": f"{ROOT}::01 Verbal Ability & Reading Comprehension", "DILR": f"{ROOT}::02 Data Interpretation & Logical Reasoning",
+         "QA": f"{ROOT}::03 Quantitative Aptitude"}
+D_TOPIC = f"{ROOT}::04 Practice by Topic"
+D_REF = f"{ROOT}::05 Formulas & Concepts"
+D_PAPERS = f"{ROOT}::06 Papers & Mocks"
+SET_DECK = {"VARC": "Whole passages", "DILR": "Whole sets"}
 
 def tagify(x): return re.sub(r"\s+", "_", x)
 def label(path, section):
-    return SECN[section] + " › " + " › ".join(p.replace("_", " ") for p in path.split("::"))
+    return SECN[section] + " › " + " › ".join(NICE.get(p, p.replace("_", " ")) for p in path.split("::"))
 def wrap(s): s = s.strip(); return s if s.startswith("<") else f"<p>{s}</p>"
 def stack(s):
     """Break side-by-side display formulas onto separate lines so they fit on a phone."""
@@ -68,7 +80,7 @@ SOURCES = [(ex_varc.VARC, data_varc.SOL, "VARC", "pilot"), (b2_varc.ITEMS, b2_va
            (ex_qa.QA, data_qa.SOL, "QA", "pilot"), (b2_qa.ITEMS, b2_qa.SOL, "QA", "b2")]
 # Later papers: one module per paper (VARC) plus its _dilr / _qa add-on modules, all sharing one Paper object.
 import importlib
-for base in ("b3_s2", "b4_s3"):
+for base in ("b3_s2", "b4_s3", "b5_22s1"):
     try: P = importlib.import_module(base).P
     except ModuleNotFoundError: continue
     for extra in ("_dilr", "_qa"): importlib.import_module(base + extra)
@@ -171,37 +183,79 @@ def ref_fields(r):
 # ---------------- guide ----------------
 ICON = lambda d: f'<span class="ic"><svg viewBox="0 0 24 24">{d}</svg></span>'
 WELCOME = f"""
-<p>sipe has every question from the CAT previous-year papers as an interactive card, with a worked solution for each one. You can start straight away; everything else is optional.</p>
-<h2>Start solving</h2>
-<ol><li>Open a paper, for example <span class="path">sipe ▸ QA ▸ 2023 ▸ Slot 1</span>. Cards come in the original exam order.</li>
-<li>Tap an option, press <b>1–4</b>, or type your answer for TITA questions. You’ll see right or wrong at once.</li>
-<li>Reveal the answer to see the solution: steps, a shortcut, the key formula, and why the other options are wrong.</li>
-<li>Rate the card as usual. If you got it wrong, choose <b>Again</b> and it will come back soon.</li></ol>
-<p class="small">Want to go back over questions you’ve already done? Open the paper’s card in <span class="path">Papers</span> and choose <b>Practice</b>, or use the <b>Revisit a paper</b> recipe in the Study Planner.</p>
+<p>Welcome. sipe holds the questions from past CAT papers as cards you can actually solve, each with a worked solution written to be read slowly. You can start straight away; everything else on this page is there for when you want it.</p>
+<h2>How the decks are laid out</h2>
+<div class="tbl"><table>
+<tr><td class="rh">01 · 02 · 03</td><td style="text-align:left;white-space:normal">One deck per section, then by year and slot, for example <span class="path">03 Quantitative Aptitude ▸ 2023 ▸ Slot 1</span>. Questions come in the original exam order. Whole RC passages and DILR sets, with all their questions on one card, sit at the end of their section.</td></tr>
+<tr><td class="rh">04 Practice by Topic</td><td style="text-align:left;white-space:normal">Pick a topic, say <span class="path">Quantitative Aptitude ▸ Algebra</span>, and every matching question from all the papers is gathered in one place. Each one shows the paper it came from.</td></tr>
+<tr><td class="rh">05 Formulas &amp; Concepts</td><td style="text-align:left;white-space:normal">Short reference cards: the formula, what each symbol means, when it helps, and a quick example. For VARC, the approach for each question type.</td></tr>
+<tr><td class="rh">06 Papers &amp; Mocks</td><td style="text-align:left;white-space:normal">One card per paper. <b>Practice</b> lets you move freely through the paper and check answers as you go; <b>Timed mock</b> gives you exam conditions and a CAT-style score.</td></tr>
+</table></div>
+<h2>Solving a question</h2>
+<ol><li>Open a section deck and work through the cards.</li>
+<li>Tap an option, press <b>1–4</b>, or type your answer for TITA questions. You’ll see straight away whether it’s right.</li>
+<li>Show the answer to read the solution: the steps, a shortcut where there is one, the key idea, and why the other options don’t hold up.</li>
+<li>Rate the card as usual. If you got it wrong, <b>Again</b> brings it back soon.</li></ol>
+<h2>Coming back to questions you’ve already done</h2>
+<p>Anki normally hides a card until it’s due. To redo something whenever you like, use the practice cards instead: a paper in <span class="path">06 Papers &amp; Mocks</span>, or a topic in <span class="path">04 Practice by Topic</span>. They keep their own ticks, have a <b>Try again</b> button on every question, and a link to start afresh. Nothing you do there changes your reviews.</p>
+<p class="small">These practice cards are tools rather than flashcards: open one, use it as long as you like, and simply close it. There’s nothing to rate, and it will be waiting for you next time.</p>
 <h2>The small toolbar (top right)</h2>
-<div class="gtool">{ICON('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9.5 2.5h5"/>')}<div><b>Timer</b>: counts while you solve and stops when you answer, then shows your time on the answer side. Tap to hide it; turn it off in <b>Aa</b>. No targets, no pressure.</div></div>
-<div class="gtool">{ICON('<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7.5h7"/>')}<div><b>Calculator</b>: a basic one, like the on-screen calculator in the exam (QA and DILR).</div></div>
-<div class="gtool">{ICON('<path d="M3 19 8.5 5h1L15 19M5 14h8"/>')}<div><b>Aa</b>: text size, passage font, timer on/off, and whether solutions open all at once or step by step.</div></div>
-<div class="gtool">{ICON('<circle cx="12" cy="12" r="8.5"/>')}<div><b>Theme</b>: switch between Auto (follow Anki), Light and Dark, right on the card.</div></div>
-<h2>Handy when you need them</h2>
-<ul><li><b>Cross out options:</b> right-click (desktop) or long-press (phone) an option you’ve ruled out.</li>
-<li><b>Highlight a passage:</b> select words in an RC passage or DILR set, then tap <b>Highlight</b>. Tap a highlight to remove it.</li>
-<li><b>Need a nudge?</b> Under the options, this shows just the first step, without the answer.</li></ul>
-<h2>Mark your mistakes with flags</h2>
-<div class="tbl"><table><tr><th>Flag</th><th>Meaning</th><th>Desktop</th></tr>
-<tr><td class="rh">Red</td><td>Concept gap: you didn’t know the idea</td><td>Ctrl/⌘ + 1</td></tr>
-<tr><td class="rh">Orange</td><td>Silly mistake: you knew it but slipped</td><td>Ctrl/⌘ + 2</td></tr>
-<tr><td class="rh">Blue</td><td>Too slow: right, but took too long</td><td>Ctrl/⌘ + 4</td></tr>
-<tr><td class="rh">Green</td><td>New trick worth remembering</td><td>Ctrl/⌘ + 3</td></tr></table></div>
-<p class="small">On a phone, use the flag button in Anki’s menu. Press the same flag again to clear it once you’ve fixed the mistake.</p>
-<h2>Other decks</h2>
-<ul><li><span class="path">Sets</span>: a whole RC passage or DILR set on one card, with all its questions.</li>
-<li><span class="path">Formulas</span>: formula cards (QA, DILR) and technique cards (VARC), by topic.</li>
-<li><span class="path">Papers</span>: one card per paper. <b>Practice</b> lets you move freely between questions, check answers and read solutions without touching your reviews; <b>Timed mock</b> runs the paper under exam conditions with CAT scoring.</li>
-<li><span class="path">00 Start Here ▸ Study Planner</span>: practise any topic, year, flag or your mistakes, with no search syntax.</li></ul>
-<h2>Watching your progress</h2>
-<p>Anki keeps everything: <b>Stats</b> shows reviews and accuracy over time, and <b>Card Info</b> (in the Browse window) shows how long each attempt took.</p>
+<div class="gtool">{ICON('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9.5 2.5h5"/>')}<div><b>Timer</b>: runs while you solve and shows your time on the answer side. Tap to hide it, or turn it off in <b>Aa</b>. There are no targets.</div></div>
+<div class="gtool">{ICON('<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7.5h7"/>')}<div><b>Calculator</b>: a basic one, much like the on-screen calculator in the exam.</div></div>
+<div class="gtool">{ICON('<path d="M3 19 8.5 5h1L15 19M5 14h8"/>')}<div><b>Aa</b>: text size, passage font, the timer, and whether solutions open all at once or one step at a time.</div></div>
+<div class="gtool">{ICON('<circle cx="12" cy="12" r="8.5"/>')}<div><b>Theme</b>: Auto (follows Anki), Light or Dark.</div></div>
+<h2>Small things that help</h2>
+<ul><li><b>Cross out an option</b> you’ve ruled out: right-click it on a computer, or long-press it on a phone.</li>
+<li><b>Highlight</b> words in a passage or DILR set: select them and tap <b>Highlight</b>. Tap a highlight to remove it.</li>
+<li><b>Need a nudge?</b> under the options shows just the first step, without giving the answer away.</li>
+<li><b>Flags</b>, if you like using them, work as usual in Anki. The Study Planner can gather flagged cards for you later.</li></ul>
+<h2>Study Planner</h2>
+<p>The next card in this deck helps you put together a set of questions by topic, year, slot or difficulty, or the ones you got wrong recently, and gives you a search to paste into Anki. No search syntax needed.</p>
+<h2>Keeping track</h2>
+<p>Anki keeps the record for you: <b>Stats</b> shows your reviews and accuracy over time, and <b>Card Info</b> in the Browse window shows how long each attempt took.</p>
 """
+
+# ---------------- practice by topic ----------------
+AREA_NAME = {"RC": "Reading Comprehension", "VA": "Verbal Ability", "DI": "Data Interpretation", "LR": "Logical Reasoning"}
+RC_TYPE = {"Except": "All-except questions", "Detail_Not_True": "Not supported by the passage", "Inference_Except": "Inference (except)",
+           "Odd_Pair": "Odd pair out", "Weaken_Except": "Weaken (except)", "Purpose": "Purpose of a detail", "Detail": "Detail",
+           "Inference": "Inference", "Main_Idea": "Main idea", "Application": "Applying the argument", "Weaken": "Weaken"}
+INTRO = {"VARC": "Every question of this kind from the papers in this deck, gathered in one place. Passages come along with their questions, and each question shows which paper it is from.",
+         "DILR": "Every set of this kind from the papers in this deck, gathered in one place. Each question shows which paper it is from, so you can see how the style has changed over the years.",
+         "QA": "Every question on this topic from the papers in this deck, gathered in one place. Each question shows which paper it is from. Pick a smaller topic below if you’d like to focus."}
+NICE = {"Profit_Loss_and_Discount": "Profit, Loss and Discount", "Time_Speed_and_Distance": "Time, Speed and Distance",
+        "Statistics_Mean_Median_Mode": "Mean, Median and Mode", "Odd_One_Out": "Odd Sentence Out", "Para_Jumble": "Para Jumbles",
+        "Logic_Based_DI": "Logic-based DI", "Simple_and_Compound_Interest": "Simple and Compound Interest"}
+def nice(x): return NICE.get(x, x.replace("_", " "))
+def topic_groups():
+    groups = {}
+    for q in sorted(QS, key=lambda q: (-q["year"], q["slot"], SEC_ORDER[q["section"]], q["qno"])):
+        sec = q["section"]; keys = []
+        if sec == "VARC":
+            area = q["topics"][0].split("::")[0]
+            keys = [(area, ("RC::" + st.split("::")[1]) if area == "RC" else q["topics"][0]) for st in (q["subtypes"] or [q["topics"][0]])] if area == "RC" else [(area, q["topics"][0])]
+        else:
+            keys = [(t.split("::")[0], t) for t in q["topics"]]
+        seen = set()
+        for area, sub in keys:
+            g = groups.setdefault((sec, area), {"subs": {}, "qs": {}})
+            label = RC_TYPE.get(sub.split("::")[-1], nice(sub.split("::")[-1])) if sec == "VARC" and area == "RC" else nice(sub.split("::")[-1])
+            g["subs"].setdefault(sub, label)
+            if q["qid"] not in g["qs"]:
+                g["qs"][q["qid"]] = {"id": q["qid"], "section": sec, "qno": q["qno"], "qtype": q["qtype"], "options": q["options"], "answer": q["answer"],
+                    "set_title": q["set_title"], "directions": q["directions"], "context": q["context"].strip(), "question": wrap(q["question"]),
+                    "solution": q["solution"], "shortcut": q["shortcut"], "paper": f"CAT {q['year']} Slot {q['slot']}",
+                    "src": f"CAT {q['year']} · Slot {q['slot']} · Question {q['qno']}", "subs": [], "label": ""}
+            e = g["qs"][q["qid"]]
+            if sub not in e["subs"]: e["subs"].append(sub)
+            e["label"] = " · ".join(g["subs"][x] for x in e["subs"])
+    out = []
+    for sec in ("VARC", "DILR", "QA"):
+        for (s2, area), g in sorted(groups.items(), key=lambda kv: kv[0][1]):
+            if s2 != sec: continue
+            subs = [{"key": k, "label": v} for k, v in sorted(g["subs"].items(), key=lambda kv: kv[1])]
+            out.append((sec, area, AREA_NAME.get(area, nice(area)), INTRO[sec], {"subs": subs, "qs": list(g["qs"].values())}))
+    return out
 
 def deck_id(name): return int(hashlib.md5(name.encode()).hexdigest()[:8], 16) + 1_500_000_000
 
@@ -221,12 +275,12 @@ def main():
     index = []
 
     # Start Here
-    add(f"{ROOT}::00 Start Here", M_GUIDE, ["welcome", "Welcome to sipe", WELCOME], ["Card::Guide"], "guide-welcome", 1, "start_here_guide")
+    add(D_START, M_GUIDE, ["welcome", "Welcome to sipe", WELCOME], ["Card::Guide"], "guide-welcome", 1, "start_here_guide")
     # questions
     for q in QS:
         tags = q_tags(q)
         due = 10_000_000 + q["year"] * 1000 + q["slot"] * 100 + SEC_ORDER[q["section"]] * 40 + q["qno"]
-        add(f"{ROOT}::{q['section']}::{q['year']}::Slot {q['slot']}", M_Q, q_fields(q), tags, q["qid"], due, f"questions_{q['section']}")
+        add(f"{D_SEC[q['section']]}::{q['year']}::Slot {q['slot']}", M_Q, q_fields(q), tags, q["qid"], due, f"questions_{q['section']}")
         index.append({"t": tags})
     # sets
     for i, s in enumerate(SETS):
@@ -234,14 +288,14 @@ def main():
                [f"Topic::{s['section']}::{x}" for x in s["topics"]]
         tags = [tagify(x) for x in tags]
         topic = "  ·  ".join(label(x, s["section"]) for x in s["topics"])
-        add(f"{ROOT}::Sets::{s['section']}", M_SET, [s["sid"], s["section"], SECN[s["section"]], paper_name(s["year"], s["slot"]), s["title"], s["directions"], s["context"],
+        add(f"{D_SEC[s['section']]}::{SET_DECK[s['section']]}", M_SET, [s["sid"], s["section"], SECN[s["section"]], paper_name(s["year"], s["slot"]), s["title"], s["directions"], s["context"],
             s["questions"], s["answers"], s["setsol"], topic], tags, "set-" + s["sid"], 20_000_000 + i, "sets")
         index.append({"t": tags})
     # reference
     for i, r in enumerate(REF):
         topic, f = ref_fields(r)
         area = topic.split("::")[0].replace("_", " ")
-        dname = f"{ROOT}::Formulas::{r['section']}" + (f"::{area}" if r["section"] == "QA" else "")
+        dname = f"{D_REF}::{SECN[r['section']]}" + (f"::{area}" if r["section"] == "QA" else "")
         tags = [tagify(x) for x in [f"Card::{r['kind']}", f"Section::{r['section']}", f"Topic::{r['section']}::{topic}"]]
         add(dname, M_REF, f, tags, "ref-" + r["rid"], 30_000_000 + i, "formulas_techniques")
         index.append({"t": tags})
@@ -259,7 +313,7 @@ def main():
     years = sorted({t.split("::")[1] for it in index for t in it["t"] if t.startswith("Year::")}, reverse=True)
     slots = sorted({t.split("::")[1] for it in index for t in it["t"] if t.startswith("Slot::")})
     pdata = json.dumps({"root": ROOT, "topics": topics, "years": years, "slots": slots, "items": index}, ensure_ascii=False).replace("</", "<\\/")
-    add(f"{ROOT}::00 Start Here", M_PLAN, ["planner", "Study Planner", pdata], ["Card::Guide"], "planner", 2, "start_here_planner")
+    add(D_START, M_PLAN, ["planner", "Study Planner", pdata], ["Card::Guide"], "planner", 2, "start_here_planner")
     # papers: one card per paper, newest first
     for pi, (py, pn) in enumerate(sorted({(q["year"], q["slot"]) for q in QS}, reverse=True)):
         pq = [q for q in QS if (q["year"], q["slot"]) == (py, pn)]
@@ -270,7 +324,13 @@ def main():
         name = paper_name(py, pn)
         mdata = json.dumps({"title": f"{name} · full paper, {len(mq)} questions", "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
         gkey = f"mock-{py}-S{pn}-pilot" if (py, pn) == (2023, 1) else f"mock-{py}-S{pn}"   # keep the v0.2 GUID
-        add(f"{ROOT}::Papers", M_MOCK, [f"{py}-S{pn}", name, mdata], ["Card::Mock", f"Year::{py}", f"Paper::{py}_S{pn}"], gkey, 40_000_000 + pi, "mock")
+        add(f"{D_PAPERS}::CAT {py}::Slot {pn}", M_MOCK, [f"{py}-S{pn}", name, mdata], ["Card::Mock", f"Year::{py}", f"Paper::{py}_S{pn}"], gkey, 40_000_000 + pi, "mock")
+
+    # practice by topic: one tool card (in its own deck) per section area
+    for i, (sec, area, title, intro, items) in enumerate(topic_groups()):
+        tdata = json.dumps({"title": title, "intro": intro, "subs": items["subs"], "questions": items["qs"]}, ensure_ascii=False).replace("</", "<\\/")
+        add(f"{D_TOPIC}::{SECN[sec]}::{title}", M_TOPIC, [f"topic-{sec}-{area}", title, SECN[sec], tdata],
+            ["Card::Topic", f"Section::{sec}"], f"topic-{sec}-{area}", 35_000_000 + i, "topic_practice")
 
     media = sorted(os.path.join(HERE, "media", m) for m in os.listdir(os.path.join(HERE, "media")))
     pkg = genanki.Package(list(decks.values())); pkg.media_files = media

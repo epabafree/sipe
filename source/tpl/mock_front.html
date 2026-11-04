@@ -35,7 +35,8 @@ SIPE.ready(function () {
           (last ? '<em>Last score ' + last.score + ' / ' + last.max + '</em>' : '') + '</button>' +
       '</div>' +
       '<div id="mk-setup"></div>' +
-      (done ? '<p class="small" style="margin-top:10px"><a href="#" id="mk-resetprog">Clear practice progress</a></p>' : '') +
+      (done ? '<p class="small" style="margin-top:10px"><a href="#" id="mk-resetprog">Start this paper afresh</a> (clears the practice ticks on this device; your Anki reviews aren’t touched)</p>' : '') +
+      '<p class="toolnote">This card is a practice space. Use it whenever you like, then simply close it; there’s nothing to rate.</p>' +
       '</div>';
     host.querySelector('#mk-practice').onclick = function () { practice(); };
     host.querySelector('#mk-mock').onclick = function () { mockSetup(); };
@@ -79,7 +80,7 @@ SIPE.ready(function () {
           if (live) { if (al.indexOf(k) >= 0) cls = ' correct'; else if (String(live.v) === k) cls = ' wrong'; }
           return '<button type="button" class="opt' + cls + '" data-k="' + k + '"' + (live ? ' disabled' : '') + '><span class="key">' + k + '</span><span class="txt">' + o + '</span></button>'; }).join('') + '</div>';
     var ctx = q.context ? '<details class="ctx" open><summary>' + q.set_title + '</summary>' + (q.directions ? '<div class="dir">' + q.directions + '</div>' : '') + '<div class="ctx-body hl-area">' + q.context + '</div></details>' : '';
-    var fb = live ? (live.r ? '<span class="good">✓ Correct</span>' : '<span class="bad">Not quite — the answer is ' + (q.qtype === 'TITA' ? esc(al[0]) : 'option ' + al.join(' or ')) + '</span>') : '';
+    var fb = live ? (live.r ? '<span class="good">✓ Correct</span>' : '<span class="bad">Not quite. The answer is ' + (q.qtype === 'TITA' ? esc(al[0]) : 'option ' + al.join(' or ')) + '.</span>') : '';
     var sol = live ? '<div class="block" style="margin-top:14px"><h4>Solution</h4>' + q.solution + '</div>' + (q.shortcut ? '<div class="block tip"><h4>Shortcut</h4>' + q.shortcut + '</div>' : '') : '';
     host.innerHTML =
       '<div class="mk-bar"><div class="mk-tabs">' + tabs + '</div><div class="mk-timer" style="font-size:13px;color:var(--muted)">Practice · ' + Object.keys(prog).length + ' / ' + DATA.questions.length + ' tried</div></div>' +

@@ -43,7 +43,7 @@ SIPE.ready(function () {
       });
     }
     var at = type === 'TITA' ? ans.split('|')[0] : 'option ' + ans.split('|').join(' or ');
-    fb.innerHTML = !attempted ? (isBack ? '<span class="neutral">Not attempted · answer: ' + at + '</span>' : '') : right ? '<span class="good">✓ Correct</span>' : '<span class="bad">Not quite — the answer is ' + at + '</span>';
+    fb.innerHTML = !attempted ? (isBack ? '<span class="neutral">Not attempted · answer: ' + at + '</span>' : '') : right ? '<span class="good">✓ Correct</span>' : '<span class="bad">Not quite. The answer is ' + at + '.</span>';
     return attempted ? (right ? 1 : 0) : null;
   }
 

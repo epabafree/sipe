@@ -69,7 +69,7 @@ SIPE.ready(function () {
     var at = type === 'TITA' ? ans.split('|')[0] : 'option ' + ans.split('|').join(' or ');
     if (!attempted) fb.innerHTML = '';
     else if (right) fb.innerHTML = '<span class="good">✓ Correct</span>';
-    else fb.innerHTML = '<span class="bad">Not quite — the answer is ' + at + '</span>';
+    else fb.innerHTML = '<span class="bad">Not quite. The answer is ' + at + '.</span>';
     return { attempted: attempted, right: right };
   }
 
