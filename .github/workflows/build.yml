@@ -1,7 +1,8 @@
 name: Build and release
 
-# Every push to main builds the deck. If the newest version in CHANGELOG.md
-# has no release yet, the build is published as that release.
+# Every push to main builds the deck and publishes it as the release for the
+# newest version in CHANGELOG.md. If that release already exists, its notes
+# and files are replaced with the current build.
 on:
   push:
     branches: [main]
@@ -66,3 +67,11 @@ jobs:
           files: |
             source/out/sipe.apkg
             sipe_csv_and_media.zip
+
+      - name: Update existing release
+        if: steps.version.outputs.exists == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release edit "${{ steps.version.outputs.tag }}" --notes-file notes.md
+          gh release upload "${{ steps.version.outputs.tag }}" source/out/sipe.apkg sipe_csv_and_media.zip --clobber

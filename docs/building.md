@@ -21,4 +21,4 @@ Output goes to `source/out/`: `sipe.apkg`, the CSVs and media.
 
 ## Releases
 
-The workflow in `.github/workflows/build.yml` runs on every push to `main`. It reads the newest version heading in `CHANGELOG.md`; if no release exists for that version yet, it builds the deck and publishes a release with `sipe.apkg` and the CSV bundle attached, using that version's changelog section as the notes. So publishing a release only takes a new changelog entry.
+The workflow in `.github/workflows/build.yml` runs on every push to `main`. It reads the newest version heading in `CHANGELOG.md`; it builds the deck and publishes it as the release for that version, with `sipe.apkg` and the CSV bundle attached and that version's changelog section as the notes. If the release already exists, the notes and files are replaced. A new release therefore only needs a new changelog heading.
