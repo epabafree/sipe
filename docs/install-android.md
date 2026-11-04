@@ -1,7 +1,7 @@
 # Install on Android (free)
 
 1. Install **AnkiDroid** from the Google Play Store. It's free and open source; it's also on F-Droid and its GitHub releases page.
-2. Download the latest `sipe_….apkg` from this repository's **Releases** page to your phone.
+2. Download `sipe.apkg` from the latest release on this repository's **Releases** page to your phone.
 3. Open the file and choose **AnkiDroid**, or in AnkiDroid tap **⋮ ▸ Import** and pick the file.
 4. Open **sipe ▸ 00 Start Here**.
 

@@ -13,8 +13,8 @@ from fmt import why as why_rows
 
 ROOT = "sipe"
 OUT = os.path.join(HERE, "out")
-YEAR, SLOT = 2023, 1
-PAPER = f"CAT {YEAR} · Slot {SLOT}"
+YEAR = 2023
+def paper_name(y, n): return f"CAT {y} · Slot {n}"
 SECN = {"VARC": "Verbal Ability & Reading Comprehension", "DILR": "Data Interpretation & Logical Reasoning", "QA": "Quantitative Aptitude"}
 SEC_ORDER = {"VARC": 0, "DILR": 1, "QA": 2}
 
@@ -66,6 +66,13 @@ import b2_varc, b2_dilr, b2_qa
 SOURCES = [(ex_varc.VARC, data_varc.SOL, "VARC", "pilot"), (b2_varc.ITEMS, b2_varc.SOL, "VARC", "b2"),
            (ex_dilr.DILR, data_dilr.SOL, "DILR", "pilot"), (b2_dilr.ITEMS, b2_dilr.SOL, "DILR", "b2"),
            (ex_qa.QA, data_qa.SOL, "QA", "pilot"), (b2_qa.ITEMS, b2_qa.SOL, "QA", "b2")]
+# Later papers: one module per paper (VARC) plus its _dilr / _qa add-on modules, all sharing one Paper object.
+import importlib
+for base in ("b3_s2", "b4_s3"):
+    try: P = importlib.import_module(base).P
+    except ModuleNotFoundError: continue
+    for extra in ("_dilr", "_qa"): importlib.import_module(base + extra)
+    SOURCES += P.sources()
 QS = []
 for ex, sol, sec, origin in SOURCES:
     for q in ex:
@@ -74,7 +81,8 @@ for ex, sol, sec, origin in SOURCES:
         subtypes = [t.replace("Subtype::", "") for t in q["topic"] if t.startswith("Subtype::")]
         main_topic = [t.split("::", 1)[1] if t.startswith(sec + "::") else t for t in topics]
         q2 = dict(q)
-        q2.update(qid=f"{YEAR}-S{SLOT}-{sec}-{q['qno']:02d}", hint=s.get("hint", ""), solution=s["solution"],
+        q2.setdefault("slot", 1); q2.setdefault("year", YEAR)
+        q2.update(qid=f"{q2['year']}-S{q2['slot']}-{sec}-{q['qno']:02d}", hint=s.get("hint", ""), solution=s["solution"],
                   shortcut=s.get("shortcut", ""), concept=s.get("concept", ""), why=s.get("why", ""),
                   setsol=s.get("setsol", ""), topics=main_topic, subtypes=subtypes)
         if s.get("why_title"): q2["why"] = f'<div class="why-title" hidden>{s["why_title"]}</div>' + q2["why"]
@@ -87,11 +95,11 @@ for ex, sol, sec, origin in SOURCES:
             q2["context"] = ex_dilr.CONTEXT
         q2["concept"] = stack(q2["concept"])
         QS.append(q2)
-QS.sort(key=lambda q: (SEC_ORDER[q["section"]], q["qno"]))
+QS.sort(key=lambda q: (q["year"], q["slot"], SEC_ORDER[q["section"]], q["qno"]))
 assert len({q["qid"] for q in QS}) == len(QS)
 
 def q_tags(q):
-    t = ["Card::Question", f"Section::{q['section']}", f"Year::{YEAR}", f"Paper::{YEAR}_S{SLOT}", f"Slot::{SLOT}",
+    t = ["Card::Question", f"Section::{q['section']}", f"Year::{q['year']}", f"Paper::{q['year']}_S{q['slot']}", f"Slot::{q['slot']}",
          f"Format::{q['qtype']}", f"Difficulty::{q['difficulty']}"]
     t += [f"Topic::{q['section']}::{x}" for x in q["topics"]]
     t += [f"QuestionType::{x}" for x in q["subtypes"]]
@@ -101,7 +109,7 @@ def q_tags(q):
 def q_fields(q):
     o = (q["options"] + ["", "", "", ""])[:4]
     topic = "  ·  ".join(label(x, q["section"]) for x in q["topics"])
-    return [q["qid"], q["section"], SECN[q["section"]], PAPER, str(q["qno"]), q["qtype"], q["set_id"], q["set_title"],
+    return [q["qid"], q["section"], SECN[q["section"]], paper_name(q["year"], q["slot"]), str(q["qno"]), q["qtype"], q["set_id"], q["set_title"],
             q["directions"], q["context"].strip(), wrap(q["question"]), o[0], o[1], o[2], o[3], q["answer"], q["hint"],
             q["solution"], q["setsol"], q["shortcut"], q["concept"], q["why"], topic, q["difficulty"] + " (estimated)"]
 
@@ -124,16 +132,33 @@ def sqa_html(q):
             + (f'<div class="sub">Strategy</div>{q["concept"]}' if q["section"] == "VARC" and q["concept"] else "") + "</div>")
 
 SETS = []
-for sid in sorted({q["set_id"] for q in QS if q["set_id"]}, key=lambda s: (SEC_ORDER[s.split("_")[2]], s)):
+for sid in sorted({q["set_id"] for q in QS if q["set_id"]}, key=lambda s: (s.split("_")[0], s.split("_")[1], SEC_ORDER[s.split("_")[2]], s)):
     members = [q for q in QS if q["set_id"] == sid]
     f = members[0]
     SETS.append(dict(sid=sid, section=f["section"], title=f["set_title"], directions=f["directions"], context=f["context"].strip(),
                      questions="".join(sq_html(q, i) for i, q in enumerate(members)), answers="".join(sqa_html(q) for q in members),
-                     setsol=f["setsol"], topics=f["topics"], members=members))
+                     setsol=f["setsol"], topics=f["topics"], members=members, year=f["year"], slot=f["slot"]))
 
 # ---------------- reference cards ----------------
+# VARC technique cards list every question of their type automatically.
+SUB2REF = {"RC::Except": "VARC-RC-001", "RC::Detail_Not_True": "VARC-RC-001", "RC::Inference_Except": "VARC-RC-001", "RC::Odd_Pair": "VARC-RC-002",
+           "RC::Weaken_Except": "VARC-RC-003", "RC::Purpose": "VARC-RC-004", "RC::Detail": "VARC-RC-005", "RC::Inference": "VARC-RC-006",
+           "RC::Main_Idea": "VARC-RC-006", "RC::Application": "VARC-RC-006", "RC::Weaken": "VARC-RC-007",
+           "VA::Missing_Sentence": "VARC-VA-001", "VA::Odd_One_Out": "VARC-VA-002", "VA::Para_Jumble": "VARC-VA-003", "VA::Summary": "VARC-VA-004"}
+_refs = {r["rid"]: r for r in REF}
+for q in QS:
+    if q["section"] != "VARC": continue
+    for k in (q["subtypes"] or q["topics"]):
+        r = _refs.get(SUB2REF.get(k, ""))
+        if r is not None and q["qid"] not in r["seen"]: r["seen"].append(q["qid"])
+for r in REF:
+    r["seen"].sort(key=lambda x: [int(t) if t.isdigit() else t for t in re.split(r"[-S]", x)])
+assert all(x in {q["qid"] for q in QS} for r in REF for x in r["seen"]), [x for r in REF for x in r["seen"] if x not in {q["qid"] for q in QS}]
 TECH_TOPIC = {"VARC-RC-001": "RC", "VARC-RC-002": "RC", "VARC-RC-003": "RC", "VARC-RC-004": "RC", "VARC-RC-005": "RC", "VARC-RC-006": "RC", "VARC-RC-007": "RC", "VARC-VA-001": "VA::Missing_Sentence",
               "VARC-VA-002": "VA::Odd_One_Out", "VARC-VA-003": "VA::Para_Jumble", "VARC-VA-004": "VA::Summary"}
+def ex_math(s):
+    """Long inline maths can't wrap on a phone: show it as display maths (one line per ⇒) so it can be scaled to fit."""
+    return re.sub(r"\\\(((?:(?!\\\)).){28,})\\\)", lambda m: "\\[" + m.group(1).replace(r" \Rightarrow ", r"\]\[\Rightarrow ") + "\\]", s)
 def ref_fields(r):
     topic = TECH_TOPIC.get(r["rid"], r["topic"])
     sym = ""
@@ -141,7 +166,7 @@ def ref_fields(r):
         sym = '<div class="tbl"><table><tr><th>Symbol</th><th>Meaning</th></tr>' + "".join(
             f'<tr><td>{a}</td><td style="text-align:left;white-space:normal">{b}</td></tr>' for a, b in r["symbols"]) + "</table></div>"
     return topic, [r["rid"], r["kind"], r["section"], SECN[r["section"]], " › ".join(x.replace("_", " ") for x in topic.split("::")),
-                   r["name"], r["prompt"], stack(r["formula"]), sym, r["when"], r["trap"], r["example"], ", ".join(r["seen"])]
+                   r["name"], r["prompt"], stack(r["formula"]), sym, r["when"], r["trap"], ex_math(r["example"]), ", ".join(r["seen"])]
 
 # ---------------- guide ----------------
 ICON = lambda d: f'<span class="ic"><svg viewBox="0 0 24 24">{d}</svg></span>'
@@ -200,16 +225,16 @@ def main():
     # questions
     for q in QS:
         tags = q_tags(q)
-        due = 10_000_000 + YEAR * 1000 + SLOT * 100 + SEC_ORDER[q["section"]] * 40 + q["qno"]
-        add(f"{ROOT}::{q['section']}::{YEAR}::Slot {SLOT}", M_Q, q_fields(q), tags, q["qid"], due, f"questions_{q['section']}")
+        due = 10_000_000 + q["year"] * 1000 + q["slot"] * 100 + SEC_ORDER[q["section"]] * 40 + q["qno"]
+        add(f"{ROOT}::{q['section']}::{q['year']}::Slot {q['slot']}", M_Q, q_fields(q), tags, q["qid"], due, f"questions_{q['section']}")
         index.append({"t": tags})
     # sets
     for i, s in enumerate(SETS):
-        tags = ["Card::Set", f"Section::{s['section']}", f"Year::{YEAR}", f"Paper::{YEAR}_S{SLOT}", f"Slot::{SLOT}", f"Set::{s['sid']}"] + \
+        tags = ["Card::Set", f"Section::{s['section']}", f"Year::{s['year']}", f"Paper::{s['year']}_S{s['slot']}", f"Slot::{s['slot']}", f"Set::{s['sid']}"] + \
                [f"Topic::{s['section']}::{x}" for x in s["topics"]]
         tags = [tagify(x) for x in tags]
         topic = "  ·  ".join(label(x, s["section"]) for x in s["topics"])
-        add(f"{ROOT}::Sets::{s['section']}", M_SET, [s["sid"], s["section"], SECN[s["section"]], PAPER, s["title"], s["directions"], s["context"],
+        add(f"{ROOT}::Sets::{s['section']}", M_SET, [s["sid"], s["section"], SECN[s["section"]], paper_name(s["year"], s["slot"]), s["title"], s["directions"], s["context"],
             s["questions"], s["answers"], s["setsol"], topic], tags, "set-" + s["sid"], 20_000_000 + i, "sets")
         index.append({"t": tags})
     # reference
@@ -235,18 +260,21 @@ def main():
     slots = sorted({t.split("::")[1] for it in index for t in it["t"] if t.startswith("Slot::")})
     pdata = json.dumps({"root": ROOT, "topics": topics, "years": years, "slots": slots, "items": index}, ensure_ascii=False).replace("</", "<\\/")
     add(f"{ROOT}::00 Start Here", M_PLAN, ["planner", "Study Planner", pdata], ["Card::Guide"], "planner", 2, "start_here_planner")
-    # mock
-    mq = [{"id": q["qid"], "section": q["section"], "qno": q["qno"], "qtype": q["qtype"], "options": q["options"], "answer": q["answer"],
-           "set_title": q["set_title"], "directions": q["directions"], "context": q["context"].strip(), "question": wrap(q["question"]),
-           "solution": q["solution"], "shortcut": q["shortcut"],
-           "topic": " › ".join(x.replace("_", " ") for x in q["topics"][0].split("::"))} for q in QS]
-    mdata = json.dumps({"title": f"{PAPER} · full paper, {len(mq)} questions", "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
-    add(f"{ROOT}::Papers", M_MOCK, [f"{YEAR}-S{SLOT}", f"{PAPER}", mdata], ["Card::Mock", f"Year::{YEAR}", f"Paper::{YEAR}_S{SLOT}"],
-        f"mock-{YEAR}-S{SLOT}-pilot", 40_000_000, "mock")
+    # papers: one card per paper, newest first
+    for pi, (py, pn) in enumerate(sorted({(q["year"], q["slot"]) for q in QS}, reverse=True)):
+        pq = [q for q in QS if (q["year"], q["slot"]) == (py, pn)]
+        mq = [{"id": q["qid"], "section": q["section"], "qno": q["qno"], "qtype": q["qtype"], "options": q["options"], "answer": q["answer"],
+               "set_title": q["set_title"], "directions": q["directions"], "context": q["context"].strip(), "question": wrap(q["question"]),
+               "solution": q["solution"], "shortcut": q["shortcut"],
+               "topic": " › ".join(x.replace("_", " ") for x in q["topics"][0].split("::"))} for q in pq]
+        name = paper_name(py, pn)
+        mdata = json.dumps({"title": f"{name} · full paper, {len(mq)} questions", "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
+        gkey = f"mock-{py}-S{pn}-pilot" if (py, pn) == (2023, 1) else f"mock-{py}-S{pn}"   # keep the v0.2 GUID
+        add(f"{ROOT}::Papers", M_MOCK, [f"{py}-S{pn}", name, mdata], ["Card::Mock", f"Year::{py}", f"Paper::{py}_S{pn}"], gkey, 40_000_000 + pi, "mock")
 
     media = sorted(os.path.join(HERE, "media", m) for m in os.listdir(os.path.join(HERE, "media")))
     pkg = genanki.Package(list(decks.values())); pkg.media_files = media
-    apkg = os.path.join(OUT, f"sipe_{YEAR}_Slot{SLOT}.apkg"); pkg.write_to_file(apkg)
+    apkg = os.path.join(OUT, "sipe.apkg"); pkg.write_to_file(apkg)
     for m in media: shutil.copy(m, os.path.join(OUT, "media"))
     for name, (mdl, rr) in rows.items():
         with open(os.path.join(OUT, "csv", f"sipe_{name}.csv"), "w", encoding="utf-8", newline="") as fh:
@@ -254,7 +282,7 @@ def main():
             fh.write("#columns:" + ",".join(["GUID", "Notetype", "Deck", "Tags"] + [f["name"] for f in mdl.fields]) + "\n")
             w = csv.writer(fh, quoting=csv.QUOTE_ALL, lineterminator="\n")
             for r in rr: w.writerow(r)
-    print("questions", len(QS), "sets", len(SETS), "refs", len(REF), "->", apkg)
+    print("papers", sorted({(q["year"], q["slot"]) for q in QS}), "questions", len(QS), "sets", len(SETS), "refs", len(REF), "->", apkg)
 
 if __name__ == "__main__":
     main()

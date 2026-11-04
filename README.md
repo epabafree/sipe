@@ -10,18 +10,18 @@ Tap an option and see straight away whether you're right. The answer side gives 
 
 | Release | Contents | Questions |
 | --- | --- | --- |
-| **CAT 2023 Slot 1** | Full paper: 24 VARC · 20 DILR · 22 QA, in the original order | 66 |
-| Set cards | 4 RC passages and 4 DILR sets, each as one card with all its questions | 8 |
-| Formula & technique cards | QA and DILR formulas, VARC question-type techniques | 37 |
-| Papers | Practice navigator + optional timed mock for CAT 2023 Slot 1 | 1 |
+| **CAT 2023 Slots 1, 2 and 3** | Three full papers: 24 VARC · 20 DILR · 22 QA each, in the original order | 198 |
+| Set cards | 12 RC passages and 12 DILR sets, each as one card with all its questions | 24 |
+| Formula & technique cards | QA and DILR formulas and techniques, VARC question-type techniques | 58 |
+| Papers | Practice navigator + optional timed mock, one per paper | 3 |
 | Start Here | Welcome guide and the Study Planner | 2 |
 
-Coming next: CAT 2023 Slots 2 and 3, then 2022, 2021, 2020–2017 and 1991–2008. See the [roadmap](#roadmap).
+Coming next: CAT 2022, then 2021, 2020–2017 and 1991–2008. See the [roadmap](#roadmap).
 
 ## Quick start
 
 1. Install Anki for your device: [Windows / Mac / Linux](docs/install-desktop.md) · [Android](docs/install-android.md) · [iPad & iPhone](docs/install-ipad.md).
-2. Download the latest `.apkg` from **Releases** (right-hand side of this page).
+2. Download `sipe.apkg` from the latest **Release** (right-hand side of this page).
 3. Double-click it, or use **File ▸ Import** in Anki. No add-ons are needed.
 4. Open **sipe ▸ 00 Start Here**, then choose a paper, for example **sipe ▸ QA ▸ 2023 ▸ Slot 1**.
 
@@ -50,11 +50,11 @@ Coming next: CAT 2023 Slots 2 and 3, then 2022, 2021, 2020–2017 and 1991–200
 ```
 sipe
 ├── 00 Start Here        Welcome guide, Study Planner
-├── VARC ▸ 2023 ▸ Slot 1
-├── DILR ▸ 2023 ▸ Slot 1
-├── QA   ▸ 2023 ▸ Slot 1
+├── VARC ▸ 2023 ▸ Slot 1 · Slot 2 · Slot 3
+├── DILR ▸ 2023 ▸ Slot 1 · Slot 2 · Slot 3
+├── QA   ▸ 2023 ▸ Slot 1 · Slot 2 · Slot 3
 ├── Sets ▸ VARC · DILR
-├── Formulas ▸ QA ▸ Algebra · Arithmetic · Geometry · Modern Maths · Number System ; DILR ; VARC
+├── Formulas ▸ QA (Algebra · Arithmetic · Geometry · Modern Maths · Number System) · DILR · VARC
 └── Papers               Practice + timed mock, one card per paper
 ```
 
@@ -67,8 +67,8 @@ Tags follow the same tree (`sipe::Section::QA`, `sipe::Topic::QA::Algebra::Quadr
 | 0 | Pilot | ✓ |
 | 1 | This repository and docs | ✓ |
 | 2 | CAT 2023 Slot 1 (full paper) | ✓ |
-| 3–4 | CAT 2023 Slots 2 and 3 | next |
-| 5–10 | CAT 2022 and 2021, one release per slot | |
+| 3–4 | CAT 2023 Slots 2 and 3 | ✓ |
+| 5–10 | CAT 2022 and 2021, one release per slot | next |
 | 11–14 | CAT 2020, 2019, 2018, 2017 | |
 | 15–17 | CAT 1991–2008 | |
 | 18 | v1.0: complete formula library, final review | |

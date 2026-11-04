@@ -20,7 +20,7 @@ def rc(qno, question, options, answer, explanation, why_wrong, approach, subtype
     VARC.append(dict(section="VARC", qno=qno, set_id="2023_S1_VARC_P1", set_title=P1_TITLE,
         directions=P1_DIRECTIONS, context=P1, question=question, options=options, qtype="MCQ",
         answer=answer, explanation=explanation, why_wrong=why_wrong, approach=approach, concept="",
-        hint="", topic=["VARC::RC::Literature", "Subtype::RC::" + subtype], difficulty=diff,
+        hint="", topic=["VARC::RC::Arts_and_Literature", "Subtype::RC::" + subtype], difficulty=diff,
         source_note=P1_NOTE))
 
 rc(1, "All of the following claims contribute to the “remapping” discussed by the passage, EXCEPT:",

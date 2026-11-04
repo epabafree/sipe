@@ -238,8 +238,157 @@ T("VARC-RC-007", "RC", "Weaken questions", "“Which, if true, would weaken the 
   "<ol><li>Pin down the claim, often the conclusion.</li><li>The answer attacks the claim directly.</li><li>Options that restate facts or misstate minor details don’t weaken anything.</li></ol>",
   "An option can be factually wrong and still not weaken the argument.", "Wolf attacks on tourists undercut the tourism upside", ["2023-S1-VARC-12"])
 
+# ---------------- added with CAT 2023 Slots 2 and 3 ----------------
+F("QA-NUM-002", "QA", "Number_System::Factors_and_Divisibility", "Counting factors",
+  r"How many factors a number has, or the smallest number with a given count",
+  r"\[N = p^a q^b r^c\]\[\text{factors} = (a+1)(b+1)(c+1)\]",
+  [(r"\(p, q, r\)", "distinct primes"), (r"\(a, b, c\)", "their exponents")],
+  "“Exactly k factors” questions: factorise k to list the possible shapes, then try the smallest primes.",
+  "“Factors other than 1 and itself” means subtract 2 from the total before matching shapes.",
+  r"\(15 = 5 \times 3 \Rightarrow p^4 q^2\): \(2^4 \cdot 3^2 = 144\)", ["2023-S2-QA-06", "2023-S3-QA-07"])
+F("QA-ALG-009", "QA", "Algebra::Inequalities_and_Absolute_Value", "AM ≥ GM for a minimum",
+  r"The least value of a sum like \(\tfrac{A}{y} + By\) with \(y > 0\)",
+  r"\[\frac{a + b}{2} \ge \sqrt{ab} \qquad \frac{A}{y} + By \ge 2\sqrt{AB}\]",
+  [(r"\(a, b\)", "positive quantities whose product is constant")],
+  "Whenever two positive terms multiply to a constant, their sum is smallest when they are equal.",
+  "Only for positive terms, and the minimum is reached only if equality is actually possible.",
+  r"\(\tfrac1y + 9y \ge 2\sqrt9 = 6\), at \(y = \tfrac13\)", ["2023-S2-QA-05"])
+F("QA-ALG-010", "QA", "Algebra::Equations_and_Polynomials", "Cube identities",
+  r"Sums or differences of cubes, or powers of \(t + \tfrac1t\)",
+  r"\[a^3 - b^3 = (a - b)(a^2 + ab + b^2)\]\[t^3 + \tfrac1{t^3} = s^3 - 3s,\quad s = t + \tfrac1t\]",
+  [(r"\(s\)", r"\(t + \tfrac1t\)")],
+  r"Given \(p^2 + q^2\) and \(pq\), or \(t^n + t^{-n}\) for some \(n\), step up or down with these identities.",
+  r"Taking a square root gives \(\pm\); check which sign is allowed.",
+  r"\(t + \tfrac1t = \sqrt5 \Rightarrow t^3 + \tfrac1{t^3} = 5\sqrt5 - 3\sqrt5 = 2\sqrt5\)", ["2023-S2-QA-20", "2023-S3-QA-04"])
+F("QA-ALG-011", "QA", "Algebra::Logarithms_and_Exponents", "Change of base",
+  r"Fractions of logs, or logs with surd bases",
+  r"\[\frac{\log_c a}{\log_c b} = \log_b a \qquad \log_{b^k} a = \tfrac1k \log_b a\]",
+  [(r"\(c\)", "any valid base")],
+  "Turn every term into the same base before comparing or adding.",
+  "The argument of every log must stay positive; reject roots that break this.",
+  r"\(\dfrac{\log_x 25}{\log_x 0.008} = \log_{5^{-3}} 5^2 = -\tfrac23\)", ["2023-S2-QA-07", "2023-S3-QA-01"])
+F("QA-ALG-012", "QA", "Algebra::Progressions_and_Series", "Common terms of two APs",
+  "Numbers that belong to two arithmetic progressions at once",
+  r"\[d_{\text{common}} = \operatorname{lcm}(d_1, d_2)\]",
+  [(r"\(d_1, d_2\)", "the two common differences")],
+  "Find the first common term by remainders, then step by the LCM within the overlapping range.",
+  "Stay inside both ranges: each sequence may stop at a different place.",
+  r"\(6n + 7\) and \(7n + 8\): both \(\equiv 1 \pmod{42}\) ⇒ largest 3-digit \(967\)", ["2023-S2-QA-22", "2023-S3-QA-21"])
+F("QA-ALG-013", "QA", "Algebra::Linear_Equations", "Two linear equations: how many solutions",
+  "Conditions for one, none, or infinitely many solutions",
+  r"\[\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2} \Rightarrow \infty \qquad \frac{a_1}{a_2} = \frac{b_1}{b_2} \ne \frac{c_1}{c_2} \Rightarrow \text{none}\]",
+  [(r"\(a_i x + b_i y = c_i\)", "the two equations")],
+  "Infinitely many solutions means the two lines are the same line.",
+  "Solve the resulting quadratic fully; the negative root often gives the extreme answer.",
+  r"\(\tfrac{a+5}{1} = \tfrac{b^2-15}{1} = \tfrac{8b}{4}\)", ["2023-S3-QA-03"])
+F("QA-ALG-014", "QA", "Algebra::Functions", "Functions of combined inputs",
+  r"\(f(\text{expression}_1, \text{expression}_2)\) is given; find \(f\) itself",
+  r"\[\text{find } \alpha, \beta \text{ with } \alpha u + \beta v = \text{the right-hand side}\]",
+  [(r"\(u, v\)", "the two input expressions")],
+  "Linear inputs: combine them to cancel one variable, then read off the formula.",
+  "Check the combination on the original before substituting.",
+  r"\(u = 3x + 2y,\ v = 2x - 5y \Rightarrow 5u + 2v = 19x\)", ["2023-S3-QA-22"])
+F("QA-ALG-015", "QA", "Algebra::Progressions_and_Series", "Infinite geometric series",
+  "Sums that go on forever with a constant ratio",
+  r"\[a + ar + ar^2 + \dots = \frac{a}{1 - r}\quad (|r| < 1)\]",
+  [(r"\(r\)", "common ratio")],
+  "Nested sums: write each bracket as a finite GP, or swap the order of summation.",
+  r"Only valid for \(|r| < 1\).",
+  r"\(\sum_{k\ge0} 4^{-k} = \tfrac43\)", ["2023-S3-QA-20"])
+F("QA-ARI-010", "QA", "Arithmetic::Time_Speed_and_Distance", "Boats and streams",
+  "A boat going up and down a river",
+  r"\[\text{down} = b + r \qquad \text{up} = b - r \qquad b = \tfrac{\text{down} + \text{up}}{2},\ r = \tfrac{\text{down} - \text{up}}{2}\]",
+  [(r"\(b\)", "boat speed in still water"), (r"\(r\)", "river speed")],
+  "Pick the distance as the LCM of the times to get whole-number speeds.",
+  "Check which direction is downstream before writing the equation.",
+  r"\(12\) km in \(2\) h down and \(3\) h up ⇒ \(b = 5,\ r = 1\)", ["2023-S3-QA-09"])
+F("QA-ARI-011", "QA", "Arithmetic::Time_and_Work", "Pipes and cisterns",
+  "Fill pipes and drain pipes working together",
+  r"\[\text{net rate} = \sum \frac{1}{t_{\text{fill}}} - \sum \frac{1}{t_{\text{drain}}}\]",
+  [(r"\(t\)", "time for one pipe alone")],
+  "Write one equation per scenario in terms of rates, then eliminate.",
+  "Use given limits (like “less than five hours”) to pick between roots.",
+  r"\(\tfrac13 - \tfrac12 + \tfrac23 = \tfrac12\) ⇒ tank full in 2 h", ["2023-S2-QA-08"])
+F("QA-ARI-012", "QA", "Arithmetic::Ratio_and_Proportion", "Direct and square proportion",
+  "Price or value that varies with a power of size",
+  r"\[P = k w^n\]<p>For a fixed total weight, \(\sum w^2\) is smallest when the parts are as equal as possible, and largest when they are as uneven as possible.</p>",
+  [(r"\(k\)", "constant of proportionality")],
+  "Breaking an object into parts: compare the extremes of the sum of squares.",
+  "Parts must respect the conditions (distinct, whole numbers).",
+  r"\(18 = 3 + 4 + 5 + 6\) (min \(\sum w^2 = 86\)) vs \(1 + 2 + 3 + 12\) (max \(158\))", ["2023-S2-QA-12"])
+F("QA-ARI-013", "QA", "Arithmetic::Profit_Loss_and_Discount", "False measures and discounts",
+  "A trader gets extra on buying, gives less on selling, and offers a discount",
+  r"\[\begin{aligned} 1 + \text{profit} = {} & \frac{\text{received}}{\text{paid for}} \times \frac{\text{charged for}}{\text{given}} \\ & \times \frac{SP}{CP} \times (1 - d) \end{aligned}\]",
+  [(r"\(d\)", "discount as a decimal")],
+  "Multiply all the factors; every cheat and discount is one ratio.",
+  "Keep each ratio the right way up: getting extra helps him, giving less helps him.",
+  r"\(\tfrac{105}{100} \times \tfrac{100}{95} \times 1.1 \times 0.95 = 1.155\)", ["2023-S3-QA-08"])
+F("QA-GEO-004", "QA", "Geometry::Polygons_and_Quadrilaterals", "Regular polygons",
+  "Angles and diagonals of an n-sided regular polygon",
+  r"\[\text{exterior} = \frac{360^\circ}{n} \qquad \text{interior} = 180^\circ - \text{exterior} \qquad \text{diagonals} = \frac{n(n - 3)}{2}\]",
+  [(r"\(n\)", "number of sides")],
+  "Any question that gives an angle relation in a regular polygon.",
+  "Interior and exterior angles add to 180°, not 360°.",
+  r"\(I - E = 120^\circ \Rightarrow E = 30^\circ,\ n = 12,\ 54\) diagonals", ["2023-S3-QA-19"])
+F("QA-GEO-005", "QA", "Geometry::Circles", "Angle in a semicircle",
+  "A triangle drawn on a diameter",
+  r"\[\text{angle in a semicircle} = 90^\circ \qquad \text{legs } ak, bk:\ k^2(a^2 + b^2) = (2r)^2\]",
+  [(r"\(r\)", "radius")],
+  "A side of the triangle is a diameter: it’s right-angled, and the diameter is the hypotenuse.",
+  "The hypotenuse is \(2r\), not \(r\).",
+  r"Legs in ratio \(1 : 1\) on radius \(r\): area \(r^2\)", ["2023-S2-QA-17"])
+F("QA-GEO-006", "QA", "Geometry::Trigonometry", "Altitudes and angles in triangles",
+  "Ratios of altitudes, or angles at the orthocentre",
+  r"\[h_B = AB\sin A \qquad h_{\text{base}} = AB\cos\tfrac{A}{2}\]",
+  [(r"\(h_B\)", "altitude from \\(B\\)"), (r"\(h_{\text{base}}\)", "altitude to the base of an isosceles triangle"), (r"\(A\)", "apex angle")],
+  "Find one angle from the given angle at the orthocentre, then express each altitude with sine or cosine.",
+  "The angle at the orthocentre and the angle you need are often supplementary.",
+  r"\(\angle A = 30^\circ \Rightarrow AD/BE = 2\cos 15^\circ\)", ["2023-S3-QA-17"])
+F("DILR-LR-003", "DILR", "LR::Routes_and_Networks", "Timed routes on a map",
+  "Teams moving along streets, one street per time step",
+  r"<ol><li>Write a position grid: teams × time steps.</li><li>Fill fixed positions from the clues.</li><li>Use “one team per street at a time” to rule out the remaining moves.</li></ol>",
+  [], "Patrol, delivery or travel puzzles on a small graph with fixed crossing times.",
+  "A team must move every step if it patrols “continuously”; it can’t wait at a station.",
+  r"Team 4 limited to A, C, E ⇒ it alternates A ↔ C/E", ["2023-S3-DILR-06", "2023-S3-DILR-07", "2023-S3-DILR-08", "2023-S3-DILR-09", "2023-S3-DILR-10"], kind="Technique")
+F("DILR-LR-004", "DILR", "LR::Mathematical_Reasoning", "Rise-then-fall sequences",
+  "Yearly amounts that start and end at fixed values, rise to a peak, then fall",
+  r"<ol><li>Subtract the fixed ends from the total.</li><li>List every rise-then-fall pattern with allowed steps that makes the remainder.</li><li>Firms with one pattern are certain; use them first.</li></ol>",
+  [], "Funding, production or score sequences with step-size rules.", "“No two equal consecutive years” rules out flat peaks.",
+  r"5 years, total 10, ends 1 ⇒ middle \(2, 4, 2\) only", ["2023-S2-DILR-01", "2023-S2-DILR-02", "2023-S2-DILR-03", "2023-S2-DILR-04", "2023-S2-DILR-05"], kind="Technique")
+F("DILR-DI-002", "DILR", "DI::Data_Tabulation", "Chains of 2-day averages",
+  "Averages of consecutive days are given",
+  r"\[T_1 + T_2 = 2A_2,\quad T_2 + T_3 = 2A_3,\ \dots\]",
+  [(r"\(A_k\)", "average of days \(k - 1\) and \(k\)")],
+  "One extra equality (two days equal) fixes every daily total.",
+  "Averages can be non-integers; double them first.",
+  r"\(T_3 = T_4\) and \(T_3 + T_4 = 32\) ⇒ \(16\) each", ["2023-S2-DILR-11", "2023-S2-DILR-12", "2023-S2-DILR-13", "2023-S2-DILR-14", "2023-S2-DILR-15"])
+F("DILR-LR-005", "DILR", "LR::Puzzles", "Grids with equal row and column totals",
+  "Cells hold distinct values 1–9 and rows/columns have equal sums",
+  r"\[\text{each line sum} = \frac{1 + 2 + \dots + 9}{3} = 15\]",
+  [], "3 × 3 grids with distinct integer averages and equal row and column totals.",
+  "Distinct integers between 1 and 9 in nine cells must be exactly 1 to 9.",
+  r"Col 1 averages \(4, 8\) ⇒ third \(= 3\)", ["2023-S2-DILR-16", "2023-S2-DILR-17", "2023-S2-DILR-18", "2023-S2-DILR-19", "2023-S2-DILR-20"])
+F("DILR-DI-003", "DILR", "DI::Data_Tabulation", "Two-way tables from percentages",
+  "Items split two ways (variant × type) with percentage clues",
+  r"<ol><li>Fill the 2 × 2 grid of city totals first (variant × type).</li><li>Then go dealer by dealer, subtracting.</li></ol>",
+  [], "Sales or survey sets where each item has two attributes.",
+  "A percentage of a sub-group (e.g. of Inverter ACs) is not a percentage of the total.",
+  r"Split Inverter \(36 = 80\%\) of Inverter ⇒ Inverter \(= 45\)", ["2023-S3-DILR-16", "2023-S3-DILR-17", "2023-S3-DILR-18", "2023-S3-DILR-19", "2023-S3-DILR-20"])
+F("DILR-LR-006", "DILR", "LR::Mathematical_Reasoning", "Weighted aggregate scores",
+  "An aggregate is a weighted average of two components",
+  r"\[\text{agg} = wT + (1 - w)P \qquad \text{agg}_1 - \text{agg}_2 = w\Delta T + (1 - w)\Delta P\]",
+  [(r"\(w\)", "weight of the test")],
+  "A given gap between two people’s aggregates is linear in \(w\): solve it directly.",
+  "Weights are positive and add to 1; reject cases that give an impossible component score.",
+  r"\(40 - 60w = 4 \Rightarrow w = 0.6\)", ["2023-S3-DILR-11", "2023-S3-DILR-12", "2023-S3-DILR-13", "2023-S3-DILR-14", "2023-S3-DILR-15"])
+
+
 for r in REF:
     extra = {"VARC-RC-001": ["2023-S1-VARC-09", "2023-S1-VARC-11", "2023-S1-VARC-13", "2023-S1-VARC-16"], "VARC-VA-001": ["2023-S1-VARC-18"],
              "VARC-VA-002": ["2023-S1-VARC-20"], "VARC-VA-003": ["2023-S1-VARC-22"], "VARC-VA-004": ["2023-S1-VARC-24"],
-             "QA-ALG-004": ["2023-S1-QA-06"], "DILR-STA-001": []}.get(r["rid"], [])
+             "QA-ALG-004": ["2023-S1-QA-06", "2023-S2-QA-02", "2023-S3-QA-05"], "DILR-STA-001": ["2023-S3-DILR-01", "2023-S3-DILR-04"],
+             "QA-ARI-001": ["2023-S3-QA-11"], "QA-ARI-003": ["2023-S2-QA-09"], "QA-ARI-004": ["2023-S2-QA-13", "2023-S2-QA-15", "2023-S3-QA-10"],
+             "QA-ARI-007": ["2023-S2-QA-14"], "QA-ARI-009": ["2023-S2-QA-10"], "QA-ARI-008": ["2023-S3-QA-13", "2023-S3-QA-15"],
+             "QA-ALG-007": ["2023-S2-QA-19"], "QA-GEO-003": ["2023-S2-QA-18"], "QA-NUM-001": ["2023-S2-QA-04"],
+             "DILR-LR-002": ["2023-S2-DILR-06"]}.get(r["rid"], [])
     r["seen"] += [x for x in extra if x not in r["seen"]]

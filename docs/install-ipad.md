@@ -6,7 +6,7 @@ There are two routes.
 AnkiMobile is the official Anki app for iOS. It's a one-time purchase on the App Store and supports everything in this deck.
 
 1. Install **AnkiMobile Flashcards** from the App Store.
-2. Download the latest `sipe_….apkg` from **Releases**, tap it, and choose **Open in AnkiMobile**. Or use the Files app's share sheet.
+2. Download `sipe.apkg` from the latest release on **Releases**, tap it, and choose **Open in AnkiMobile**. Or use the Files app's share sheet.
 3. Open **sipe ▸ 00 Start Here**.
 
 ## Free route: AnkiWeb in Safari

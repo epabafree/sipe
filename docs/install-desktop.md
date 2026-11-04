@@ -2,7 +2,7 @@
 
 1. Go to **apps.ankiweb.net** and download Anki for your system. Get the latest version.
 2. Install and open it.
-3. Download the latest `sipe_….apkg` from this repository's **Releases** page.
+3. Download `sipe.apkg` from the latest release on this repository's **Releases** page.
 4. Double-click the file, or in Anki choose **File ▸ Import…** and pick it.
 5. Open **sipe ▸ 00 Start Here**.
 
