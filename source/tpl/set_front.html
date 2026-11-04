@@ -1,0 +1,91 @@
+<div id="sp" class="sipe setcard" data-sid="{{SetID}}" data-sec="{{Section}}">
+  <div class="top">
+    <div class="meta"><span class="sec {{Section}}">{{SectionName}}</span><span class="dot">·</span><span>{{Paper}}</span><span class="dot">·</span><span>Whole set</span></div>
+    %%TOOLBAR%%
+  </div>
+  <div class="layout has-ctx">
+    <details class="ctx" open>
+      <summary>{{SetTitle}}</summary>
+      {{#Directions}}<div class="dir">{{Directions}}</div>{{/Directions}}
+      <div class="ctx-body hl-area">{{Context}}</div>
+    </details>
+    <section class="sq-list">{{Questions}}</section>
+  </div>
+</div>
+
+<script>%%COMMON%%</script>
+<script>
+SIPE.ready(function () {
+  var S = window.SIPE, root = document.getElementById('sp');
+  if (!root) return;
+  var sid = (root.getAttribute('data-sid') || '').trim(), K = 'setpick:' + sid, TK = 'set:' + sid;
+  var isBack = !!document.getElementById('ans');
+  var tval = root.querySelector('.tval');
+  S.apply(); S.toolbar(root);
+  if (root.getAttribute('data-sec') === 'VARC') { var cb = root.querySelector('[data-act=calc]'); if (cb) cb.style.display = 'none'; }
+  var picks = S.ssGet(K) || {};
+  var qs = Array.prototype.slice.call(root.querySelectorAll('.sq'));
+
+  function show(q, v) {
+    var type = q.getAttribute('data-type'), ans = q.getAttribute('data-ans'), fb = q.querySelector('.feedback');
+    var attempted = v != null && v !== '', right = S.isRight(type, ans, v);
+    q.classList.add('locked');
+    if (type === 'TITA') {
+      var inp = q.querySelector('input'), go = q.querySelector('.tita .btn');
+      if (inp) { inp.value = attempted ? v : ''; inp.disabled = true; if (attempted) inp.classList.add(right ? 'ok' : 'no'); }
+      if (go) go.style.display = 'none';
+    } else {
+      q.querySelectorAll('.opt').forEach(function (o) {
+        var k = o.getAttribute('data-k');
+        if (ans.split('|').indexOf(k) >= 0) o.classList.add('correct');
+        if (attempted && k === String(v) && !right) o.classList.add('wrong');
+        o.disabled = true;
+      });
+    }
+    var at = type === 'TITA' ? ans.split('|')[0] : 'option ' + ans.split('|').join(' or ');
+    fb.innerHTML = !attempted ? (isBack ? '<span class="neutral">Not attempted · answer: ' + at + '</span>' : '') : right ? '<span class="good">✓ Correct</span>' : '<span class="bad">Not quite — the answer is ' + at + '</span>';
+    return attempted ? (right ? 1 : 0) : null;
+  }
+
+  if (isBack) {
+    var secs = S.timerStop(TK); if (window.__sipeTick) clearInterval(window.__sipeTick);
+    if (tval && secs != null) tval.textContent = S.fmt(secs);
+    var got = 0, att = 0;
+    qs.forEach(function (q) { var r = show(q, picks[q.getAttribute('data-qn')]); if (r !== null) { att++; got += r; } });
+    var res = document.querySelector('#ans .result');
+    if (res) {
+      res.className = 'result ' + (att === 0 ? 'neutral' : got === qs.length ? 'good' : got >= qs.length / 2 ? 'neutral' : 'bad');
+      res.innerHTML = '<span>' + (att === 0 ? 'Answers revealed' : 'You got ' + got + ' of ' + qs.length + ' right') + '</span>' + (secs != null ? '<span class="time">Time · ' + S.fmt(secs) + '</span>' : '');
+    }
+    document.querySelectorAll('#ans .sqa').forEach(function (b) {
+      var qn = b.getAttribute('data-qn'), q = root.querySelector('.sq[data-qn="' + qn + '"]');
+      var type = q.getAttribute('data-type'), ans = q.getAttribute('data-ans');
+      if (type === 'TITA') { var st = b.querySelector('.ao[data-k=t]'); if (st) st.classList.add('on'); }
+      else ans.split('|').forEach(function (k) { var sk = b.querySelector('.ao[data-k="' + k + '"]'); if (sk) sk.classList.add('on'); });
+    });
+    var ctx = root.querySelector('.ctx'); if (ctx && window.innerWidth < 900) ctx.open = false;
+    S.stepMode(document);
+    S.ssDel(K); S.ssDel('t:' + TK);
+    return;
+  }
+
+  if (!S.ssGet('t:' + TK) || !Object.keys(picks).length) S.timerStart(TK);
+  S.timerLive(TK, tval);
+  S.highlighter(root);
+  qs.forEach(function (q) {
+    var qn = q.getAttribute('data-qn');
+    var opts = Array.prototype.slice.call(q.querySelectorAll('.opt'));
+    S.crossOut(opts);
+    var choose = function (v) {
+      if (q.classList.contains('locked')) return;
+      picks[qn] = String(v); S.ssSet(K, picks); show(q, String(v));
+      if (Object.keys(picks).length === qs.length) { var s2 = S.timerStop(TK); if (window.__sipeTick) clearInterval(window.__sipeTick); if (tval && s2 != null) tval.textContent = S.fmt(s2); }
+    };
+    if (picks[qn] != null) show(q, picks[qn]);
+    opts.forEach(function (o) { o.addEventListener('click', function () { if (o.__lp) { o.__lp = false; return; } choose(o.getAttribute('data-k')); }); });
+    var inp = q.querySelector('input'), go = q.querySelector('.tita .btn');
+    if (inp) inp.addEventListener('keydown', function (e) { e.stopPropagation(); if (e.key === 'Enter') { e.preventDefault(); if (inp.value.trim()) choose(inp.value.trim()); } });
+    if (go) go.addEventListener('click', function () { if (inp && inp.value.trim()) choose(inp.value.trim()); });
+  });
+});
+</script>

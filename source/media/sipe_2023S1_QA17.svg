@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 318" width="340" height="318">
+<rect width="340" height="318" fill="#ffffff"/>
+<circle cx="170" cy="150" r="115" fill="none" stroke="#9ca3af" stroke-width="1.6"/>
+<polygon points="65.8,198.6 121.4,45.8 281.1,120.2 209.3,258.1" fill="#eef2ff" stroke="#1f2937" stroke-width="1.8"/>
+<line x1="65.8" y1="198.6" x2="281.1" y2="120.2" stroke="#2563eb" stroke-width="1.6"/>
+<line x1="121.4" y1="45.8" x2="209.3" y2="258.1" stroke="#dc2626" stroke-width="1.6"/>
+<circle cx="169.1" cy="161.0" r="3.2" fill="#1f2937"/>
+<text x="45.8" y="204.6" font-size="17" font-style="italic" fill="#1f2937" font-family="Georgia,serif">A</text><text x="113.4" y="36.8" font-size="17" font-style="italic" fill="#1f2937" font-family="Georgia,serif">B</text><text x="288.1" y="124.2" font-size="17" font-style="italic" fill="#1f2937" font-family="Georgia,serif">C</text><text x="205.3" y="280.1" font-size="17" font-style="italic" fill="#1f2937" font-family="Georgia,serif">D</text><text x="175.1" y="154.0" font-size="17" font-style="italic" fill="#1f2937" font-family="Georgia,serif">E</text>
+<text x="10" y="310" font-size="12.5" fill="#4b5563" font-family="Helvetica,Arial,sans-serif">AB : CD = 2 : 1, BC : AD = 5 : 4 (not to scale)</text>
+</svg>

@@ -1,0 +1,255 @@
+<div id="sp" class="sipe mock" data-mid="{{MockID}}">
+  <div class="top"><div class="meta"><span class="sec">Paper</span><span class="dot">·</span><span>{{Title}}</span></div>%%TOOLBAR%%</div>
+  <div id="mk-app"><div class="block">Loading…</div></div>
+</div>
+<script type="application/json" id="mk-data">{{DataJSON}}</script>
+<script>%%COMMON%%</script>
+<script>
+SIPE.ready(function () {
+  var S = window.SIPE, root = document.getElementById('sp'), host = document.getElementById('mk-app');
+  if (!root || !host) return;
+  S.apply(); S.toolbar(root);
+  var tb = root.querySelector('[data-act=timer]'); if (tb) tb.style.display = 'none';
+  var MID = (root.getAttribute('data-mid') || 'mock').trim();
+  var DATA; try { DATA = JSON.parse(document.getElementById('mk-data').textContent); } catch (e) { host.innerHTML = '<div class="block">Could not read the mock data.</div>'; return; }
+  var SECN = { VARC: 'Verbal Ability & Reading Comprehension', DILR: 'Data Interpretation & Logical Reasoning', QA: 'Quantitative Aptitude' };
+  var PACE = { VARC: 40 / 24, DILR: 40 / 20, QA: 40 / 22 }, ORDER = ['VARC', 'DILR', 'QA'];
+  var sections = ORDER.filter(function (s) { return DATA.questions.some(function (q) { return q.section === s; }); });
+  var bySec = {}; sections.forEach(function (s) { bySec[s] = DATA.questions.filter(function (q) { return q.section === s; }); });
+  var HIST = 'sipe:mockhist:' + MID, M = null, tick = null;
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function stop() { if (tick) { clearInterval(tick); tick = null; } }
+  function score(q, v) { if (v == null || v === '') return null; return S.isRight(q.qtype, q.answer, v); }
+
+  var PROG = 'sipe:paperprog:' + MID;
+  function start() {
+    stop();
+    var hist = S.lsGet(HIST) || [], last = hist[hist.length - 1];
+    var prog = S.lsGet(PROG) || {}, done = Object.keys(prog).length, right = Object.keys(prog).filter(function (k) { return prog[k] === 'c'; }).length;
+    var total = DATA.questions.length;
+    host.innerHTML = '<div class="read">' +
+      '<div class="modes">' +
+        '<button type="button" class="mode" id="mk-practice"><b>Practice this paper</b><span>Move freely between questions, check each answer and read the solution straight away. Doesn’t affect your Anki reviews.</span>' +
+          (done ? '<em>' + done + ' of ' + total + ' tried · ' + right + ' right last time</em>' : '') + '</button>' +
+        '<button type="button" class="mode" id="mk-mock"><b>Timed mock</b><span>Exam conditions: answers stay hidden until you submit, then you get a CAT-style score.</span>' +
+          (last ? '<em>Last score ' + last.score + ' / ' + last.max + '</em>' : '') + '</button>' +
+      '</div>' +
+      '<div id="mk-setup"></div>' +
+      (done ? '<p class="small" style="margin-top:10px"><a href="#" id="mk-resetprog">Clear practice progress</a></p>' : '') +
+      '</div>';
+    host.querySelector('#mk-practice').onclick = function () { practice(); };
+    host.querySelector('#mk-mock').onclick = function () { mockSetup(); };
+    var rp = host.querySelector('#mk-resetprog'); if (rp) rp.onclick = function (e) { e.preventDefault(); S.lsSet(PROG, {}); start(); };
+  }
+  function mockSetup() {
+    var hist = S.lsGet(HIST) || [], last = hist[hist.length - 1];
+    var total = DATA.questions.length;
+    host.innerHTML = '<div class="read"><div class="block">' +
+      '<h4>Timed mock</h4>' +
+      '<p>' + esc(DATA.title) + '. Questions appear in the original order and are scored CAT-style: <b>+3</b> for a correct answer, <b>−1</b> for a wrong MCQ answer, no penalty on TITA.</p>' +
+      '<div class="tbl"><table><tr><th>Section</th><th>Questions</th><th>Real CAT time</th></tr>' + sections.map(function (s) { return '<tr><td class="rh">' + SECN[s] + '</td><td>' + bySec[s].length + '</td><td>40 min</td></tr>'; }).join('') + '</table></div>' +
+      '<div class="pl-sub">Timer</div>' +
+      '<label class="radio"><input type="radio" name="mk-t" value="none" checked> No timer</label>' +
+      '<label class="radio"><input type="radio" name="mk-t" value="real"> Real CAT: 40 minutes per section, sections lock in order</label>' +
+      '<label class="radio"><input type="radio" name="mk-t" value="custom"> One overall timer: <input type="number" id="mk-min" min="5" max="240" value="' + Math.max(10, Math.round(total * 1.8)) + '" style="width:72px"> minutes</label>' +
+      '<div class="pl-sub">Sections</div>' +
+      '<label class="radio"><input type="radio" name="mk-s" value="all" checked> All sections (' + sections.join(' → ') + ')</label>' +
+      sections.map(function (s) { return '<label class="radio"><input type="radio" name="mk-s" value="' + s + '"> ' + SECN[s] + ' only</label>'; }).join('') +
+      '<div style="margin-top:14px; display:flex; gap:8px"><button class="btn" id="mk-start">Start</button><button class="btn ghost" id="mk-back">Back</button></div>' +
+      (last ? '<p class="small" style="margin-top:12px">Last attempt: <b>' + last.score + '</b> / ' + last.max + ' · ' + esc(last.when) + ' · ' + hist.length + ' saved on this device</p>' : '') +
+      '</div></div>';
+    host.querySelector('#mk-back').onclick = start;
+    host.querySelector('#mk-start').onclick = function () {
+      var t = host.querySelector('input[name=mk-t]:checked').value, sc = host.querySelector('input[name=mk-s]:checked').value;
+      begin(t, sc === 'all' ? sections.slice() : [sc], +(host.querySelector('#mk-min').value || 60));
+    };
+  }
+
+  /* ---------------- practice navigator ---------------- */
+  var PR = null;
+  function practice() { stop(); M = null; PR = PR || { si: 0, qi: 0, live: {} }; prRender(); }
+  function prRender() {
+    var s = sections[PR.si], list = bySec[s], q = list[PR.qi], prog = S.lsGet(PROG) || {}, live = PR.live[q.id];
+    var tabs = sections.map(function (x, i) { return '<button type="button" class="mk-tab' + (i === PR.si ? ' on' : '') + '" data-si="' + i + '">' + x + '</button>'; }).join('');
+    var pal = list.map(function (x, i) { var st = prog[x.id]; return '<button class="pb ' + (st === 'c' ? 'a' : st === 'w' ? 'na' : 'nv') + (i === PR.qi ? ' cur' : '') + '" data-i="' + i + '">' + x.qno + '</button>'; }).join('');
+    var al = String(q.answer).split('|');
+    var opts = q.qtype === 'TITA'
+      ? '<div class="tita"><label>Type your answer</label><input id="pr-in" type="text" autocomplete="off" value="' + esc(live ? live.v : '') + '"' + (live ? ' disabled class="' + (live.r ? 'ok' : 'no') + '"' : '') + '><button type="button" class="btn" id="pr-go"' + (live ? ' style="display:none"' : '') + '>Check</button></div>'
+      : '<div class="opts">' + q.options.map(function (o, i) { var k = String(i + 1), cls = '';
+          if (live) { if (al.indexOf(k) >= 0) cls = ' correct'; else if (String(live.v) === k) cls = ' wrong'; }
+          return '<button type="button" class="opt' + cls + '" data-k="' + k + '"' + (live ? ' disabled' : '') + '><span class="key">' + k + '</span><span class="txt">' + o + '</span></button>'; }).join('') + '</div>';
+    var ctx = q.context ? '<details class="ctx" open><summary>' + q.set_title + '</summary>' + (q.directions ? '<div class="dir">' + q.directions + '</div>' : '') + '<div class="ctx-body hl-area">' + q.context + '</div></details>' : '';
+    var fb = live ? (live.r ? '<span class="good">✓ Correct</span>' : '<span class="bad">Not quite — the answer is ' + (q.qtype === 'TITA' ? esc(al[0]) : 'option ' + al.join(' or ')) + '</span>') : '';
+    var sol = live ? '<div class="block" style="margin-top:14px"><h4>Solution</h4>' + q.solution + '</div>' + (q.shortcut ? '<div class="block tip"><h4>Shortcut</h4>' + q.shortcut + '</div>' : '') : '';
+    host.innerHTML =
+      '<div class="mk-bar"><div class="mk-tabs">' + tabs + '</div><div class="mk-timer" style="font-size:13px;color:var(--muted)">Practice · ' + Object.keys(prog).length + ' / ' + DATA.questions.length + ' tried</div></div>' +
+      '<div class="mk-body"><div class="mk-main"><div class="layout' + (q.context ? ' has-ctx' : '') + '">' + ctx +
+      '<section class="qpane' + (live ? ' locked' : '') + '"><div class="small" style="margin-bottom:8px">' + SECN[s] + ' · Question ' + q.qno + ' · ' + q.qtype + '</div><div class="question hl-area">' + q.question + '</div>' + opts +
+      '<div class="feedback">' + fb + '</div>' + (live ? '<button type="button" class="btn ghost small" id="pr-retry" style="margin-top:10px">Try again</button>' : '') + sol + '</section></div>' +
+      '<div class="mk-nav"><button class="btn ghost" id="pr-prev">◀ Previous</button><button class="btn" id="pr-next">Next ▶</button></div></div>' +
+      '<aside class="mk-pal"><div class="pal-grid">' + pal + '</div>' +
+      '<div class="legend"><span><i class="pb a"></i>Right last time</span><span><i class="pb na"></i>Wrong last time</span><span><i class="pb nv"></i>Not tried</span></div>' +
+      '<button class="btn ghost" id="pr-exit" style="width:100%;margin-top:10px">Back to paper menu</button></aside></div>';
+    var check = function (v) {
+      var r = S.isRight(q.qtype, q.answer, v);
+      PR.live[q.id] = { v: v, r: r };
+      var pg = S.lsGet(PROG) || {}; pg[q.id] = r ? 'c' : 'w'; S.lsSet(PROG, pg);
+      prRender();
+    };
+    host.querySelectorAll('.opt').forEach(function (b) { b.addEventListener('click', function () { if (b.__lp) { b.__lp = false; return; } if (!PR.live[q.id]) check(b.getAttribute('data-k')); }); });
+    S.crossOut(Array.prototype.slice.call(host.querySelectorAll('.opt'))); S.highlighter(host);
+    var inp = document.getElementById('pr-in'), go = document.getElementById('pr-go');
+    if (inp) inp.onkeydown = function (e) { e.stopPropagation(); if (e.key === 'Enter' && inp.value.trim()) check(inp.value.trim()); };
+    if (go) go.onclick = function () { if (inp.value.trim()) check(inp.value.trim()); };
+    var rt = document.getElementById('pr-retry'); if (rt) rt.onclick = function () { delete PR.live[q.id]; prRender(); };
+    host.querySelector('#pr-prev').onclick = function () { prGo(-1); };
+    host.querySelector('#pr-next').onclick = function () { prGo(1); };
+    host.querySelector('#pr-exit').onclick = function () { PR = null; start(); };
+    host.querySelectorAll('.mk-tab').forEach(function (b) { b.onclick = function () { PR.si = +b.getAttribute('data-si'); PR.qi = 0; prRender(); }; });
+    host.querySelectorAll('.pb[data-i]').forEach(function (b) { b.onclick = function () { PR.qi = +b.getAttribute('data-i'); prRender(); }; });
+    S.typeset(host); S.stepMode(host);
+  }
+  function prGo(d) {
+    var n = bySec[sections[PR.si]].length, nq = PR.qi + d;
+    if (nq >= n && PR.si < sections.length - 1) { PR.si++; PR.qi = 0; }
+    else if (nq < 0 && PR.si > 0) { PR.si--; PR.qi = bySec[sections[PR.si]].length - 1; }
+    else PR.qi = Math.min(n - 1, Math.max(0, nq));
+    prRender();
+    try { host.scrollIntoView({ block: 'start' }); } catch (e) {}
+  }
+
+  function begin(mode, secs, mins) {
+    PR = null;
+    M = { mode: mode, secs: secs, si: 0, qi: 0, ans: {}, mark: {}, seen: {}, spent: {}, left: {}, overall: mode === 'custom' ? mins * 60 : null, done: false };
+    secs.forEach(function (s) { M.left[s] = mode === 'real' ? 40 * 60 : null; M.spent[s] = 0; });
+    render();
+    var lastT = Date.now();
+    tick = setInterval(function () {
+      if (!M || M.done || !document.body.contains(host)) { stop(); return; }
+      var now = Date.now(), dt = (now - lastT) / 1000; lastT = now;
+      var s = M.secs[M.si], q = bySec[s][M.qi];
+      M.spent[s] += dt; M.seen[q.id] = (M.seen[q.id] || 0) + dt;
+      if (M.left[s] != null) { M.left[s] -= dt; if (M.left[s] <= 0) { M.left[s] = 0; nextSection(true); return; } }
+      if (M.overall != null) { M.overall -= dt; if (M.overall <= 0) { M.overall = 0; finish(true); return; } }
+      clock();
+    }, 1000);
+  }
+  function clock() {
+    var el = document.getElementById('mk-timer'); if (!el || !M) return;
+    var s = M.secs[M.si], v = M.left[s] != null ? M.left[s] : M.overall;
+    el.textContent = v != null ? S.fmt(v) + ' left' : S.fmt(M.spent[s]) + ' on this section';
+    el.classList.toggle('low', v != null && v < 300);
+  }
+  function status(q) { var a = M.ans[q.id], m = M.mark[q.id], has = a != null && a !== ''; return m && has ? 'am' : m ? 'm' : has ? 'a' : M.seen[q.id] != null ? 'na' : 'nv'; }
+
+  function render() {
+    var s = M.secs[M.si], list = bySec[s], q = list[M.qi], a = M.ans[q.id];
+    if (M.seen[q.id] == null) M.seen[q.id] = 0;
+    var free = M.mode !== 'real';
+    var tabs = M.secs.map(function (x, i) { return '<button type="button" class="mk-tab' + (i === M.si ? ' on' : '') + (!free && i < M.si ? ' past' : '') + '" data-si="' + i + '"' + (!free && i !== M.si ? ' disabled' : '') + '>' + x + '</button>'; }).join('');
+    var opts = q.qtype === 'TITA'
+      ? '<div class="tita"><label>Type your answer</label><input id="mk-in" type="text" autocomplete="off" value="' + esc(a || '') + '"></div>'
+      : '<div class="opts">' + q.options.map(function (o, i) { var k = String(i + 1); return '<button type="button" class="opt' + (String(a) === k ? ' chosen' : '') + '" data-k="' + k + '"><span class="key">' + k + '</span><span class="txt">' + o + '</span></button>'; }).join('') + '</div>';
+    var ctx = q.context ? '<details class="ctx" open><summary>' + q.set_title + '</summary>' + (q.directions ? '<div class="dir">' + q.directions + '</div>' : '') + '<div class="ctx-body hl-area">' + q.context + '</div></details>' : '';
+    host.innerHTML =
+      '<div class="mk-bar"><div class="mk-tabs">' + tabs + '</div><div id="mk-timer" class="mk-timer"></div></div>' +
+      '<div class="mk-body"><div class="mk-main"><div class="layout' + (q.context ? ' has-ctx' : '') + '">' + ctx +
+      '<section class="qpane"><div class="small" style="margin-bottom:8px">' + SECN[s] + ' · Question ' + q.qno + ' · ' + q.qtype + '</div><div class="question hl-area">' + q.question + '</div>' + opts + '</section></div>' +
+      '<div class="mk-nav"><button class="btn ghost" id="mk-prev">◀ Previous</button><button class="btn ghost" id="mk-clear">Clear</button><button class="btn ghost" id="mk-mark">' + (M.mark[q.id] ? 'Unmark' : 'Mark for review') + '</button><button class="btn" id="mk-next">Save &amp; next ▶</button></div></div>' +
+      '<aside class="mk-pal"><div class="pal-grid">' + list.map(function (x, i) { return '<button class="pb ' + status(x) + (i === M.qi ? ' cur' : '') + '" data-i="' + i + '">' + x.qno + '</button>'; }).join('') + '</div>' +
+      '<div class="legend"><span><i class="pb a"></i>Answered</span><span><i class="pb na"></i>Not answered</span><span><i class="pb m"></i>Marked</span><span><i class="pb am"></i>Answered + marked</span><span><i class="pb nv"></i>Not visited</span></div>' +
+      '<button class="btn ghost" id="mk-end" style="width:100%;margin-top:10px">' + (!free && M.si < M.secs.length - 1 ? 'Submit section → ' + M.secs[M.si + 1] : 'Submit test') + '</button></aside></div>';
+    clock();
+    host.querySelectorAll('.opt').forEach(function (b) { b.addEventListener('click', function () { if (b.__lp) { b.__lp = false; return; } M.ans[q.id] = b.getAttribute('data-k'); host.querySelectorAll('.opt').forEach(function (x) { x.classList.toggle('chosen', x === b); }); pal(); }); });
+    S.crossOut(Array.prototype.slice.call(host.querySelectorAll('.opt')));
+    S.highlighter(host);
+    var inp = document.getElementById('mk-in');
+    if (inp) { inp.oninput = function () { M.ans[q.id] = inp.value.trim(); pal(); }; inp.onkeydown = function (e) { e.stopPropagation(); if (e.key === 'Enter') { e.preventDefault(); go(1); } }; }
+    host.querySelector('#mk-prev').onclick = function () { go(-1); };
+    host.querySelector('#mk-next').onclick = function () { go(1); };
+    host.querySelector('#mk-clear').onclick = function () { delete M.ans[q.id]; render(); };
+    host.querySelector('#mk-mark').onclick = function () { M.mark[q.id] = !M.mark[q.id]; go(1); };
+    host.querySelectorAll('.mk-tab').forEach(function (b) { b.onclick = function () { if (b.disabled) return; M.si = +b.getAttribute('data-si'); M.qi = 0; render(); }; });
+    host.querySelectorAll('.pb[data-i]').forEach(function (b) { b.onclick = function () { M.qi = +b.getAttribute('data-i'); render(); }; });
+    host.querySelector('#mk-end').onclick = function () {
+      var all = free ? DATA.questions.filter(function (x) { return M.secs.indexOf(x.section) >= 0; }) : list;
+      var un = all.filter(function (x) { return !(M.ans[x.id] != null && M.ans[x.id] !== ''); }).length;
+      var box = document.createElement('div'); box.className = 'block mk-confirm';
+      box.innerHTML = '<p><b>' + (!free && M.si < M.secs.length - 1 ? 'Submit this section?' : 'Submit the test?') + '</b> ' + un + ' unanswered.' + (!free ? ' You can’t come back to this section.' : '') + '</p><button class="btn small" id="mk-yes">Submit</button> <button class="btn ghost small" id="mk-no">Keep working</button>';
+      var old = host.querySelector('.mk-confirm'); if (old) old.remove();
+      host.querySelector('.mk-pal').appendChild(box);
+      box.querySelector('#mk-yes').onclick = function () { if (free) finish(false); else nextSection(false); };
+      box.querySelector('#mk-no').onclick = function () { box.remove(); };
+    };
+    S.typeset(host);
+  }
+  function pal() { var list = bySec[M.secs[M.si]]; host.querySelectorAll('.pb[data-i]').forEach(function (b) { var i = +b.getAttribute('data-i'); b.className = 'pb ' + status(list[i]) + (i === M.qi ? ' cur' : ''); }); }
+  function go(d) { var n = bySec[M.secs[M.si]].length, nq = M.qi + d;
+    if (nq >= n && M.mode !== 'real' && M.si < M.secs.length - 1) { M.si++; M.qi = 0; }
+    else if (nq < 0 && M.mode !== 'real' && M.si > 0) { M.si--; M.qi = bySec[M.secs[M.si]].length - 1; }
+    else M.qi = Math.min(n - 1, Math.max(0, nq));
+    render(); }
+  function nextSection(auto) { if (M.si < M.secs.length - 1) { M.si++; M.qi = 0; render(); if (auto) S.toast('Time up — moved to ' + M.secs[M.si]); } else finish(auto); }
+
+  function finish(auto) {
+    M.done = true; stop();
+    var tot = 0, max = 0, rows = '', topics = {};
+    M.secs.forEach(function (s) {
+      var c = 0, w = 0, sc = 0;
+      bySec[s].forEach(function (q) {
+        var r = score(q, M.ans[q.id]);
+        var tp = topics[q.topic] = topics[q.topic] || { c: 0, w: 0, u: 0, sec: s };
+        if (r === null) tp.u++; else if (r) { c++; sc += 3; tp.c++; } else { w++; tp.w++; if (q.qtype !== 'TITA') sc -= 1; }
+      });
+      tot += sc; max += bySec[s].length * 3;
+      var att = c + w;
+      rows += '<tr><td class="rh">' + s + '</td><td>' + att + ' / ' + bySec[s].length + '</td><td>' + c + '</td><td>' + w + '</td><td><b>' + sc + '</b></td><td>' + (att ? Math.round(100 * c / att) + '%' : '–') + '</td><td>' + S.fmt(M.spent[s]) + '</td></tr>';
+    });
+    var hist = S.lsGet(HIST) || [], d = new Date();
+    hist.push({ score: tot, max: max, when: d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) });
+    S.lsSet(HIST, hist.slice(-20));
+    var tRows = Object.keys(topics).map(function (k) { var t = topics[k]; return [k, t]; })
+      .sort(function (a, b) { return (b[1].w + b[1].u) - (a[1].w + a[1].u); })
+      .map(function (x) { var t = x[1], n = t.c + t.w + t.u; return '<tr><td class="rh">' + esc(x[0]) + '</td><td>' + t.sec + '</td><td>' + t.c + ' / ' + n + '</td><td>' + (t.w ? '<span style="color:var(--bad)">' + t.w + ' wrong</span>' : '') + (t.u ? ' ' + t.u + ' skipped' : '') + '</td></tr>'; }).join('');
+    var list = M.secs.map(function (s) {
+      return '<div class="pl-sub">' + SECN[s] + '</div><div class="rv-list">' + bySec[s].map(function (q) {
+        var v = M.ans[q.id], r = score(q, v);
+        return '<button class="rv ' + (r === null ? 'u' : r ? 'c' : 'w') + '" data-id="' + esc(q.id) + '"><b>Q' + q.qno + '</b><span>' + (r === null ? '—' : esc(v)) + '</span><span class="small">' + S.fmt(M.seen[q.id] || 0) + '</span></button>';
+      }).join('') + '</div>';
+    }).join('');
+    host.innerHTML = '<div class="read">' + (auto ? '<div class="mk-flash">Time’s up — the test was submitted.</div>' : '') +
+      '<div class="block"><h4>Your result</h4><div class="mk-score">' + tot + ' <span>/ ' + max + '</span></div>' +
+      '<div class="tbl"><table><tr><th>Section</th><th>Attempted</th><th>Correct</th><th>Wrong</th><th>Score</th><th>Accuracy</th><th>Time</th></tr>' + rows + '</table></div></div>' +
+      '<div class="block"><h4>By topic · where the marks went</h4><div class="tbl"><table><tr><th>Topic</th><th>Section</th><th>Correct</th><th></th></tr>' + tRows + '</table></div></div>' +
+      '<div class="block"><h4>Review</h4><p class="small">Tap a question to see the solution. Green = correct, red = wrong, grey = skipped; the time is how long you spent on it.</p>' + list + '<div id="mk-rv"></div></div>' +
+      '<button class="btn ghost" id="mk-again">Back to start</button></div>';
+    host.querySelectorAll('.rv').forEach(function (b) {
+      b.onclick = function () {
+        var q = DATA.questions.filter(function (x) { return x.id === b.getAttribute('data-id'); })[0], v = M.ans[q.id];
+        var opt = q.qtype === 'TITA' ? '' : '<div class="opts">' + q.options.map(function (o, i) { var k = String(i + 1); return '<div class="opt' + (String(q.answer).split('|').indexOf(k) >= 0 ? ' correct' : k === String(v) ? ' wrong' : '') + '"><span class="key">' + k + '</span><span class="txt">' + o + '</span></div>'; }).join('') + '</div>';
+        var box = document.getElementById('mk-rv');
+        box.innerHTML = '<div style="margin-top:16px">' + (q.context ? '<details class="ctx"><summary>' + q.set_title + '</summary><div class="ctx-body">' + q.context + '</div></details>' : '') +
+          '<div class="qpane"><div class="small" style="margin-bottom:8px">' + q.section + ' · Question ' + q.qno + '</div><div class="question">' + q.question + '</div>' + opt +
+          '<p style="margin-top:12px"><b>Your answer:</b> ' + (v == null || v === '' ? '—' : esc(v)) + ' &nbsp;·&nbsp; <b>Correct:</b> ' + esc(String(q.answer).split('|')[0]) + '</p></div>' +
+          '<div class="block" style="margin-top:12px"><h4>Solution</h4>' + q.solution + '</div>' + (q.shortcut ? '<div class="block tip"><h4>Shortcut</h4>' + q.shortcut + '</div>' : '') + '</div>';
+        S.typeset(box); S.stepMode(box);
+        try { box.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) {}
+      };
+    });
+    host.querySelector('#mk-again').onclick = function () { M = null; start(); };
+  }
+
+  if (window.__mkKey) document.removeEventListener('keydown', window.__mkKey, true);
+  window.__mkKey = function (e) {
+    if (!document.body.contains(host)) return;
+    if (e.target && e.target.tagName === 'INPUT') return;
+    var inPr = PR && !M, inMk = M && !M.done;
+    if (!inPr && !inMk) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); e.stopPropagation(); inPr ? prGo(1) : go(1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); e.stopPropagation(); inPr ? prGo(-1) : go(-1); }
+    else if (/^[1-4]$/.test(e.key)) { var b = host.querySelector('.opt[data-k="' + e.key + '"]'); if (b) { e.preventDefault(); e.stopPropagation(); b.click(); } }
+  };
+  document.addEventListener('keydown', window.__mkKey, true);
+  start();
+});
+</script>

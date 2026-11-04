@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+<rect width="400" height="250" fill="#ffffff"/>
+<polygon points="40,60 40,190 248,190" fill="#dbeafe"/>
+<polygon points="40,60 248,190 300,190" fill="#fde68a"/>
+<line x1="40" y1="60" x2="40" y2="190" stroke="#1f2937" stroke-width="1.8" /><line x1="40" y1="190" x2="352" y2="190" stroke="#1f2937" stroke-width="1.8" /><line x1="40" y1="60" x2="352" y2="190" stroke="#1f2937" stroke-width="1.8" />
+<line x1="40" y1="60" x2="248" y2="190" stroke="#2563eb" stroke-width="1.4" /><line x1="40" y1="60" x2="300" y2="190" stroke="#b45309" stroke-width="1.4" />
+<polyline points="40,178 52,178 52,190" fill="none" stroke="#1f2937" stroke-width="1.2"/>
+<g font-family="Georgia,serif" font-style="italic" font-size="17" fill="#1f2937">
+<text x="32" y="52">A</text><text x="20" y="196">B</text>
+<text x="358" y="196">C</text><text x="242" y="212">P</text><text x="294" y="212">Q</text></g>
+<g font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#4b5563">
+<text x="6" y="129.0">5 cm</text>
+<text x="132" y="228">BP = 8</text><text x="266" y="228">PQ = 2</text>
+<text x="320" y="228">QC = 2</text>
+<text x="40" y="46" > </text>
+<text x="200" y="40">[ABP] = 20, [ABQ] = 25, [ABC] = 30</text></g>
+</svg>

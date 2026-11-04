@@ -1,0 +1,155 @@
+<div id="sp" class="sipe planner">
+  <div class="top"><div class="meta"><span class="sec">Study Planner</span></div>%%TOOLBAR%%</div>
+  <div class="read">
+    <h1 class="g-title">What do you want to practise?</h1>
+    <p class="small">Tick what you want and copy the line at the bottom into a filtered deck. You don’t need to learn any search syntax.</p>
+    <div id="pl-app"></div>
+  </div>
+</div>
+<script type="application/json" id="pl-data">{{IndexJSON}}</script>
+<script>%%COMMON%%</script>
+<script>
+SIPE.ready(function () {
+  var S = window.SIPE, root = document.getElementById('sp'); if (!root) return;
+  S.apply(); S.toolbar(root);
+  ['timer', 'calc'].forEach(function (a) { var b = root.querySelector('[data-act=' + a + ']'); if (b) b.style.display = 'none'; });
+  var app = document.getElementById('pl-app');
+  var D; try { D = JSON.parse(document.getElementById('pl-data').textContent); } catch (e) { app.textContent = 'Could not load the planner data.'; return; }
+  var R = D.root;
+  var SECN = { VARC: 'Verbal Ability & Reading Comprehension', DILR: 'Data Interpretation & Logical Reasoning', QA: 'Quantitative Aptitude' };
+  var st = { noresched: false, sec: {}, topic: {}, year: {}, slot: {}, fmt: {}, diff: {}, flag: {}, hist: 'any', days: 14, cards: { Question: true, Set: false, Ref: false }, order: 'added' };
+  var saved = S.lsGet('sipe:planner'); if (saved) { for (var k in saved) st[k] = saved[k]; }
+
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
+  function on(o) { return Object.keys(o).filter(function (k) { return o[k]; }); }
+  function chip(group, val, label, title) { return '<button type="button" class="pchip' + (st[group][val] ? ' on' : '') + '" data-g="' + group + '" data-v="' + esc(val) + '"' + (title ? ' title="' + esc(title) + '"' : '') + '>' + label + '</button>'; }
+  function tq(tag) { return 'tag:' + R + '::' + tag; }
+  function or(list) { return list.length === 1 ? list[0] : '(' + list.join(' OR ') + ')'; }
+
+  var RECIPES = [
+    { n: 'Revisit a paper', d: 'Every card from a paper, done or not, in exam order. Your schedule stays untouched', f: function () { reset(); st.noresched = true; st.year = {}; st.year[D.years[0]] = true; st.slot = {}; st.slot[D.slots[0]] = true; } },
+    { n: 'Practise one topic', d: 'Pick a topic below; every year is included', f: function () { reset(); st.cards = { Question: true, Set: false, Ref: false }; } },
+    { n: 'Topic + its formulas', d: 'Questions plus that topic’s formula cards', f: function () { reset(); st.cards = { Question: true, Set: false, Ref: true }; } },
+    { n: 'Redo my mistakes', d: 'Anything you got wrong in the last 14 days', f: function () { reset(); st.hist = 'wrong'; st.days = 14; st.order = 'random'; } },
+    { n: 'Fix concept gaps', d: 'Everything flagged red', f: function () { reset(); st.flag = { 1: true }; } },
+    { n: 'Silly-mistake drill', d: 'Everything flagged orange, shuffled', f: function () { reset(); st.flag = { 2: true }; st.order = 'random'; } },
+    { n: 'Speed work', d: 'Everything flagged blue', f: function () { reset(); st.flag = { 4: true }; } },
+    { n: 'Tricks to revise', d: 'Everything flagged green', f: function () { reset(); st.flag = { 3: true }; } },
+    { n: 'Keep forgetting', d: 'Cards you have forgotten 2+ times', f: function () { reset(); st.hist = 'lapses'; } },
+    { n: 'TITA practice', d: 'Only type-your-answer questions', f: function () { reset(); st.fmt = { TITA: true }; } },
+    { n: 'Whole passages & sets', d: 'Set cards only, in paper order', f: function () { reset(); st.cards = { Question: false, Set: true, Ref: false }; } }
+  ];
+  function reset() { st.noresched = false; st.sec = {}; st.topic = {}; st.year = {}; st.slot = {}; st.fmt = {}; st.diff = {}; st.flag = {}; st.hist = 'any'; st.order = 'added'; st.cards = { Question: true, Set: false, Ref: false }; }
+
+  function topicsHtml() {
+    var secs = on(st.sec).length ? on(st.sec) : Object.keys(D.topics);
+    return secs.map(function (s) {
+      var areas = D.topics[s] || {};
+      return '<div class="pt-sec"><div class="pt-sh">' + SECN[s] + '</div>' + Object.keys(areas).map(function (a) {
+        var subs = areas[a], aTag = 'Topic::' + s + '::' + a;
+        return '<details class="pt-area"' + (subs.some(function (x) { return st.topic['Topic::' + s + '::' + a + '::' + x]; }) || st.topic[aTag] ? ' open' : '') + '><summary>' +
+          chip('topic', aTag, a.replace(/_/g, ' ') + ' <span class="cnt">all</span>') + '</summary><div class="pt-subs">' +
+          subs.map(function (x) { return chip('topic', aTag + '::' + x, x.replace(/_/g, ' ')); }).join('') + '</div></details>';
+      }).join('') + '</div>';
+    }).join('');
+  }
+
+  function build() {
+    var qp = [];
+    var secs = on(st.sec), tps = on(st.topic), yrs = on(st.year), sls = on(st.slot), fm = on(st.fmt), df = on(st.diff), fl = on(st.flag);
+    var cardTags = []; if (st.cards.Question) cardTags.push(tq('Card::Question')); if (st.cards.Set) cardTags.push(tq('Card::Set'));
+    var parts = [];
+    if (cardTags.length) {
+      qp.push(or(cardTags));
+      if (secs.length) qp.push(or(secs.map(function (s) { return tq('Section::' + s); })));
+      if (tps.length) qp.push(or(tps.map(tq)));
+      if (yrs.length) qp.push(or(yrs.map(function (y) { return tq('Year::' + y); })));
+      if (sls.length) qp.push(or(sls.map(function (y) { return tq('Slot::' + y); })));
+      if (fm.length) qp.push(or(fm.map(function (y) { return tq('Format::' + y); })));
+      if (df.length) qp.push(or(df.map(function (y) { return tq('Difficulty::' + y); })));
+      parts.push(qp.join(' '));
+    }
+    if (st.cards.Ref) {
+      var rp = [or([tq('Card::Formula'), tq('Card::Technique')])];
+      if (secs.length) rp.push(or(secs.map(function (s) { return tq('Section::' + s); })));
+      if (tps.length) rp.push(or(tps.map(tq)));
+      parts.push(rp.join(' '));
+    }
+    if (!parts.length) return { q: '', n: 0 };
+    var q = parts.length > 1 ? '(' + parts.map(function (x) { return '(' + x + ')'; }).join(' OR ') + ')' : parts[0];
+    if (fl.length) q += ' ' + or(fl.map(function (f) { return 'flag:' + f; }));
+    if (st.hist === 'new') q += ' is:new'; else if (st.hist === 'due') q += ' is:due'; else if (st.hist === 'wrong') q += ' rated:' + st.days + ':1'; else if (st.hist === 'lapses') q += ' prop:lapses>=2'; else if (st.hist === 'seen') q += ' -is:new';
+    q = 'deck:' + R + ' ' + q;
+    var n = D.items.filter(function (it) {
+      var t = it.t;
+      var has = function (x) { return t.some(function (y) { return y === x || y.indexOf(x + '::') === 0; }); };
+      var isRef = has('Card::Formula') || has('Card::Technique');
+      if (isRef) { if (!st.cards.Ref) return false; }
+      else { if (!(st.cards.Question && has('Card::Question')) && !(st.cards.Set && has('Card::Set'))) return false;
+        if (yrs.length && !yrs.some(function (y) { return has('Year::' + y); })) return false;
+        if (sls.length && !sls.some(function (y) { return has('Slot::' + y); })) return false;
+        if (fm.length && !fm.some(function (y) { return has('Format::' + y); })) return false;
+        if (df.length && !df.some(function (y) { return has('Difficulty::' + y); })) return false; }
+      if (secs.length && !secs.some(function (s) { return has('Section::' + s); })) return false;
+      if (tps.length && !tps.some(function (x) { return has(x); })) return false;
+      return true;
+    }).length;
+    return { q: q, n: n };
+  }
+
+  var tab = 'desk';
+  function render() {
+    S.lsSet('sipe:planner', st);
+    var b = build();
+    var hist = [['any', 'Everything'], ['new', 'Not studied yet'], ['due', 'Due today'], ['seen', 'Already studied'], ['wrong', 'Got wrong recently'], ['lapses', 'Forgotten 2+ times']];
+    var flags = [['1', 'Concept gap', '#d14b43'], ['2', 'Silly mistake', '#e58a2e'], ['4', 'Too slow', '#3d7fd9'], ['3', 'New trick', '#3fa560']];
+    var instr = {
+      desk: '<ol><li>In Anki’s main window choose <b>Tools ▸ Create Filtered Deck…</b> (or press <b>F</b>).</li><li>Paste the line into <b>Search</b>. Set <b>Limit</b> to <b>9999</b>.</li><li>Order: <b>' + (st.order === 'random' ? 'Random' : 'Order added') + '</b>. ' + (st.noresched ? '<b>Untick</b> “Reschedule cards based on my answers” so revisiting doesn’t change your intervals.' : 'Keep <b>Reschedule cards based on my answers</b> ticked.') + '</li><li>Press <b>Build</b> and study. When you’re done, delete the filtered deck: the cards go back to their papers with your progress.</li></ol>',
+      droid: '<ol><li>On AnkiDroid’s deck list, tap the <b>⋮</b> menu (top right) ▸ <b>Create filtered deck</b>.</li><li>Paste the line into <b>Search</b>, set the limit to <b>9999</b> and the order to <b>' + (st.order === 'random' ? 'Random' : 'Order added') + '</b>.' + (st.noresched ? ' Turn <b>Reschedule</b> off.' : '') + '</li><li>Tap the check mark to build it, then study. Delete it when done; nothing is lost.</li></ol>',
+      ios: '<ol><li>In AnkiMobile’s deck list, tap <b>Add</b> (or <b>+</b>) and choose <b>Filtered Deck</b>.</li><li>Paste the line into <b>Search</b>, set the limit to <b>9999</b> and the order to <b>' + (st.order === 'random' ? 'Random' : 'Order added') + '</b>.' + (st.noresched ? ' Turn <b>Reschedule</b> off.' : '') + '</li><li>Tap <b>Build</b> and study. Delete it when done; nothing is lost.</li></ol>'
+    };
+    app.innerHTML =
+      '<div class="pl-block"><div class="pl-h">Quick recipes</div><div class="recipes">' + RECIPES.map(function (r, i) { return '<button type="button" class="recipe" data-r="' + i + '"><b>' + r.n + '</b><span>' + r.d + '</span></button>'; }).join('') + '</div></div>' +
+      '<div class="pl-block"><div class="pl-h">Section</div>' + Object.keys(SECN).map(function (s) { return chip('sec', s, SECN[s]); }).join('') + '</div>' +
+      '<div class="pl-block"><div class="pl-h">Topics <span class="small">· leave empty for all</span></div>' + topicsHtml() + '</div>' +
+      '<details class="pl-block pl-more"' + (on(st.year).length || on(st.slot).length || on(st.fmt).length || on(st.diff).length ? ' open' : '') + '><summary class="pl-h">Year, slot, format, difficulty</summary>' +
+        '<div class="pl-sub">Year</div>' + D.years.map(function (y) { return chip('year', y, y); }).join('') +
+        '<div class="pl-sub">Slot</div>' + D.slots.map(function (y) { return chip('slot', y, y === 'YearSet' ? 'Year set (no slot)' : 'Slot ' + y); }).join('') +
+        '<div class="pl-sub">Format</div>' + chip('fmt', 'MCQ', 'MCQ') + chip('fmt', 'TITA', 'TITA (type the answer)') +
+        '<div class="pl-sub">Difficulty (estimated)</div>' + ['Easy', 'Medium', 'Hard'].map(function (d) { return chip('diff', d, d); }).join('') +
+      '</details>' +
+      '<details class="pl-block pl-more"' + (on(st.flag).length || st.hist !== 'any' ? ' open' : '') + '><summary class="pl-h">Your history and flags</summary>' +
+        '<div class="pl-sub">Which cards</div><div class="seg wide">' + hist.map(function (h) { return '<button type="button" data-hist="' + h[0] + '" class="' + (st.hist === h[0] ? 'on' : '') + '">' + h[1] + '</button>'; }).join('') + '</div>' +
+        (st.hist === 'wrong' ? '<div class="pl-sub">Within the last</div><div class="seg">' + [7, 14, 30].map(function (d) { return '<button type="button" data-days="' + d + '" class="' + (st.days === d ? 'on' : '') + '">' + d + ' days</button>'; }).join('') + '</div>' : '') +
+        '<div class="pl-sub">Flags</div>' + flags.map(function (f) { return chip('flag', f[0], '<i class="fd" style="background:' + f[2] + '"></i>' + f[1]); }).join('') +
+      '</details>' +
+      '<div class="pl-block"><div class="pl-h">Include</div>' +
+        '<label class="ck"><input type="checkbox" data-card="Question"' + (st.cards.Question ? ' checked' : '') + '> Single questions</label>' +
+        '<label class="ck"><input type="checkbox" data-card="Set"' + (st.cards.Set ? ' checked' : '') + '> Whole passages &amp; DILR sets</label>' +
+        '<label class="ck"><input type="checkbox" data-card="Ref"' + (st.cards.Ref ? ' checked' : '') + '> Formula &amp; technique cards</label>' +
+        '<div class="pl-sub">Order</div><div class="seg"><button type="button" data-order="added" class="' + (st.order === 'added' ? 'on' : '') + '">Paper order</button><button type="button" data-order="random" class="' + (st.order === 'random' ? 'on' : '') + '">Shuffled</button></div>' +
+      '</div>' +
+      '<div class="pl-out"><div class="pl-count">' + (b.q ? '<b>' + b.n + '</b> card' + (b.n === 1 ? '' : 's') + ' match' + (b.n === 1 ? 'es' : '') + (st.hist !== 'any' || on(st.flag).length ? ' before history and flag filters' : '') : 'Choose at least one card type') + '</div>' +
+        '<textarea id="pl-q" readonly rows="3">' + esc(b.q) + '</textarea>' +
+        '<div class="pl-actions"><button type="button" class="btn" id="pl-copy">Copy</button><button type="button" class="btn ghost" id="pl-reset">Clear all</button></div>' +
+        '<div class="pl-tabs"><button type="button" data-tab="desk" class="' + (tab === 'desk' ? 'on' : '') + '">Desktop</button><button type="button" data-tab="droid" class="' + (tab === 'droid' ? 'on' : '') + '">Android</button><button type="button" data-tab="ios" class="' + (tab === 'ios' ? 'on' : '') + '">iPad / iPhone</button></div>' +
+        '<div class="pl-instr">' + instr[tab] + '</div>' +
+      '</div>';
+
+    app.querySelectorAll('.pchip').forEach(function (c) { c.onclick = function (e) { e.preventDefault(); e.stopPropagation(); var g = c.getAttribute('data-g'), v = c.getAttribute('data-v'); st[g][v] = !st[g][v]; if (!st[g][v]) delete st[g][v]; render(); }; });
+    app.querySelectorAll('.recipe').forEach(function (c) { c.onclick = function () { RECIPES[+c.getAttribute('data-r')].f(); render(); S.toast(RECIPES[+c.getAttribute('data-r')].n); }; });
+    app.querySelectorAll('[data-hist]').forEach(function (c) { c.onclick = function () { st.hist = c.getAttribute('data-hist'); render(); }; });
+    app.querySelectorAll('[data-days]').forEach(function (c) { c.onclick = function () { st.days = +c.getAttribute('data-days'); render(); }; });
+    app.querySelectorAll('[data-order]').forEach(function (c) { c.onclick = function () { st.order = c.getAttribute('data-order'); render(); }; });
+    app.querySelectorAll('[data-card]').forEach(function (c) { c.onchange = function () { st.cards[c.getAttribute('data-card')] = c.checked; render(); }; });
+    app.querySelectorAll('[data-tab]').forEach(function (c) { c.onclick = function () { tab = c.getAttribute('data-tab'); render(); }; });
+    app.querySelector('#pl-reset').onclick = function () { reset(); render(); };
+    app.querySelector('#pl-copy').onclick = function () {
+      var ta = app.querySelector('#pl-q'), done = function () { S.toast('Copied: now paste it into a filtered deck'); };
+      try { navigator.clipboard.writeText(ta.value).then(done, function () { ta.select(); document.execCommand('copy'); done(); }); }
+      catch (e) { ta.focus(); ta.select(); try { document.execCommand('copy'); done(); } catch (e2) { S.toast('Select the text and copy it'); } }
+    };
+  }
+  render();
+});
+</script>

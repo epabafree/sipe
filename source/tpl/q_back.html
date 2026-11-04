@@ -1,0 +1,36 @@
+{{FrontSide}}
+
+<div id="ans" class="sipe ans">
+  <div class="read">
+    <div class="result neutral">Answer</div>
+
+    <div class="answer-box"><span class="k">Answer</span>
+      <div class="v">
+        <span class="ao" data-k="1"><span class="num">1</span>{{OptionA}}</span>
+        <span class="ao" data-k="2"><span class="num">2</span>{{OptionB}}</span>
+        <span class="ao" data-k="3"><span class="num">3</span>{{OptionC}}</span>
+        <span class="ao" data-k="4"><span class="num">4</span>{{OptionD}}</span>
+        <span class="ao" data-k="t">{{Answer}}</span>
+      </div>
+    </div>
+
+    <div class="block"><h4>Solution</h4>{{Solution}}</div>
+
+    {{#SetSolution}}<div class="block"><details class="setsol"><summary>Solve the whole set</summary>{{SetSolution}}</details></div>{{/SetSolution}}
+
+    {{#Shortcut}}<div class="block tip"><h4>Shortcut</h4>{{Shortcut}}</div>{{/Shortcut}}
+
+    {{#Concept}}<div class="block concept"><h4>Key idea</h4>{{Concept}}</div>{{/Concept}}
+
+    {{#WhyOthers}}<div class="block why"><h4>Why the other options don’t work</h4>{{WhyOthers}}</div>{{/WhyOthers}}
+
+    <div class="flagline"><span>Flag it if useful:</span>
+      <span class="f" style="--c:#d14b43">Concept gap</span>
+      <span class="f" style="--c:#e58a2e">Silly mistake</span>
+      <span class="f" style="--c:#3d7fd9">Too slow</span>
+      <span class="f" style="--c:#3fa560">New trick</span>
+      <span class="kb">Ctrl/⌘ + 1 · 2 · 4 · 3, or the flag button on mobile</span>
+    </div>
+    <div class="tagline">{{Topic}} · {{Difficulty}} · {{QID}}</div>
+  </div>
+</div>

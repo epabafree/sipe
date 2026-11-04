@@ -1,0 +1,21 @@
+<div id="sp" class="sipe refcard" data-sec="{{Section}}" data-kind="{{Kind}}">
+  <div class="top">
+    <div class="meta"><span class="sec {{Section}}">{{Kind}}</span><span class="dot">·</span><span>{{SectionName}}</span><span class="dot">·</span><span>{{TopicLabel}}</span></div>
+    %%TOOLBAR%%
+  </div>
+  <div class="read ref-q">
+    <div class="ref-name">{{Name}}</div>
+    <div class="ref-prompt">{{Prompt}}</div>
+    <div class="ref-ask">Recall the <span class="kw">formula</span> and when to use it, then reveal.</div>
+  </div>
+</div>
+<script>%%COMMON%%</script>
+<script>
+SIPE.ready(function () {
+  var S = window.SIPE, root = document.getElementById('sp'); if (!root) return;
+  S.apply(); S.toolbar(root);
+  ['timer', 'calc'].forEach(function (a) { var b = root.querySelector('[data-act=' + a + ']'); if (b) b.style.display = 'none'; });
+  var kw = root.querySelector('.kw'); if (kw && root.getAttribute('data-kind') === 'Technique') kw.textContent = 'steps';
+  if (document.getElementById('ans')) { var a = root.querySelector('.ref-ask'); if (a) a.style.display = 'none'; S.stepMode(document); }
+});
+</script>

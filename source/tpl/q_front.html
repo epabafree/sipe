@@ -1,0 +1,133 @@
+<div id="sp" class="sipe q" data-type="{{QType}}" data-ans="{{Answer}}" data-qid="{{QID}}" data-sec="{{Section}}">
+  <div class="top">
+    <div class="meta"><span class="sec {{Section}}">{{SectionName}}</span><span class="dot">·</span><span>{{Paper}}</span><span class="dot">·</span><span>Question {{QNo}}</span><span class="dot">·</span><span>{{QType}}</span></div>
+    %%TOOLBAR%%
+  </div>
+
+  <div class="layout {{#Context}}has-ctx{{/Context}}">
+    {{#Context}}
+    <details class="ctx" open>
+      <summary>{{SetTitle}}</summary>
+      {{#Directions}}<div class="dir">{{Directions}}</div>{{/Directions}}
+      <div class="ctx-body hl-area">{{Context}}</div>
+    </details>
+    {{/Context}}
+
+    <section class="qpane">
+      <div class="question hl-area">{{Question}}</div>
+      <div class="opts">
+        {{#OptionA}}<button type="button" class="opt" data-k="1"><span class="key">1</span><span class="txt">{{OptionA}}</span></button>{{/OptionA}}
+        {{#OptionB}}<button type="button" class="opt" data-k="2"><span class="key">2</span><span class="txt">{{OptionB}}</span></button>{{/OptionB}}
+        {{#OptionC}}<button type="button" class="opt" data-k="3"><span class="key">3</span><span class="txt">{{OptionC}}</span></button>{{/OptionC}}
+        {{#OptionD}}<button type="button" class="opt" data-k="4"><span class="key">4</span><span class="txt">{{OptionD}}</span></button>{{/OptionD}}
+      </div>
+      <div class="opt-tip" hidden>Tip: right-click (or long-press on a phone) an option to cross it out.</div>
+      <div class="tita">
+        <label for="tita-in">Type your answer · no options, no negative marking</label>
+        <input id="tita-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Your answer">
+        <button type="button" class="btn" id="tita-go">Check</button>
+      </div>
+      <div class="feedback" aria-live="polite"></div>
+      {{#Hint}}<button type="button" class="nudge-btn">Need a nudge?</button><div class="nudge-box">{{Hint}}</div>{{/Hint}}
+    </section>
+  </div>
+</div>
+
+<script>%%COMMON%%</script>
+<script>
+SIPE.ready(function () {
+  var S = window.SIPE, root = document.getElementById('sp');
+  if (!root) return;
+  var qid = (root.getAttribute('data-qid') || '').trim();
+  var type = (root.getAttribute('data-type') || 'MCQ').trim().toUpperCase();
+  var ans = (root.getAttribute('data-ans') || '').replace(/<[^>]*>/g, '').trim();
+  var isBack = !!document.getElementById('ans');
+  var K = 'pick:' + qid;
+  var fb = root.querySelector('.feedback');
+  var opts = Array.prototype.slice.call(root.querySelectorAll('.opt'));
+  var inp = root.querySelector('#tita-in'), go = root.querySelector('#tita-go');
+  var tval = root.querySelector('.tval');
+  S.apply(); S.toolbar(root);
+  if (root.getAttribute('data-sec') === 'VARC') { var cb = root.querySelector('[data-act=calc]'); if (cb) cb.style.display = 'none'; }
+
+  function show(v) {
+    root.classList.add('locked');
+    var attempted = v != null && v !== '', right = S.isRight(type, ans, v);
+    if (type === 'TITA') {
+      if (inp) { inp.value = attempted ? v : ''; inp.disabled = true; if (attempted) inp.classList.add(right ? 'ok' : 'no'); }
+      if (go) go.style.display = 'none';
+    } else {
+      var al = ans.split('|');
+      opts.forEach(function (o) {
+        var k = o.getAttribute('data-k');
+        o.classList.remove('chosen', 'correct', 'wrong');
+        if (al.indexOf(k) >= 0) o.classList.add('correct');
+        if (attempted && k === String(v) && !right) o.classList.add('wrong');
+        o.disabled = true;
+      });
+    }
+    var at = type === 'TITA' ? ans.split('|')[0] : 'option ' + ans.split('|').join(' or ');
+    if (!attempted) fb.innerHTML = '';
+    else if (right) fb.innerHTML = '<span class="good">✓ Correct</span>';
+    else fb.innerHTML = '<span class="bad">Not quite — the answer is ' + at + '</span>';
+    return { attempted: attempted, right: right };
+  }
+
+  if (isBack) {
+    var secs = S.timerStop(qid);
+    var v = S.ssGet(K), r = show(v);
+    if (tval && secs != null) tval.textContent = S.fmt(secs);
+    if (window.__sipeTick) clearInterval(window.__sipeTick);
+    var res = document.querySelector('#ans .result');
+    if (res) {
+      res.className = 'result ' + (!r.attempted ? 'neutral' : r.right ? 'good' : 'bad');
+      res.innerHTML = '<span>' + (!r.attempted ? 'Answer revealed' : r.right ? '✓ You got it right' : 'You answered ' + (type === 'TITA' ? '“' + String(v).replace(/</g, '&lt;') + '”' : 'option ' + v)) + '</span>' +
+        (secs != null ? '<span class="time">Time · ' + S.fmt(secs) + '</span>' : '');
+    }
+    var box = document.querySelector('#ans .answer-box .v');
+    if (box) {
+      if (type === 'TITA') { var st = box.querySelector('.ao[data-k=t]'); if (st) st.classList.add('on'); }
+      else ans.split('|').forEach(function (k) { var sk = box.querySelector('.ao[data-k="' + k + '"]'); if (sk) sk.classList.add('on'); });
+    }
+    var h = document.querySelector('#ans .concept h4');
+    if (h) h.textContent = { QA: 'Key formula', DILR: 'Key idea', VARC: 'Strategy for this question type' }[root.getAttribute('data-sec')] || 'Key idea';
+    var wt = document.querySelector('#ans .why-title'), wh = document.querySelector('#ans .why h4');
+    if (wt && wh) wh.textContent = wt.textContent;
+    var ctx = root.querySelector('.ctx');
+    if (ctx && window.innerWidth < 900) ctx.open = false;
+    S.stepMode(document);
+    S.ssDel(K); S.ssDel('t:' + qid);
+    return;
+  }
+
+  /* ---- front ---- */
+  var prior = S.ssGet(K);
+  if (!S.ssGet('t:' + qid) || prior == null) S.timerStart(qid);
+  S.timerLive(qid, tval);
+  S.crossOut(opts); S.highlighter(root); S.nudge(root);
+  var seen = S.lsGet('sipe:tipcount') || 0;
+  if (type !== 'TITA' && seen < 4) { var tip = root.querySelector('.opt-tip'); if (tip) tip.hidden = false; S.lsSet('sipe:tipcount', seen + 1); }
+
+  function choose(v) {
+    if (root.classList.contains('locked')) return;
+    S.ssSet(K, String(v));
+    var secs = S.timerStop(qid);
+    if (window.__sipeTick) clearInterval(window.__sipeTick);
+    if (tval && secs != null) tval.textContent = S.fmt(secs);
+    show(String(v));
+  }
+  if (prior != null && prior !== '') show(prior);
+  opts.forEach(function (o) { o.addEventListener('click', function () { if (o.__lp) { o.__lp = false; return; } choose(o.getAttribute('data-k')); }); });
+  if (inp) inp.addEventListener('keydown', function (e) { e.stopPropagation(); if (e.key === 'Enter') { e.preventDefault(); if (inp.value.trim()) choose(inp.value.trim()); } });
+  if (go) go.addEventListener('click', function () { if (inp && inp.value.trim()) choose(inp.value.trim()); });
+
+  if (window.__sipeKey) document.removeEventListener('keydown', window.__sipeKey, true);
+  window.__sipeKey = function (e) {
+    if (document.getElementById('ans')) return;
+    var t = e.target && e.target.tagName;
+    if (t === 'INPUT' || t === 'TEXTAREA') return;
+    if (type !== 'TITA' && /^[1-4]$/.test(e.key) && root.querySelector('.opt[data-k="' + e.key + '"]')) { e.preventDefault(); e.stopPropagation(); choose(e.key); }
+  };
+  document.addEventListener('keydown', window.__sipeKey, true);
+});
+</script>

@@ -1,0 +1,12 @@
+<div id="sp" class="sipe guide">
+  <div class="top"><div class="meta"><span class="sec">Start here</span></div>%%TOOLBAR%%</div>
+  <div class="read"><h1 class="g-title">{{Title}}</h1>{{Body}}</div>
+</div>
+<script>%%COMMON%%</script>
+<script>
+SIPE.ready(function () {
+  var S = window.SIPE, root = document.getElementById('sp'); if (!root) return;
+  S.apply(); S.toolbar(root);
+  ['timer', 'calc'].forEach(function (a) { var b = root.querySelector('[data-act=' + a + ']'); if (b) b.style.display = 'none'; });
+});
+</script>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 222" width="640" height="222" font-family="Helvetica,Arial,sans-serif">
+<rect width="640" height="222" fill="#fff"/>
+<text x="147.0" y="22" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">Block XX</text>
+<path d="M30 32 v-6 h234 v6" fill="none" stroke="#6b7280"/>
+<text x="69.0" y="56" text-anchor="middle" font-size="12.5" fill="#4b5563">Column-A</text>
+<rect x="39" y="78" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="69.0" y="101.0" text-anchor="middle" font-size="15" fill="#1f2937">A1</text>
+<rect x="39" y="130" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="69.0" y="153.0" text-anchor="middle" font-size="15" fill="#1f2937">A2</text>
+<text x="147.0" y="56" text-anchor="middle" font-size="12.5" fill="#4b5563">Column-B</text>
+<rect x="117" y="78" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="147.0" y="101.0" text-anchor="middle" font-size="15" fill="#1f2937">B1</text>
+<rect x="117" y="130" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="147.0" y="153.0" text-anchor="middle" font-size="15" fill="#1f2937">B2</text>
+<text x="225.0" y="56" text-anchor="middle" font-size="12.5" fill="#4b5563">Column-C</text>
+<rect x="195" y="78" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="225.0" y="101.0" text-anchor="middle" font-size="15" fill="#1f2937">C1</text>
+<rect x="195" y="130" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="225.0" y="153.0" text-anchor="middle" font-size="15" fill="#1f2937">C2</text>
+<rect x="30" y="70" width="234" height="104" fill="none" stroke="#9ca3af" stroke-dasharray="4 3"/>
+<text x="441.0" y="22" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">Block YY</text>
+<path d="M324 32 v-6 h234 v6" fill="none" stroke="#6b7280"/>
+<text x="363.0" y="56" text-anchor="middle" font-size="12.5" fill="#4b5563">Column-D</text>
+<rect x="333" y="78" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="363.0" y="101.0" text-anchor="middle" font-size="15" fill="#1f2937">D1</text>
+<rect x="333" y="130" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="363.0" y="153.0" text-anchor="middle" font-size="15" fill="#1f2937">D2</text>
+<text x="441.0" y="56" text-anchor="middle" font-size="12.5" fill="#4b5563">Column-E</text>
+<rect x="411" y="78" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="441.0" y="101.0" text-anchor="middle" font-size="15" fill="#1f2937">E1</text>
+<rect x="411" y="130" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="441.0" y="153.0" text-anchor="middle" font-size="15" fill="#1f2937">E2</text>
+<text x="519.0" y="56" text-anchor="middle" font-size="12.5" fill="#4b5563">Column-F</text>
+<rect x="489" y="78" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="519.0" y="101.0" text-anchor="middle" font-size="15" fill="#1f2937">F1</text>
+<rect x="489" y="130" width="60" height="36" rx="4" fill="#eef2ff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="519.0" y="153.0" text-anchor="middle" font-size="15" fill="#1f2937">F2</text>
+<rect x="324" y="70" width="234" height="104" fill="none" stroke="#9ca3af" stroke-dasharray="4 3"/>
+<rect x="272" y="70" width="44" height="144" fill="#e5e7eb"/>
+<text x="294" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#374151" transform="rotate(-90 294 122)">ROAD</text>
+<rect x="20" y="182" width="548" height="32" fill="#e5e7eb"/>
+<text x="320.0" y="203" text-anchor="middle" font-size="13" font-weight="700" fill="#374151">ROAD</text>
+<text x="568" y="101.0" font-size="12.5" fill="#4b5563">Row-1</text>
+<text x="568" y="153.0" font-size="12.5" fill="#4b5563">Row-2</text>
+</svg>
