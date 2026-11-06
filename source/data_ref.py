@@ -413,6 +413,22 @@ F("QA-MOD-003", "QA", "Modern_Maths::Permutations_and_Combinations", "Sharing id
   "Check whether each person must get at least one; the two formulas differ.",
   r"20 balloons, even amounts, at least 2 each: \(\binom{9}{3} = 84\)", ["2022-S1-QA-22"])
 
+# ---------------- added with CAT 2022 Slot 2 ----------------
+F("QA-ALG-018", "QA", "Algebra::Logarithms_and_Exponents", "When a power equals 1",
+  r"Equations of the form \(a^b = 1\)",
+  r"<ol><li>\(a = 1\), any \(b\)</li><li>\(b = 0\) and \(a \ne 0\)</li><li>\(a = -1\) and \(b\) even</li></ol>",
+  [(r"\(a\)", "the base"), (r"\(b\)", "the exponent")],
+  "Integer-solution questions where both the base and the exponent depend on x.",
+  "The case a = −1 is the one most often missed, and b = 0 needs a non-zero base.",
+  r"\((x^2 - 10)^{x^2 - 3x - 10} = 1\): \(x = 5, -2, 3, -3\)", ["2022-S2-QA-19"])
+F("QA-ALG-019", "QA", "Algebra::Progressions_and_Series", "Standard sums",
+  "Sums of the first n natural numbers and of their squares",
+  r"\[\sum_{k=1}^n k = \frac{n(n + 1)}{2} \qquad \sum_{k=1}^n k^2 = \frac{n(n + 1)(2n + 1)}{6}\]",
+  [(r"\(n\)", "number of terms")],
+  "Whenever a sum of sums appears: write the inner sum as a polynomial in n, then use these.",
+  "Check the starting value; these formulas start at k = 1.",
+  r"\(\sum_{n=1}^{25}(2n^2 + n) = 11375\)", ["2022-S2-QA-21"])
+
 for r in REF:
     extra = {"VARC-RC-001": ["2023-S1-VARC-09", "2023-S1-VARC-11", "2023-S1-VARC-13", "2023-S1-VARC-16"], "VARC-VA-001": ["2023-S1-VARC-18"],
              "VARC-VA-002": ["2023-S1-VARC-20"], "VARC-VA-003": ["2023-S1-VARC-22"], "VARC-VA-004": ["2023-S1-VARC-24"],

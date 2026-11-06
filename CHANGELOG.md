@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.6.0
+
+Added CAT 2022 Slot 2 (66 questions, 8 set cards), in the original exam order.
+
+DILR Q6 (widget routes, "If the last location visited is Ahmednagar…") was dropped from scoring in the actual exam: under the tie-breaking rule Ahmednagar can't be the last stop. The card keeps the question and explains this; the intended answer is 35.
+
+Two new formula cards: when a power equals 1, and the standard sums of n and n².
+
+Fixes to the source text:
+- QA Q19: the exponent was printed as a second factor. The equation is (x² − 10)^(x² − 3x − 10) = 1, not a product.
+- RC passage on octopuses: the source leaves out the paragraph on chromatophores that three questions rely on. A short summary of it has been added in brackets.
+- RC Q2: option 4 read "capable of being a music king"; corrected to "capable of musicking".
+- DILR Set 3: the revenue axis label "8" should be 80. Both plots are redrawn.
+- Engineering passage: "roles can", "FDA-approved", "self-reflection", "primes students" restored.
+
 ## v0.5.0
 
 Added CAT 2022 Slot 1 (66 questions, 8 set cards).

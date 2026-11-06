@@ -12,7 +12,8 @@ An Anki deck of CAT previous-year questions. Each question is an interactive car
 | CAT 2023 Slot 2 | 24 | 20 | 22 | 66 |
 | CAT 2023 Slot 3 | 24 | 20 | 22 | 66 |
 | CAT 2022 Slot 1 | 24 | 20 | 22 | 66 |
-| | | | | **264** |
+| CAT 2022 Slot 2 | 24 | 20 | 22 | 66 |
+| | | | | **330** |
 
 Alongside the question cards there are set cards (a whole RC passage or DILR set on one card), formula and technique cards, a practice card for each topic area, and a card for each paper with a practice mode and a timed mock.
 
@@ -49,7 +50,7 @@ Every card is tagged (`sipe::Topic::QA::Algebra::Quadratic_Equations`, `sipe::Pa
 
 Questions, options, passages and data are kept as printed. Clear misprints are fixed, and each fix is listed in the [changelog](CHANGELOG.md). Answers are checked against the official keys. Solutions are written for this deck rather than copied from the source.
 
-The source groups the 2021 and 2022 questions by topic rather than by paper, so they have been put back into exam order using the official response sheets. Where a question's position couldn't be confirmed, the changelog says so.
+The source groups the 2021 and 2022 questions by topic rather than by paper, so they have been put back into exam order using the official response sheets. Where a question's position couldn't be confirmed, the changelog says so. Options are listed in the order the source prints them, which for a few of these questions differs from the exam.
 
 Difficulty labels are estimates, not official data.
 
@@ -62,7 +63,7 @@ Difficulty labels are estimates, not official data.
 
 ## Roadmap
 
-- CAT 2022 Slots 2 and 3
+- CAT 2022 Slot 3
 - CAT 2021, all three slots
 - CAT 2017–2020
 - CAT 1991–2008 (mostly DILR and QA)
