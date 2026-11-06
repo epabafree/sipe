@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.7.0
+
+Added CAT 2022 Slot 3 (66 questions, 8 set cards), in the original exam order. The four bar charts in DILR Set 1 are given as tables.
+
+DILR Q5 (females aged 20–30 in 1980 who died between 50 and 60) can be read two ways. The card uses the official answer, 30, and explains the other reading.
+
+Three new formula cards: medians and the centroid, which side lengths make a polygon, and the same remainder for several divisors.
+
+Fixes to the source text:
+- QA Q3: the right-hand side of the second equation was missing. It reads (4a/b)^(6x − y) = (2a/b)^(y − 6x).
+- QA Q14: "less then" → "less than".
+- Software passage: "aimlessly click around", "for", "data collected", "screen-driven".
+- Other passages: "so-called", "industrialisation", "Farmers", "modern genetic", "nation’s".
+
 ## v0.6.0
 
 Added CAT 2022 Slot 2 (66 questions, 8 set cards), in the original exam order.
