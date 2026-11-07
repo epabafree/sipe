@@ -1,0 +1,280 @@
+{
+ "passages": {
+  "P2": "Starting in 1957, [Noam Chomsky] proclaimed a new doctrine: Language, that most human of all attributes, was innate. The grammatical faculty was built into the infant brain, and your average 3-year-old was not a mere apprentice in the great enterprise of absorbing English from his or her parents, but a “linguistic genius.” Since this message was couched in terms of Chomskyan theoretical linguistics, in discourse so opaque that it was nearly incomprehensible even to some scholars, many people did not hear it. Now, in a brilliant, witty and altogether satisfying book, Mr. Chomsky’s colleague Steven Pinker . . . has brought Mr. Chomsky’s findings to everyman. In “The Language Instinct” he has gathered persuasive data from such diverse fields as cognitive neuroscience, developmental psychology and speech therapy to make his points, and when he disagrees with Mr. Chomsky he tells you so. . . .\n\nFor Mr. Chomsky and Mr. Pinker, somewhere in the human brain there is a complex set of neural circuits that have been programmed with “super-rules” (making up what Mr. Chomsky calls “universal grammar”), and that these rules are unconscious and instinctive. A half-century ago, this would have been pooh-poohed as a “black box” theory, since one could not actually pinpoint this grammatical faculty in a specific part of the brain, or describe its functioning. But now things are different. Neurosurgeons [have now found that this] “black box” is situated in and around Broca’s area, on the left side of the forebrain. . . .\n\nUnlike Mr. Chomsky, Mr. Pinker firmly places the wiring of the brain for language within the framework of Darwinian natural selection and evolution. He effectively disposes of all claims that intelligent nonhuman primates like chimps have any abilities to learn and use language. It is not that chimps lack the vocal apparatus to speak; it is just that their brains are unable to produce or use grammar. On the other hand, the “language instinct,” when it first appeared among our most distant hominid ancestors, must have given them a selective reproductive advantage over their competitors (including the ancestral chimps). . . .\n\nSo according to Mr. Pinker, the roots of language must be in the genes, but there cannot be a “grammar gene” any more than there can be a gene for the heart or any other complex body structure. This proposition will undoubtedly raise the hackles of some behavioural psychologists and anthropologists, for it apparently contradicts the liberal idea that human behaviour may be changed for the better by improvements in culture and environment, and it might seem to invite the twin bugaboos of biological determinism and racism. Yet Mr. Pinker stresses one point that should allay such fears. Even though there are 4,000 to 6,000 languages today, they are all sufficiently alike to be considered one language by an extraterrestrial observer. In other words, most of the diversity of the world’s cultures, so beloved to anthropologists, is superficial and minor compared to the similarities. Racial differences are literally only “skin deep.” The fundamental unity of humanity is the theme of Mr. Chomsky’s universal grammar, and of this exciting book.",
+  "P1": "Keeping time accurately comes with a price. The maximum accuracy of a clock is directly related to how much disorder, or entropy, it creates every time it ticks. Natalia Ares at the University of Oxford and her colleagues made this discovery using a tiny clock with an accuracy that can be controlled. The clock consists of a 50-nanometre-thick membrane of silicon nitride, vibrated by an electric current. Each time the membrane moved up and down once and then returned to its original position, the researchers counted a tick, and the regularity of the spacing between the ticks represented the accuracy of the clock. The researchers found that as they increased the clock’s accuracy, the heat produced in the system grew, increasing the entropy of its surroundings by jostling nearby particles . . . “If a clock is more accurate, you are paying for it somehow,” says Ares. In this case, you pay for it by pouring more ordered energy into the clock, which is then converted into entropy. “By measuring time, we are increasing the entropy of the universe,” says Ares. The more entropy there is in the universe, the closer it may be to its eventual demise. “Maybe we should stop measuring time,” says Ares. The scale of the additional entropy is so small, though, that there is no need to worry about its effects, she says.\n\nThe increase in entropy in timekeeping may be related to the “arrow of time”, says Marcus Huber at the Austrian Academy of Sciences in Vienna, who was part of the research team. It has been suggested that the reason that time only flows forward, not in reverse, is that the total amount of entropy in the universe is constantly increasing, creating disorder that cannot be put in order again.\n\nThe relationship that the researchers found is a limit on the accuracy of a clock, so it doesn’t mean that a clock that creates the most possible entropy would be maximally accurate – hence a large, inefficient grandfather clock isn’t more precise than an atomic clock. “It’s a bit like fuel use in a car. Just because I’m using more fuel doesn’t mean that I’m going faster or further,” says Huber.\n\nWhen the researchers compared their results with theoretical models developed for clocks that rely on quantum effects, they were surprised to find that the relationship between accuracy and entropy seemed to be the same for both..... We can’t be sure yet that these results are actually universal, though, because there are many types of clocks for which the relationship between accuracy and entropy haven’t been tested. “It’s still unclear how this principle plays out in real devices such as atomic clocks, which push the ultimate quantum limits of accuracy,” says Mark Mitchison at Trinity College Dublin in Ireland. Understanding this relationship could be helpful for designing clocks in the future, particularly those used in quantum computers and other devices where both accuracy and temperature are crucial, says Ares. This finding could also help us understand more generally how the quantum world and the classical world are similar and different in terms of thermodynamics and the passage of time.",
+  "P3": "Back in the early 2000s, an awesome thing happened in the New X-Men comics. Our mutant heroes had been battling giant robots called Sentinels for years, but suddenly these mechanical overlords spawned a new threat: Nano-Sentinels! Not content to rule Earth with their metal fists, these tiny robots invaded our bodies at the microscopic level. Infected humans were slowly converted into machines, cell by cell.\n\nNow, a new wave of extremely odd robots is making at least part of the Nano-Sentinels story come true. Using exotic fabrication materials like squishy hydrogels and elastic polymers, researchers are making autonomous devices that are often tiny and that could turn out to be more powerful than an Army of Terminators. Some are 1-centimetre blobs that can skate over water. Others are flat sheets that can roll themselves into tubes, or matchstick-sized plastic coils that act as powerful muscles. No, they won’t be invading our bodies and turning us into Sentinels – which I personally find a little disappointing – but some of them could one day swim through our bloodstream to heal us. They could also clean up pollutants in water or fold themselves into different kinds of vehicles for us to drive.\n\nUnlike a traditional robot, which is made of mechanical parts, these new kinds of robots are made from molecular parts. The principle is the same: both are devices that can move around and do things independently. But a robot made from smart materials might be nothing more than a pink drop of hydrogel. Instead of gears and wires, it’s assembled from two kinds of molecules – some that love water and some that avoid it – which interact to allow the bot to skate on top of a pond.\n\nSometimes these materials are used to enhance more conventional robots. One team of researchers, for example, has developed a different kind of hydrogel that becomes sticky when exposed to a low-voltage zap of electricity and then stops being sticky when the electricity is switched off. This putty-like gel can be pasted right onto the feet or wheels of a robot. When the robot wants to climb a sheer wall or scoot across the ceiling, it can activate its sticky feet with a few volts. Once it is back on a flat surface again, the robot turns off the adhesive like a light switch.\n\nRobots that are wholly or partly made of gloop aren’t the future that I was promised in science fiction. But it’s definitely the future I want. I’m especially keen on the nanometre-scale “soft robots” that could one day swim through our bodies. Metin Sitti, a director at the Max Planck Institute for Intelligent Systems in Germany, worked with colleagues to prototype these tiny, synthetic beasts using various stretchy materials, such as simple rubber, and seeding them with magnetic microparticles. They are assembled into a finished shape by applying magnetic fields. The results look like flowers or geometric shapes made from Tinkertoy ball and stick modelling kits. They’re guided through tubes of fluid using magnets, and can even stop and cling to the sides of a tube.",
+  "P4": "Today we can hardly conceive of ourselves without an unconscious. Yet between 1700 and 1900, this notion developed as a genuinely original thought. The “unconscious” burst the shell of conventional language, coined as it had been to embody the fleeting ideas and the shifting conceptions of several generations until, finally, it became fixed and defined in specialized terms within the realm of medical psychology and Freudian psychoanalysis.\n\nThe vocabulary concerning the soul and the mind increased enormously in the course of the nineteenth century. The enrichments of literary and intellectual language led to an altered understanding of the meanings that underlie time-honored expressions and traditional catchwords. At the same time, once coined, powerful new ideas attracted to themselves a whole host of seemingly unrelated issues, practices, and experiences, creating a peculiar network of preoccupations that as a group had not existed before. The drawn-out attempt to approach and define the unconscious brought together the spiritualist and the psychical researcher of borderline phenomena (such as apparitions, spectral illusions, haunted houses, mediums, trance, automatic writing); the psychiatrist or alienist probing the nature of mental disease, of abnormal ideation, hallucination, delirium, melancholia, mania; the surgeon performing operations with the aid of hypnotism; the magnetizer claiming to correct the disequilibrium in the universal flow of magnetic fluids but who soon came to be regarded as a clever manipulator of the imagination; the physiologist and the physician who puzzled over sleep, dreams, sleepwalking, anesthesia, the influence of the mind on the body in health and disease; the neurologist concerned with the functions of the brain and the physiological basis of mental life; the philosopher interested in the will, the emotions, consciousness, knowledge, imagination and the creative genius; and, last but not least, the psychologist. Significantly, most if not all of these practices (for example, hypnotism in surgery or psychological magnetism) originated in the waning years of the eighteenth century and during the early decades of the nineteenth century, as did some of the disciplines (such as psychology and psychical research). The majority of topics too were either new or assumed hitherto unknown colours. Thus, before 1790, few if any spoke, in medical terms, of the affinity between creative genius and the hallucinations of the insane.... Striving vaguely and independently to give expression to a latent conception, various lines of thought can be brought together by some novel term. The new concept then serves as a kind of resting place or stocktaking in the development of ideas, giving satisfaction and a stimulus for further discussion or speculation. Thus, the massive introduction of the term unconscious by Hartmann in 1869 appeared to focalize many stray thoughts, affording a temporary feeling that a crucial step had been taken forward, a comprehensive knowledge gained, a knowledge that required only further elaboration, explication, and unfolding in order to bring in a bounty of higher understanding. Ultimately, Hartmann’s attempt at defining the unconscious proved fruitless because he extended its reach into every realm of organic and inorganic, spiritual, intellectual, and instinctive existence, severely diluting the precision and compromising the impact of the concept."
+ },
+ "q": {
+  "VARC": {
+   "9": {
+    "q": "Which one of the following statements best summarises the author’s position about Pinker’s book?",
+    "opts": [
+     "Anatomical developments like the voice box play a key role in determining language acquisition skills.",
+     "Culture and environment play a key role in shaping our acquisition of language.",
+     "The evolutionary and deterministic framework of Pinker’s book makes it racist.",
+     "The universality of the “language instinct” counter claims that Pinker’s book is racist."
+    ],
+    "raw": "Which one of the following statements best summarises the author’s position about Pinker’s book? (1) Anatomical developments like the voice box play a key role in determining language acquisition skills. (2) Culture and environment play a key role in shaping our acquisition of language. (3) The evolutionary and deterministic framework of Pinker’s book makes it racist. (4) The universality of the “language instinct” counter claims that Pinker’s book is racist.",
+    "book": 31
+   },
+   "10": {
+    "q": "According to the passage, all of the following are true about the language instinct EXCEPT that:",
+    "opts": [
+     "all intelligent primates are gifted with it.",
+     "it confers an evolutionary reproductive advantage.",
+     "developments in neuroscience have increased its acceptance.",
+     "not all intelligent primates are gifted with it."
+    ],
+    "raw": "According to the passage, all of the following are true about the language instinct EXCEPT that: (1) all intelligent primates are gifted with it. (2) it confers an evolutionary reproductive advantage. (3) developments in neuroscience have increased its acceptance. (4) not all intelligent primates are gifted with it.",
+    "book": 32
+   },
+   "11": {
+    "q": "On the basis of the information in the passage, Pinker and Chomsky may disagree with each other on which one of the following points?",
+    "opts": [
+     "The inborn language acquisition skills of humans.",
+     "The Darwinian explanatory paradigm for language.",
+     "The language instinct.",
+     "The possibility of a universal grammar."
+    ],
+    "raw": "On the basis of the information in the passage, Pinker and Chomsky may disagree with each other on which one of the following points? (1) The inborn language acquisition skills of humans. (2) The Darwinian explanatory paradigm for language. (3) The language instinct. (4) The possibility of a universal grammar.",
+    "book": 33
+   },
+   "12": {
+    "q": "From the passage, it can be inferred that all of the following are true about Pinker’s book, “The Language Instinct”, EXCEPT that Pinker:",
+    "opts": [
+     "draws extensively from Chomsky’s propositions.",
+     "disagrees with Chomsky on certain grounds.",
+     "writes in a different style from Chomsky.",
+     "draws from behavioural psychology theories."
+    ],
+    "raw": "From the passage, it can be inferred that all of the following are true about Pinker’s book, “The Language Instinct”, EXCEPT that Pinker: (1) draws extensively from Chomsky’s propositions. (2) disagrees with Chomsky on certain grounds. (3) writes in a different style from Chomsky. (4) draws from behavioural psychology theories.",
+    "book": 34
+   },
+   "2": {
+    "q": "None of the following statements can be inferred from the passage EXCEPT that:",
+    "opts": [
+     "the arrow of time has not yet been tested for atomic clocks.",
+     "quantum computers are likely to produce more heat and, hence, more entropy, because of the emphasis on their clocks’ accuracy.",
+     "grandfather clocks are likely to produce less heat and, hence, less entropy, because they are not as accurate.",
+     "a clock with a 50-nanometre-thick membrane of silicon nitride has been made to vibrate, producing electric currents."
+    ],
+    "raw": "None of the following statements can be inferred from the passage EXCEPT that: (1) the arrow of time has not yet been tested for atomic clocks. (2) quantum computers are likely to produce more heat and, hence, more entropy, because of the emphasis on their clocks’ accuracy. (3) grandfather clocks are likely to produce less heat and, hence, less entropy, because they are not as accurate. (4) a clock with a 50-nanometre-thick membrane of silicon nitride has been made to vibrate, producing electric currents.",
+    "book": 37
+   },
+   "3": {
+    "q": "The author makes all of the following arguments in the passage, EXCEPT that:",
+    "opts": [
+     "The relationship between accuracy and entropy may not apply to all clocks.",
+     "Researchers found that the heat produced in a system is the price paid for increased accuracy of measurement.",
+     "There is no difference in accuracy between an inefficient grandfather clock and an atomic clock.",
+     "In designing clocks for quantum computers, both precision and heat have to be taken into account."
+    ],
+    "raw": "The author makes all of the following arguments in the passage, EXCEPT that: (1) The relationship between accuracy and entropy may not apply to all clocks. (2) Researchers found that the heat produced in a system is the price paid for increased accuracy of measurement. (3) There is no difference in accuracy between an inefficient grandfather clock and an atomic clock. (4) In designing clocks for quantum computers, both precision and heat have to be taken into account.",
+    "book": 35
+   },
+   "4": {
+    "q": "“It’s a bit like fuel use in a car. Just because I’m using more fuel doesn’t mean that I’m going faster or further”... What is the purpose of this example?",
+    "opts": [
+     "If you go faster in a car, you will tend to consume more fuel, but the converse is not necessarily true. In the same way, increased entropy does not necessarily mean greater accuracy of a clock.",
+     "The further you go in a car, the more fuel you use. In the same way, the faster you go in a car, the less time you use.",
+     "If you measure the speed of a car with a grandfather clock, the result will be different than if you measured it with an atomic clock.",
+     "The further and faster you go in a car, the greater the amount of fuel you will use, the greater the amount of heat produced and, hence, the greater the entropy."
+    ],
+    "raw": "“It’s a bit like fuel use in a car. Just because I’m using more fuel doesn’t mean that I’m going faster or further”... What is the purpose of this example? (1) If you go faster in a car, you will tend to consume more fuel, but the converse is not necessarily true. In the same way, increased entropy does not necessarily mean greater accuracy of a clock. (2) The further you go in a car, the more fuel you use. In the same way, the faster you go in a car, the less time you use. (3) If you measure the speed of a car with a grandfather clock, the result will be different than if you measured it with an atomic clock. (4) The further and faster you go in a car, the greater the amount of fuel you will use, the greater the amount of heat produced and, hence, the greater the entropy.",
+    "book": 38
+   },
+   "5": {
+    "q": "Which one of the following sets of words and phrases serves best as keywords of the passage?",
+    "opts": [
+     "Electric current; Heat; Quantum effects",
+     "Silicon Nitride; Energy; Grandfather Clock",
+     "Measuring Time; Accuracy; Entropy",
+     "Membrane; Arrow of time; Entropy"
+    ],
+    "raw": "Which one of the following sets of words and phrases serves best as keywords of the passage? (1) Electric current; Heat; Quantum effects (2) Silicon Nitride; Energy; Grandfather Clock (3) Measuring Time; Accuracy; Entropy (4) Membrane; Arrow of time; Entropy",
+    "book": 36
+   },
+   "15": {
+    "q": "Which one of the following statements best captures the sense of the first paragraph?",
+    "opts": [
+     "Tiny Sentinels called X-Men infected people, turning them into mutant robot overlords.",
+     "None of the options listed here.",
+     "The X-Men were mutant heroes who now had to battle tiny robots called Nano-Sentinels.",
+     "People who were infected by Nano-Sentinels robots became mutants who were called X-Men."
+    ],
+    "raw": "Which one of the following statements best captures the sense of the first paragraph? (1) Tiny Sentinels called X-Men infected people, turning them into mutant robot overlords. (2) None of the options listed here. (3) The X-Men were mutant heroes who now had to battle tiny robots called Nano-Sentinels. (4) People who were infected by Nano-Sentinels robots became mutants who were called X-Men.",
+    "book": 57
+   },
+   "16": {
+    "q": "Which one of the following scenarios, if false, could be seen as supporting the passage?",
+    "opts": [
+     "There are two kinds of molecules used to make some nano-robots: one that reacts positively to water and the other negatively.",
+     "Some hydrogels turn sticky when an electric current is passed through them; this potentially has very useful applications.",
+     "Nano-Sentinel-like robots are likely to be used to inject people to convert them into robots, cell by cell.",
+     "Robots made from smart materials are likely to become part of our everyday lives in the future."
+    ],
+    "raw": "Which one of the following scenarios, if false, could be seen as supporting the passage? (1) There are two kinds of molecules used to make some nano-robots: one that reacts positively to water and the other negatively. (2) Some hydrogels turn sticky when an electric current is passed through them; this potentially has very useful applications. (3) Nano-Sentinel-like robots are likely to be used to inject people to convert them into robots, cell by cell. (4) Robots made from smart materials are likely to become part of our everyday lives in the future.",
+    "book": 58
+   },
+   "17": {
+    "q": "Which one of the following statements, if true, would be the most direct extension of the arguments in the passage?",
+    "opts": [
+     "X-Men may be created by injecting people with mutant nano-gels that will respond to the brain’s magnetic field.",
+     "In the future, robots will be used to search and destroy diseases even in the deepest recesses of the human body.",
+     "Sentinel robots will be used in warfare to cause large-scale destructive mutations amongst civilians.",
+     "1-centimetre blobs of gel that have nano-robots in them will be used to send messages."
+    ],
+    "raw": "Which one of the following statements, if true, would be the most direct extension of the arguments in the passage? (1) X-Men may be created by injecting people with mutant nano-gels that will respond to the brain’s magnetic field. (2) In the future, robots will be used to search and destroy diseases even in the deepest recesses of the human body. (3) Sentinel robots will be used in warfare to cause large-scale destructive mutations amongst civilians. (4) 1-centimetre blobs of gel that have nano-robots in them will be used to send messages.",
+    "book": 55
+   },
+   "18": {
+    "q": "Which one of the following statements best summarises the central point of the passage?",
+    "opts": [
+     "Once the stuff of science fiction, nano-robots now feature in cutting-edge scientific research.",
+     "Robots will use nano-robots on their feet and wheels to climb walls or move on ceilings.",
+     "The field of robotics is likely to be feature more and more in comics like the New X-Men.",
+     "Nano-robots made from molecules that react to water have become increasingly useful."
+    ],
+    "raw": "Which one of the following statements best summarises the central point of the passage? (1) Once the stuff of science fiction, nano-robots now feature in cutting-edge scientific research. (2) Robots will use nano-robots on their feet and wheels to climb walls or move on ceilings. (3) The field of robotics is likely to be feature more and more in comics like the New X-Men. (4) Nano-robots made from molecules that react to water have become increasingly useful.",
+    "book": 56
+   },
+   "19": {
+    "q": "Which one of the following statements best describes what the passage is about?",
+    "opts": [
+     "The identification of the unconscious as an object of psychical research.",
+     "The growing vocabulary of the soul and the mind, as diverse processes.",
+     "The discovery of the unconscious as a part of the human mind.",
+     "The collating of diverse ideas under the single term: unconscious."
+    ],
+    "raw": "Which one of the following statements best describes what the passage is about? (1) The identification of the unconscious as an object of psychical research. (2) The growing vocabulary of the soul and the mind, as diverse processes. (3) The discovery of the unconscious as a part of the human mind. (4) The collating of diverse ideas under the single term: unconscious.",
+    "book": 236
+   },
+   "20": {
+    "q": "“The enrichments of literary and intellectual language led to an altered understanding of the meanings that underlie time-honored expressions and traditional catchwords.” Which one of the following interpretations of this sentence would be closest in meaning to the original?",
+    "opts": [
+     "Literary and intellectual language was altered by time-honored expressions and traditional catchwords.",
+     "All of the options listed here.",
+     "The meanings of time-honored expressions were changed by innovations in literary and intellectual language.",
+     "Time-honored expressions and traditional catchwords were enriched by literary and intellectual language."
+    ],
+    "raw": "“The enrichments of literary and intellectual language led to an altered understanding of the meanings that underlie time-honored expressions and traditional catchwords.” Which one of the following interpretations of this sentence would be closest in meaning to the original? (1) Literary and intellectual language was altered by time-honored expressions and traditional catchwords. (2) All of the options listed here. (3) The meanings of time-honored expressions were changed by innovations in literary and intellectual language. (4) Time-honored expressions and traditional catchwords were enriched by literary and intellectual language.",
+    "book": 235
+   },
+   "21": {
+    "q": "Which one of the following sets of words is closest to mapping the main arguments of the passage?",
+    "opts": [
+     "Unconscious; Latent conception; Dreams",
+     "Literary language; Unconscious; Insanity",
+     "Language; Unconscious; Psychoanalysis",
+     "Imagination; Magnetism; Psychiatry"
+    ],
+    "raw": "Which one of the following sets of words is closest to mapping the main arguments of the passage? (1) Unconscious; Latent conception; Dreams (2) Literary language; Unconscious; Insanity (3) Language; Unconscious; Psychoanalysis (4) Imagination; Magnetism; Psychiatry",
+    "book": 237
+   },
+   "22": {
+    "q": "All of the following statements may be considered valid inferences from the passage, EXCEPT:",
+    "opts": [
+     "Unrelated practices began to be treated as related to each other, as knowledge of the mind grew in the nineteenth century.",
+     "Eighteenth century thinkers were the first to perceive a connection between creative genius and insanity.",
+     "Without the linguistic developments of the nineteenth century, the growth of understanding of the soul and the mind may not have happened.",
+     "New conceptions in the nineteenth century could provide new knowledge because of the establishment of fields such as anaesthesiology."
+    ],
+    "raw": "All of the following statements may be considered valid inferences from the passage, EXCEPT: (1) Unrelated practices began to be treated as related to each other, as knowledge of the mind grew in the nineteenth century. (2) Eighteenth century thinkers were the first to perceive a connection between creative genius and insanity. (3) Without the linguistic developments of the nineteenth century, the growth of understanding of the soul and the mind may not have happened. (4) New conceptions in the nineteenth century could provide new knowledge because of the establishment of fields such as anaesthesiology.",
+    "book": 238
+   },
+   "1": {
+    "q": "The four sentences (labelled 1, 2, 3, 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer:",
+    "opts": [
+     "It is regimes of truth that make certain relationships speakable – relationships, like subjectivities, are constituted through discursive formations, which sustain regimes of truth.",
+     "Relationships are nothing without the communication that brings them into being; interpersonal communication is connected to knowledge shared by interlocutors, and scholars should attend to relational histories in their analyses.",
+     "A Foucauldian approach to relationships goes beyond these conceptions of discourse and history to macro level regimes of truth as constituting relationships.",
+     "Reconsidering micropractices within relationships that are constituted within and simultaneously contributors to regimes of truth acknowledges the central position of power/knowledge in the constitution of what has come to be considered true and real."
+    ],
+    "raw": "The four sentences (labelled 1, 2, 3, 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer: 1. It is regimes of truth that make certain relationships speakable – relationships, like subjectivities, are constituted through discursive formations, which sustain regimes of truth. 2. Relationships are nothing without the communication that brings them into being; interpersonal communication is connected to knowledge shared by interlocutors, and scholars should attend to relational histories in their analyses. 3. A Foucauldian approach to relationships goes beyond these conceptions of discourse and history to macro level regimes of truth as constituting relationships. 4. Reconsidering micropractices within relationships that are constituted within and simultaneously contributors to regimes of truth acknowledges the central position of power/knowledge in the constitution of what has come to be considered true and real.",
+    "book": 25
+   },
+   "14": {
+    "q": "The four sentences (labelled 1, 2, 3 and 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer:",
+    "opts": [
+     "Restitution of artefacts to original cultures could face legal obstacles, as many Western museums are legally prohibited from disposing off their collections.",
+     "This is in response to countries like Nigeria, which are pressurising European museums to return their precious artefacts looted by colonisers in the past.",
+     "Museums in Europe today are struggling to come to terms with their colonial legacy, some taking steps to return artefacts but not wanting to lose their prized collections.",
+     "Legal hurdles notwithstanding, politicians and institutions in France and Germany would now like to defuse the colonial time bombs, and are now backing the return of part of their holdings."
+    ],
+    "raw": "The four sentences (labelled 1, 2, 3 and 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer: 1. Restitution of artefacts to original cultures could face legal obstacles, as many Western museums are legally prohibited from disposing off their collections. 2. This is in response to countries like Nigeria, which are pressurising European museums to return their precious artefacts looted by colonisers in the past. 3. Museums in Europe today are struggling to come to terms with their colonial legacy, some taking steps to return artefacts but not wanting to lose their prized collections. 4. Legal hurdles notwithstanding, politicians and institutions in France and Germany would now like to defuse the colonial time bombs, and are now backing the return of part of their holdings.",
+    "book": 26
+   },
+   "24": {
+    "q": "The four sentences (labelled 1, 2, 3 and 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer:",
+    "opts": [
+     "Businesses find automation, such as robotic employees, a big asset in terms of productivity and efficiency.",
+     "But in recent years, robotics has had increasing impacts on unemployment, not just of manual labour, as computers are rapidly handling some white-collar and service-sector work.",
+     "For years politicians have promised workers that they would bring back their jobs by clamping down on trade, offshoring and immigration.",
+     "Economists, based on their research, say that the bigger threat to jobs now is not globalisation but automation."
+    ],
+    "raw": "The four sentences (labelled 1, 2, 3 and 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer: 1. Businesses find automation, such as robotic employees, a big asset in terms of productivity and efficiency. 2. But in recent years, robotics has had increasing impacts on unemployment, not just of manual labour, as computers are rapidly handling some white-collar and service-sector work. 3. For years politicians have promised workers that they would bring back their jobs by clamping down on trade, offshoring and immigration. 4. Economists, based on their research, say that the bigger threat to jobs now is not globalisation but automation.",
+    "book": 27
+   },
+   "8": {
+    "q": "Five jumbled up sentences, related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd one out and key in the number of the sentence as your answer:",
+    "opts": [
+     "They often include a foundation course on navigating capitalism with Chinese characteristics and have replaced typical cases from US corporates with a focus on how Western theories apply to China’s buzzing local firms.",
+     "The best Chinese business schools look like their Western rivals but are now growing distinct in terms of what they teach and the career boost they offer.",
+     "Western schools have enhanced their offerings with double degrees, popular with domestic and overseas students alike—and boosted the prestige of their Chinese partners.",
+     "For students, a big draw is the chance to rub shoulders with captains of China’s private sector.",
+     "Their business courses now largely cater to the growing demand from China Inc which has become more global, richer and ready to recruit from this sinocentric student body."
+    ],
+    "raw": "Five jumbled up sentences, related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd one out and key in the number of the sentence as your answer: 1. They often include a foundation course on navigating capitalism with Chinese characteristics and have replaced typical cases from US corporates with a focus on how Western theories apply to China’s buzzing local firms. 2. The best Chinese business schools look like their Western rivals but are now growing distinct in terms of what they teach and the career boost they offer. 3. Western schools have enhanced their offerings with double degrees, popular with domestic and overseas students alike—and boosted the prestige of their Chinese partners. 4. For students, a big draw is the chance to rub shoulders with captains of China’s private sector. 5. Their business courses now largely cater to the growing demand from China Inc which has become more global, richer and ready to recruit from this sinocentric student body.",
+    "book": 15
+   },
+   "6": {
+    "q": "Five jumbled up sentences, related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd one out and key in the number of the sentence as your answer:",
+    "opts": [
+     "A typical example is Wikipedia, where the overwhelming majority of contributors are male and so the available content is skewed to reflect their interests.",
+     "Without diversity of thought and representation, society is left with a distorted picture of future options, which are likely to result in augmenting existing inequalities.",
+     "Gross gender inequality in the technology sector is problematic, not only for the industry-wide marginalisation of women, but because technology designs embody the values of their makers.",
+     "While redressing unequal representation in the workplace is a step in the right direction, broader social change is needed to address the structural inequalities embedded within the current organisation of work and employment.",
+     "If technology merely reflects the perspectives of the male stereotype, then new technologies are unlikely to accommodate the diverse social contexts within which they operate."
+    ],
+    "raw": "Five jumbled up sentences, related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd one out and key in the number of the sentence as your answer: 1. A typical example is Wikipedia, where the overwhelming majority of contributors are male and so the available content is skewed to reflect their interests. 2. Without diversity of thought and representation, society is left with a distorted picture of future options, which are likely to result in augmenting existing inequalities. 3. Gross gender inequality in the technology sector is problematic, not only for the industry-wide marginalisation of women, but because technology designs embody the values of their makers. 4. While redressing unequal representation in the workplace is a step in the right direction, broader social change is needed to address the structural inequalities embedded within the current organisation of work and employment. 5. If technology merely reflects the perspectives of the male stereotype, then new technologies are unlikely to accommodate the diverse social contexts within which they operate.",
+    "book": 16
+   },
+   "7": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nPeople view idleness as a sin and industriousness as a virtue, and in the process have developed an unsatisfactory relationship with their jobs. Work has become a way for them to keep busy, even though many find their work meaningless. In their need for activity people undertake what was once considered work (fishing, gardening) as hobbies. The opposing view is that hard work has made us prosperous and improved our levels of health and education. It has also brought innovation and labour and time-saving devices, which have lessened life’s drudgery.",
+    "opts": [
+     "Hard work has overtaken all aspects of our lives and has enabled economic prosperity, but it is important that people reserve their leisure time for some idleness.",
+     "Some believe that hard work has been glorified to the extent that it has become meaningless, and led to greater idleness, but it has also had enormous positive impacts on everyday life.",
+     "While the idealisation of hard work has propelled people into meaningless jobs and endless activity, it has also led to tremendous social benefits from prosperity and innovation.",
+     "Despite some detractors, hard work is essential in today’s world to enable economic progress, for education and health and to propel innovations that make life easier."
+    ],
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nPeople view idleness as a sin and industriousness as a virtue, and in the process have developed an unsatisfactory relationship with their jobs. Work has become a way for them to keep busy, even though many find their work meaningless. In their need for activity people undertake what was once considered work (fishing, gardening) as hobbies. The opposing view is that hard work has made us prosperous and improved our levels of health and education. It has also brought innovation and labour and time-saving devices, which have lessened life’s drudgery. (1) Hard work has overtaken all aspects of our lives and has enabled economic prosperity, but it is important that people reserve their leisure time for some idleness. (2) Some believe that hard work has been glorified to the extent that it has become meaningless, and led to greater idleness, but it has also had enormous positive impacts on everyday life. (3) While the idealisation of hard work has propelled people into meaningless jobs and endless activity, it has also led to tremendous social benefits from prosperity and innovation. (4) Despite some detractors, hard work is essential in today’s world to enable economic progress, for education and health and to propel innovations that make life easier.",
+    "book": 25
+   },
+   "13": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nBrazil’s growth rate has been low, yet most Brazilians say their financial situation has improved, and they expect it to get even better. This is because most incomes are rising fast, with higher minimum wages and very low unemployment. The result is falling inequality and a growing middle class — the result of economic stabilization, improved social security and universal primary education. But despite recent improvements the Brazilian economy is still painfully unequal, with poor Brazilians paying the biggest share of their income in taxes and getting the least back in government services.",
+    "opts": [
+     "With rising incomes and falling unemployment, most Brazilians are being misled into thinking that their economy is doing well.",
+     "Most Brazilians feel they have benefitted from recent economic events, but the poor continue to be dealt unfairly by the state.",
+     "Economic reforms have benefitted many Brazilians, but they are unaware of the impending problems from rising inequalities in their society.",
+     "Good economic indicators have masked the unfair taxation of the poor that is likely to destabilise the Brazilian economy in the next few years."
+    ],
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nBrazil’s growth rate has been low, yet most Brazilians say their financial situation has improved, and they expect it to get even better. This is because most incomes are rising fast, with higher minimum wages and very low unemployment. The result is falling inequality and a growing middle class — the result of economic stabilization, improved social security and universal primary education. But despite recent improvements the Brazilian economy is still painfully unequal, with poor Brazilians paying the biggest share of their income in taxes and getting the least back in government services. (1) With rising incomes and falling unemployment, most Brazilians are being misled into thinking that their economy is doing well. (2) Most Brazilians feel they have benefitted from recent economic events, but the poor continue to be dealt unfairly by the state. (3) Economic reforms have benefitted many Brazilians, but they are unaware of the impending problems from rising inequalities in their society. (4) Good economic indicators have masked the unfair taxation of the poor that is likely to destabilise the Brazilian economy in the next few years.",
+    "book": 26
+   },
+   "23": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nThe human mind is wired to see patterns. Not only does the brain process information as it comes in, it also stores insights from all our past experiences. Every interaction, happy or sad, is catalogued in our memory. Intuition draws from that deep memory well to inform our decisions going forward. In other words, intuitive decisions are based on data, and not contrary to data as many would like to assume. When we subconsciously spot patterns, the body starts firing neurochemicals in both the brain and gut. These “somatic markers” are what give us that instant sense that something is right … or that it’s off. Not only are these automatic processes faster than rational thought, but our intuition draws from decades of diverse qualitative experience (sights, sounds, interactions, etc.) – a wholly human feature that big data alone could never accomplish.",
+    "opts": [
+     "Intuitions are neurochemical firings based on pattern recognition and draw upon a rich and vast database of experiences.",
+     "Intuition is infinitely richer than big data which is based on rational thought and accomplishes more than what big data can.",
+     "Intuitions are automatic processes and are therefore faster than rational thought, and so decisions based on them are better.",
+     "Intuition draws from deep memory, and may not be related to data, but to decades of diverse qualitative experience."
+    ],
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nThe human mind is wired to see patterns. Not only does the brain process information as it comes in, it also stores insights from all our past experiences. Every interaction, happy or sad, is catalogued in our memory. Intuition draws from that deep memory well to inform our decisions going forward. In other words, intuitive decisions are based on data, and not contrary to data as many would like to assume. When we subconsciously spot patterns, the body starts firing neurochemicals in both the brain and gut. These “somatic markers” are what give us that instant sense that something is right … or that it’s off. Not only are these automatic processes faster than rational thought, but our intuition draws from decades of diverse qualitative experience (sights, sounds, interactions, etc.) – a wholly human feature that big data alone could never accomplish. (1) Intuitions are neurochemical firings based on pattern recognition and draw upon a rich and vast database of experiences. (2) Intuition is infinitely richer than big data which is based on rational thought and accomplishes more than what big data can. (3) Intuitions are automatic processes and are therefore faster than rational thought, and so decisions based on them are better. (4) Intuition draws from deep memory, and may not be related to data, but to decades of diverse qualitative experience.",
+    "book": 27
+   }
+  },
+  "DILR": {},
+  "QA": {}
+ }
+}

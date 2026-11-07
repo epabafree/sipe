@@ -16,6 +16,9 @@ SIPE.ready(function () {
   var PACE = { VARC: 40 / 24, DILR: 40 / 20, QA: 40 / 22 }, ORDER = ['VARC', 'DILR', 'QA'];
   var sections = ORDER.filter(function (s) { return DATA.questions.some(function (q) { return q.section === s; }); });
   var bySec = {}; sections.forEach(function (s) { bySec[s] = DATA.questions.filter(function (q) { return q.section === s; }); });
+  var FULL = DATA.full || { VARC: 24, DILR: 20, QA: 22 };
+  function secMin(s) { return Math.max(5, Math.min(40, Math.round(40 * bySec[s].length / (FULL[s] || bySec[s].length)))); }
+  var PARTIAL = sections.some(function (s) { return bySec[s].length < (FULL[s] || 0); });
   var HIST = 'sipe:mockhist:' + MID, M = null, tick = null;
   function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
   function stop() { if (tick) { clearInterval(tick); tick = null; } }
@@ -48,10 +51,10 @@ SIPE.ready(function () {
     host.innerHTML = '<div class="read"><div class="block">' +
       '<h4>Timed mock</h4>' +
       '<p>' + esc(DATA.title) + '. Questions appear in the original order and are scored CAT-style: <b>+3</b> for a correct answer, <b>−1</b> for a wrong MCQ answer, no penalty on TITA.</p>' +
-      '<div class="tbl"><table><tr><th>Section</th><th>Questions</th><th>Real CAT time</th></tr>' + sections.map(function (s) { return '<tr><td class="rh">' + SECN[s] + '</td><td>' + bySec[s].length + '</td><td>40 min</td></tr>'; }).join('') + '</table></div>' +
+      '<div class="tbl"><table><tr><th>Section</th><th>Questions</th><th>Time</th></tr>' + sections.map(function (s) { return '<tr><td class="rh" style="white-space:normal">' + SECN[s] + '</td><td>' + bySec[s].length + '</td><td>' + secMin(s) + ' min</td></tr>'; }).join('') + '</table></div>' +
       '<div class="pl-sub">Timer</div>' +
       '<label class="radio"><input type="radio" name="mk-t" value="none" checked> No timer</label>' +
-      '<label class="radio"><input type="radio" name="mk-t" value="real"> Real CAT: 40 minutes per section, sections lock in order</label>' +
+      '<label class="radio"><input type="radio" name="mk-t" value="real"> Real CAT: ' + (PARTIAL ? '40 minutes per full section, scaled to the questions here' : '40 minutes per section') + ', sections lock in order</label>' +
       '<label class="radio"><input type="radio" name="mk-t" value="custom"> One overall timer: <input type="number" id="mk-min" min="5" max="240" value="' + Math.max(10, Math.round(total * 1.8)) + '" style="width:72px"> minutes</label>' +
       '<div class="pl-sub">Sections</div>' +
       '<label class="radio"><input type="radio" name="mk-s" value="all" checked> All sections (' + sections.join(' → ') + ')</label>' +
@@ -122,7 +125,7 @@ SIPE.ready(function () {
   function begin(mode, secs, mins) {
     PR = null;
     M = { mode: mode, secs: secs, si: 0, qi: 0, ans: {}, mark: {}, seen: {}, spent: {}, left: {}, overall: mode === 'custom' ? mins * 60 : null, done: false };
-    secs.forEach(function (s) { M.left[s] = mode === 'real' ? 40 * 60 : null; M.spent[s] = 0; });
+    secs.forEach(function (s) { M.left[s] = mode === 'real' ? secMin(s) * 60 : null; M.spent[s] = 0; });
     render();
     var lastT = Date.now();
     tick = setInterval(function () {

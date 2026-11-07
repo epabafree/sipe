@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 442" width="660" height="442" font-family="Helvetica,Arial,sans-serif">
+<rect width="660" height="442" fill="#fff"/>
+<line x1="645.0" y1="12" x2="645.0" y2="392" stroke="#e5e7eb"/>
+<line x1="603.8" y1="12" x2="603.8" y2="392" stroke="#e5e7eb"/>
+<line x1="562.5" y1="12" x2="562.5" y2="392" stroke="#e5e7eb"/>
+<line x1="521.2" y1="12" x2="521.2" y2="392" stroke="#e5e7eb"/>
+<line x1="480.0" y1="12" x2="480.0" y2="392" stroke="#e5e7eb"/>
+<line x1="438.8" y1="12" x2="438.8" y2="392" stroke="#e5e7eb"/>
+<line x1="397.5" y1="12" x2="397.5" y2="392" stroke="#e5e7eb"/>
+<line x1="356.2" y1="12" x2="356.2" y2="392" stroke="#e5e7eb"/>
+<line x1="315.0" y1="12" x2="315.0" y2="392" stroke="#e5e7eb"/>
+<line x1="273.8" y1="12" x2="273.8" y2="392" stroke="#e5e7eb"/>
+<line x1="232.5" y1="12" x2="232.5" y2="392" stroke="#e5e7eb"/>
+<line x1="191.2" y1="12" x2="191.2" y2="392" stroke="#e5e7eb"/>
+<line x1="150.0" y1="12" x2="150.0" y2="392" stroke="#e5e7eb"/>
+<text x="142" y="33.0" text-anchor="end" font-size="13.5" fill="#111827">Abani</text>
+<rect x="191.2" y="19" width="82.5" height="18" fill="#c9ced6" stroke="#6b7280" stroke-width="0.6"/>
+<text x="232.5" y="33.0" text-anchor="middle" font-size="12.5" fill="#111827">100%</text>
+<text x="142" y="57.0" text-anchor="end" font-size="13.5" fill="#111827">Bahni</text>
+<rect x="191.2" y="43" width="82.5" height="18" fill="#9aa1ab" stroke="#6b7280" stroke-width="0.6"/>
+<text x="232.5" y="57.0" text-anchor="middle" font-size="12.5" fill="#111827">100%</text>
+<text x="142" y="81.0" text-anchor="end" font-size="13.5" fill="#111827">Tinni</text>
+<rect x="150.0" y="67" width="82.5" height="18" fill="#e3e6ea" stroke="#6b7280" stroke-width="0.6"/>
+<text x="191.2" y="81.0" text-anchor="middle" font-size="12.5" fill="#111827">80%</text>
+<text x="8" y="57.0" font-size="13.5" font-weight="bold" fill="#374151">Project 1</text>
+<line x1="8" y1="93.0" x2="645" y2="93.0" stroke="#d1d5db"/>
+<text x="142" y="115.0" text-anchor="end" font-size="13.5" fill="#111827">Danni</text>
+<rect x="191.2" y="101" width="123.8" height="18" fill="#3f4652" stroke="#6b7280" stroke-width="0.6"/>
+<text x="253.1" y="115.0" text-anchor="middle" font-size="12.5" fill="#ffffff">90%</text>
+<text x="142" y="139.0" text-anchor="end" font-size="13.5" fill="#111827">Tinni</text>
+<rect x="232.5" y="125" width="82.5" height="18" fill="#e3e6ea" stroke="#6b7280" stroke-width="0.6"/>
+<text x="273.8" y="139.0" text-anchor="middle" font-size="12.5" fill="#111827">100%</text>
+<text x="8" y="127.0" font-size="13.5" font-weight="bold" fill="#374151">Project 2</text>
+<line x1="8" y1="151.0" x2="645" y2="151.0" stroke="#d1d5db"/>
+<text x="142" y="173.0" text-anchor="end" font-size="13.5" fill="#111827">Abani</text>
+<rect x="315.0" y="159" width="82.5" height="18" fill="#c9ced6" stroke="#6b7280" stroke-width="0.6"/>
+<text x="356.2" y="173.0" text-anchor="middle" font-size="12.5" fill="#111827">100%</text>
+<text x="142" y="197.0" text-anchor="end" font-size="13.5" fill="#111827">Bahni</text>
+<rect x="273.8" y="183" width="165.0" height="18" fill="#9aa1ab" stroke="#6b7280" stroke-width="0.6"/>
+<text x="356.2" y="197.0" text-anchor="middle" font-size="12.5" fill="#111827">75%</text>
+<text x="142" y="221.0" text-anchor="end" font-size="13.5" fill="#111827">Danni</text>
+<rect x="356.2" y="207" width="123.8" height="18" fill="#3f4652" stroke="#6b7280" stroke-width="0.6"/>
+<text x="418.1" y="221.0" text-anchor="middle" font-size="12.5" fill="#ffffff">100%</text>
+<text x="8" y="197.0" font-size="13.5" font-weight="bold" fill="#374151">Project 3</text>
+<line x1="8" y1="233.0" x2="645" y2="233.0" stroke="#d1d5db"/>
+<text x="142" y="255.0" text-anchor="end" font-size="13.5" fill="#111827">Abani</text>
+<rect x="397.5" y="241" width="206.2" height="18" fill="#c9ced6" stroke="#6b7280" stroke-width="0.6"/>
+<text x="500.6" y="255.0" text-anchor="middle" font-size="12.5" fill="#111827">80%</text>
+<text x="142" y="279.0" text-anchor="end" font-size="13.5" fill="#111827">Danni</text>
+<rect x="480.0" y="265" width="82.5" height="18" fill="#3f4652" stroke="#6b7280" stroke-width="0.6"/>
+<text x="521.2" y="279.0" text-anchor="middle" font-size="12.5" fill="#ffffff">100%</text>
+<text x="142" y="303.0" text-anchor="end" font-size="13.5" fill="#111827">Tinni</text>
+<rect x="397.5" y="289" width="123.8" height="18" fill="#e3e6ea" stroke="#6b7280" stroke-width="0.6"/>
+<text x="459.4" y="303.0" text-anchor="middle" font-size="12.5" fill="#111827">100%</text>
+<text x="8" y="279.0" font-size="13.5" font-weight="bold" fill="#374151">Project 4</text>
+<line x1="8" y1="315.0" x2="645" y2="315.0" stroke="#d1d5db"/>
+<text x="142" y="337.0" text-anchor="end" font-size="13.5" fill="#111827">Bahni</text>
+<rect x="521.2" y="323" width="123.8" height="18" fill="#9aa1ab" stroke="#6b7280" stroke-width="0.6"/>
+<text x="583.1" y="337.0" text-anchor="middle" font-size="12.5" fill="#111827">90%</text>
+<text x="142" y="361.0" text-anchor="end" font-size="13.5" fill="#111827">Danni</text>
+<rect x="603.8" y="347" width="41.2" height="18" fill="#3f4652" stroke="#6b7280" stroke-width="0.6"/>
+<text x="624.4" y="361.0" text-anchor="middle" font-size="12.5" fill="#ffffff">100%</text>
+<text x="142" y="385.0" text-anchor="end" font-size="13.5" fill="#111827">Tinni</text>
+<rect x="480.0" y="371" width="82.5" height="18" fill="#e3e6ea" stroke="#6b7280" stroke-width="0.6"/>
+<text x="521.2" y="385.0" text-anchor="middle" font-size="12.5" fill="#111827">100%</text>
+<text x="8" y="361.0" font-size="13.5" font-weight="bold" fill="#374151">Project 5</text>
+<line x1="8" y1="397.0" x2="645" y2="397.0" stroke="#d1d5db"/>
+<text x="150.0" y="414" text-anchor="middle" font-size="12" fill="#374151">Jan 1</text>
+<text x="191.2" y="414" text-anchor="middle" font-size="12" fill="#374151">Feb 1</text>
+<text x="232.5" y="414" text-anchor="middle" font-size="12" fill="#374151">Mar 1</text>
+<text x="273.8" y="414" text-anchor="middle" font-size="12" fill="#374151">Apr 1</text>
+<text x="315.0" y="414" text-anchor="middle" font-size="12" fill="#374151">May 1</text>
+<text x="356.2" y="414" text-anchor="middle" font-size="12" fill="#374151">Jun 1</text>
+<text x="397.5" y="414" text-anchor="middle" font-size="12" fill="#374151">Jul 1</text>
+<text x="438.8" y="414" text-anchor="middle" font-size="12" fill="#374151">Aug 1</text>
+<text x="480.0" y="414" text-anchor="middle" font-size="12" fill="#374151">Sep 1</text>
+<text x="521.2" y="414" text-anchor="middle" font-size="12" fill="#374151">Oct 1</text>
+<text x="562.5" y="414" text-anchor="middle" font-size="12" fill="#374151">Nov 1</text>
+<text x="603.8" y="414" text-anchor="middle" font-size="12" fill="#374151">Dec 1</text>
+<text x="645.0" y="414" text-anchor="middle" font-size="12" fill="#374151">Jan 1</text>
+</svg>

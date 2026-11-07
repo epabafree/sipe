@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.10.0
+
+Added CAT 2021 Slot 3 (66 questions, 8 set cards), in the original exam order. The project schedule in DILR Set 2 is redrawn from the source.
+
+VARC Q3 (the clock passage, "all of the following arguments, EXCEPT") follows the official key, option 2. Option 3 is close to a line in the passage, and the card explains the difference.
+
+The timed mock's section table now wraps on narrow screens.
+
+Fixes to the source text:
+- Hyphens restored in "half-century", "time-saving", "Nano-Sentinels" and "industry-wide".
+
 ## v0.9.0
 
 Added CAT 2021 Slot 2 (66 questions, 8 set cards), in the original exam order. The order-processing chart in DILR Set 1 is redrawn from the source.

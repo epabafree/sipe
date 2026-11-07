@@ -14,6 +14,8 @@ from fmt import why as why_rows
 ROOT = "sipe"
 OUT = os.path.join(HERE, "out")
 YEAR = 2023
+FULL_PAPER = {2020: {"VARC": 26, "DILR": 24, "QA": 26}}
+
 def paper_name(y, n): return f"CAT {y} · Slot {n}"
 SECN = {"VARC": "Verbal Ability & Reading Comprehension", "DILR": "Data Interpretation & Logical Reasoning", "QA": "Quantitative Aptitude"}
 SEC_ORDER = {"VARC": 0, "DILR": 1, "QA": 2}
@@ -80,7 +82,7 @@ SOURCES = [(ex_varc.VARC, data_varc.SOL, "VARC", "pilot"), (b2_varc.ITEMS, b2_va
            (ex_qa.QA, data_qa.SOL, "QA", "pilot"), (b2_qa.ITEMS, b2_qa.SOL, "QA", "b2")]
 # Later papers: one module per paper (VARC) plus its _dilr / _qa add-on modules, all sharing one Paper object.
 import importlib
-for base in ("b3_s2", "b4_s3", "b5_22s1", "b6_22s2", "b7_22s3", "b8_21s1", "b9_21s2"):
+for base in ("b3_s2", "b4_s3", "b5_22s1", "b6_22s2", "b7_22s3", "b8_21s1", "b9_21s2", "b10_21s3"):
     try: P = importlib.import_module(base).P
     except ModuleNotFoundError: continue
     for extra in ("_dilr", "_qa"): importlib.import_module(base + extra)
@@ -322,7 +324,9 @@ def main():
                "solution": q["solution"], "shortcut": q["shortcut"],
                "topic": " › ".join(x.replace("_", " ") for x in q["topics"][0].split("::"))} for q in pq]
         name = paper_name(py, pn)
-        mdata = json.dumps({"title": f"{name} · full paper, {len(mq)} questions", "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
+        full = FULL_PAPER.get(py, {"VARC": 24, "DILR": 20, "QA": 22}); nfull = sum(full.values())
+        ttl = f"{name} · full paper, {len(mq)} questions" if len(mq) >= nfull else f"{name} · {len(mq)} of {nfull} questions (the rest aren’t in the source)"
+        mdata = json.dumps({"title": ttl, "full": full, "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
         gkey = f"mock-{py}-S{pn}-pilot" if (py, pn) == (2023, 1) else f"mock-{py}-S{pn}"   # keep the v0.2 GUID
         add(f"{D_PAPERS}::CAT {py}::Slot {pn}", M_MOCK, [f"{py}-S{pn}", name, mdata], ["Card::Mock", f"Year::{py}", f"Paper::{py}_S{pn}"], gkey, 40_000_000 + pi, "mock")
 
