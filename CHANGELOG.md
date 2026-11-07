@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.14.0
+
+Added CAT 2019 Slot 1: 84 of the 100 questions, in the original exam order. The rest aren't in the source: VARC Q1, Q3–9 (including the online-shopping passage), Q14, Q20–21, Q27–28 and Q34, and QA Q8 and Q20.
+
+The CAT 2019 papers had 34, 32 and 34 questions per section.
+
+Charts:
+- DILR Set 4: the source's radar chart has only four of the five vendors (Vendor 3 is missing). It is redrawn with all five, with values to the nearest 5.
+- DILR Set 5: the source draws Telangana's bars wrongly. The rank table needs Kerala to have more IPC cases than Telangana. The chart is redrawn.
+- DILR Set 6: the street map is redrawn.
+
+Answer keys:
+- DILR Q1 (shelves): the source key gives 2. Both layouts work, so the answer is 8, which is the official answer.
+- QA Q4: the source key gives 3. The answer is 1/3.
+- QA Q19: the source key gives 0. x = 0 is a root, so the answer is 1.
+
+Fixes to the source text:
+- DILR Set 1, fact 2: "higher number d than" is "higher numbered than".
+- QA Q26: "4√64" is the fourth root of 64.
+- Hyphens restored, for example "wide-ranging", "long-lasting", "rags-to-riches", "folk-rock", "pre-industrial".
+
 ## v0.13.0
 
 Added CAT 2020 Slot 3: 69 of the 76 questions, in the original exam order. The rest aren't in the source: VARC Q1–4 (the screen-time passage), Q6 and Q7, and QA Q4. This completes CAT 2020.
