@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.16.0
+
+Added CAT 2018 Slot 1: 86 of the 100 questions, in the original exam order. The rest aren't in the source: VARC Q1, Q10–14 (the war memorial passage), Q21, Q27 and Q30–34 (the plastics passage), and QA Q9.
+
+The LED sales chart in DILR Set 5 is shown as a table of the figures the chart gives, with blanks where the chart leaves them out.
+
+Fixes to the source text:
+- Hyphens restored, for example "trauma-related", "human-elephant", "extra-genetic", "non-professional".
+
 ## v0.15.0
 
 Added CAT 2019 Slot 2: 57 of the 100 questions, in the original exam order. The source has none of this paper's VARC questions. Also missing are DILR Set 6 (Q21–24, the languages set) and QA Q3.

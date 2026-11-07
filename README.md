@@ -22,7 +22,8 @@ An Anki deck of CAT previous-year questions. Each question is an interactive car
 | CAT 2020 Slot 3 | 20 | 24 | 25 | 69 |
 | CAT 2019 Slot 1 | 20 | 32 | 32 | 84 |
 | CAT 2019 Slot 2 | 0 | 24 | 33 | 57 |
-| | | | | **942** |
+| CAT 2018 Slot 1 | 21 | 32 | 33 | 86 |
+| | | | | **1028** |
 
 Alongside the question cards there are set cards (a whole RC passage or DILR set on one card), formula and technique cards, a practice card for each topic area, and a card for each paper with a practice mode and a timed mock.
 
@@ -59,7 +60,7 @@ Every card is tagged (`sipe::Topic::QA::Algebra::Quadratic_Equations`, `sipe::Pa
 
 Questions, options, passages and data are kept as printed. Clear misprints are fixed, and each fix is listed in the [changelog](CHANGELOG.md). Answers are checked against the official keys. Solutions are written for this deck rather than copied from the source.
 
-The source groups the 2021 and 2022 questions by topic rather than by paper, so they have been put back into exam order using the official response sheets. Where a question's position couldn't be confirmed, the changelog says so. Options are listed in the order the source prints them, which for a few of these questions differs from the exam. The source doesn't have every 2019 and 2020 question; the table above shows how many of each section are included.
+The source groups the 2021 and 2022 questions by topic rather than by paper, so they have been put back into exam order using the official response sheets. Where a question's position couldn't be confirmed, the changelog says so. Options are listed in the order the source prints them, which for a few of these questions differs from the exam. The source doesn't have every question from 2018 to 2020; the table above shows how many of each section are included.
 
 Difficulty labels are estimates, not official data.
 
@@ -72,7 +73,7 @@ Difficulty labels are estimates, not official data.
 
 ## Roadmap
 
-- CAT 2017–2019
+- CAT 2018 Slot 2 and CAT 2017
 - CAT 1991–2008 (mostly DILR and QA)
 - More mocks and longer explanations after that
 
