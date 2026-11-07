@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.17.0
+
+The three CAT 2020 papers are now complete: 76 questions each (26 VARC, 24 DILR, 26 QA). 21 questions and 3 set cards added.
+
+- 2020 Slot 1, VARC: RC passage on anarchism and the state (Q16–20), a summary (Q2) and an odd-one-out (Q14).
+- 2020 Slot 1, DILR Set 3: cab driver ratings (Q11–14). The ratings and payment table is laid out in full, and the set solution gives each driver's lowest and highest possible total.
+- 2020 Slot 1, QA: Q10 (birthdays across twelve months).
+- 2020 Slot 2, VARC: an odd-one-out (Q9) and a para jumble (Q10).
+- 2020 Slot 3, VARC: RC passage on screens and class (Q1–4), an odd-one-out (Q6) and a para jumble (Q7).
+- 2020 Slot 3, QA: Q4 (road contractor).
+- CAT 2022 Slot 2, VARC Q6: the answer is option 3, the two characterisations named in the passage. The solution and option notes are rewritten to match.
+
 ## v0.16.0
 
 Added CAT 2018 Slot 1: 86 questions (21 VARC, 32 DILR, 33 QA) and 11 set cards (3 RC passages, 8 DILR sets), numbered as in the exam.

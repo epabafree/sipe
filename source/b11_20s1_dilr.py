@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Batch 11 — CAT 2020 Slot 1: DILR (sets 1, 2, 4, 5).
+# Batch 11 — CAT 2020 Slot 1: DILR (sets 1–5).
 from fmt import steps, final, trap, why, table, p
 from b11_20s1 import P
 
@@ -78,6 +78,52 @@ P.dq(10, "If C is an expert in mridangam and F is not, then which are the three 
  "C mridangam only makes E tabla only; F not mridangam makes F tabla only.",
  steps(("From the set solution", p("Tabla only: E, F and H. G is then tabla + mridangam."))) + final("E, F and H, option 2"),
  [("1", "G plays mridangam too."), ("3", "C is mridangam only."), ("4", "C is mridangam only, G plays mridangam too.")])
+
+# ---------------- Set 3: Cab drivers ----------------
+CABS = table(["", "P1", "P2", "P3", "P4", "P5", "Fixed payment", "Bonus"],
+             [["Arun", "", "", "", "4", "", "₹1000", "₹250 × Final Rating"], ["Barun", "3", "", "", "", "", "₹1200", "₹200 × Final Rating"],
+              ["Chandan", "", "", "2", "", "", "₹1400", "₹100 × Final Rating"], ["Damodaran", "", "3", "", "", "", "₹1300", "₹150 × Final Rating"],
+              ["Eman", "", "", "", "", "2", "₹1100", "₹200 × Final Rating"]])
+P.dilr_set(3, "Set 3 — Cab driver ratings", "Read the following passage carefully and answer the questions that follow.",
+ p("The local office of the APP-CAB company evaluates the performance of five cab drivers, Arun, Barun, Chandan, Damodaran, and Eman for their monthly payment based on ratings in five different parameters (P1 to P5) as given below:") +
+ "<p>P1: timely arrival<br>P2: behaviour<br>P3: comfortable ride<br>P4: driver’s familiarity with the route<br>P5: value for money</p>" +
+ p("Based on feedback from the customers, the office assigns a rating from 1 to 5 in each of these parameters. Each rating is an integer from a low value of 1 to a high value of 5. The final rating of a driver is the average of his ratings in these five parameters. The monthly payment of the drivers has two parts – a fixed payment and final rating-based bonus. If a driver gets a rating of 1 in any of the parameters, he is not eligible to get bonus. To be eligible for bonus a driver also needs to get a rating of five in at least one of the parameters.") +
+ p("The partial information related to the ratings of the drivers in different parameters and the monthly payment structure (in rupees) is given in the table below:") + CABS +
+ p("The following additional facts are known.") +
+ "<ol><li>Arun and Barun have got a rating of 5 in exactly one of the parameters. Chandan has got a rating of 5 in exactly two parameters.</li><li>None of drivers has got the same rating in three parameters.</li></ol>",
+ "DILR::LR::Mathematical_Reasoning",
+ steps(("The rules in one line", p("Five ratings per driver, each from 1 to 5, and no value used three times. A bonus needs at least one 5 and no 1.")),
+       ("Smallest and largest totals with a bonus", p("With a bonus, the other ratings are 2 to 5. To keep the total low, use each small value twice; to keep it high, use each large value twice. Arun and Barun may have only one 5, Chandan exactly two.") +
+          table(["Driver", "Lowest", "Total"],
+                [["Arun", "4, 5, 2, 2, 3", "16"], ["Barun", "3, 5, 2, 2, 3", "15"], ["Chandan", "2, 5, 5, 2, 3", "17"], ["Damodaran", "3, 5, 2, 2, 3", "15"], ["Eman", "2, 5, 2, 3, 3", "15"]]) +
+          table(["Driver", "Highest", "Total"],
+                [["Arun", "4, 5, 4, 3, 3", "19"], ["Barun", "3, 5, 4, 4, 3", "19"], ["Chandan", "2, 5, 5, 4, 4", "20"], ["Damodaran", "3, 5, 5, 4, 4", "21"], ["Eman", "2, 5, 5, 4, 4", "20"]])),
+       ("Payment", p("Payment = fixed + rate × (total ÷ 5). Each question uses the lowest or highest total."))) +
+ final("Every question comes down to the lowest or highest possible total for one driver."),
+ p("Low totals use each small value twice; high totals use each large value twice. The ‘no three alike’ rule stops you from going further."),
+ p("<b>Extreme values under a ‘no value three times’ rule:</b> fill the slots with pairs: two of the extreme value, then two of the next."))
+P.dq(11, "If Damodaran does not get a bonus, what is the maximum possible value of his final rating?", ["3.8", "3.4", "3.6", "3.2"], "MCQ", "3", "Medium",
+ "No bonus means he has a 1, or has no 5. Try both.",
+ steps(("With a 1", p("3 (given), 1, and the rest as high as possible: 5, 5, 4. Total 18, rating 3.6.")),
+       ("With no 5", p("3 (given) and the others at most 4, no value three times: 4, 4, 3, 2. Total 16, rating 3.2.")),
+       ("Larger", p("3.6."))) + final("3.6, option 3"),
+ [("1", "A total of 19 needs no 1 and a 5, which earns a bonus."), ("2", "Not the largest possible."), ("4", "The best with no 5, but a 1 allows more.")])
+P.dq(12, "If Eman gets a bonus, what is the minimum possible value of his final rating?", ["3.0", "3.2", "2.8", "3.4"], "MCQ", "1", "Medium",
+ "He needs a 5 and no 1. Keep the rest as low as the ‘no three alike’ rule allows.",
+ steps(("Lowest total", p("2 (given), 5, and then 2, 3, 3 (a third 2 is not allowed). Total 15, rating 3.0."))) + final("3.0, option 1"),
+ [("2", "Possible, but not the lowest."), ("3", "A total of 14 needs a third 2 or a 1."), ("4", "Possible, but not the lowest.")])
+P.dq(13, "If all five drivers get bonus, what is the minimum possible value of the monthly payment (in rupees) that a driver gets?", ["1740", "1600", "1700", "1750"], "MCQ", "3", "Medium",
+ "Find each driver’s lowest payment using his lowest total.",
+ steps(("Lowest payments", p("Payment = fixed + rate × rating. For Eman: 1100 + 200 × 3.0 = 1700.") + table(["Driver", "Lowest", "Payment (₹)"],
+                                 [["Arun", "3.2", "1800"], ["Barun", "3.0", "1800"], ["Chandan", "3.4", "1740"],
+                                  ["Damodaran", "3.0", "1750"], ["Eman", "3.0", "1700"]], hi={(4, 2)}))) + final("₹1700 (Eman), option 3"),
+ [("1", "Chandan’s lowest, but Eman can earn less."), ("2", "Below every driver’s lowest."), ("4", "Damodaran’s lowest.")])
+P.dq(14, "If all five drivers get bonus, what is the maximum possible value of the monthly payment (in rupees) that a driver gets?", ["1960", "1950", "1900", "2050"], "MCQ", "1", "Medium",
+ "Find each driver’s highest payment using his highest total.",
+ steps(("Highest payments", p("Payment = fixed + rate × rating. For Barun: 1200 + 200 × 3.8 = 1960.") + table(["Driver", "Highest", "Payment (₹)"],
+                                  [["Arun", "3.8", "1950"], ["Barun", "3.8", "1960"], ["Chandan", "4.0", "1800"],
+                                   ["Damodaran", "4.2", "1930"], ["Eman", "4.0", "1900"]], hi={(1, 2)}))) + final("₹1960 (Barun), option 1"),
+ [("2", "Arun’s highest; he may have only one 5."), ("3", "Eman’s highest."), ("4", "Would need a rating no driver can reach.")])
 
 # ---------------- Set 4: Medicines ----------------
 P.dilr_set(4, "Set 4 — Four medicines", "Read the following passage carefully and answer the questions that follow.",

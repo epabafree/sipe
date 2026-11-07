@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Batch 11 — CAT 2020 Slot 1: QA (25 of 26).
+# Batch 11 — CAT 2020 Slot 1: QA (26 of 26).
 from fmt import steps, final, trap, why, table, p
 from b11_20s1 import P
 
@@ -78,6 +78,14 @@ P.qa(9, r"A circle is inscribed in a rhombus with diagonals \(12\) cm and \(16\)
        ("Ratio", p(r"\(\tfrac{\pi \times 23.04}{96}\) \(= 0.24\pi\) \(= \tfrac{6\pi}{25}\)."))) + final(r"\(\tfrac{6\pi}{25}\), option 3"),
  concept=r"\[\text{area} = \tfrac12 \times \text{perimeter} \times r\]",
  why_rows=[("1", "Half the ratio."), ("2", "Not 0.24π."), ("4", "Not 0.24π.")])
+
+P.qa(10, r"Among \(100\) students, \(x_1\) have birthdays in January, \(x_2\) have birthdays in February, and so on. If \(x_0 = \max(x_1, x_2, \dots, x_{12})\), then the smallest possible value of \(x_0\) is",
+ M("9", "10", "8", "12"), "MCQ", "1", ["Number_System::Miscellaneous"], "Easy",
+ "Spread the 100 birthdays as evenly as you can over 12 months.",
+ steps(("Even spread", p(r"\(100 \div 12 = 8\) remainder \(4\). Twelve months of 8 hold only 96, so at least one month has 9.")),
+       ("It works", p("Four months with 9 and eight months with 8: 36 + 64 = 100. The largest is 9."))) + final(r"\(9\), option 1"),
+ concept=r"\[\text{smallest possible maximum} = \left\lceil \frac{n}{k} \right\rceil\]",
+ why_rows=[("2", "Possible, but not the smallest."), ("3", r"\(12 \times 8 = 96 < 100\)."), ("4", "Possible, but not the smallest.")])
 
 P.qa(11, r"A straight road connects points A and B. Car 1 travels from A to B and Car 2 travels from B to A, both leaving at the same time. After meeting each other, they take \(45\) minutes and \(20\) minutes, respectively, to complete their journeys. If Car 1 travels at the speed of \(60\) km/hr, then the speed of Car 2, in km/hr, is",
  M("90", "70", "100", "80"), "MCQ", "1", ["Arithmetic::Time_Speed_and_Distance"], "Easy",

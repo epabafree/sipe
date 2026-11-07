@@ -7,6 +7,7 @@ P = Paper(2020, 1, "ex11_20s1.json")
 P.passage("P1", "Passage 1 — Nouns, verbs and the rules of grammar", "Arts_and_Literature")
 P.passage("P2", "Passage 2 — Money in Tang China", "Social_Science_and_History")
 P.passage("P3", "Passage 3 — Elephant seal dialects", "Environment_and_Life_Science")
+P.passage("P4", "Passage 4 — Anarchism and the state", "Social_Science_and_History")
 
 # ---------------- Verbal ability (Q1, Q3) ----------------
 P.va(1, P.summary_html(1, "As Soviet power declined"), P.Q["VARC"][1]["opts"], "MCQ", "2", "Summary", "Hard",
@@ -174,3 +175,65 @@ P.va(26, P.sent_html(26), [], "TITA", "3124", "Para_Jumble", "Medium",
  "pj",
  [("3", "Continuity and change."), ("1", "Tensions remain."), ("2", "China’s rise."), ("4", "“These concerns” bring outside interest.")],
  why_title="Why each sentence goes where it does")
+
+
+# ---------------- Verbal ability (Q2, Q14) ----------------
+P.va(2, P.summary_html(2, "For years, movies"), P.Q["VARC"][2]["opts"], "MCQ", "2", "Summary", "Medium",
+ "Who has the wrong idea, and where did it come from?",
+ steps(("What the passage says", "<ol><li>Films and TV shows give an unrealistic picture of the ‘science of voices’.</li><li>One film scene shows an expert reading a speaker’s origin and age from a short clip, and a computer matching the voice with 90% certainty.</li><li>These misimpressions have caused errors in real trials: the ‘CSI effect’, where judges expect too much of forensic science.</li></ol>"),
+       ("Choosing", p("Option 2 keeps both halves: the screen is the source, and the false belief is that forensic phonetics is reliable."))) +
+ final("Option 2"),
+ "summary",
+ [("1", "True in spirit, but it drops films and television, which are the whole point."), ("3", "The passage says the screen version is unrealistic, not that it is used in real life."),
+  ("4", "The passage is about false expectations, not about voice analysis becoming more common.")])
+
+P.va(14, P.sent_html(14), [], "TITA", "3", "Odd_One_Out", "Medium",
+ "Four sentences describe how feminist criticism of reading began. One describes what androcentric books do to readers.",
+ steps(("The chain", p("1 → 5 → 4 → 2: for feminists, how we read is tied to what we read (1); more specifically, the inquiry begins with seeing that the canon is androcentric and harms women readers (5); documenting this realisation was an early task (4); Showalter’s critique of the curriculum is an example of that work (2).")),
+       ("The odd one", p("Sentence 3 explains how androcentric literature shapes the reading experience by gender. It is a claim about books, while the paragraph is about what feminist critics did."))) +
+ final("3"),
+ "oddone",
+ [("1", "Opens: how we read and what we read."), ("5", "“More specifically” narrows sentence 1."), ("4", "“This realization” is the one in sentence 5."), ("2", "“This work” is the documenting in sentence 4.")],
+ why_title="How the other sentences fit")
+
+# ---------------- Passage 4: Anarchism (Q16–20) ----------------
+P.rc(16, "P4", "Except", "2", "Medium",
+ "Three options are stated in the passage. Look for the one about how the public sees anarchism.",
+ steps(("Checking each", p("Option 1 is in paragraphs 2–3: the revolution ended in terror and a new ruling caste. Option 3 is in the last paragraph. Option 4 is in paragraphs 3–4.")),
+       ("The odd one", p("The passage never discusses a popular view of anarchism as lawlessness and violence, or a mistrust of collectivism. Anarchist-communism is in fact collectivist."))) +
+ final("Option 2"),
+ "except",
+ [("1", "Paragraphs 2–3: the outcome of the Revolution and the betrayal by the new politicians."), ("3", "Last paragraph: ‘several traditions of individualist anarchism’, all about autonomy."),
+  ("4", "Paragraphs 3–4: the state is the enemy; new rulers used violence and terror.")])
+
+P.rc(17, "P4", "Inference", "4", "Medium",
+ "Who made the revolution possible, and what did the new rulers do to them?",
+ steps(("The line", ev(3, "workers and peasants, grasping the chance that arose to bring an end to centuries of exploitation and tyranny, were inevitably betrayed by the new class of politicians") +
+          p("The workers’ uprising brought the new class to power, and it then used terror, a secret police and an army to control them."))) +
+ final("Option 4"),
+ "inference",
+ [("1", "The new rulers were not anarchists; anarchists opposed them."), ("2", "Says nothing about how the workers were betrayed."), ("3", "No deal with the old ruling class is mentioned.")])
+
+P.rc(18, "P4", "Detail", "2", "Medium",
+ "Read the last sentence: how do these thinkers differ from free-market liberals?",
+ steps(("The line", ev(6, "in protecting our own autonomy and associating with others for common advantages, we are promoting the good of all. These thinkers differed from free-market liberals in their absolute mistrust of American capitalism, and in their emphasis on mutualism") +
+          p("Shared: individual autonomy. Different: mutualism, which the liberals don’t stress."))) +
+ final("Option 2"),
+ "detail",
+ [("1", "Neither group is said to favour a people’s state or state intervention."), ("3", "The anarchists mistrust capitalism; they don’t argue for it."), ("4", "Altruism and a ‘mystical’ market are not in the passage.")])
+
+P.rc(19, "P4", "Main_Idea", "3", "Easy",
+ "Which set names the passage’s subject?",
+ steps(("The concerns", p("The passage is about anarchism, its view of the state as the enemy, and the individual’s freedom and autonomy in the individualist strands.")),
+       ("Choosing", p("Option 3 covers all of these."))) +
+ final("Option 3"),
+ "inference",
+ [("1", "Leaves out anarchism; ‘strike’ never comes up."), ("2", "Leaves out anarchism; liberals are mentioned only once."), ("4", "Power and the state overlap, and betrayal is one episode, not a concern of the whole passage.")])
+
+P.rc(20, "P4", "Detail", "3", "Easy",
+ "What do all anarchists treat as the enemy?",
+ steps(("The line", ev(4, "For anarchists the state itself is the enemy") +
+          p("Anarchist-communism ‘differs from state socialism in opposing the concept of any central authority’. Every strand rejects centralised state power."))) +
+ final("Option 3"),
+ "detail",
+ [("1", "The passage does name a common idea."), ("2", "Proudhon adopted the word; the passage doesn’t trace all forms to him."), ("4", "Only the individualist strands put the individual first.")])

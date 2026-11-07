@@ -61,14 +61,14 @@ P.rc(5, "P2", "Detail_Not_True", "2", "Medium",
  "notrue",
  [("1", "The passage treats culture and tradition as useful for explanation and exposition."), ("3", "These institutions are now consciously shaped by law and planning."), ("4", "The passage stresses that formal and informal institutions are intertwined.")])
 
-P.rc(6, "P2", "Detail", "1", "Medium",
+P.rc(6, "P2", "Detail", "3", "Medium",
  "Read the first two sentences together. What is being characterised, and in what two ways?",
- steps(("The opening", ev(1, "We begin with the emergence of the philosophy of the social sciences as an arena of thought and as a set of social institutions. The two characterisations overlap but are not congruent.") +
-          p("The philosophy of the social sciences is described in two ways: as an arena of thought and as a set of social institutions.")),
-       ("Choosing", p("Of the options, only option 1 pairs the philosophy of the social sciences with “a set of social institutions”, the terms the sentence actually uses."))) +
- final("Option 1"),
+ steps(("The opening", ev(1, "We begin with the emergence of the philosophy of the social sciences as an arena of thought and as a set of social institutions. The two characterisations overlap but are not congruent. Academic disciplines are social institutions.") +
+          p("The thing being characterised is the philosophy of the social sciences. The two characterisations are “an arena of thought”, that is, an academic discipline, and “a set of social institutions”.")),
+       ("Choosing", p("Option 3 names the two: academic disciplines and institutions. The next sentence shows the overlap: academic disciplines are themselves social institutions, yet the two aren’t the same thing."))) +
+ final("Option 3 (official answer)"),
  "detail",
- [("2", "Academic disciplines come up in the next sentence, as an example of social institutions."), ("3", "These are related terms, but they aren’t the two characterisations."), ("4", "Individuals and social structures appear in the author’s definition of an institution.")])
+ [("1", "“The philosophy of the social sciences” is what is being characterised, not one of the two characterisations."), ("2", "An arena of thought and an academic discipline are one characterisation, not two."), ("4", "Individuals and social structures appear in the author’s definition of an institution.")])
 
 P.rc(7, "P2", "Inference", "3", "Easy",
  "Why does the author bring up the stock exchange and the black market? Look at the sentence just before.",

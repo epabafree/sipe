@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Batch 12 — CAT 2020 Slot 2: VARC (24 of 26). DILR and QA: b12_20s2_dilr.py, b12_20s2_qa.py.
+# Batch 12 — CAT 2020 Slot 2: VARC (26 of 26). DILR and QA: b12_20s2_dilr.py, b12_20s2_qa.py.
 from fmt import steps, final, trap, ev, why, table, p
 from paperlib import Paper
 
@@ -77,6 +77,26 @@ P.va(8, P.sent_html(8), [], "TITA", "2413", "Para_Jumble", "Medium",
  final("2413"),
  "pj",
  [("2", "Fission is the most dangerous change."), ("4", "Its radiation."), ("1", "“But” the public watches the bomb."), ("3", "“However”: peaceful uses are worse.")],
+ why_title="Why each sentence goes where it does")
+
+# ---------------- Verbal ability (Q9–10) ----------------
+P.va(9, P.sent_html(9), [], "TITA", "4", "Odd_One_Out", "Hard",
+ "Four sentences are about how stories of assault are told and what they leave out. One is about the questions put to victims.",
+ steps(("The chain", p("5 → 2 → 1 → 3: stories of assault have become a genre (5); in these narratives we give perpetrators futures and victims pasts (2); the victim’s life after the assault gets little attention next to the moment of damage (1); one result is that we lack words for the victim’s life afterwards (3).")),
+       ("The odd one", p("Sentence 4 is about questioning victims to understand or corroborate details. That is about investigation, not about how the stories are told, and nothing before or after it picks it up."))) +
+ trap("Sentence 5 can look like loose background, but it brings in the ‘narratives’ that sentence 2 talks about. Without it the paragraph has no subject.") +
+ final("4 (official answer)"),
+ "oddone",
+ [("5", "Opens: these stories have become a genre."), ("2", "Narratives sort perpetrators into futures and victims into pasts."), ("1", "Expands on the victims’ past: attention goes to the moment of damage."), ("3", "“One result”: no vocabulary for life afterwards.")],
+ why_title="How the other sentences fit")
+
+P.va(10, P.sent_html(10), [], "TITA", "1342", "Para_Jumble", "Medium",
+ "Sentence 3 begins with ‘It’. What is ‘it’?",
+ steps(("The opener", p("Sentence 1: you may think you notice every change around you, but there is too much information for your brain to process.")),
+       ("The sequence", p("Sentence 3: ‘It’ (your brain) can’t be aware of everything. Sentence 4: so big shifts can happen without your noticing. Sentence 2: psychologists call ‘this tendency’ change blindness."))) +
+ final("1342"),
+ "pj",
+ [("1", "Too much information for the brain."), ("3", "“It” is the brain."), ("4", "The result: big changes go unnoticed."), ("2", "“This tendency” gets its name.")],
  why_title="Why each sentence goes where it does")
 
 # ---------------- Verbal ability (Q11) ----------------

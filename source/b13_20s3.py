@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
-# Batch 13 — CAT 2020 Slot 3: VARC (20 of 26). DILR and QA: b13_20s3_dilr.py, b13_20s3_qa.py.
+# Batch 13 — CAT 2020 Slot 3: VARC (26 of 26). DILR and QA: b13_20s3_dilr.py, b13_20s3_qa.py.
 from fmt import steps, final, trap, ev, why, table, p
 from paperlib import Paper
 
 P = Paper(2020, 3, "ex13_20s3.json")
-P.passage("P1", "Passage 1 — Explaining the economic crisis", "Economics_and_Management")
-P.passage("P2", "Passage 2 — Travel writing and identity", "Arts_and_Literature")
-P.passage("P3", "Passage 3 — Bregman on human nature", "Philosophy_and_Psychology")
+P.passage("P0", "Passage 1 — Screens and class", "Science_and_Technology")
+P.passage("P1", "Passage 2 — Explaining the economic crisis", "Economics_and_Management")
+P.passage("P2", "Passage 3 — Travel writing and identity", "Arts_and_Literature")
+P.passage("P3", "Passage 4 — Bregman on human nature", "Philosophy_and_Psychology")
 
 # ---------------- Passage 2: Travel writing ----------------
 P.rc(14, "P2", "Except", "1", "Medium",
@@ -176,3 +177,56 @@ P.va(25, P.summary_html(25, "Brown et al."), P.Q["VARC"][25]["opts"], "MCQ", "1"
  final("Option 1"),
  "summary",
  [("2", "‘Must’ is too strong."), ("3", "Leaves out metabolic theory."), ("4", "The opposite of the suggestion.")])
+
+
+# ---------------- Passage: Screens and class (Q1–4) ----------------
+P.rc(1, "P0", "Except", "3", "Easy",
+ "Three options are causes the passage itself gives for more screen time. Which one does it never mention?",
+ steps(("Checking each", p("Option 1: tech companies pushed one laptop per student in public schools. Option 2: a worker ‘can be punished for going offline’. Option 4: ‘screens are filling a crucial void’ in an isolated culture.")),
+       ("The odd one", p("Falling costs and more streaming are never mentioned. The author blames deliberate design and social pressures, not cheaper content."))) +
+ final("Option 3"),
+ "except",
+ [("1", "Paragraph 4: laptops for every student."), ("2", "Last paragraph: workers punished for being offline."), ("4", "Last paragraph: screens fill a void.")])
+
+P.rc(2, "P0", "Detail", "1", "Easy",
+ "What do the people who build the screen-based future do with their own children?",
+ steps(("The line", ev(4, "But this idea isn’t how the people who actually build the screen-based future raise their own children") +
+          p("They sell screens to public schools while sending their own children to a nearly screen-free school. Paragraph 5 calls this a ‘concerted effort … to confuse the public’."))) +
+ final("Option 1"),
+ "detail",
+ [("2", "Privacy and data mining by these companies are not the confusion described."), ("3", "The psychologists work to hook users; nothing says findings are hidden."), ("4", "The ‘right to disconnect’ is a small movement, not something tech companies lobby for.")])
+
+P.rc(3, "P0", "Inference", "3", "Easy",
+ "The quoted line ties wealth to time away from screens. Which other line ties screen habits to class?",
+ steps(("The match", p("‘How comfortable someone is with human engagement could become a new class marker’ says the same thing: the rich buy time off-screen and with people, so human contact marks class."))) +
+ final("Option 3"),
+ "inference",
+ [("1", "About the internet being the same for everyone."), ("2", "About screens filling a social gap, not about wealth."), ("4", "About health, not about who spends to avoid screens.")])
+
+P.rc(4, "P0", "Except", "3", "Easy",
+ "The author treats human contact as something screens take away.",
+ steps(("Checking each", p("Option 1: tech companies employ experts to ‘hook eyes and minds to the screen’. Option 2: children with heavy screen use scored lower on thinking and language tests. Option 4: a study linked screen time to depression.")),
+       ("The odd one", p("Screens fill a void, but the author never says they increase human contact. ‘And so human contact is rare.’"))) +
+ final("Option 3"),
+ "except",
+ [("1", "Paragraph 5: hooking minds as fast and as long as possible."), ("2", "Paragraph 3: lower scores on thinking and language tests."), ("4", "Paragraph 3: screen time linked to depression in adults.")])
+
+# ---------------- Verbal ability (Q6–7) ----------------
+P.va(6, P.sent_html(6), [], "TITA", "3", "Odd_One_Out", "Hard",
+ "Four sentences explain an idea about femininity and appearance. One is about today’s makeover media.",
+ steps(("The chain", p("1 → 5 → 2 → 4: displaying inner qualities through appearance rested on a distinction between being a woman and being feminine (1); being a woman was biological, femininity a process (5); so appearance became a sign of conduct (2); women judged to fail at feminine beauty are denigrated (4).")),
+       ("The odd one", p("Sentence 3 is about makeover-centric media setting out ‘good’ and ‘bad’ ways to be a woman. The others describe how the femininity ideal worked; sentence 3 jumps to a modern media genre the paragraph never introduces."))) +
+ trap("Sentences 3 and 4 both mention race and class, so either can look odd. Sentence 4 follows from 2: it shows who is judged as failing the ideal.") +
+ final("3"),
+ "oddone",
+ [("1", "The distinction behind the logic of appearance."), ("5", "Explains the distinction."), ("2", "Appearance becomes a sign of conduct."), ("4", "Who is judged as failing.")],
+ why_title="How the other sentences fit")
+
+P.va(7, P.sent_html(7), [], "TITA", "3142", "Para_Jumble", "Easy",
+ "‘Each one’ and ‘the others’ need something to point back to.",
+ steps(("The opener", p("Sentence 3 introduces the seven deities, the Shichi Fukujin.")),
+       ("The sequence", p("Sentence 1: each one stands for a kind of good fortune. Sentence 4: only two of them were native Japanese gods. Sentence 2: the others came from Buddhist, Hindu and Daoist gods."))) +
+ final("3142"),
+ "pj",
+ [("3", "Introduces the seven gods."), ("1", "“Each one” of the seven."), ("4", "Only two were native."), ("2", "“The others”: the remaining five.")],
+ why_title="Why each sentence goes where it does")

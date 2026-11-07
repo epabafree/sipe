@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Batch 13 — CAT 2020 Slot 3: QA (25 of 26).
+# Batch 13 — CAT 2020 Slot 3: QA (26 of 26).
 from fmt import steps, final, trap, why, table, p
 from b13_20s3 import P
 
@@ -26,6 +26,14 @@ P.qa(3, r"Let \(m\) and \(n\) be positive integers. If \(x^2 + mx + 2n = 0\) and
        ("Small n", p(r"\(n = 1\): \(m \le 1\) but \(m^2 \ge 8\), impossible. \(n = 2\): \(m \le 4\) and \(m^2 \ge 16\), so \(m = 4\) and \(m + n = 6\)."))) + final(r"\(6\), option 2"),
  concept=r"\[\text{real roots} \iff b^2 - 4ac \ge 0\]",
  why_rows=[("1", "Possible, but not the smallest."), ("3", "Possible, but not the smallest."), ("4", "No pair adds to 5.")])
+
+P.qa(4, r"A contractor agreed to construct a \(6\) km road in \(200\) days. He employed \(140\) persons for the work. After \(60\) days, he realized that only \(1.5\) km road has been completed. How many additional people would he need to employ in order to finish the work exactly on time?",
+ [], "TITA", "40", ["Arithmetic::Time_and_Work"], "Easy",
+ "Work done is proportional to people × days. Find the rate from the first 60 days.",
+ steps(("Rate", p(r"\(140 \times 60 = 8400\) person-days built \(1.5\) km.")),
+       ("What is left", p(r"\(4.5\) km in \(140\) days needs \(8400 \times 3 = 25200\) person-days, so \(25200 \div 140 = 180\) people.")),
+       ("Additional", p(r"\(180 - 140 = 40\)."))) + final(r"\(40\)"),
+ concept=r"\[\frac{M_1 D_1}{W_1} = \frac{M_2 D_2}{W_2}\]")
 
 P.qa(5, r"If \(x_1 = -1\) and \(x_m = x_{m+1} + (m + 1)\) for every positive integer \(m\), then \(x_{100}\) equals",
  M("-5151", "-5150", "-5051", "-5050"), "MCQ", "4", ["Algebra::Progressions_and_Series"], "Easy",

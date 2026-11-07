@@ -17,13 +17,13 @@ An Anki deck of CAT previous-year questions. Each question is an interactive car
 | CAT 2021 Slot 1 | 24 | 20 | 22 | 66 |
 | CAT 2021 Slot 2 | 24 | 20 | 22 | 66 |
 | CAT 2021 Slot 3 | 24 | 20 | 22 | 66 |
-| CAT 2020 Slot 1 | 19 | 20 | 25 | 64 |
-| CAT 2020 Slot 2 | 24 | 24 | 26 | 74 |
-| CAT 2020 Slot 3 | 20 | 24 | 25 | 69 |
+| CAT 2020 Slot 1 | 26 | 24 | 26 | 76 |
+| CAT 2020 Slot 2 | 26 | 24 | 26 | 76 |
+| CAT 2020 Slot 3 | 26 | 24 | 26 | 76 |
 | CAT 2019 Slot 1 | 20 | 32 | 32 | 84 |
 | CAT 2019 Slot 2 | 0 | 24 | 33 | 57 |
 | CAT 2018 Slot 1 | 21 | 32 | 33 | 86 |
-| | | | | **1028** |
+| | | | | **1049** |
 
 Alongside the question cards there are set cards (a whole RC passage or DILR set on one card), formula and technique cards, a practice card for each topic area, and a card for each paper with a practice mode and a timed mock.
 

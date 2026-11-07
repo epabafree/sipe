@@ -271,6 +271,27 @@
     ],
     "raw": "With the Treaty of Westphalia, the papacy had been confined to ecclesiastical functions, and the doctrine of sovereign equality reigned. What political theory could then explain the origin and justify the functions of secular political order? In his Leviathan, published in 1651, three years after the Peace of Westphalia, Thomas Hobbes provided such a theory. He imagined a “state of nature” in the past when the absence of authority produced a “war of all against all.” To escape such intolerable insecurity, he theorized, people delivered their rights to a sovereign power in return for the sovereign’s provision of security for all within the state’s border. The sovereign state’s monopoly on power was established as the only way to overcome the perpetual fear of violent death and war. (1) Thomas Hobbes theorized that sovereign states emerged out of people’s voluntary desire to overcome the sense of insecurity and establish the doctrine of sovereign equality. (2) Thomas Hobbes theorized the emergence of sovereign states based on a transactional relationship between people and sovereign state that was necessitated by a sense of insecurity of the people. (3) Thomas Hobbes theorized the voluntary surrender of rights by people as essential for emergence of sovereign states. (4) Thomas Hobbes theorized the emergence of sovereign states as a form of transactional governance to limit the power of the papacy.",
     "book": 15
+   },
+   "9": {
+    "q": "Five jumbled up sentences, related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd one out and key in the number of the sentence as your answer:",
+    "opts": [
+     "The victim’s trauma after assault rarely gets the attention that we lavish on the moment of damage that divided the survivor from a less encumbered past.",
+     "One thing we often do with narratives of sexual assault is sort their respective parties into different temporalities: it seems we are interested in perpetrators’ futures and victims’ pasts.",
+     "One result is that we don’t have much of a vocabulary for what happens in a victim’s life after the painful past has been excavated, even when our shared language gestures toward the future, as the term “survivor” does.",
+     "Even the most charitable questions asked about the victims seem to focus on the past, in pursuit of understanding or of corroboration of painful details.",
+     "As more and more stories of sexual assault have been made public in the last two years, the genre of their telling has exploded — crimes have a tendency to become not just stories but genres."
+    ],
+    "raw": "Five jumbled up sentences, related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd one out and key in the number of the sentence as your answer: 1. The victim’s trauma after assault rarely gets the attention that we lavish on the moment of damage that divided the survivor from a less encumbered past. 2. One thing we often do with narratives of sexual assault is sort their respective parties into different temporalities: it seems we are interested in perpetrators’ futures and victims’ pasts. 3. One result is that we don’t have much of a vocabulary for what happens in a victim’s life after the painful past has been excavated, even when our shared language gestures toward the future, as the term “survivor” does. 4. Even the most charitable questions asked about the victims seem to focus on the past, in pursuit of understanding or of corroboration of painful details. 5. As more and more stories of sexual assault have been made public in the last two years, the genre of their telling has exploded — crimes have a tendency to become not just stories but genres."
+   },
+   "10": {
+    "q": "The four sentences (labelled 1, 2, 3, 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer:",
+    "opts": [
+     "While you might think that you see or are aware of all the changes that happen in your immediate environment, there is simply too much information for your brain to fully process everything.",
+     "Psychologists use the term ‘change blindness’ to describe this tendency of people to be blind to changes though they are in the immediate environment.",
+     "It cannot be aware of every single thing that happens in the world around you.",
+     "Sometimes big shifts happen in front of your eyes and you are not at all aware of these changes."
+    ],
+    "raw": "The four sentences (labelled 1, 2, 3, 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer: 1. While you might think that you see or are aware of all the changes that happen in your immediate environment, there is simply too much information for your brain to fully process everything. 2. Psychologists use the term ‘change blindness’ to describe this tendency of people to be blind to changes though they are in the immediate environment. 3. It cannot be aware of every single thing that happens in the world around you. 4. Sometimes big shifts happen in front of your eyes and you are not at all aware of these changes."
    }
   },
   "DILR": {},
