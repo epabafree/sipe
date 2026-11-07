@@ -82,7 +82,7 @@ SOURCES = [(ex_varc.VARC, data_varc.SOL, "VARC", "pilot"), (b2_varc.ITEMS, b2_va
            (ex_qa.QA, data_qa.SOL, "QA", "pilot"), (b2_qa.ITEMS, b2_qa.SOL, "QA", "b2")]
 # Later papers: one module per paper (VARC) plus its _dilr / _qa add-on modules, all sharing one Paper object.
 import importlib
-for base in ("b3_s2", "b4_s3", "b5_22s1", "b6_22s2", "b7_22s3", "b8_21s1", "b9_21s2", "b10_21s3", "b11_20s1", "b12_20s2"):
+for base in ("b3_s2", "b4_s3", "b5_22s1", "b6_22s2", "b7_22s3", "b8_21s1", "b9_21s2", "b10_21s3", "b11_20s1", "b12_20s2", "b13_20s3"):
     try: P = importlib.import_module(base).P
     except ModuleNotFoundError: continue
     for extra in ("_dilr", "_qa"): importlib.import_module(base + extra)

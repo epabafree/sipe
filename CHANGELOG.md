@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.13.0
+
+Added CAT 2020 Slot 3: 69 of the 76 questions, in the original exam order. The rest aren't in the source: VARC Q1–4 (the screen-time passage), Q6 and Q7, and QA Q4. This completes CAT 2020.
+
+Answer keys:
+- VARC Q5 (para-jumble on exaptation): the source key gives 2341. The official answer is 2431.
+- VARC Q12 (economic crisis, "EXCEPT"): the source key gives option 4. The official answer is option 3, the failure of economic systems not meaning the failure of their ideologies.
+
+Fixes to the source text:
+- DILR Set 3, fact 8: the bracket read "(either in row 2 column 2 diagonal)". It is "(neither in row, column, nor diagonal)".
+- Travel writing passage: "Pratt's study" (printed "Pratr's"), "Travel writers' descriptions", "nation, class".
+- Bregman passage: "18th century" (printed "l8th").
+- VARC Q23: "something vital: context" had lost its colon.
+- Hyphens restored, for example "self-development", "upper-class", "super-risky", "Jean-Jacques".
+
 ## v0.12.0
 
 Added CAT 2020 Slot 2: 74 of the 76 questions, in the original exam order. VARC Q9 and Q10 aren't in the source.
