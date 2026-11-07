@@ -75,3 +75,18 @@ jobs:
         run: |
           gh release edit "${{ steps.version.outputs.tag }}" --notes-file notes.md
           gh release upload "${{ steps.version.outputs.tag }}" source/out/sipe.apkg sipe_csv_and_media.zip --clobber
+
+      - name: Sync notes of older releases with the changelog
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for tag in $(grep -oP '^## \Kv[0-9]+\.[0-9]+\.[0-9]+' CHANGELOG.md); do
+            gh release view "$tag" >/dev/null 2>&1 || continue
+            awk -v v="$tag" '
+              $0 ~ "^## "v { on=1; next }
+              on && /^## v0\.1\.0/ && v == "v0.2.0" { print ""; print; next }
+              on && /^## / { exit }
+              on { print }
+            ' CHANGELOG.md | sed 's#](docs/#](https://github.com/${{ github.repository }}/blob/main/docs/#g' > "notes_$tag.md"
+            gh release edit "$tag" --notes-file "notes_$tag.md"
+          done
