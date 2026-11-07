@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Batch 15 — CAT 2019 Slot 2: DILR (24 of 32). Set 6 (Q21–24) isn't in the source; Set 7 (Q25–28) is left out because the source prints the revenue chart in place of the cost chart.
+# Batch 15 — CAT 2019 Slot 2: DILR (24 of 32).
 from fmt import steps, final, trap, why, table, p
 from b15_19s2 import P
 

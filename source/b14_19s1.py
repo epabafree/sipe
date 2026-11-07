@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Batch 14 — CAT 2019 Slot 1: VARC (20 of 34; the rest aren't in the source). DILR and QA: b14_19s1_dilr.py, b14_19s1_qa.py.
+# Batch 14 — CAT 2019 Slot 1: VARC (20 of 34). DILR and QA: b14_19s1_dilr.py, b14_19s1_qa.py.
 from fmt import steps, final, trap, ev, why, table, p
 from paperlib import Paper
 

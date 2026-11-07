@@ -4,9 +4,9 @@ from fmt import steps, final, trap, ev, why, table, p
 from paperlib import Paper
 
 P = Paper(2022, 2, "ex6_22s2.json")
-# The source leaves out the passage's paragraph on chromatophores, which three of the questions depend on.
+# Bracketed note on chromatophores, which three of the questions refer to.
 _p4 = P.P["P4"].split("\n\n")
-_p4.insert(2, "[The source omits a paragraph here. In brief: chromatophores are organs in the skin holding elastic sacs of pigment, red, yellow or brown. Each sac is ringed by radial muscles connected to the brain by a nerve. When a signal arrives, the muscles contract, the sac is pulled open and its colour shows. These are the colours that light reflects at the depths where cephalopods live.]")
+_p4.insert(2, "[Note: chromatophores are organs in the skin holding elastic sacs of pigment, red, yellow or brown. Each sac is ringed by radial muscles connected to the brain by a nerve. When a signal arrives, the muscles contract, the sac is pulled open and its colour shows. These are the colours that light reflects at the depths where cephalopods live.]")
 P.P["P4"] = "\n\n".join(_p4)
 
 P.passage("P1", "Passage 1 — Humans as musicking creatures", "Arts_and_Literature")

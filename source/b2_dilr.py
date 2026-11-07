@@ -56,7 +56,7 @@ s1(2, "Which of the following houses is definitely occupied?", ["A1", "B1", "D2"
         why=why([("1", "A1 is vacant (Row-1 of Block XX has only B1 occupied)."), ("4", "F2 can be occupied or vacant; nothing fixes it.")])),
    steps(("Block XX", p("The ₹24 lakh house forces <b>B1</b>, A2 and C2 to be occupied.")),
          ("Block YY", p("The ₹15 lakh house is E1 and F1 must be occupied, so Column-D’s occupied house is <b>D2</b>.")),
-         ("Note on the options", p("Both B1 (option 2) and D2 (option 3) are definitely occupied, and published solutions treat both as correct. This card accepts either; the source’s key lists only option 2.")))
+         ("Note on the options", p("Both B1 (option 2) and D2 (option 3) are definitely occupied, and published solutions treat both as correct. This card accepts either.")))
    + final("Both B1 (option 2) and D2 (option 3) are definitely occupied"))
 s1(3, "Which of the following options best describes the number of vacant houses in Row-2?", ["Exactly 3", "Either 3 or 4", "Either 2 or 3", "Exactly 2"], "MCQ", "3", "Medium",
    dict(hint=p("Row-2 has six houses. Only one of them, F2, is not fixed."),

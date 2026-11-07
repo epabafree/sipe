@@ -58,9 +58,9 @@ Every card is tagged (`sipe::Topic::QA::Algebra::Quadratic_Equations`, `sipe::Pa
 
 ## Notes on the content
 
-Questions, options, passages and data are kept as printed. Clear misprints are fixed, and each fix is listed in the [changelog](CHANGELOG.md). Answers are checked against the official keys. Solutions are written for this deck rather than copied from the source.
+Questions, options, passages and data are kept as set in the exam, and answers follow the official keys. Solutions are written for this deck. Charts and maps are drawn as SVG, and data that reads better as a table is given as one.
 
-The source groups the 2021 and 2022 questions by topic rather than by paper, so they have been put back into exam order using the official response sheets. Where a question's position couldn't be confirmed, the changelog says so. Options are listed in the order the source prints them, which for a few of these questions differs from the exam. The source doesn't have every question from 2018 to 2020; the table above shows how many of each section are included.
+Questions keep their exam numbers, so a paper can skip a number. The table above shows how many questions each paper has in the deck, and paper cards and timed mocks scale to that.
 
 Difficulty labels are estimates, not official data.
 

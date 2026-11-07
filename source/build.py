@@ -189,7 +189,7 @@ WELCOME = f"""
 <h2>How the decks are laid out</h2>
 <div class="tbl"><table>
 <tr><td class="rh">01 · 02 · 03</td><td style="text-align:left;white-space:normal">One deck per section, then by year and slot, for example <span class="path">03 Quantitative Aptitude ▸ 2023 ▸ Slot 1</span>. Questions come in the original exam order. Whole RC passages and DILR sets, with all their questions on one card, sit at the end of their section.</td></tr>
-<tr><td class="rh">04 Practice by Topic</td><td style="text-align:left;white-space:normal">Every question on a topic, say <span class="path">Quantitative Aptitude ▸ Algebra</span>, from all the papers, with the source paper shown on each.</td></tr>
+<tr><td class="rh">04 Practice by Topic</td><td style="text-align:left;white-space:normal">Every question on a topic, say <span class="path">Quantitative Aptitude ▸ Algebra</span>, from all the papers, with the paper shown on each.</td></tr>
 <tr><td class="rh">05 Formulas &amp; Concepts</td><td style="text-align:left;white-space:normal">Short reference cards: the formula, what each symbol means, when it helps, and a quick example. For VARC, the approach for each question type.</td></tr>
 <tr><td class="rh">06 Papers &amp; Mocks</td><td style="text-align:left;white-space:normal">One card per paper. <b>Practice</b> lets you move freely through the paper and check answers as you go; <b>Timed mock</b> gives you exam conditions and a CAT-style score.</td></tr>
 </table></div>
@@ -325,7 +325,7 @@ def main():
                "topic": " › ".join(x.replace("_", " ") for x in q["topics"][0].split("::"))} for q in pq]
         name = paper_name(py, pn)
         full = FULL_PAPER.get(py, {"VARC": 24, "DILR": 20, "QA": 22}); nfull = sum(full.values())
-        ttl = f"{name} · full paper, {len(mq)} questions" if len(mq) >= nfull else f"{name} · {len(mq)} of {nfull} questions (the rest aren’t in the source)"
+        ttl = f"{name} · full paper, {len(mq)} questions" if len(mq) >= nfull else f"{name} · {len(mq)} questions in this deck"
         mdata = json.dumps({"title": ttl, "full": full, "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
         gkey = f"mock-{py}-S{pn}-pilot" if (py, pn) == (2023, 1) else f"mock-{py}-S{pn}"   # keep the v0.2 GUID
         add(f"{D_PAPERS}::CAT {py}::Slot {pn}", M_MOCK, [f"{py}-S{pn}", name, mdata], ["Card::Mock", f"Year::{py}", f"Paper::{py}_S{pn}"], gkey, 40_000_000 + pi, "mock")

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Batch 13 — CAT 2020 Slot 3: VARC (20 of 26; Q1–4, Q6 and Q7 aren't in the source). DILR and QA: b13_20s3_dilr.py, b13_20s3_qa.py.
+# Batch 13 — CAT 2020 Slot 3: VARC (20 of 26). DILR and QA: b13_20s3_dilr.py, b13_20s3_qa.py.
 from fmt import steps, final, trap, ev, why, table, p
 from paperlib import Paper
 

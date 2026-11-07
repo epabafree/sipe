@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Batch 16 — CAT 2018 Slot 1: QA (33 of 34; Q9 isn't in the source).
+# Batch 16 — CAT 2018 Slot 1: QA (33 of 34).
 from fmt import steps, final, trap, why, table, p
 from b16_18s1 import P
 

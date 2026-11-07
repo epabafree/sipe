@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Batch 11 — CAT 2020 Slot 1: DILR (sets 1, 2, 4, 5; set 3, Q11–14, isn't in the source).
+# Batch 11 — CAT 2020 Slot 1: DILR (sets 1, 2, 4, 5).
 from fmt import steps, final, trap, why, table, p
 from b11_20s1 import P
 
@@ -79,7 +79,7 @@ P.dq(10, "If C is an expert in mridangam and F is not, then which are the three 
  steps(("From the set solution", p("Tabla only: E, F and H. G is then tabla + mridangam."))) + final("E, F and H, option 2"),
  [("1", "G plays mridangam too."), ("3", "C is mridangam only."), ("4", "C is mridangam only, G plays mridangam too.")])
 
-# ---------------- Set 4: Medicines (Set 3, Q11–14, isn't in the source) ----------------
+# ---------------- Set 4: Medicines ----------------
 P.dilr_set(4, "Set 4 — Four medicines", "Read the following passage carefully and answer the questions that follow.",
  p("1000 patients currently suffering from a disease were selected to study the effectiveness of treatment of four types of medicines — A, B, C and D. These patients were first randomly assigned into two groups of equal size, called treatment group and control group. The patients in the control group were not treated with any of these medicines; instead they were given a dummy medicine, called placebo, containing only sugar and starch. The following information is known about the patients in the treatment group.") +
  "<ol type=\"a\"><li>A total of 250 patients were treated with type A medicine and a total of 210 patients were treated with type C medicine.</li><li>25 patients were treated with type A medicine only. 20 patients were treated with type C medicine only. 10 patients were treated with type D medicine only.</li><li>35 patients were treated with type A and type D medicines only. 20 patients were treated with type A and type B medicines only. 30 patients were treated with type A and type C medicines only. 20 patients were treated with type C and type D medicines only.</li><li>100 patients were treated with exactly three types of medicines.</li><li>40 patients were treated with medicines of types A, B and C, but not with medicines of type D. 20 patients were treated with medicines of types A, C and D, but not with medicines of type B.</li><li>50 patients were given all the four types of medicines. 75 patients were treated with exactly one type of medicine.</li></ol>",

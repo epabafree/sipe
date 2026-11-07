@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Batch 11 — CAT 2020 Slot 1: VARC (19 of 26 questions are in the source). DILR and QA: b11_20s1_dilr.py, b11_20s1_qa.py.
+# Batch 11 — CAT 2020 Slot 1: VARC. DILR and QA: b11_20s1_dilr.py, b11_20s1_qa.py.
 from fmt import steps, final, trap, ev, why, table, p
 from paperlib import Paper
 

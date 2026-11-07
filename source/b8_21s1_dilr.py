@@ -150,7 +150,7 @@ P.dilr_set(4, "Set 4 — Sales by sub-category", "Read the following passage and
                  ["Office supply", "Binders", "5.3", "3.6"], ["", "Art", "0.6", "0.45"], ["", "Appliances", "3.1", "1.9"], ["", "Envelopes", "0.2", "0.35"],
                  ["", "Fasteners", "0.1", "0.1"], ["", "Labels", "0.3", "0.2"], ["", "Paper", "2.0", "1.5"], ["", "Storage", "5.1", "5.1*"], ["", "Suppliers", "1.2", "1.05"],
                  ["Technology", "Accessories", "4.4", "3.1"], ["", "Copiers", "4.6", "3.6"], ["", "Machines", "4.1", "4.1"], ["", "Phones", "7.7", "5.8"]]) +
-          p("* The source doesn’t show a 2019 mark for Storage; it is taken as level with the 2020 bar."))) +
+          p("* Storage has no separate 2019 mark; it is taken as level with the 2020 bar."))) +
  final("Readings to about 0.05 are enough; the options are far apart."),
  p("Read only what each question needs. The options are spread out, so rough readings are fine."),
  p("<b>Bars with markers:</b> the bar and the marker on the same row give the change directly. A marker inside the bar means sales went up."))
