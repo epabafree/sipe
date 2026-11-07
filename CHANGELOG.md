@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.11.0
+
+Added CAT 2020 Slot 1: 64 of the 76 questions, in the original exam order. The rest aren't in the source: VARC Q2, Q14 and Q16–20 (one passage), DILR Set 3 (Q11–14) and QA Q10. Question numbers follow the exam, so they have gaps.
+
+CAT 2020 sections had 26, 24 and 26 questions. For papers with missing questions, the paper card says how many are included, and the timed mock shortens each section in proportion to the questions it has.
+
+Fixes to the source text:
+- DILR Set 5, fact III: the source says vendor W had contracts only in 2013. The paper says 2012; with 2013 the set has no solution.
+- DILR Q24: option 3 read "A, B, Z, and X"; it is "A, B, W, and X".
+- QA Q5: the exponent was printed as a second factor. The equation is (x² − 7x + 11)^(x² − 13x + 42) = 1.
+- Grammar passage: "compound-complex"; seal passage: "great-great-grandsons"; summary and para-jumble text: "conventional", "nineteenth century".
+
 ## v0.10.0
 
 Added CAT 2021 Slot 3 (66 questions, 8 set cards), in the original exam order. The project schedule in DILR Set 2 is redrawn from the source.
