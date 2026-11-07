@@ -481,6 +481,6 @@ for r in REF:
     r["seen"] += [x for x in extra if x not in r["seen"]]
     more = {"QA-ALG-009": ["2022-S3-QA-01", "2022-S3-QA-18"], 
             "QA-ARI-009": ["2022-S3-QA-10"], "QA-GEO-005": ["2022-S3-QA-16"], "QA-ARI-004": ["2022-S3-QA-04", "2022-S3-QA-14"],
-            "QA-ALG-018": ["2022-S3-QA-03"],
-            "QA-ALG-016": ["2021-S1-QA-10"], "QA-ALG-004": ["2022-S3-QA-02", "2022-S3-QA-06"]}.get(r["rid"], [])
+            "QA-ALG-018": ["2022-S3-QA-03"], "QA-ARI-007": ["2021-S2-QA-08"], "QA-ARI-011": ["2021-S2-QA-22"], "QA-MOD-003": ["2021-S2-QA-05"],
+            "QA-ALG-016": ["2021-S1-QA-10", "2021-S2-QA-14"], "QA-ALG-004": ["2022-S3-QA-02", "2022-S3-QA-06", "2021-S2-QA-07"], "QA-ARI-001": ["2021-S2-QA-04"]}.get(r["rid"], [])
     r["seen"] += [x for x in more if x not in r["seen"]]

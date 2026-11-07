@@ -15,7 +15,8 @@ An Anki deck of CAT previous-year questions. Each question is an interactive car
 | CAT 2022 Slot 2 | 24 | 20 | 22 | 66 |
 | CAT 2022 Slot 3 | 24 | 20 | 22 | 66 |
 | CAT 2021 Slot 1 | 24 | 20 | 22 | 66 |
-| | | | | **462** |
+| CAT 2021 Slot 2 | 24 | 20 | 22 | 66 |
+| | | | | **528** |
 
 Alongside the question cards there are set cards (a whole RC passage or DILR set on one card), formula and technique cards, a practice card for each topic area, and a card for each paper with a practice mode and a timed mock.
 
@@ -65,7 +66,7 @@ Difficulty labels are estimates, not official data.
 
 ## Roadmap
 
-- CAT 2021 Slots 2 and 3
+- CAT 2021 Slot 3
 - CAT 2017–2020
 - CAT 1991–2008 (mostly DILR and QA)
 - More mocks and longer explanations after that

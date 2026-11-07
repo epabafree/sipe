@@ -1,8 +1,19 @@
 # Changelog
 
+## v0.9.0
+
+Added CAT 2021 Slot 2 (66 questions, 8 set cards), in the original exam order. The order-processing chart in DILR Set 1 is redrawn from the source.
+
+Fixes to the source text:
+- DILR Set 2: fact 1 read "value for an object is o10"; it should be 10.
+- Knowledge passage: "things-in-themselves" and "things-as-they-are-in-themselves" restored.
+- Summary on preprints: "peer-reviewed" and "conservative" restored.
+
 ## v0.8.0
 
 Added CAT 2021 Slot 1 (66 questions, 8 set cards), in the original exam order. The sales chart in DILR Set 4 is redrawn from the source. The source doesn't show the 2019 mark for Storage, so it is drawn at the end of the 2020 bar (about 5.1). Q17 uses it, but its answer is the same for any value from about 3.8 to 5.8.
+
+Two new formula cards: the inradius of a right triangle, and the sign of a rational expression.
 
 Fixes to the source text:
 - DILR Set 2: "a profit of I 4 per unit" → "₹4 per unit".
