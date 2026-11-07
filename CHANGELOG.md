@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.8.0
+
+Added CAT 2021 Slot 1 (66 questions, 8 set cards), in the original exam order. The sales chart in DILR Set 4 is redrawn from the source. The source doesn't show the 2019 mark for Storage, so it is drawn at the end of the 2020 bar (about 5.1). Q17 uses it, but its answer is the same for any value from about 3.8 to 5.8.
+
+Fixes to the source text:
+- DILR Set 2: "a profit of I 4 per unit" → "₹4 per unit".
+- DILR Set 3: "acquintance" → "acquaintance", "Bhratan" → "Bharatan", "Ezhill" → "Ezhil".
+- Cuttlefish passage: "marshmalow" → "marshmallow", and the quotation marks around "delayed" and "never".
+- Utopia passage: "institutions and more." → "institutions and mores,".
+- McGurk summary: "ga-gaga" → "ga-ga-ga", "in congruent" → "incongruent", "many limes" → "many times".
+- QA Q17: "work alone" → "works alone".
+
 ## v0.7.0
 
 Added CAT 2022 Slot 3 (66 questions, 8 set cards), in the original exam order. The four bar charts in DILR Set 1 are given as tables.

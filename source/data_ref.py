@@ -451,6 +451,21 @@ F("QA-NUM-003", "QA", "Number_System::Remainders", "The same remainder for sever
   "The remainder r must be smaller than every divisor.",
   r"Remainder 4 for 9, 10, 12, 25 and divisible by 11, under 5000: \(N = 1804\)", ["2022-S3-QA-17"])
 
+F("QA-GEO-009", "QA", "Geometry::Circles", "Inradius of a right triangle",
+  "A circle inscribed in a right-angled triangle",
+  r"\[r = \frac{a + b - c}{2}\]",
+  [(r"\(a, b\)", "the legs"), (r"\(c\)", "the hypotenuse"), (r"\(r\)", "the inradius")],
+  "Tangents from a vertex to the incircle are equal; from the right-angle vertex both equal r.",
+  "Use the formula for right triangles only. In general, r = area ÷ semi-perimeter.",
+  r"\(r = 4\), \(BC = 10\): \(AB = x\), \(AC = x + 2\), so \(x = 24\) and the area is 120", ["2021-S1-QA-14"])
+F("QA-ALG-020", "QA", "Algebra::Inequalities_and_Absolute_Value", "Sign of a rational expression",
+  "When a product or quotient of linear factors is positive or negative",
+  r"\[\frac{(x - a)(x - b)}{(x - c)(x - d)} > 0 \text{ right of all roots}\]",
+  [],
+  "Factorise, mark every root of the top and bottom on a line, and alternate signs from the right.",
+  "A repeated factor doesn’t flip the sign. Roots of the denominator are always excluded.",
+  r"\(\frac{(x + 5)(x - 3)}{(x - 9)(x + 2)} < 0\) on \((-5, -2)\) and \((3, 9)\)", ["2021-S1-QA-15"])
+
 for r in REF:
     extra = {"VARC-RC-001": ["2023-S1-VARC-09", "2023-S1-VARC-11", "2023-S1-VARC-13", "2023-S1-VARC-16"], "VARC-VA-001": ["2023-S1-VARC-18"],
              "VARC-VA-002": ["2023-S1-VARC-20"], "VARC-VA-003": ["2023-S1-VARC-22"], "VARC-VA-004": ["2023-S1-VARC-24"],
@@ -464,7 +479,8 @@ for r in REF:
              "QA-ALG-012": ["2022-S1-QA-14"], "QA-NUM-001": ["2023-S2-QA-04", "2022-S1-QA-04"], "QA-ARI-013": ["2022-S1-QA-17"],
              "DILR-LR-006": ["2022-S1-DILR-16"]}.get(r["rid"], [])
     r["seen"] += [x for x in extra if x not in r["seen"]]
-    more = {"QA-ALG-009": ["2022-S3-QA-01", "2022-S3-QA-18"], "QA-ALG-004": ["2022-S3-QA-02", "2022-S3-QA-06"],
+    more = {"QA-ALG-009": ["2022-S3-QA-01", "2022-S3-QA-18"], 
             "QA-ARI-009": ["2022-S3-QA-10"], "QA-GEO-005": ["2022-S3-QA-16"], "QA-ARI-004": ["2022-S3-QA-04", "2022-S3-QA-14"],
-            "QA-ALG-018": ["2022-S3-QA-03"]}.get(r["rid"], [])
+            "QA-ALG-018": ["2022-S3-QA-03"],
+            "QA-ALG-016": ["2021-S1-QA-10"], "QA-ALG-004": ["2022-S3-QA-02", "2022-S3-QA-06"]}.get(r["rid"], [])
     r["seen"] += [x for x in more if x not in r["seen"]]
