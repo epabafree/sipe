@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.12.0
+
+Added CAT 2020 Slot 2: 74 of the 76 questions, in the original exam order. VARC Q9 and Q10 aren't in the source.
+
+Fixes to the source text:
+- VARC Q1 (para-jumble): the source key gives 2134. The official answer is 2143.
+- DILR Q24: the options were garbled. They now read as in the paper ("Car 2 is a compact", "Car 7 is a compact", "Car 4 is an SUV", "Car 6 is a compact").
+- QA Q18: the condition is x ≥ y ≥ −20. The source dropped the minus sign, which leaves no solutions.
+- Piracy passage: the yacht is "Le Ponant", not "Le Gonant".
+- Aggression passage: "verbal aggression" had a stray comma.
+- Hyphens and broken words restored, for example "low-carbon", "renewable-powered", "pirate-infested", "large-scale", "so-called".
+
 ## v0.11.0
 
 Added CAT 2020 Slot 1: 64 of the 76 questions, in the original exam order. The rest aren't in the source: VARC Q2, Q14 and Q16–20 (one passage), DILR Set 3 (Q11–14) and QA Q10. Question numbers follow the exam, so they have gaps.
