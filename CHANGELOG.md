@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.15.0
+
+Added CAT 2019 Slot 2: 57 of the 100 questions, in the original exam order. The source has none of this paper's VARC questions. Also missing are DILR Set 6 (Q21–24, the languages set) and QA Q3.
+
+DILR Set 7 (Q25–28, the store's revenue and cost) is left out. The source prints the revenue chart twice and the cost chart is missing, so the set can't be shown as it was set. The paper card and the timed mock work without a VARC section.
+
+The rainfall chart in DILR Set 2 is redrawn.
+
+Answer keys:
+- QA Q26 (common terms of two sequences): the source key gives 19. The common terms run 19, 39, …, 399, which is 20 terms.
+
+Fixes to the source text:
+- QA Q31: "2 times" is "3/2 times". With 2, no polygon fits.
+
 ## v0.14.0
 
 Added CAT 2019 Slot 1: 84 of the 100 questions, in the original exam order. The rest aren't in the source: VARC Q1, Q3–9 (including the online-shopping passage), Q14, Q20–21, Q27–28 and Q34, and QA Q8 and Q20.
