@@ -1,0 +1,266 @@
+{
+ "passages": {
+  "V1": "Once, the world’s richest men competed over yachts, jets and private islands. Now, their status symbol is enormous GPU clusters. Elon Musk says he has 100,000 GPUs and plans to buy 200,000 more, while Mark Zuckerberg is aiming for 350,000. Yet this quest for ever-bigger computing setups cannot go on forever. Each new chip not only adds processing power but also increases the burden of keeping everything synchronised. The more GPUs there are, the more time they waste shuttling data around rather than doing useful work. Instead, computer scientists are looking for cleverer ways to train new AI models without always resorting to these colossal installations. One idea is to abandon giant bespoke clusters, with all their upfront costs, and instead distribute the task of training across multiple smaller data centres. Some researchers see this as a step towards an even bolder goal: training AI without any dedicated hardware at all.\n\nTraining a modern AI system usually involves feeding it data (text) with some sections hidden; the model then guesses what is missing. If it is wrong, it gets tweaked via backpropagation to inch closer to the correct answer next time. Running these calculations on thousands of GPUs in parallel sounds efficient, but there is a catch: constant “checkpointing,” where every chip shares updates with the others, can devour half the total training time. This inefficiency led Arthur Douillard, an engineer at Google DeepMind, to propose “Distributed Low-Communication Training of Language Models,” or DiLoCo. Rather than forcing 100,000 GPUs to talk to each other at every step, DiLoCo breaks them into “islands”—each a self-contained data centre. Within an island, checkpointing proceeds as usual. Between islands, however, communications plummet, reducing that bottleneck five hundredfold.\n\nModels trained this way may be slightly less fine-tuned for tasks they were explicitly trained on, but they often generalise better when confronted with new problems. Freed from incessant synchronisation, each “island” explores the training data in its own way before being pulled back in line. Vincent Weisser, founder of the open-source AI lab Prime Intellect, seized on DiLoCo to train Intellect-1, a 10bn-parameter model comparable to Meta’s Llama 2. His team used 30 smaller GPU clusters in eight cities across three continents. Instead of checkpointing on every training step, they did it every 500 steps and “quantised” the shared updates, throwing away the least significant data. That meant the GPUs worked productively most of the time—even when scattered across the globe. For labs that already have vast data centres, switching to distributed training may not be urgent. Yet Douillard believes this approach will catch on, given how much it cuts costs and complexity. For smaller outfits, the benefits are immediate, since vast GPU farms are rare and expensive. The dream of fully decentralised AI goes further still: eventually tapping into billions of consumer devices, if the tricky engineering can be mastered. Models might even improve, learning from more diverse data with fewer synchronisation demands. Then the billionaires may have to find something else to measure.",
+  "V2": "In 2008, archaeologists discovered a large cemetery in southwest England. Located near the village of Winterborne Kingston in Dorset, the burial ground contained human remains dating back to Britain’s Iron Age, which lasted from around 800 B.C.E. to 43 C.E. The bodies belonged to a Celtic tribe known as the Durotriges. Since intact remains from this period are rare, the researchers were happy to have discovered the cemetery in the first place. But when they began to sequence DNA from dozens of bodies buried at the site, they were in for an even bigger surprise. The DNA analysis showed that many of the individuals in this community shared the same mitochondrial DNA (mtDNA), which gets passed down from mothers to children. They were related through the female line.\n\nThis indicates that the group was what’s known as a “matrilocality,” in which newly married men left their families to join their bride’s community. Matrilocalities are relatively rare in prehistoric Europe: After marriage, women typically left their community to join their new husband’s village in an arrangement known as a “patrilocality.” The Durotriges who lived in southwest England are thought to be among the first recorded matrilocal systems in European prehistory. In total, the team studied the genomes of 57 individuals buried at the site between 100 B.C.E to 100 C.E. Many of the Durotriges could be traced back to the same shared female ancestor, including an adult woman, her daughter, her granddaughters and potentially her great-grandson. Most of the individuals who did not share the same matrilineal DNA were male, which suggests they married into the group. “My jaw dropped,” says lead author Lara Cassidy, a geneticist at Trinity College Dublin. “This was a clear signature of matrilocality, or husbands moving to live with their wives’ families—a pattern we’d never seen before in prehistoric Europe.”\n\nArmed with these results, the researchers began to look for other traces of matrilocality across prehistoric Britain. They investigated human remains from more than 150 archaeological sites covering a period of roughly 6,000 years—and found several other examples of matrilocal communities in Britain. It’s still not clear exactly how prevalent matrilocal communities were in Iron Age Britain, but future studies might help answer that question. Additional research might also take a closer look at the unrelated men buried at the site, investigating where they grew up and how far they traveled to join their wives. Women living in matrilocal communities likely had more influence than women living in patrilocalities. They also had the benefit of staying with their families and support networks. But even in matrilocalities, men still typically held positions of power.\n\n“They tend to be the village chief more often, but they might not get elected without the help of their daughters, sisters and wives, who have soft power and a lot of influence,” Cassidy says. “[Women] aren’t just confined to the domestic sphere.” After the Romans invaded Britain during the first century C.E., they wrote about British women with high levels of power and multiple husbands. But scholars are divided as to whether the Romans actually observed these women or were merely spinning cautionary tales.",
+  "V3": "MANAGERS ARE better equipped than ever to make good decisions. They are more aware that human judgment is fallible. They have oodles of data about customers and products. They can use artificial intelligence to analyse and synthesise information with unprecedented speed. But as the pendulum swings inexorably away from gut instinct towards data-based decisions, firms need to be alive to a different set of dangers.\n\nIn a recent paper, Linda Chang of the Toyota Research Institute and co-authors identify a cognitive bias they call “quantification fixation”. The risk of relying solely on data is familiar—sometimes referred to as the McNamara fallacy, after the American secretary of defence who used misleading quantitative measures in the Vietnam war. But Ms Chang and her co-authors explain why people put disproportionate weight on numbers. Data are particularly suited for making comparisons. In one experiment, participants were asked to imagine choosing between two software engineers for a promotion. One was more likely to climb the ladder but less likely to stay; the other had a higher chance of retention but a lower probability of advancement. When only promotion likelihood was given a numerical value, participants tended to prioritize it in their decision; however, when retention was also quantified, it began to outweigh promotion in importance, influencing participants to choose the more loyal candidate.. One answer is to quantify everything. But, as the authors point out, some things are mushier. A firm’s culture is harder to express as a number than its salary levels. Data can reveal more about a startup’s financials than a founder’s resilience. Numbers allow for easy comparisons, but do not always tell the whole story.\n\nThere are other risks. Humans bring the same cognitive biases to their analysis of numbers as to other decisions. Take confirmation bias: in another experiment, undergraduates stated their expectation for a correlation between wealth and happiness before seeing a fictitious dataset. Faced with the identical graph, those who expected a positive correlation were likelier to see one. Beliefs influenced interpretation. Plenty of people struggle with basic data literacy: they often avoid competitions with larger numbers of contestants, even when the odds are the same. In a world giddy over AI models, relying on algorithms may seem sensible. In one experiment, Hossein Nikpayam and colleagues found that managers blamed decision-makers who ignored machine-led recommendations if outcomes were bad, yet gave no credit when they were good. People once said nobody got fired for buying IBM; soon, “nobody gets fired for following the algorithm” may be the modern equivalent. But there are times when humans have an advantage: datasets reflect the world as it is, not how it might be. It’s harder to evaluate radically new ideas by looking at existing patterns. Early HBO executives used instinct and contrarianism to commission shows that broke the mould—profane comedy specials, a prison drama that killed a main character in the first episode. Other networks turned down a violent mobster in therapy; HBO did not. Relying on data might have led to safer decisions.\n\nNone of this is to say that instinct trumps data, or that humans make better decisions than machines. Far from it. But it is a warning. Numbers promise rigour, certainty and objectivity. They have flaws, too.",
+  "V4": "Researcher Emily Yeh from the University of Colorado Boulder uses “Shangrilazation” to describe how Tibet’s culture and landscape have been commodified for Chinese needs. Inspired by the Shangri-La tourism zone in northern Yunnan, it references a Tibetan border region renamed after the 1933 novel Lost Horizon, which idealized Tibet as a timeless utopia. Over the last decade, Shangri-La City morphed from a neglected provincial town called Gyalthang into a tourist paradise. After the original center burned in 2014, a faux old town was built with cobblestone alleys, ancient-looking stupas, and statues of Tibetans in “traditional” poses. Millions now flock here. A bus stop proclaims Xi Jinping’s slogan: “Clear waters and green mountains are mountains of gold and silver.”\n\nThis model spread across Tibet, turning the region into a theme park for China. Grazing grounds became “nature reserves,” displacing herders. New highways draw Chinese motorists to scenic towns and renovated monasteries, while faux nomad camps serve as photo ops. For China’s stressed urbanites, Tibet promises unspoiled nature and a slower pace—where friendly locals share their land and wisdom. Nearly all tourists are Chinese, as foreign entry is restricted. In the reconstructed old town of Shangri-La, I met Jing Zheng from Hangzhou, learning thangka painting in glitter and Tibetan robes. “Sometimes, I just want to be someone else,” she said. “Today I am Drolma—a Tibetan girl free of care.” Many Han expect Tibetan Buddhism to fill the spiritual vacuum left by fading Communist ideology. In Daocheng, once an isolated village, Xiao Liu from Shenzhen arrived for a “spiritual recharge.” Work stress drove him to visit monks for clarity. “Tibetan people are so pure,” he said.\n\nBeijing’s immense tourism investments mask a deeper political agenda. Officially, China pledges to protect Tibet’s heritage, but in practice Tibetan land, language, and culture face erasure. Nomads are resettled, Tibetan children attend Chinese boarding schools, monasteries teach “Sinicized Buddhism,” and cultural advocates risk arrest. In Lhasa, Tibetans without local residency need a special permit to enter the city, and checkpoints frequently scan IDs for weapons or flammable materials. A state-sponsored musical about Princess Wencheng—promoted as Lhasa’s must-see—claims she introduced civilization to Tibet, legitimizing Beijing’s rule. History is revised to assert Tibet has always belonged to China.\n\nDespite harsh surveillance, protests persist. Since 2009, 159 Tibetans have self-immolated. In 2022, pop star Tsewang Norbu set himself on fire near the Potala Palace, crying “Free Tibet!” Official planning documents say tourism must advance “Xi Jinping Thought” and promote “ethnic unity.” Authorities push the idea that Tibetans are grateful members of a unified Chinese nation with a shared future. Tourism is meant to “stabilize Tibet” by steering locals away from traditional livelihoods. Some benefit from the boom, but many resent the intrusion. A Litang waitress pointed at tourists in gaudy Tibetan costumes. “So ugly,” she whispered."
+ },
+ "q": {
+  "VARC": {
+   "1": {
+    "q": "Which of the following sets of terms best encapsulates the key words of the passage?",
+    "opts": [
+     "GPU parallelization, GPU synchronization, Language Models, Cost reduction, Monolithic data centers.",
+     "GPU clusters, Distributed Training, Checkpointing, DiLoCo, Generalization.",
+     "Monolithic data centers, GPU clusters, Consumer devices, Checkpointing, Cost savings.",
+     "GPU clusters, Distributed Training, Language models, DiLoCo, Consumer devices."
+    ],
+    "ans": "2",
+    "raw": "Which of the following sets of terms best encapsulates the key words of the passage?"
+   },
+   "2": {
+    "q": "According to the passage, which of the following is NOT a challenge faced in traditional AI model training?",
+    "opts": [
+     "The GPUs must frequently communicate and synchronize.",
+     "The costs associated with building giant custom GPU clusters.",
+     "The inability of GPUs to generalize when training AI models.",
+     "The time on data shuttling instead of productive computation."
+    ],
+    "ans": "3",
+    "raw": "According to the passage, which of the following is NOT a challenge faced in traditional AI model training?"
+   },
+   "3": {
+    "q": "Which of the following is NOT mentioned in the passage as a benefit of DiLoCo?",
+    "opts": [
+     "Reduction in synchronization bottlenecks between GPUs.",
+     "Improved generalization of AI models when solving new problems.",
+     "Elimination of the need for checkpointing during training.",
+     "Significant reduction in cost and complexity for smaller labs."
+    ],
+    "ans": "3",
+    "raw": "Which of the following is NOT mentioned in the passage as a benefit of DiLoCo?"
+   },
+   "4": {
+    "q": "Which of the following best captures the tone of the passage regarding the future of AI training?",
+    "opts": [
+     "Skeptical optimism about the feasibility of decentralizing AI training.",
+     "Enthusiastic advocacy for distributed and decentralized training methods.",
+     "Critical of the inefficiencies and costs of current AI training without offering alternatives.",
+     "Cautiously hopeful about innovations that balance efficiency and scalability in AI training."
+    ],
+    "ans": "4",
+    "raw": "Which of the following best captures the tone of the passage regarding the future of AI training?"
+   },
+   "5": {
+    "q": "Which of the following details from the passage provides the strongest evidence for matrilocality?",
+    "opts": [
+     "All the mtDNA discovered belonged to females belonging to the same locality.",
+     "Roman texts mentioning powerful British women and multiple husbands.",
+     "An unbroken line of mitochondrial DNA spanning multiple generations.",
+     "Unrelated men buried at the site who did not share the primary mtDNA."
+    ],
+    "ans": "3",
+    "raw": "Which of the following details from the passage provides the strongest evidence for matrilocality?"
+   },
+   "6": {
+    "q": "All of the following statements can be inferred from the DNA analysis of the early Celtic tribe at Durotriges EXCEPT:",
+    "opts": [
+     "It broadens our understanding of the variety of family structures in Iron Age Europe.",
+     "Women may have enjoyed stronger support networks and increased day-to-day influence.",
+     "It raises the question of how prevalent matriarchal communities were in Iron Age Britain.",
+     "Mitochondrial DNA analysis offers a robust line of evidence for maternal ancestry."
+    ],
+    "ans": "3",
+    "raw": "All of the following statements can be inferred from the DNA analysis of the early Celtic tribe at Durotriges EXCEPT:"
+   },
+   "7": {
+    "q": "Which of the following, if true, would most seriously undermine the matrilocal interpretation drawn from the archaeological and DNA findings about the Durotriges?",
+    "opts": [
+     "Genetic markers indicate that most adult males at the site have closely related maternal lineages.",
+     "Historical accounts describe Iron Age tribes in Britain alternating between matrilocal and patrilocal customs.",
+     "Both men and women at the site were buried with a similar variety of grave goods and local dietary patterns.",
+     "The cemetery at Winterborne Kingston was used for a short period and the burial population was more homogeneous in age."
+    ],
+    "ans": "1",
+    "raw": "Which of the following, if true, would most seriously undermine the matrilocal interpretation drawn from the archaeological and DNA findings about the Durotriges?"
+   },
+   "8": {
+    "q": "The author refers to Roman texts in the final paragraph primarily in order to:",
+    "opts": [
+     "Highlight the differences between Roman and British societal norms.",
+     "Provide additional evidence of matrilocality in prehistoric Britain.",
+     "Challenge the credibility of Roman observations about British tribes.",
+     "Provide external historical accounts of women in Iron Age Britain."
+    ],
+    "ans": "4",
+    "raw": "The author refers to Roman texts in the final paragraph primarily in order to:"
+   },
+   "9": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: Wetlands also play a crucial role in reducing floods, filtering water, and storing carbon.\n\nParagraph: Wetlands are watery areas where the ground stays soaked enough to support unique plant and animal life. They can be formed naturally or artificially, and their water can be fresh, salty, or somewhere in between. Official efforts to protect these places began in the 1970s, after new laws recognized their importance. ____1____. Before that, the word “wetland” first appeared in a 1953 government report on bird habitats. Over time, different groups have used various definitions, but many rely on an international agreement from 1971. ____2____. This agreement describes wetlands as places with shallow water that stays year-round or only part of the time. Because these sites attract birds, their preservation was a major focus in early wetland conservation and continues to guide current protection measures. ____3____. Their vital role extends far beyond wildlife. ____4____.",
+    "opts": [
+     "Option 4",
+     "Option 2",
+     "Option 3",
+     "Option 1"
+    ],
+    "ans": "1",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: Wetlands also play a crucial role in reducing floods, filtering water, and storing carbon. Paragraph: Wetlands are watery areas where the ground stays soaked enough to support unique plant and animal life. They can be formed naturally or artificially, and their water can be fresh, salty, or somewhere in between. Official efforts to protect these places began in the 1970s, after new laws recognized their importance. ___(1)___ Before that, the word “wetland” first appeared in a 1953 government report on bird habitats. Over time, different groups have used various definitions, but many rely on an international agreement from 1971. ___(2)___ This agreement describes wetlands as places with shallow water that stays year-round or only part of the time. Because these sites attract birds, their preservation was a major focus in early wetland conservation and continues to guide current protection measures. ___(3)___ Their vital role extends far beyond wildlife. ___(4)___"
+   },
+   "10": {
+    "q": "Which of the following best conveys the main point of the first paragraph?",
+    "opts": [
+     "We lean heavily on quantitative data for certainty, but doubts still persist.",
+     "We have side-lined gut feeling in favor of quick, data-driven decisions.",
+     "Statistical evidence is treated as final, closing off further debate.",
+     "Decision makers today are more accurate and objective in their decisions."
+    ],
+    "ans": "1",
+    "raw": "Which of the following best conveys the main point of the first paragraph?"
+   },
+   "11": {
+    "q": "Ms Chang and her co-authors explain that:",
+    "opts": [
+     "Quantification fixation can lead decision-makers to overlook objective but critical elements, granting undue emphasis to what’s not measurable.",
+     "If companies want to account for intangible factors like culture fit, ethics, or resilience, they need to rely on gut instinct rather than data.",
+     "If companies want to account for intangible factors like culture fit, ethics, or resilience, they need to be represented by a number.",
+     "If something is expressed in numbers, it influences our decision-making, even when what’s not measured is equally or more important."
+    ],
+    "ans": "4",
+    "raw": "Ms Chang and her co-authors explain that:"
+   },
+   "12": {
+    "q": "In the context of the passage, “nobody gets fired for following the algorithm” implies all of the following EXCEPT:",
+    "opts": [
+     "Managers may rely on algorithms to avoid personal accountability for decisions.",
+     "Following algorithms can sometimes suppress innovative or contrarian thinking.",
+     "Algorithms are infallible and, more often than not, offer the best possible outcomes.",
+     "There is a cultural pressure to adhere to machine recommendations to mitigate risk."
+    ],
+    "ans": "3",
+    "raw": "In the context of the passage, “nobody gets fired for following the algorithm” implies all of the following EXCEPT:"
+   },
+   "13": {
+    "q": "Which aspect of the author’s argument would a film studio most likely apply when deciding to invest in an unconventional script?",
+    "opts": [
+     "Relying on gut instinct and contrarian thinking to invest in novel narratives.",
+     "Recognizing that relying on gut instinct can lead to riskier but less profitable decisions.",
+     "Leveraging AI algorithms to predict box office success of past unconventional scripts.",
+     "Focusing exclusively on data-driven trends to ensure mainstream audience appeal."
+    ],
+    "ans": "1",
+    "raw": "Which aspect of the author’s argument would a film studio most likely apply when deciding to invest in an unconventional script?"
+   },
+   "14": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: This ongoing inquiry distinguishes philosophy from other fields, driving it to ask questions that often have no definitive answers.\n\nParagraph: ____1____. Philosophy arises from wonder, as Aristotle noted, and people seek explanations but often stop when further answers seem elusive. Philosophers remain captivated by understanding reality in broad, defensible ways, pushing inquiry beyond ordinary limits. In epistemology, they begin by assuming they possess ample knowledge but discover through reflection that many certainties are questionable. ____2____. These doubts stem from peculiarities in human experience that challenge common knowledge claims. By probing the security of beliefs, epistemologists reveal why a study of knowledge is needed: it compels us to refine our theories, remain open to revision, and pursue a more rigorous grasp of how we know what we know. ____3____. Such exploration underlines the importance of examining belief structures, ensuring deeper insight into the foundations and boundaries of human understanding. ____4____.",
+    "opts": [
+     "Option 2",
+     "Option 1",
+     "Option 3",
+     "Option 4"
+    ],
+    "ans": "1",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: This ongoing inquiry distinguishes philosophy from other fields, driving it to ask questions that often have no definitive answers. Paragraph: ___(1)___ Philosophy arises from wonder, as Aristotle noted, and people seek explanations but often stop when further answers seem elusive. Philosophers remain captivated by understanding reality in broad, defensible ways, pushing inquiry beyond ordinary limits. In epistemology, they begin by assuming they possess ample knowledge but discover through reflection that many certainties are questionable. ___(2)___ These doubts stem from peculiarities in human experience that challenge common knowledge claims. By probing the security of beliefs, epistemologists reveal why a study of knowledge is needed: it compels us to refine our theories, remain open to revision, and pursue a more rigorous grasp of how we know what we know. ___(3)___ Such exploration underlines the importance of examining belief structures, ensuring deeper insight into the foundations and boundaries of human understanding. ___(4)___"
+   },
+   "15": {
+    "q": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer.\n\nManmohan Singh, who served as India's prime minister from 2004 to 2014, was instrumental in driving economic reforms with the support of Sonia Gandhi and Narasimha Rao.\n\nKnown for his gentle demeanor and open-minded approach, Singh exemplified the qualities of a global statesman.\n\nSingh’s legacy includes significant contributions to education and healthcare policy, which often drew bipartisan praise.\n\nUnder Singh’s leadership, India transitioned from being one of the world’s poorest, slowest-growing countries into a burgeoning global power.\n\nHis tenure will be remembered for its role in cementing India’s reputation as an emerging economic powerhouse.",
+    "opts": [],
+    "ans": "3",
+    "raw": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer. 1. Manmohan Singh, who served as India's prime minister from 2004 to 2014, was instrumental in driving economic reforms with the support of Sonia Gandhi and Narasimha Rao. 2. Known for his gentle demeanor and open-minded approach, Singh exemplified the qualities of a global statesman. 3. Singh’s legacy includes significant contributions to education and healthcare policy, which often drew bipartisan praise. 4. Under Singh’s leadership, India transitioned from being one of the world’s poorest, slowest-growing countries into a burgeoning global power. 5. His tenure will be remembered for its role in cementing India’s reputation as an emerging economic powerhouse."
+   },
+   "16": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nPhilosophers examine the nature of laws for four main reasons. First, laws seem central to scientific practice. Second, they are pivotal to philosophical issues involving counterfactuals, explanation, and the distinction between laws and non-laws, as sparked by thinkers like Chisholm, Goodman, Hempel, and Oppenheim. Third, Goodman famously suggested a link between lawhood and inductive confirmability, prompting further interest in the problem of induction. Finally, philosophers relish a good puzzle: while “everyone here is seated” may be a true generalization, it appears too accidental to count as a law, unlike Einstein’s principle that signals cannot exceed the speed of light, which is also true but non-accidental.",
+    "opts": [
+     "The philosophical study of laws stems from their foundational role in science, their relevance to philosophical problems, and their distinction from accidental generalizations.",
+     "Philosophers are drawn to laws for their role in scientific inquiry, their connection to explanation and induction, and the intriguing distinction between generalizations and true laws.",
+     "Philosophers study laws because they are central to science, related to counterfactuals, explanation, and induction, and the challenge of distinguishing laws from accidental truths.",
+     "The examination of laws by philosophers reflects their scientific importance, their link to problems like induction and explanation, and their appeal as intellectual challenges."
+    ],
+    "ans": "3",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. Philosophers examine the nature of laws for four main reasons. First, laws seem central to scientific practice. Second, they are pivotal to philosophical issues involving counterfactuals, explanation, and the distinction between laws and non-laws, as sparked by thinkers like Chisholm, Goodman, Hempel, and Oppenheim. Third, Goodman famously suggested a link between lawhood and inductive confirmability, prompting further interest in the problem of induction. Finally, philosophers relish a good puzzle: while “everyone here is seated” may be a true generalization, it appears too accidental to count as a law, unlike Einstein’s principle that signals cannot exceed the speed of light, which is also true but non-accidental."
+   },
+   "17": {
+    "q": "How does the author organize her story to show that “Shangrilazation” serves a political agenda?",
+    "opts": [
+     "By highlighting how tourism is used to transform Tibet’s economy and to promote cultural exchanges.",
+     "By explaining how the commodification of Tibet conceals efforts to erase its traditional identity.",
+     "By describing the effects of “Sinicized Buddhism” and Beijing's investments in Tibet’s tourism sector.",
+     "By highlighting local resentment and instances of Tibetans rejecting external cultural influences."
+    ],
+    "ans": "2",
+    "raw": "How does the author organize her story to show that “Shangrilazation” serves a political agenda?"
+   },
+   "18": {
+    "q": "According to the passage, which factor primarily led to the renaming of Gyalthang as Shangri-La City?",
+    "opts": [
+     "The historical and cultural significance of the Tibetan region described in Lost Horizon.",
+     "A deliberate attempt to align the region with the ideals of a utopian tourism model.",
+     "The desire to modernize Gyalthang and attract global tourists to the area.",
+     "A political effort to reshape Tibet’s image and align it with Beijing’s objectives."
+    ],
+    "ans": "2",
+    "raw": "According to the passage, which factor primarily led to the renaming of Gyalthang as Shangri-La City?"
+   },
+   "19": {
+    "q": "Which policy change by the Chinese mentioned below would most directly address the author’s concerns?",
+    "opts": [
+     "Increasing the number of Chinese tourists to Tibet to boost economic benefits for local communities.",
+     "Reducing surveillance and granting greater autonomy to Tibetan cultural advocates.",
+     "Enhancing the preservation of Tibetan culture through government-led tourism initiatives.",
+     "Restricting access to Tibet further to ensure its heritage remains undisturbed by external influences."
+    ],
+    "ans": "2",
+    "raw": "Which policy change by the Chinese mentioned below would most directly address the author’s concerns?"
+   },
+   "20": {
+    "q": "‘A Litang waitress pointed at tourists in gaudy Tibetan costumes. “So ugly,” she whispered.’ The phrase \"So ugly\" has been used in the passage in a sense that is:",
+    "opts": [
+     "Literal, highlighting the unattractive appearance of the tourists in traditional costumes.",
+     "Hyperbolic, exaggerating the locals’ disapproval of tourists for dramatic effect.",
+     "Ironic, mocking the superficial attempts of tourists to replicate Tibetan culture while failing to respect its essence.",
+     "Figurative, using synecdoche to critique the broader phenomenon of cultural commodification."
+    ],
+    "ans": "4",
+    "raw": "‘A Litang waitress pointed at tourists in gaudy Tibetan costumes. “So ugly,” she whispered.’ The phrase \"So ugly\" has been used in the passage in a sense that is:"
+   },
+   "21": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nLiberal nationalists see liberal-democratic principles and pro-national attitudes as complementary. Yael Tamir, a major proponent, introduced the debate in the early 1990s and later described the nation-state as an ideal meeting point between the two. She acknowledges that either the meaningfulness of a community or its openness must be somewhat sacrificed, though different thinkers strike different balances. Her version of liberal nationalism is akin to social liberalism, aligning with those who support “solidaristic communities.” They argue that national identity fosters solidarity, which in turn supports social justice by creating stronger social bonds and mutual responsibilities. This approach shares similarities with others who contend that a sense of shared identity can strengthen democratic values and encourage a more equitable society.",
+    "opts": [
+     "Yael Tamir’s liberal nationalism balances community meaning with openness, promoting solidarity for social justice through national identity.",
+     "Liberal nationalism links national identity with solidarity, suggesting that shared identity strengthens democracy and social justice.",
+     "Liberal nationalists argue that national identity and liberal-democratic values can coexist, fostering solidarity and supporting social justice despite necessary trade-offs.",
+     "Proponents of liberal nationalism, including Yael Tamir, view the nation-state as a balance between community and openness, advancing solidarity and democracy."
+    ],
+    "ans": "3",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. Liberal nationalists see liberal-democratic principles and pro-national attitudes as complementary. Yael Tamir, a major proponent, introduced the debate in the early 1990s and later described the nation-state as an ideal meeting point between the two. She acknowledges that either the meaningfulness of a community or its openness must be somewhat sacrificed, though different thinkers strike different balances. Her version of liberal nationalism is akin to social liberalism, aligning with those who support “solidaristic communities.” They argue that national identity fosters solidarity, which in turn supports social justice by creating stronger social bonds and mutual responsibilities. This approach shares similarities with others who contend that a sense of shared identity can strengthen democratic values and encourage a more equitable society."
+   },
+   "22": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nEvolutionary game theory began as an application of mathematical game theory to biology, recognizing that frequency-dependent fitness introduces a strategic aspect to evolution. It has since drawn growing interest from social scientists, motivated by three factors. First, “evolution” here can be cultural, describing changes in beliefs and norms. Second, its rationality assumptions often suit social systems more accurately than those used in traditional game theory. Third, as an explicitly dynamic theory, evolutionary game theory fills a gap in the static framework of classical game theory. Consequently, it provides valuable tools for exploring how strategic behavior evolves across diverse contexts.",
+    "opts": [
+     "Evolutionary game theory extends classical game theory by incorporating frequency-dependent fitness and dynamic strategies, making it applicable to biology and social systems.",
+     "Evolutionary game theory, initially developed for biology, now serves as a dynamic tool for analyzing cultural evolution, rationality in social systems, and strategic behavior.",
+     "The dynamic nature of evolutionary game theory bridges the static framework of classical game theory, enabling the study of biological and cultural evolution in strategic contexts.",
+     "Social scientists have embraced evolutionary game theory for its dynamic approach to cultural evolution, rationality, and strategic interactions, apart from its use in biology."
+    ],
+    "ans": "2",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. Evolutionary game theory began as an application of mathematical game theory to biology, recognizing that frequency-dependent fitness introduces a strategic aspect to evolution. It has since drawn growing interest from social scientists, motivated by three factors. First, “evolution” here can be cultural, describing changes in beliefs and norms. Second, its rationality assumptions often suit social systems more accurately than those used in traditional game theory. Third, as an explicitly dynamic theory, evolutionary game theory fills a gap in the static framework of classical game theory. Consequently, it provides valuable tools for exploring how strategic behavior evolves across diverse contexts."
+   },
+   "23": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: His drum design aimed to simplify the tuning process for musicians, making it quicker and more efficient.\n\nParagraph: Marlon Brando, widely recognized for his iconic film roles, also had a passion for drumming. Toward the end of his life, he worked on creating a revolutionary conga drum design that could be tuned by a single crank at the bottom rather than multiple screws at the top. ____1____. From 2002 onward, he earned four patents for this innovative drum-tuning system. Sadly, Brando passed away in 2004, before realizing his dream of seeing his invention reach mass production. ____2____. Seven years later, famed drummer Poncho Sanchez tested one of these unique drums, praising its sound but expressing doubts about its practicality and cost. ____3____. While production never came to fruition, Brando’s imaginative approach to instrument design remains a testament to his enduring creativity, offering a glimpse into a side of his genius that extended beyond the silver screen. It endures as a footnote. ____4____.",
+    "opts": [
+     "Option 3",
+     "Option 2",
+     "Option 1",
+     "Option 4"
+    ],
+    "ans": "3",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: His drum design aimed to simplify the tuning process for musicians, making it quicker and more efficient. Paragraph: Marlon Brando, widely recognized for his iconic film roles, also had a passion for drumming. Toward the end of his life, he worked on creating a revolutionary conga drum design that could be tuned by a single crank at the bottom rather than multiple screws at the top. ___(1)___ From 2002 onward, he earned four patents for this innovative drum-tuning system. Sadly, Brando passed away in 2004, before realizing his dream of seeing his invention reach mass production. ___(2)___ Seven years later, famed drummer Poncho Sanchez tested one of these unique drums, praising its sound but expressing doubts about its practicality and cost. ___(3)___ While production never came to fruition, Brando’s imaginative approach to instrument design remains a testament to his enduring creativity, offering a glimpse into a side of his genius that extended beyond the silver screen. It endures as a footnote. ___(4)___"
+   },
+   "24": {
+    "q": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer.\n\nUniversal humanists argue that banning great works of art associated with an enemy country narrows perspectives and fosters provincialism.\n\nCultural chauvinism, though typically criticized, can become a crucial tool of resistance in specific contexts, as exemplified by Ukraine’s stance toward Russian cultural dominance.\n\nAdvocates of universal humanism believe that art transcends politics and should remain accessible even in times of conflict.\n\nThe banning of cultural works from enemy countries has historically been viewed as a tactic to bolster nationalist identity during wartime.\n\nIn Ukraine’s case, rejecting Russian cultural influences is seen as part of a broader strategy to assert independence from a forced political and cultural embrace.",
+    "opts": [],
+    "ans": "4",
+    "raw": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer. 1. Universal humanists argue that banning great works of art associated with an enemy country narrows perspectives and fosters provincialism. 2. Cultural chauvinism, though typically criticized, can become a crucial tool of resistance in specific contexts, as exemplified by Ukraine’s stance toward Russian cultural dominance. 3. Advocates of universal humanism believe that art transcends politics and should remain accessible even in times of conflict. 4. The banning of cultural works from enemy countries has historically been viewed as a tactic to bolster nationalist identity during wartime. 5. In Ukraine’s case, rejecting Russian cultural influences is seen as part of a broader strategy to assert independence from a forced political and cultural embrace."
+   }
+  }
+ }
+}

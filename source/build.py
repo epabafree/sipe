@@ -21,9 +21,12 @@ MOCK_SERIES = "Simp Mocks"          # display name of the mock series (one place
 MOCK_ONE = "Simp Mock"
 MOCK_TAG = "Simp_Mocks"
 MOCK_FULL = {"VARC": 24, "DILR": 20, "QA": 22}
-def mock_name(n): return f"{MOCK_ONE} {n}"
+# q["mock"] = series * 100 + number (e.g. 202301, 202505); 0 for past papers
+def mock_name(m): return f"{MOCK_ONE} {m % 100} ({m // 100})"
+def mock_deck(m): return f"{D_PAPERS}::{MOCK_SERIES}::{m // 100}::Mock {m % 100:02d}"
+def mock_qid(m): return f"SM{m % 100:02d}" if m // 100 == 2023 else f"SM{m // 100 % 100}-{m % 100:02d}"
 def q_paper(q): return mock_name(q["mock"]) if q.get("mock") else paper_name(q["year"], q["slot"])
-def q_ptag(q): return f"Paper::{MOCK_TAG}_{q['mock']:02d}" if q.get("mock") else f"Paper::{q['year']}_S{q['slot']}"
+def q_ptag(q): return f"Paper::{MOCK_TAG}_{q['mock'] // 100}_{q['mock'] % 100:02d}" if q.get("mock") else f"Paper::{q['year']}_S{q['slot']}"
 SECN = {"VARC": "Verbal Ability & Reading Comprehension", "DILR": "Data Interpretation & Logical Reasoning", "QA": "Quantitative Aptitude"}
 SEC_ORDER = {"VARC": 0, "DILR": 1, "QA": 2}
 
@@ -89,7 +92,7 @@ SOURCES = [(ex_varc.VARC, data_varc.SOL, "VARC", "pilot"), (b2_varc.ITEMS, b2_va
            (ex_qa.QA, data_qa.SOL, "QA", "pilot"), (b2_qa.ITEMS, b2_qa.SOL, "QA", "b2")]
 # Later papers: one module per paper (VARC) plus its _dilr / _qa add-on modules, all sharing one Paper object.
 import importlib
-MOCK_MODULES = [f"m{n:02d}" for n in range(1, 16)]
+MOCK_MODULES = [f"m{n:02d}" for n in range(1, 16)] + [f"m25_{n:02d}" for n in range(1, 20)]
 for base in MOCK_MODULES + ["b3_s2", "b4_s3", "b5_22s1", "b6_22s2", "b7_22s3", "b8_21s1", "b9_21s2", "b10_21s3", "b11_20s1", "b12_20s2", "b13_20s3", "b14_19s1", "b15_19s2", "b16_18s1"]:
     try: P = importlib.import_module(base).P
     except ModuleNotFoundError: continue
@@ -104,7 +107,7 @@ for ex, sol, sec, origin in SOURCES:
         main_topic = [t.split("::", 1)[1] if t.startswith(sec + "::") else t for t in topics]
         q2 = dict(q)
         q2.setdefault("slot", 1); q2.setdefault("year", YEAR); q2.setdefault("mock", 0)
-        qid = f"SM{q2['mock']:02d}-{sec}-{q['qno']:02d}" if q2["mock"] else f"{q2['year']}-S{q2['slot']}-{sec}-{q['qno']:02d}"
+        qid = f"{mock_qid(q2['mock'])}-{sec}-{q['qno']:02d}" if q2["mock"] else f"{q2['year']}-S{q2['slot']}-{sec}-{q['qno']:02d}"
         q2.update(qid=qid, hint=s.get("hint", ""), solution=s["solution"],
                   shortcut=s.get("shortcut", ""), concept=s.get("concept", ""), why=s.get("why", ""),
                   setsol=s.get("setsol", ""), topics=main_topic, subtypes=subtypes)
@@ -295,8 +298,8 @@ def main():
     for q in QS:
         tags = q_tags(q)
         if q["mock"]:
-            due = 50_000_000 + q["mock"] * 1000 + SEC_ORDER[q["section"]] * 40 + q["qno"]
-            dname = f"{D_PAPERS}::{MOCK_SERIES}::{mock_name(q['mock'])}::{SECN[q['section']]}"
+            due = 50_000_000 + (2100 - q["mock"] // 100) * 10_000 + q["mock"] % 100 * 100 + SEC_ORDER[q["section"]] * 30 + q["qno"]
+            dname = f"{mock_deck(q['mock'])}::{SECN[q['section']]}"
         else:
             due = 10_000_000 + q["year"] * 1000 + q["slot"] * 100 + SEC_ORDER[q["section"]] * 40 + q["qno"]
             dname = f"{D_SEC[q['section']]}::{q['year']}::Slot {q['slot']}"
@@ -311,7 +314,7 @@ def main():
         tags += [f"Topic::{s['section']}::{x}" for x in s["topics"]]
         tags = [tagify(x) for x in tags]
         topic = "  ·  ".join(label(x, s["section"]) for x in s["topics"])
-        sdeck = f"{D_PAPERS}::{MOCK_SERIES}::{mock_name(s['mock'])}::Whole passages and sets" if s["mock"] else f"{D_SEC[s['section']]}::{SET_DECK[s['section']]}"
+        sdeck = f"{mock_deck(s['mock'])}::Whole passages and sets" if s["mock"] else f"{D_SEC[s['section']]}::{SET_DECK[s['section']]}"
         add(sdeck, M_SET, [s["sid"], s["section"], SECN[s["section"]], q_paper(s["first"]), s["title"], s["directions"], s["context"],
             s["questions"], s["answers"], s["setsol"], topic], tags, "set-" + s["sid"], 20_000_000 + i, "sets")
         index.append({"t": tags})
@@ -344,13 +347,16 @@ def main():
                 "set_title": q["set_title"], "directions": q["directions"], "context": q["context"].strip(), "question": wrap(q["question"]),
                 "solution": q["solution"], "shortcut": q["shortcut"],
                 "topic": " › ".join(x.replace("_", " ") for x in q["topics"][0].split("::"))}
-    for mn in sorted({q["mock"] for q in QS if q["mock"]}):
+    for mn in sorted({q["mock"] for q in QS if q["mock"]}, key=lambda m: (-(m // 100), m % 100)):
         mq = [mock_q(q) for q in QS if q["mock"] == mn]
         name = mock_name(mn); nfull = sum(MOCK_FULL.values())
         ttl = f"{name} · full mock, {len(mq)} questions" if len(mq) >= nfull else f"{name} · {len(mq)} questions in this deck"
-        mdata = json.dumps({"title": ttl, "full": MOCK_FULL, "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
-        add(f"{D_PAPERS}::{MOCK_SERIES}::{name}", M_MOCK, [f"SM{mn:02d}", name, mdata], ["Card::Mock", f"Source::{MOCK_TAG}", f"Paper::{MOCK_TAG}_{mn:02d}"],
-            f"simpmock-{mn:02d}", 45_000_000 + mn, "mock")
+        full = {s: max(sum(1 for q in mq if q["section"] == s), MOCK_FULL[s]) for s in MOCK_FULL} if mn // 100 != 2023 else MOCK_FULL
+        nfull = sum(full.values())
+        ttl = f"{name} · full mock, {len(mq)} questions" if len(mq) >= nfull else f"{name} · {len(mq)} questions in this deck"
+        mdata = json.dumps({"title": ttl, "full": full, "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
+        gk = f"simpmock-{mn % 100:02d}" if mn // 100 == 2023 else f"simpmock-{mn // 100}-{mn % 100:02d}"
+        add(mock_deck(mn), M_MOCK, [mock_qid(mn), name, mdata], ["Card::Mock", f"Source::{MOCK_TAG}", q_ptag({"mock": mn})], gk, 45_000_000 + (2100 - mn // 100) * 100 + mn % 100, "mock")
     for pi, (py, pn) in enumerate(sorted({(q["year"], q["slot"]) for q in PYQ}, reverse=True)):
         pq = [q for q in PYQ if (q["year"], q["slot"]) == (py, pn)]
         mq = [{"id": q["qid"], "section": q["section"], "qno": q["qno"], "qtype": q["qtype"], "options": q["options"], "answer": q["answer"],

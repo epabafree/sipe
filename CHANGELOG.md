@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.19.0
+
+Simp Mocks are now grouped by series (`Simp Mocks ▸ 2025` and `Simp Mocks ▸ 2023`). Added the 2025 series with Mocks 1 and 2: 136 questions (48 VARC, 44 DILR, 44 QA) and 18 set cards.
+
+- Mock 1, DILR Set 1: stacked bar chart of tickets booked in each five-minute slot for five days, with every segment labelled.
+- Mock 1, DILR Set 2: the artefact grid is given as a table, and the set solution builds the full magic square step by step.
+- Mock 1, DILR Set 5: pie chart of the warehouse products, and a table of every product by brand.
+- Mock 1, QA Q17 and Q18: the angle-bisector figure and the triangle with two cevians are redrawn.
+- Mock 2, DILR Set 2: candlestick chart of ten trading days, and a table of open, high, low and close for each day.
+- Mock 2, DILR Set 4: both percentage tables, and the set solution derives every mark up to a common factor.
+- Mock 2, QA Q18: the semicircle inscribed in an equilateral triangle is redrawn.
+- Formulas, fractions and options that were images are typeset as maths throughout.
+- Mock paper cards are named “Simp Mock N (series)”. The 2023 Mock 1 deck moves to `Simp Mocks ▸ 2023 ▸ Mock 01`; in an existing collection its cards keep their old deck until moved.
+
 ## v0.18.0
 
 Added Simp Mocks, a series of full-length practice mocks in the CAT pattern, under `06 Papers & Mocks ▸ Simp Mocks`. First: Simp Mock 1, 56 questions (24 VARC, 10 DILR, 22 QA) and 6 set cards (4 RC passages, 2 DILR sets).

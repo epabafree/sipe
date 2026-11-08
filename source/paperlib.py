@@ -98,7 +98,7 @@ class Paper:
 
 class Mock(Paper):
     """A full-length mock test (not a CAT paper). Same helpers; its own IDs, decks and tags."""
-    def __init__(self, n, extract_file):
+    def __init__(self, n, extract_file, series=2023):
         super().__init__(0, n, extract_file)
-        self.sid_prefix = f"SM{n:02d}_M"
-        self.extra = {"mock": n}
+        self.sid_prefix = f"SM{n:02d}_M" if series == 2023 else f"SM{series % 100}-{n:02d}_M"
+        self.extra = {"mock": series * 100 + n}
