@@ -17,6 +17,13 @@ YEAR = 2023
 FULL_PAPER = {2020: {"VARC": 26, "DILR": 24, "QA": 26}, 2019: {"VARC": 34, "DILR": 32, "QA": 34}, 2018: {"VARC": 34, "DILR": 32, "QA": 34}}
 
 def paper_name(y, n): return f"CAT {y} · Slot {n}"
+MOCK_SERIES = "Simp Mocks"          # display name of the mock series (one place to rename it)
+MOCK_ONE = "Simp Mock"
+MOCK_TAG = "Simp_Mocks"
+MOCK_FULL = {"VARC": 24, "DILR": 20, "QA": 22}
+def mock_name(n): return f"{MOCK_ONE} {n}"
+def q_paper(q): return mock_name(q["mock"]) if q.get("mock") else paper_name(q["year"], q["slot"])
+def q_ptag(q): return f"Paper::{MOCK_TAG}_{q['mock']:02d}" if q.get("mock") else f"Paper::{q['year']}_S{q['slot']}"
 SECN = {"VARC": "Verbal Ability & Reading Comprehension", "DILR": "Data Interpretation & Logical Reasoning", "QA": "Quantitative Aptitude"}
 SEC_ORDER = {"VARC": 0, "DILR": 1, "QA": 2}
 
@@ -82,7 +89,8 @@ SOURCES = [(ex_varc.VARC, data_varc.SOL, "VARC", "pilot"), (b2_varc.ITEMS, b2_va
            (ex_qa.QA, data_qa.SOL, "QA", "pilot"), (b2_qa.ITEMS, b2_qa.SOL, "QA", "b2")]
 # Later papers: one module per paper (VARC) plus its _dilr / _qa add-on modules, all sharing one Paper object.
 import importlib
-for base in ("b3_s2", "b4_s3", "b5_22s1", "b6_22s2", "b7_22s3", "b8_21s1", "b9_21s2", "b10_21s3", "b11_20s1", "b12_20s2", "b13_20s3", "b14_19s1", "b15_19s2", "b16_18s1"):
+MOCK_MODULES = [f"m{n:02d}" for n in range(1, 16)]
+for base in MOCK_MODULES + ["b3_s2", "b4_s3", "b5_22s1", "b6_22s2", "b7_22s3", "b8_21s1", "b9_21s2", "b10_21s3", "b11_20s1", "b12_20s2", "b13_20s3", "b14_19s1", "b15_19s2", "b16_18s1"]:
     try: P = importlib.import_module(base).P
     except ModuleNotFoundError: continue
     for extra in ("_dilr", "_qa"): importlib.import_module(base + extra)
@@ -95,8 +103,9 @@ for ex, sol, sec, origin in SOURCES:
         subtypes = [t.replace("Subtype::", "") for t in q["topic"] if t.startswith("Subtype::")]
         main_topic = [t.split("::", 1)[1] if t.startswith(sec + "::") else t for t in topics]
         q2 = dict(q)
-        q2.setdefault("slot", 1); q2.setdefault("year", YEAR)
-        q2.update(qid=f"{q2['year']}-S{q2['slot']}-{sec}-{q['qno']:02d}", hint=s.get("hint", ""), solution=s["solution"],
+        q2.setdefault("slot", 1); q2.setdefault("year", YEAR); q2.setdefault("mock", 0)
+        qid = f"SM{q2['mock']:02d}-{sec}-{q['qno']:02d}" if q2["mock"] else f"{q2['year']}-S{q2['slot']}-{sec}-{q['qno']:02d}"
+        q2.update(qid=qid, hint=s.get("hint", ""), solution=s["solution"],
                   shortcut=s.get("shortcut", ""), concept=s.get("concept", ""), why=s.get("why", ""),
                   setsol=s.get("setsol", ""), topics=main_topic, subtypes=subtypes)
         if s.get("why_title"): q2["why"] = f'<div class="why-title" hidden>{s["why_title"]}</div>' + q2["why"]
@@ -109,12 +118,16 @@ for ex, sol, sec, origin in SOURCES:
             q2["context"] = ex_dilr.CONTEXT
         q2["concept"] = stack(q2["concept"])
         QS.append(q2)
-QS.sort(key=lambda q: (q["year"], q["slot"], SEC_ORDER[q["section"]], q["qno"]))
+QS.sort(key=lambda q: (q["mock"], q["year"], q["slot"], SEC_ORDER[q["section"]], q["qno"]))
+PYQ = [q for q in QS if not q["mock"]]
 assert len({q["qid"] for q in QS}) == len(QS)
 
 def q_tags(q):
-    t = ["Card::Question", f"Section::{q['section']}", f"Year::{q['year']}", f"Paper::{q['year']}_S{q['slot']}", f"Slot::{q['slot']}",
-         f"Format::{q['qtype']}", f"Difficulty::{q['difficulty']}"]
+    if q["mock"]:
+        t = ["Card::Question", f"Section::{q['section']}", f"Source::{MOCK_TAG}", q_ptag(q), f"Format::{q['qtype']}", f"Difficulty::{q['difficulty']}"]
+    else:
+        t = ["Card::Question", f"Section::{q['section']}", f"Year::{q['year']}", q_ptag(q), f"Slot::{q['slot']}",
+             f"Format::{q['qtype']}", f"Difficulty::{q['difficulty']}"]
     t += [f"Topic::{q['section']}::{x}" for x in q["topics"]]
     t += [f"QuestionType::{x}" for x in q["subtypes"]]
     if q["set_id"]: t.append(f"Set::{q['set_id']}")
@@ -123,7 +136,7 @@ def q_tags(q):
 def q_fields(q):
     o = (q["options"] + ["", "", "", ""])[:4]
     topic = "  ·  ".join(label(x, q["section"]) for x in q["topics"])
-    return [q["qid"], q["section"], SECN[q["section"]], paper_name(q["year"], q["slot"]), str(q["qno"]), q["qtype"], q["set_id"], q["set_title"],
+    return [q["qid"], q["section"], SECN[q["section"]], q_paper(q), str(q["qno"]), q["qtype"], q["set_id"], q["set_title"],
             q["directions"], q["context"].strip(), wrap(q["question"]), o[0], o[1], o[2], o[3], q["answer"], q["hint"],
             q["solution"], q["setsol"], q["shortcut"], q["concept"], q["why"], topic, q["difficulty"] + " (estimated)"]
 
@@ -151,7 +164,7 @@ for sid in sorted({q["set_id"] for q in QS if q["set_id"]}, key=lambda s: (s.spl
     f = members[0]
     SETS.append(dict(sid=sid, section=f["section"], title=f["set_title"], directions=f["directions"], context=f["context"].strip(),
                      questions="".join(sq_html(q, i) for i, q in enumerate(members)), answers="".join(sqa_html(q) for q in members),
-                     setsol=f["setsol"], topics=f["topics"], members=members, year=f["year"], slot=f["slot"]))
+                     setsol=f["setsol"], topics=f["topics"], members=members, year=f["year"], slot=f["slot"], mock=f["mock"], first=f))
 
 # ---------------- reference cards ----------------
 # VARC technique cards list every question of their type automatically.
@@ -160,7 +173,7 @@ SUB2REF = {"RC::Except": "VARC-RC-001", "RC::Detail_Not_True": "VARC-RC-001", "R
            "RC::Main_Idea": "VARC-RC-006", "RC::Application": "VARC-RC-006", "RC::Weaken": "VARC-RC-007",
            "VA::Missing_Sentence": "VARC-VA-001", "VA::Odd_One_Out": "VARC-VA-002", "VA::Para_Jumble": "VARC-VA-003", "VA::Summary": "VARC-VA-004"}
 _refs = {r["rid"]: r for r in REF}
-for q in QS:
+for q in PYQ:
     if q["section"] != "VARC": continue
     for k in (q["subtypes"] or q["topics"]):
         r = _refs.get(SUB2REF.get(k, ""))
@@ -191,7 +204,7 @@ WELCOME = f"""
 <tr><td class="rh">01 · 02 · 03</td><td style="text-align:left;white-space:normal">One deck per section, then by year and slot, for example <span class="path">03 Quantitative Aptitude ▸ 2023 ▸ Slot 1</span>. Questions come in the original exam order. Whole RC passages and DILR sets, with all their questions on one card, sit at the end of their section.</td></tr>
 <tr><td class="rh">04 Practice by Topic</td><td style="text-align:left;white-space:normal">Every question on a topic, say <span class="path">Quantitative Aptitude ▸ Algebra</span>, from all the papers, with the paper shown on each.</td></tr>
 <tr><td class="rh">05 Formulas &amp; Concepts</td><td style="text-align:left;white-space:normal">Short reference cards: the formula, what each symbol means, when it helps, and a quick example. For VARC, the approach for each question type.</td></tr>
-<tr><td class="rh">06 Papers &amp; Mocks</td><td style="text-align:left;white-space:normal">One card per paper. <b>Practice</b> lets you move freely through the paper and check answers as you go; <b>Timed mock</b> gives you exam conditions and a CAT-style score.</td></tr>
+<tr><td class="rh">06 Papers &amp; Mocks</td><td style="text-align:left;white-space:normal">One card per paper. <b>Practice</b> lets you move freely through the paper and check answers as you go; <b>Timed mock</b> gives you exam conditions and a CAT-style score. <b>{MOCK_SERIES}</b> are full-length practice mocks in the CAT pattern: each has its own deck with the question cards, whole passages and sets, and a paper card for practice or a timed attempt.</td></tr>
 </table></div>
 <h2>Solving a question</h2>
 <ol><li>Open a section deck and work through the cards.</li>
@@ -231,7 +244,7 @@ NICE = {"Profit_Loss_and_Discount": "Profit, Loss and Discount", "Time_Speed_and
 def nice(x): return NICE.get(x, x.replace("_", " "))
 def topic_groups():
     groups = {}
-    for q in sorted(QS, key=lambda q: (-q["year"], q["slot"], SEC_ORDER[q["section"]], q["qno"])):
+    for q in sorted(PYQ, key=lambda q: (-q["year"], q["slot"], SEC_ORDER[q["section"]], q["qno"])):
         sec = q["section"]; keys = []
         if sec == "VARC":
             area = q["topics"][0].split("::")[0]
@@ -281,16 +294,25 @@ def main():
     # questions
     for q in QS:
         tags = q_tags(q)
-        due = 10_000_000 + q["year"] * 1000 + q["slot"] * 100 + SEC_ORDER[q["section"]] * 40 + q["qno"]
-        add(f"{D_SEC[q['section']]}::{q['year']}::Slot {q['slot']}", M_Q, q_fields(q), tags, q["qid"], due, f"questions_{q['section']}")
+        if q["mock"]:
+            due = 50_000_000 + q["mock"] * 1000 + SEC_ORDER[q["section"]] * 40 + q["qno"]
+            dname = f"{D_PAPERS}::{MOCK_SERIES}::{mock_name(q['mock'])}::{SECN[q['section']]}"
+        else:
+            due = 10_000_000 + q["year"] * 1000 + q["slot"] * 100 + SEC_ORDER[q["section"]] * 40 + q["qno"]
+            dname = f"{D_SEC[q['section']]}::{q['year']}::Slot {q['slot']}"
+        add(dname, M_Q, q_fields(q), tags, q["qid"], due, f"questions_{q['section']}")
         index.append({"t": tags})
     # sets
     for i, s in enumerate(SETS):
-        tags = ["Card::Set", f"Section::{s['section']}", f"Year::{s['year']}", f"Paper::{s['year']}_S{s['slot']}", f"Slot::{s['slot']}", f"Set::{s['sid']}"] + \
-               [f"Topic::{s['section']}::{x}" for x in s["topics"]]
+        if s["mock"]:
+            tags = ["Card::Set", f"Section::{s['section']}", f"Source::{MOCK_TAG}", q_ptag(s["first"]), f"Set::{s['sid']}"]
+        else:
+            tags = ["Card::Set", f"Section::{s['section']}", f"Year::{s['year']}", q_ptag(s["first"]), f"Slot::{s['slot']}", f"Set::{s['sid']}"]
+        tags += [f"Topic::{s['section']}::{x}" for x in s["topics"]]
         tags = [tagify(x) for x in tags]
         topic = "  ·  ".join(label(x, s["section"]) for x in s["topics"])
-        add(f"{D_SEC[s['section']]}::{SET_DECK[s['section']]}", M_SET, [s["sid"], s["section"], SECN[s["section"]], paper_name(s["year"], s["slot"]), s["title"], s["directions"], s["context"],
+        sdeck = f"{D_PAPERS}::{MOCK_SERIES}::{mock_name(s['mock'])}::Whole passages and sets" if s["mock"] else f"{D_SEC[s['section']]}::{SET_DECK[s['section']]}"
+        add(sdeck, M_SET, [s["sid"], s["section"], SECN[s["section"]], q_paper(s["first"]), s["title"], s["directions"], s["context"],
             s["questions"], s["answers"], s["setsol"], topic], tags, "set-" + s["sid"], 20_000_000 + i, "sets")
         index.append({"t": tags})
     # reference
@@ -317,8 +339,20 @@ def main():
     pdata = json.dumps({"root": ROOT, "topics": topics, "years": years, "slots": slots, "items": index}, ensure_ascii=False).replace("</", "<\\/")
     add(D_START, M_PLAN, ["planner", "Study Planner", pdata], ["Card::Guide"], "planner", 2, "start_here_planner")
     # papers: one card per paper, newest first
-    for pi, (py, pn) in enumerate(sorted({(q["year"], q["slot"]) for q in QS}, reverse=True)):
-        pq = [q for q in QS if (q["year"], q["slot"]) == (py, pn)]
+    def mock_q(q):
+        return {"id": q["qid"], "section": q["section"], "qno": q["qno"], "qtype": q["qtype"], "options": q["options"], "answer": q["answer"],
+                "set_title": q["set_title"], "directions": q["directions"], "context": q["context"].strip(), "question": wrap(q["question"]),
+                "solution": q["solution"], "shortcut": q["shortcut"],
+                "topic": " › ".join(x.replace("_", " ") for x in q["topics"][0].split("::"))}
+    for mn in sorted({q["mock"] for q in QS if q["mock"]}):
+        mq = [mock_q(q) for q in QS if q["mock"] == mn]
+        name = mock_name(mn); nfull = sum(MOCK_FULL.values())
+        ttl = f"{name} · full mock, {len(mq)} questions" if len(mq) >= nfull else f"{name} · {len(mq)} questions in this deck"
+        mdata = json.dumps({"title": ttl, "full": MOCK_FULL, "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
+        add(f"{D_PAPERS}::{MOCK_SERIES}::{name}", M_MOCK, [f"SM{mn:02d}", name, mdata], ["Card::Mock", f"Source::{MOCK_TAG}", f"Paper::{MOCK_TAG}_{mn:02d}"],
+            f"simpmock-{mn:02d}", 45_000_000 + mn, "mock")
+    for pi, (py, pn) in enumerate(sorted({(q["year"], q["slot"]) for q in PYQ}, reverse=True)):
+        pq = [q for q in PYQ if (q["year"], q["slot"]) == (py, pn)]
         mq = [{"id": q["qid"], "section": q["section"], "qno": q["qno"], "qtype": q["qtype"], "options": q["options"], "answer": q["answer"],
                "set_title": q["set_title"], "directions": q["directions"], "context": q["context"].strip(), "question": wrap(q["question"]),
                "solution": q["solution"], "shortcut": q["shortcut"],
@@ -346,7 +380,7 @@ def main():
             fh.write("#columns:" + ",".join(["GUID", "Notetype", "Deck", "Tags"] + [f["name"] for f in mdl.fields]) + "\n")
             w = csv.writer(fh, quoting=csv.QUOTE_ALL, lineterminator="\n")
             for r in rr: w.writerow(r)
-    print("papers", sorted({(q["year"], q["slot"]) for q in QS}), "questions", len(QS), "sets", len(SETS), "refs", len(REF), "->", apkg)
+    print("papers", sorted({(q["year"], q["slot"]) for q in PYQ}), "mocks", sorted({q["mock"] for q in QS if q["mock"]}), "questions", len(QS), "sets", len(SETS), "refs", len(REF), "->", apkg)
 
 if __name__ == "__main__":
     main()

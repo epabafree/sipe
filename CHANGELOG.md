@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.18.0
+
+Added Simp Mocks, a series of full-length practice mocks in the CAT pattern, under `06 Papers & Mocks ▸ Simp Mocks`. First: Simp Mock 1, 56 questions (24 VARC, 10 DILR, 22 QA) and 6 set cards (4 RC passages, 2 DILR sets).
+
+- Each mock has its own deck: one subdeck per section, a deck of whole passages and sets, and a paper card for practice or a timed mock.
+- Mock questions are tagged `Source::Simp_Mocks` and `Paper::Simp_Mocks_NN`, and stay out of the past-paper section decks and Practice by Topic.
+- DILR Set 2 (pipelines): network diagram of both routes and the C2→C1 link, with the time for each stretch; every question has a table of route times for each possible split.
+- DILR Set 3 (fruit committee): the set solution lists all ten fruit pairs with their cost and who bought each.
+- QA Q16: the two-circle figure is redrawn with the common tangent marked.
+- QA formulas and options that were images are typeset as maths.
+- The Start Here guide describes the mock decks.
+
 ## v0.17.0
 
 The three CAT 2020 papers are now complete: 76 questions each (26 VARC, 24 DILR, 26 QA). 21 questions and 3 set cards added.

@@ -25,6 +25,14 @@ An Anki deck of CAT previous-year questions. Each question is an interactive car
 | CAT 2018 Slot 1 | 21 | 32 | 33 | 86 |
 | | | | | **1049** |
 
+### Simp Mocks
+
+Full-length practice mocks in the CAT pattern (24 VARC, 20 DILR, 22 QA), under `06 Papers & Mocks ▸ Simp Mocks`. Each mock has its own deck with the question cards, whole-passage and whole-set cards, and a paper card for practice or a timed attempt. Mock questions are kept out of the past-paper decks and topic practice.
+
+| Mock | VARC | DILR | QA | Total |
+| --- | ---: | ---: | ---: | ---: |
+| Simp Mock 1 | 24 | 10 | 22 | 56 |
+
 Alongside the question cards there are set cards (a whole RC passage or DILR set on one card), formula and technique cards, a practice card for each topic area, and a card for each paper with a practice mode and a timed mock.
 
 ## Installing
