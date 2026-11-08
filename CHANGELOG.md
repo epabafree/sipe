@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.20.0
+
+Added Simp Mocks 3 and 4 (2025): 134 questions (48 VARC, 42 DILR, 44 QA) and 17 set cards.
+
+- Mock 3, DILR Set 1 (bullet trains): the set solution gives both trains’ full five-service timetables, marking the hubs that can swap.
+- Mock 3, DILR Set 3 (museum visit): table of divisions by floor, and each school’s route through the day.
+- Mock 3, DILR Set 4: every region of the Music–Dance–Speech Venn diagram, split by girls and boys where it is fixed.
+- Mock 4, DILR Set 1: the placement table is split into one table per semester, plus a table of students with offers of both kinds.
+- Mock 4, DILR Set 2: the four-track, eight-sector wheel is redrawn with every cell labelled.
+- Mock 4, DILR Set 5: grouped bar chart of male and female employees by branch.
+- Formulas and options that were images are typeset as maths.
+
 ## v0.19.0
 
 Simp Mocks are now grouped by series (`Simp Mocks ▸ 2025` and `Simp Mocks ▸ 2023`). Added the 2025 series with Mocks 1 and 2: 136 questions (48 VARC, 44 DILR, 44 QA) and 18 set cards.
