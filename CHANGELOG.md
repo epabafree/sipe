@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.22.0
+
+Added Simp Mocks 7 and 8 (2025): 136 questions (48 VARC, 44 DILR, 44 QA) and 18 set cards.
+
+- Mock 7, DILR Set 1 (five tests): the set solution derives every test’s five scores and shows them in one table.
+- Mock 7, DILR Set 2: each batsman’s runs in T20s, ODIs and Tests, with the three-format totals.
+- Mock 7, DILR Set 3 (computer lab): the clues as a numbered list, and a timeline of every student’s entry and exit.
+- Mock 7, DILR Set 4 (three-day event): the ticket table, and a table of attendance by category and number of days.
+- Mock 7, DILR Set 5: all nine valid dinner orders listed.
+- Mock 7, QA Q2 and Q14: the circle with two chords and the triangle with two lines from B are redrawn.
+- Mock 8, DILR Set 1: grouped bar chart of workshop attendance by division, with a table of single and multiple attendances.
+- Mock 8, DILR Set 4: scatter plot of revenue against salary share, each company labelled with its efficiency; table of salary bills.
+- Mock 8, DILR Set 5: separate tables of average scores and matches, and each tournament’s weighted average, median and qualifiers.
+- Mock 8, QA Q9, Q11 and Q15: the tangents to a circle, the crossing rectangles and the pencil are redrawn.
+- Formulas and options that were images are typeset as maths.
+
 ## v0.21.0
 
 Added Simp Mocks 5 and 6 (2025): 134 questions (48 VARC, 42 DILR, 44 QA) and 17 set cards.

@@ -1,0 +1,266 @@
+{
+ "passages": {
+  "V1": "Demand from tech giants such as Microsoft, Amazon and Google, all racing to find sufficient clean power to feed data centres underpinning the AI boom, is turbocharging the nuclear revival. Brad Smith, president of Microsoft, explains that even before AI, his firm’s promise to remove more greenhouse gases than it contributed was ambitious. (...) Now, thanks to AI, he reckons Microsoft will consume five to six times as much electricity by 2030 as it anticipated (...). Nuclear power is well suited to data centres because it provides a reliable source of clean energy around the clock, unlike wind and solar. The vast scale of nuclear-power plants also makes them attractive: running an AI data centre can require as much as a gigawatt, which would be provided by millions of solar panels—or just a single nuclear-power plant.\n\nUnfortunately, there are few decommissioned nuclear reactors in America, Europe and Japan suitable for big tech to resurrect. New plants will therefore need to be built. These projects absorb enormous amounts of capital and are sensitive to interest-rate fluctuations and delays. (...) A case in point is the recently opened Vogtle nuclear plant in Georgia, America’s first in decades: it came in far over budget and behind schedule. One way for tech giants to mitigate the risk is to bring in outside investors. Last month Microsoft teamed up with BlackRock and others to launch a $30bn infrastructure fund devoted to AI. Smith expects it to finance nuclear projects, among other things. (...)\n\nAt the same time, tech titans have taken a growing interest in SMRs. Currently there are only two in operation, in China and Russia. But Western manufacturers such as GE Vernova and Rolls Royce have been busily developing them, as have numerous startups. TerraPower, backed by Bill Gates, is building its first plant in Wyoming. Oklo, which counts Sam Altman of OpenAI among its backers, intends to deploy several small nuclear plants by 2030. Earlier this year it signed an agreement to provide Equinix with 500 megawatts of nuclear power that includes a prepayment to help fund construction. There are more SMRs planned or under construction in America than anywhere else, thanks in part to enthusiasm from tech. Oracle recently unveiled plans for a gigawatt-scale data centre powered by three SMRs. (...) Sundar Pichai, the boss of Google, confirmed that his firm is also looking into SMRs to power its data centres.\n\nStill, the technology behind SMRs remains unproven at scale. Meanwhile, the uncertain price tag of building conventional nuclear-power plants will continue to weigh on the industry’s growth—and big tech’s hopes of powering the AI revolution without spewing carbon. Chris Womack, chief executive of the Southern Company, reckons that public support would help. “The government must provide some cost-overrun insurance.” Streamlining lengthy permitting processes would be even better. Governments certainly seem to be warming towards nuclear power. (...) Pointing to the surge in demand from AI, the head of the Emirates Nuclear Energy Corporation declared: “We have witnessed a step change in momentum.” For it to continue, a mix of technical ingenuity, financial wizardry and supportive policy will be needed.",
+  "V2": "Everywhere you turn, there is talk of lived experience. But there is little consensus about what the phrase ‘lived experience’ means, where it came from, and whether it has any value. (...) The Lived Experience Leaders Movement explains that those who have lived experiences have ‘Direct, first-hand experience, past or present, of a social issue(s) and/or injustice(s)’.… In the 1940s and ’50s, existentialists adopted the language of lived experience, coinciding with a turn to identity politics. Jean-Paul Sartre wrote about the lived experience of being a Jew, Simone de Beauvoir about being a woman, and Frantz Fanon about being a Black man. They demanded a return to lived experience, highlighting how dominant cultural categories distort one’s sense of self.\n\nNo contemporary philosopher has done more to help us understand identity politics than Charles Taylor. He sees it as a response to the human need for recognition - for one’s most authentic self to be valued. In premodernity, recognition was assured by fulfilling one’s social role, but now it is no longer guaranteed. Hence one’s identity must be acknowledged. Taylor argues that this demand is tied to the romantic notion of a true self obscured by society. Lived experience plays a central role in this process. First, it has become a marker of authenticity. A commonplace is that historical categories don’t match the lived experience of marginalised people. Miranda Fricker calls this ‘hermeneutical injustice’: marginalised people can’t fully understand their social reality because interpretive resources are dominated by the privileged. Talk of lived experience signals authenticity by capturing experiences unreflected in mainstream culture. Second, invoking lived experience has become a way of securing epistemic and political authority. ‘You don’t know what it’s like’ implies privileged knowledge, so others must defer. ‘Speaking as a…’ signals that authority, offering truths that Raymond Williams calls ‘the most authentic kind of truths’. Third, lived experience polices boundaries. Gayatri Spivak calls this ‘strategic essentialism’, in which groups act as if they are monolithic. Kwame Anthony Appiah warns this can create rigid definitions of what counts as ‘authentically’ Black, risking a social prison. … Transgressing these boundaries casts doubt on one’s authenticity.\n\nThose who routinely deploy lived experience politically haven’t been very critical about it. Yet Joan Scott argued that reliance on lived experience can reinforce categories such as ‘Black’ or ‘woman’. Rather than liberating marginalised people, it can entrench the very categories that oppress them. Appeals to lived experience as purely subjective and unanswerable are also questionable. As Kwame Anthony Appiah notes, we can misunderstand our own experiences, distorted by ideology and oppression. Lived experience is never unmediated. Thus, it doesn’t deserve reflexive deference simply because it’s tied to identity or dignity. Refusal to defer may feel like erasure, but lived experience isn’t an unassailable foundation for authenticity.(...)\n\nAs bell hooks wrote, identity politics emerges from the struggles of oppressed groups to critique dominant structures. But if lived experience is interpretive, it’s a shaky basis for authenticity. New language may create rather than merely reflect experience. Concepts like ‘Black/white’ or ‘privileged/underprivileged’ shape our self-understanding. If culture shapes lived experience, we must be wary of treating it as our final touchstone.",
+  "V3": "Everyone loves to watch hummingbirds—tiny, bright blurs that hover at flowers and fiercely defend feeders. (...) With their small size and blazing metabolism, they live on a knife-edge, sometimes shutting down their bodies to survive the night or migrate thousands of miles. (...) Their nectar-rich diet leads to blood-sugar levels that would hospitalize a human, and their zooming flight can generate fighter-pilot-level G-forces. For years, researchers assumed hummingbirds spent about 30 percent of their day feeding, resting most of the time. But physiological ecologist Anusha Shankar looked closely and found they often work far harder.\n\nShankar studied broad-billed hummingbirds in southern Arizona, measuring metabolic rates during various activities and estimating total daily energy use. (...) She calculated the per-minute cost of perching, flying and hovering, then inferred how much time the birds spent feeding versus perching. Results varied. Early in summer, when flowers are abundant, they could meet energy needs with only a few hours of feeding, perching up to 70 percent of the day. But when flowers grew scarcer, they perched just 20 percent of their waking hours, devoting the rest—up to 13 hours—to feeding. Hummingbirds have a trick to save energy. When they risk running out, they may go torpid at night, dropping body temperature near the surrounding air. (...) Torpid birds appear almost comatose, breathing intermittently, saving up to 95 percent of hourly metabolic costs during cold nights. This can be essential after days of less feeding or before migration. They still keep their internal clock. (...) To be ready for daylight, they begin rousing about an hour before sunrise, well before visible light cues.\n\nTo fuel their sky-high metabolism, hummingbirds may drink up to 80 percent of their body weight in nectar daily—like a 150-pound person downing dozens of sodas. (...) Nectar is often sweeter than typical soft drinks. Humans can’t absorb sugar that fast. Hummingbirds manage it with leaky guts, allowing sugars to enter the bloodstream between cells. This rapid uptake helps them reach blood-sugar levels six times higher than in humans. (...) Such levels would cause severe glycation damage in people, but hummingbirds avoid it—possibly thanks to proteins with fewer vulnerable amino acids. By the end of the night, a hummingbird’s sugar stores are nearly gone. Yet it must wake up and fly. (...) They can rapidly shift from burning sugar to burning fat in mere minutes—far faster than other organisms.\n\nBecause nectar is mostly water, hummingbirds must excrete large amounts without losing electrolytes. Their kidneys recapture salts and produce almost distilled water. (...) But if they kept producing such dilute urine overnight, they would die of dehydration. So they shut down their kidneys every night—akin to acute renal failure in humans. Otherwise, as one researcher put it, they’d “piss themselves to death.”",
+  "V4": "Confidence is contagious. Someone declaring a position with ringing certainty is more likely to inspire than someone who hedges their bets. “We may fight them on the beaches; it depends a bit on the weather,” would have been a lot less persuasive. A study by Matthias Brauer of the University of Mannheim analysed language used in letters from activist investors; it found that more confident letters were associated with more successful activist campaigns. Confidence confers status. In a study by Cameron Anderson of the University of California, Berkeley, MBA students were asked to take a survey that listed both genuine names and made-up ones. Overconfident students who picked more fictitious entries turned out to have the most influence on their classmates, according to end-of-term ratings.\n\nConfidence without competence will only get you so far. If you go around telling people how much you love “The One Musketeer”, you will not be that influential. But competence without confidence imposes limits, too. Self-doubters are less likely to put themselves forward for big promotions. Irrational levels of self-belief are a hallmark of many successful founders. A recent paper by Terhi Maczulskij and Jutta Viinikainen found that higher self-confidence predicted both entrepreneurship and entrepreneurial success. As much as confidence brings rewards, it also brings danger. Work by Ulrike Malmendier and Geoffrey Tate found that overconfident bosses are more likely to undertake acquisitions. They are also more likely to destroy value. Another paper, by Guoli Chen of INSEAD, looked at how CEOs’ confidence affects their earnings forecasts. Bosses with inflated self-belief were slower to adjust their forecasts when they proved inaccurate. “Put simply,” the researchers conclude, “overconfident executives who make mistakes continue to be wrong for longer.”\n\nIn an ideal world, confidence would be distributed evenly and in just the right quantities: an optimally confident person trusts their own judgment while accepting it can be fallible. In practice, confidence is distributed unevenly and is prone to feedback loops. A confident person is apt to place even more faith in their abilities if they have success. One study by Nathanael Fast tested people’s willingness to bet on their performance in a difficult general-knowledge quiz. Those who were asked how much power they had at work before making their bets staked more (and lost more) than others who answered afterward. This messy picture resolves into two propositions for managers. First, puffed-up people need guardrails. A new paper by Priscilla Kraft of WHU finds that overconfident bosses of American high-tech firms have a better record of making breakthrough innovations if they are constrained by powerful, expert boards. Second, self-doubters need encouragement to fulfill their potential. That might come from managers, mentors or even themselves. A study by Joris Lammers of the University of Cologne primed participants in a mock interview to think of times when they had wielded power. Independent evaluators who were unaware of the experiment found that these participants wrote more persuasive cover letters and did better in face-to-face interviews than other applicants. Confidence can be natural. It can also be a trick."
+ },
+ "q": {
+  "VARC": {
+   "1": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nAs the Cold War came to an end, humans were no longer contained within their old geographies or identities. They now inhabited a new world that appeared to be unhinged from the normal evolution of human society. The concept chosen to capture this transformational moment in human history was ‘globalisation’. During the past three decades, more people have begun viewing our ‘global’ world as a cursed fate. With its suffocating time-space compression, globalisation seems to have uncoupled us from the logic and flow of history. Our suspicious, bastard identities - patched together from a mishmash of cultures - appear incompatible with our ancestors’ ‘authentic’ traditions and ways of life. We have become strangers to the places they called home, to the ways they dressed, ate or communicated with one another.",
+    "opts": [
+     "Globalisation, emerging after the Cold War, has compressed time and space, creating fractured identities and estrangement from ancestral ways of life.",
+     "As globalisation transformed human existence after the Cold War, people found themselves unhinged from normal evolution, struggling with hybrid identities and cultural dislocation.",
+     "The post-Cold War era ushered in globalisation, which severed people from their historical and cultural roots, leading to a loss of authentic identity.",
+     "The end of the Cold War brought globalisation, a force that disrupted historical continuity, leaving people disconnected from their past identities and traditions."
+    ],
+    "ans": "4",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. As the Cold War came to an end, humans were no longer contained within their old geographies or identities. They now inhabited a new world that appeared to be unhinged from the normal evolution of human society. The concept chosen to capture this transformational moment in human history was ‘globalisation’. During the past three decades, more people have begun viewing our ‘global’ world as a cursed fate. With its suffocating time-space compression, globalisation seems to have uncoupled us from the logic and flow of history. Our suspicious, bastard identities - patched together from a mishmash of cultures - appear incompatible with our ancestors’ ‘authentic’ traditions and ways of life. We have become strangers to the places they called home, to the ways they dressed, ate or communicated with one another."
+   },
+   "2": {
+    "q": "According to the passage, the current appeal of nuclear energy is attributed to all of the following EXCEPT:",
+    "opts": [
+     "SMRs' commercial viability and transformative impact on clean energy.",
+     "The need for stable, clean energy to power large data centres.",
+     "Big Tech and startups investing heavily in nuclear infrastructure.",
+     "Scalability and 24/7 reliability as an alternative to wind and solar."
+    ],
+    "ans": "1",
+    "raw": "According to the passage, the current appeal of nuclear energy is attributed to all of the following EXCEPT:"
+   },
+   "3": {
+    "q": "The author uses the example of the Vogtle nuclear plant to highlight all of the following concerns EXCEPT:",
+    "opts": [
+     "The delays and cost overruns of building new nuclear plants.",
+     "The risk of exposure to fluctuating interest rates.",
+     "The uncertainty about the long-term return on investment.",
+     "The absence of decommissioned plants in America, Europe and Japan."
+    ],
+    "ans": "4",
+    "raw": "The author uses the example of the Vogtle nuclear plant to highlight all of the following concerns EXCEPT:"
+   },
+   "4": {
+    "q": "Which of the following is NOT an assumption underlying the main argument of the passage?",
+    "opts": [
+     "Governments will view nuclear power favourably to ease licensing and cost overruns.",
+     "Nuclear power is the most viable energy source to meet the demands of AI-driven data centres.",
+     "Demand for data-center power needs will remain constant in the foreseeable future.",
+     "The big tech’s drive towards clean energy will not wane despite economic pressures."
+    ],
+    "ans": "3",
+    "raw": "Which of the following is NOT an assumption underlying the main argument of the passage?"
+   },
+   "5": {
+    "q": "The author's overall tone in the final paragraph can best be described as:",
+    "opts": [
+     "Guarded pessimism that stresses insurmountable financial and technical challenges.",
+     "Measured optimism that acknowledges obstacles while outlining paths for progress.",
+     "A neutral stance that presents information without projecting an uncertain future.",
+     "A dismissive tone that minimizes risks and assumes nuclear expansion is inevitable."
+    ],
+    "ans": "2",
+    "raw": "The author's overall tone in the final paragraph can best be described as:"
+   },
+   "6": {
+    "q": "According to the passage, ‘lived experience’ constitutes all of the following EXCEPT:",
+    "opts": [
+     "A person’s first hand encounters with and perceptions of social reality.",
+     "A person’s identity shaped by factors such as race, gender or class.",
+     "Insights that a person gleans from oppression or marginalisation.",
+     "The cultural narratives that distort a person’s subjective experiences."
+    ],
+    "ans": "4",
+    "raw": "According to the passage, ‘lived experience’ constitutes all of the following EXCEPT:"
+   },
+   "7": {
+    "q": "According to the passage, lived experience plays the central role in ‘the romantic notion of a true self obscured by society,’ in all the following ways EXCEPT:",
+    "opts": [
+     "It signals authenticity by capturing experiences side-lined in mainstream narratives.",
+     "It makes marginalized individuals fully aware of the knowledge held by the privileged.",
+     "It grants authority to those with first-hand experience.",
+     "It forms strict group identities that narrow the definition of what is authentic."
+    ],
+    "ans": "2",
+    "raw": "According to the passage, lived experience plays the central role in ‘the romantic notion of a true self obscured by society,’ in all the following ways EXCEPT:"
+   },
+   "8": {
+    "q": "Which of the following statements is suggested by the sentence “Lived experience is never unmediated”?",
+    "opts": [
+     "Lived experience is a direct and unfiltered reflection of reality.",
+     "Lived experience is completely unreliable and lacks any factual basis.",
+     "Lived experience is shaped by cultural, social, and ideological factors.",
+     "Lived experience is subjective and cannot be communicated effectively."
+    ],
+    "ans": "3",
+    "raw": "Which of the following statements is suggested by the sentence “Lived experience is never unmediated”?"
+   },
+   "9": {
+    "q": "Joan Scott, Kwame Anthony Appiah, and bell hooks are mentioned in the passage to illustrate the author's point that:",
+    "opts": [
+     "Lived experience can reinforce oppression instead of empowering the marginalized.",
+     "Identity politics helps marginalized groups challenge the dominant power structures.",
+     "Lived experience provides the foundation of authenticity to the marginalised people.",
+     "In identity politics, lived experience is seen as the final and unquestionable source of truth."
+    ],
+    "ans": "1",
+    "raw": "Joan Scott, Kwame Anthony Appiah, and bell hooks are mentioned in the passage to illustrate the author's point that:"
+   },
+   "10": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nFrom a humanist position, how do we approach the tech vexed, perfection striving humanity that is fast encroaching right now? What is the antidote to ‘roboticism’, or the transformation of humans into machines? While there is clearly no antidote as such to this problem, there is a sensibility - also growing in stature - that powerfully counters the roboticist trend, and this sensibility is ‘awe’. Awe is the humility and wonder, or sense of adventure, toward living. It has also been defined as a sense of vastness that defies accommodation. However one defines it, the sensibility of awe subverts mechanised living. It demands we live in the present, spontaneously, and with radical openness.",
+    "opts": [
+     "The antidote to the growing roboticism of modern life is the sensibility of awe, which fosters humility, wonder, and a rejection of mechanised existence.",
+     "As technology pushes humanity toward roboticism, awe emerges as a counteracting force, emphasizing spontaneity, radical openness, and a deeper engagement with life.",
+     "In an age of mechanised, perfection seeking humanity, the sensibility of awe offers a counterforce, encouraging spontaneity, openness, and a rejection of roboticism.",
+     "Awe, defined by humility and wonder, serves as a powerful response to the mechanisation of human life, promoting presence and an adventurous approach to living."
+    ],
+    "ans": "3",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. From a humanist position, how do we approach the tech vexed, perfection striving humanity that is fast encroaching right now? What is the antidote to ‘roboticism’, or the transformation of humans into machines? While there is clearly no antidote as such to this problem, there is a sensibility - also growing in stature - that powerfully counters the roboticist trend, and this sensibility is ‘awe’. Awe is the humility and wonder, or sense of adventure, toward living. It has also been defined as a sense of vastness that defies accommodation. However one defines it, the sensibility of awe subverts mechanised living. It demands we live in the present, spontaneously, and with radical openness."
+   },
+   "11": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: The controversy has reignited broader debates about balancing healthcare affordability with ensuring the effectiveness of medical treatments.\n\nParagraph: Public anger in China has surged over concerns raised by doctors that generic drugs used in public hospitals are becoming increasingly ineffective. Many doctors argue that the country’s drug procurement system, which prioritizes cost-cutting, is to blame. ____1____. The system incentivizes hospitals to use cheap generic drugs instead of original brand-name pharmaceuticals, often resulting in concerns over quality and efficacy. While generics are meant to provide the same benefits as their branded counterparts, reports of inconsistent results and ineffective treatments have fueled anxiety among both medical professionals and the public. ____2____. Some experts warn that the current system, despite its goal of making healthcare affordable, may be compromising patient safety. ____3____. In response to the growing unrest, Chinese authorities have pledged to investigate drug quality issues and review procurement policies to address public concerns. ____4____. However, critics remain skeptical about whether meaningful reforms will be implemented.",
+    "opts": [
+     "Option 3",
+     "Option 1",
+     "Option 4",
+     "Option 2"
+    ],
+    "ans": "4",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: The controversy has reignited broader debates about balancing healthcare affordability with ensuring the effectiveness of medical treatments. Paragraph: Public anger in China has surged over concerns raised by doctors that generic drugs used in public hospitals are becoming increasingly ineffective. Many doctors argue that the country’s drug procurement system, which prioritizes cost-cutting, is to blame. ___(1)___ The system incentivizes hospitals to use cheap generic drugs instead of original brand-name pharmaceuticals, often resulting in concerns over quality and efficacy. While generics are meant to provide the same benefits as their branded counterparts, reports of inconsistent results and ineffective treatments have fueled anxiety among both medical professionals and the public. ___(2)___ Some experts warn that the current system, despite its goal of making healthcare affordable, may be compromising patient safety. ___(3)___ In response to the growing unrest, Chinese authorities have pledged to investigate drug quality issues and review procurement policies to address public concerns. ___(4)___ However, critics remain skeptical about whether meaningful reforms will be implemented."
+   },
+   "12": {
+    "q": "The phrase \"live on a knife-edge\" in the passage refers to:",
+    "opts": [
+     "The constant risks hummingbirds face as they continuously push their limits.",
+     "The significant hazards arising from the evolutionary constraints of hummingbirds’ physiology.",
+     "The delicate balance hummingbirds keep between energy intake and expenditure.",
+     "The rapid metabolic adjustments hummingbirds make in response to seasonal changes in food availability."
+    ],
+    "ans": "3",
+    "raw": "The phrase \"live on a knife-edge\" in the passage refers to:"
+   },
+   "13": {
+    "q": "Which of the following is NOT mentioned in the passage as a reason hummingbirds need to save energy?",
+    "opts": [
+     "To survive cold nights",
+     "To prepare for migration",
+     "To defend their access to food",
+     "To offset periods of low energy availability"
+    ],
+    "ans": "3",
+    "raw": "Which of the following is NOT mentioned in the passage as a reason hummingbirds need to save energy?"
+   },
+   "14": {
+    "q": "The passage implies that hummingbirds’ metabolic adaptations are significant because they:",
+    "opts": [
+     "Enable the birds to process large quantities of sugar and sidestep the damage linked to high blood sugar.",
+     "Enable hummingbirds to slip into a phase of near-death lethargy to conserve energy and regain high levels of energy soon after.",
+     "Equip these diminutive creatures to satisfy their considerable energy needs despite their rapid metabolic pace.",
+     "Enable hummingbirds to quickly shift between burning sugar and fat, allowing them to adjust to changing energy availability."
+    ],
+    "ans": "3",
+    "raw": "The passage implies that hummingbirds’ metabolic adaptations are significant because they:"
+   },
+   "15": {
+    "q": "What is the central idea of the passage?",
+    "opts": [
+     "Hummingbirds have evolved complex strategies to balance their extreme energy needs and sugar intake through physiological adaptations.",
+     "The study of hummingbirds has primarily revealed how they survive their high metabolic requirements by spending a vast amount of time feeding.",
+     "Hummingbirds face formidable challenges related to sugar metabolism, flight exertion, and hydration due to their small size and dietary patterns.",
+     "Despite assumptions about their rest, hummingbirds show remarkable resilience by managing energy, sugar, and hydration."
+    ],
+    "ans": "4",
+    "raw": "What is the central idea of the passage?"
+   },
+   "16": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: This raises concerns about the role of AI in shaping public understanding of current events.\n\nParagraph: Artificial intelligence (AI) chatbots are increasingly used to summarize news articles, but recent research by the BBC suggests they often produce inaccurate summaries. ____1____. The study analyzed four major AI chatbots and found that their summaries frequently misrepresented key details, omitted crucial context, or introduced factual errors. Experts warn that such inaccuracies could mislead readers who rely on these tools for quick information. AI developers argue that improving training data and refining algorithms will help enhance accuracy, but challenges remain. ____2____. Misinformation and biased outputs are persistent concerns, as chatbots process vast amounts of online content, much of which may be unreliable. As AI becomes a more dominant force in news consumption, ensuring reliability and accountability in automated summaries is crucial. ____3____. Some researchers advocate for integrating human oversight into AI-generated news summaries to minimize errors and maintain credibility. Without improvements, there is a risk that AI chatbots could contribute to the spread of misinformation rather than combat it. ____4____.",
+    "opts": [
+     "Option 1",
+     "Option 2",
+     "Option 3",
+     "Option 4"
+    ],
+    "ans": "3",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: This raises concerns about the role of AI in shaping public understanding of current events. Paragraph: Artificial intelligence (AI) chatbots are increasingly used to summarize news articles, but recent research by the BBC suggests they often produce inaccurate summaries. ___(1)___ The study analyzed four major AI chatbots and found that their summaries frequently misrepresented key details, omitted crucial context, or introduced factual errors. Experts warn that such inaccuracies could mislead readers who rely on these tools for quick information. AI developers argue that improving training data and refining algorithms will help enhance accuracy, but challenges remain. ___(2)___ Misinformation and biased outputs are persistent concerns, as chatbots process vast amounts of online content, much of which may be unreliable. As AI becomes a more dominant force in news consumption, ensuring reliability and accountability in automated summaries is crucial. ___(3)___ Some researchers advocate for integrating human oversight into AI-generated news summaries to minimize errors and maintain credibility. Without improvements, there is a risk that AI chatbots could contribute to the spread of misinformation rather than combat it. ___(4)___"
+   },
+   "17": {
+    "q": "“We may fight them on the beaches; it depends a bit on the weather” What is the purpose of this example used in the passage?",
+    "opts": [
+     "To argue that leaders can be effective by adapting to circumstances.",
+     "To argue that confident statements are not always more convincing than cautious ones.",
+     "To show that assertiveness in delivering strong messages can inspire others.",
+     "To show that humour can enhance the effectiveness of a message."
+    ],
+    "ans": "3",
+    "raw": "“We may fight them on the beaches; it depends a bit on the weather” What is the purpose of this example used in the passage?"
+   },
+   "18": {
+    "q": "The researchers mentioned in the second paragraph, Maczulskij and Jutta Viinikainen, Ulrike Malmendier and Geoffrey Tate, and Guoli Chen of INSEAD, are most likely to agree with which of the following statements?",
+    "opts": [
+     "Overconfidence leads to unsound decisions unless balanced by strong oversight.",
+     "Excessive self-doubt prevents competent individuals from realizing their full potential.",
+     "Entrepreneurs and CEOs generally possess balanced self-confidence.",
+     "Confidence without competence is rarely influential."
+    ],
+    "ans": "1",
+    "raw": "The researchers mentioned in the second paragraph, Maczulskij and Jutta Viinikainen, Ulrike Malmendier and Geoffrey Tate, and Guoli Chen of INSEAD, are most likely to agree with which of the following statements?"
+   },
+   "19": {
+    "q": "Which of the following statements, if false, would be inconsistent with the facts/arguments in the passage?",
+    "opts": [
+     "Confidence always leads to better professional outcomes and higher success.",
+     "Success reinforces confidence, which can lead to risk-taking and uneven results.",
+     "Overconfidence is a rare trait that does not significantly impact leadership decisions.",
+     "Self-doubt is more dangerous than overconfidence in leadership and professional growth."
+    ],
+    "ans": "2",
+    "raw": "Which of the following statements, if false, would be inconsistent with the facts/arguments in the passage?"
+   },
+   "20": {
+    "q": "In a personal interview, candidates were asked, \"What is your greatest strength?\" Based on the passage, the author is most likely to favour which of the following responses?",
+    "opts": [
+     "\"I am confident that I am great at everything I do, and I always trust my instincts.\"",
+     "\"My greatest strength is my self-confidence and I know I have no major weaknesses.\"",
+     "\"I am confident I can handle any task perfectly and to your entire satisfaction.”",
+     "\"I believe in my abilities, but know my limitations and am always ready to improve.\""
+    ],
+    "ans": "4",
+    "raw": "In a personal interview, candidates were asked, \"What is your greatest strength?\" Based on the passage, the author is most likely to favour which of the following responses?"
+   },
+   "21": {
+    "q": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer.\n\nLocals often remark that even if you don’t work at the factory, many of your friends—and even half of your school class—likely do.\n\nThe sprawling 6.5 square kilometer complex lies next to the Autostadt, a theme park dedicated to automobiles and to VW, Europe’s largest carmaker.\n\nToday, however, the plant has also come to symbolise some of the main problems affecting the German car industry as a whole.\n\nWolfsburg is less a city with a car factory than a factory around which an entire city has grown, employing roughly 60,000 people from the region.\n\nWhen you arrive by train in Wolfsburg, Lower Saxony, the first sight is the massive Volkswagen factory with its imposing VW logo and four tall chimneys dominating one bank of the canal.",
+    "opts": [],
+    "ans": "3",
+    "raw": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer. 1. Locals often remark that even if you don’t work at the factory, many of your friends—and even half of your school class—likely do. 2. The sprawling 6.5 square kilometer complex lies next to the Autostadt, a theme park dedicated to automobiles and to VW, Europe’s largest carmaker. 3. Today, however, the plant has also come to symbolise some of the main problems affecting the German car industry as a whole. 4. Wolfsburg is less a city with a car factory than a factory around which an entire city has grown, employing roughly 60,000 people from the region. 5. When you arrive by train in Wolfsburg, Lower Saxony, the first sight is the massive Volkswagen factory with its imposing VW logo and four tall chimneys dominating one bank of the canal."
+   },
+   "22": {
+    "q": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer.\n\nThe fact that the bail could be dislodged when the wicket was struck made this preferable to the stump, which name was later applied to the hurdle uprights.\n\nThe ball, once presumably a stone, has remained much the same since the 17th century; its modern weight of between 5.5 and 5.75 ounces was established in 1774.\n\nCricket is believed to have begun possibly as early as the 13th century as a game in which country boys bowled at a tree stump or at the hurdle gate into a sheep pen.\n\nEarly manuscripts differ about the size of the wicket, which acquired a third stump in the 1770s, but by 1706 the pitch—the area between the wickets—was 22 yards long.\n\nThis gate consisted of two uprights and a crossbar resting on the slotted tops; the crossbar was called a bail and the entire gate a wicket.",
+    "opts": [],
+    "ans": "2",
+    "raw": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer. 1. The fact that the bail could be dislodged when the wicket was struck made this preferable to the stump, which name was later applied to the hurdle uprights. 2. The ball, once presumably a stone, has remained much the same since the 17th century; its modern weight of between 5.5 and 5.75 ounces was established in 1774. 3. Cricket is believed to have begun possibly as early as the 13th century as a game in which country boys bowled at a tree stump or at the hurdle gate into a sheep pen. 4. Early manuscripts differ about the size of the wicket, which acquired a third stump in the 1770s, but by 1706 the pitch—the area between the wickets—was 22 yards long. 5. This gate consisted of two uprights and a crossbar resting on the slotted tops; the crossbar was called a bail and the entire gate a wicket."
+   },
+   "23": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: This long-awaited showcase provides Indian audiences a rare opportunity to experience Dalí’s dreamlike imagination firsthand.\n\nParagraph: Although the Spanish surrealist Salvador Dalí never visited India, an exhibition of his artworks is being held in the country for the first time. ____1____. The exhibition showcases over 200 of his original sketches, etchings, and watercolor paintings. Curated by Christine Argillet, daughter of Pierre Argillet—Dalí’s friend,—the collection offers a glimpse into the artist’s fascination with India. ____2____. Dalí was intrigued by India, particularly the West’s obsession with Indian mysticism in the 1960s and 1970s. Some sketches in the collection are inspired by photographs her father took during a visit to India when the hippie movement was at its peak. Dalí's India features elephants and temples, but these elements blend seamlessly into his surrealist vision, making them hard to identify at first glance. ____3____. His works depict human bodies sprouting flowers, dancing eyeballs floating among intricate strokes, and disjointed body parts interacting in unexpected ways. ____4____. Observers who study these forms closely begin to see new connections and meanings emerging within the dreamlike compositions.",
+    "opts": [
+     "Option 4",
+     "Option 2",
+     "Option 3",
+     "Option 1"
+    ],
+    "ans": "4",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: This long-awaited showcase provides Indian audiences a rare opportunity to experience Dalí’s dreamlike imagination firsthand. Paragraph: Although the Spanish surrealist Salvador Dalí never visited India, an exhibition of his artworks is being held in the country for the first time. ___(1)___ The exhibition showcases over 200 of his original sketches, etchings, and watercolor paintings. Curated by Christine Argillet, daughter of Pierre Argillet—Dalí’s friend,—the collection offers a glimpse into the artist’s fascination with India. ___(2)___ Dalí was intrigued by India, particularly the West’s obsession with Indian mysticism in the 1960s and 1970s. Some sketches in the collection are inspired by photographs her father took during a visit to India when the hippie movement was at its peak. Dalí's India features elephants and temples, but these elements blend seamlessly into his surrealist vision, making them hard to identify at first glance. ___(3)___ His works depict human bodies sprouting flowers, dancing eyeballs floating among intricate strokes, and disjointed body parts interacting in unexpected ways. ___(4)___ Observers who study these forms closely begin to see new connections and meanings emerging within the dreamlike compositions."
+   },
+   "24": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nThe anthropologist Clifford Geertz coined the term epochalism to name the anxious discourses of postcolonial states that had attained legal freedom but remained captive to the economic and political power of their former rulers. Much like the old imperialism, the neoliberal past will not be so easily transcended if the structures that it built over decades remain. Careful longitudinal research often reaches conclusions that are as truthful as they are tedious to publics demanding radical change. Even when we are trying to break free, we are always in the middle of history.",
+    "opts": [
+     "Epochalism describes the struggles of postcolonial states that, despite legal independence, remain constrained by neoliberal structures, showing history is not easily transcended.",
+     "Despite legal independence, postcolonial states remain bound by economic and political structures, highlighting the enduring grip of imperialism of neoliberalism.",
+     "Clifford Geertz’s concept of epochalism explains how postcolonial nations, though legally free, remain entangled in historical power structures that hinder true autonomy.",
+     "The persistence of neoliberal and imperialist structures demonstrates that postcolonial states, despite their independence, remain entirely trapped in ongoing historical forces."
+    ],
+    "ans": "1",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. The anthropologist Clifford Geertz coined the term epochalism to name the anxious discourses of postcolonial states that had attained legal freedom but remained captive to the economic and political power of their former rulers. Much like the old imperialism, the neoliberal past will not be so easily transcended if the structures that it built over decades remain. Careful longitudinal research often reaches conclusions that are as truthful as they are tedious to publics demanding radical change. Even when we are trying to break free, we are always in the middle of history."
+   }
+  }
+ }
+}
