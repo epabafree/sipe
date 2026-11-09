@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.23.0
+
+Added Simp Mocks 9 and 11 (2025): 136 questions (48 VARC, 44 DILR, 44 QA) and 18 set cards.
+
+- Mock 9, DILR Set 1 (scholarships): line, bar and horizontal-bar charts redrawn, with the bar axis starting at zero; table of yearly totals, applicants and awards.
+- Mock 9, DILR Set 3 (metro passengers): the station-to-station table redrawn; the solution tabulates all three valid fillings.
+- Mock 9, DILR Set 4 (dartboard): solutions count the colour strings directly, block by block.
+- Mock 9, DILR Set 5 (quiz teams): the clues as a numbered list, and a seat-by-seat table of student, subject and team.
+- Mock 9, QA Q21: the rectangle with its chord-and-circle segment is redrawn.
+- Mock 11, DILR Set 1 (election): the vote-share table, and a table of each candidate’s votes.
+- Mock 11, DILR Set 3 (warehouses): grouped bar charts for both warehouses; month-by-month stock flow and transfers.
+- Mock 11, DILR Set 4 (chess): the four possible result patterns in one table.
+- Mock 11, DILR Set 5 (car hire): the road map redrawn with every distance.
+- Mock 11, QA Q2, Q10, Q20 and Q22: the chain of perpendiculars, the square with five circles, the crossing lines and the trapezium are redrawn.
+- Formulas and options that were images are typeset as maths.
+
 ## v0.22.0
 
 Added Simp Mocks 7 and 8 (2025): 136 questions (48 VARC, 44 DILR, 44 QA) and 18 set cards.
