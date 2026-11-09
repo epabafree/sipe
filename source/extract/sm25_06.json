@@ -1,0 +1,266 @@
+{
+ "passages": {
+  "V1": "The world’s largest mammal migration does not involve Africa’s Serengeti or its famed wildlife but rather millions of fruit bats congregating over Zambia’s Kasanka National Park annually. Straw-colored fruit bats (Eidolon helvum) travel from across Zambia, the Democratic Republic of Congo, and neighboring countries to settle in Kasanka’s swampy forest. Each evening, they take to the skies in search of fruit, returning at dawn to sleep, their wings casting shadows over the forest.\n\nKasanka is one of Zambia’s smallest national parks and lies an eight-hour drive from Lusaka, the capital. Visitors can opt for this journey via the Great North Road or a private charter flight. Inside the park, herds of puku, baboons, and the rare sitatunga antelope greet travelers, but in November, the bats are the star attraction. Arriving between October and January, the megabats, resembling flying foxes, hang from trees like icicles and fill the air with their chirps. While their migration is believed to be tied to food availability, scientists remain puzzled about the exact reasons for their seasonal congregation. The bats feast on local fruits, such as waterberries and mangoes, playing a vital ecological role by dispersing seeds over vast distances, aiding forest regeneration. However, deforestation and hunting threaten their population, classified as near threatened by the International Union for Conservation of Nature.\n\nThe nightly emergence of bats is a spectacular natural event. Around dusk, they rise from the mushitu swamp forest at the confluence of the Musola and Kasanka Rivers. Their wings, with an impressive 30-inch span, darken the sky in a breathtaking cloud of movement. Guides estimate the number of bats to be between 10 and 12 million during peak migration, far exceeding the one million estimated by recent studies. At dawn, the bats return, gliding back into the forest after traveling up to 60 miles overnight in search of fruit. The cool swamp forest offers them a safe haven from predators like crocodiles and eagles. Although not year-round residents of Kasanka, their migration patterns remain a mystery. Studies reveal their dispersal into Congo, Malawi, and even South Sudan after leaving the park. Kasanka’s short trees provide an unusual roosting site for these highly social creatures, which typically prefer tall trees or urban environments. In cities, however, their stunning migration is obscured by light pollution and urban sprawl.\n\nScientists face challenges in understanding the bats’ migration due to limitations in tracking technology. GPS tags have yet to last a full year, leaving questions about whether the same bats return annually. Despite these uncertainties, the sheer scale of the migration leaves visitors in awe. Witnessing millions of bats rise together is a profound biological event that underscores their ecological significance. The bats contribute an estimated $800,000 annually to the ecosystem through seed dispersal, highlighting the importance of conserving their habitat. Observing their migration offers a rare glimpse into one of nature’s most extraordinary phenomena—just remember to keep your mouth closed. Though guides say, a dropping is considered good luck.",
+  "V2": "The concept of \"the planetary\" redefines how we think about our existence on Earth. Unlike earlier ecological perspectives, which focused on localized or national scales, the planetary calls us to see Earth as a singular, interconnected system. This perspective invites us to confront not only our responsibility but also the limitations of our power. Gayatri Spivak first articulated planetarity as a rejection of colonialist domination. For her, it was a way of saying no to the extractive mindset that sought to exploit the planet. Instead, she proposed an approach rooted in humility, recognizing Earth’s vastness and complexity without attempting to dominate it. This idea evolved further in the work of historian Dipesh Chakrabarty. He emphasized the planetary as a concept that forces us to see ourselves not just as global actors but as one force among many. The Amazon cannot be deforested, nor can fossil fuels be burned without severe repercussions—a feedback loop where nature always responds to human actions. Chakrabarty’s vision recognizes that the planetary demands a new relationship with Earth, one that understands it as alive and self-regulating, echoing ideas like the Gaia theory.\n\nRecently, the planetary has taken on another dimension, integrating human technology and governance. Thinkers like those at the Berggruen Institute argue that seeing Earth from space has given us a new sense of responsibility. With this view, some advocate for interventions like geoengineering and planetary governance. These proposals suggest humanity now has the tools to manage Earth’s systems in ways that could ensure survival, even if it means embracing the very power Spivak once rejected. This broader understanding also raises questions about governance and economy. Current systems, rooted in free trade and globalization, often fail to account for environmental costs. Some solutions include carbon pricing, deforestation rules, and addressing inequalities between nations. However, these are only pieces of a larger puzzle. Addressing planetary challenges, particularly climate change, requires deeper shifts. China’s experience highlights this complexity. Its rapid adoption of green energy was driven less by global concerns and more by local issues like smog. This interplay between the local and planetary shows solutions must consider both scales.\n\nThe planetary discussion also extends beyond Earth, into interplanetary exploration. Two competing visions dominate this conversation. Elon Musk envisions Mars as a \"Plan B\" for humanity—a backup in case Earth becomes uninhabitable. His approach involves fleets of spacecraft to establish a self-sustaining colony on Mars. In contrast, Jeff Bezos sees space as a way to preserve Earth by relocating heavy industries to orbit and the Moon. This vision imagines Earth as a pristine home while space becomes an industrial hinterland, supporting human expansion without ecological destruction. These contrasting views embody the tension within the planetary concept. Musk’s vision is survivalist, preparing for the worst, while Bezos’s is expansionist, imagining infinite possibilities. Both reflect the challenges and opportunities of this pivotal moment. The planetary perspective forces us to confront our interconnectedness with Earth and beyond. It demands that we rethink our actions, systems, and aspirations to ensure a sustainable future—not just for ourselves but for the planet and, potentially, other worlds.",
+  "V3": "The 12 Days of Christmas are meant to start on December 25th. But not in the world of artificial intelligence (AI). On December 5th, OpenAI, maker of ChatGPT, began a blizzard of product shipments dubbed the “12 days of shipmas.” This included a full roll-out of Sora, its video-generation tool, and Canvas, a writing and coding product. Not to be outdone, Google also got an early start. On December 11th, it unveiled a new generative-AI model, Gemini 2.0, along with prototypes Astra and Mariner. These tools are “agentic AI,” capable of taking actions on a user’s behalf.\n\nThe emphasis on products over models in these announcements was striking. While researchers aim for new intelligence frontiers, developers are under pressure to release tools that demonstrate market value. Developing generative-AI products is uniquely challenging. Usually, products are designed around consumer needs. But in generative AI, the rapidly evolving technology often shapes the product itself. “You are normally taught not to be a hammer looking for a nail,” says Kevin Weil, OpenAI’s chief product officer. “But every two months computers can do something that we have never before been able to do.”\n\nThese product launches were not without hiccups. OpenAI had to suspend access to Sora soon after its release due to high demand. Users who tested it found lingering problems, such as difficulty portraying complex movements. Marques Brownlee, a tech reviewer, observed that Sora often struggled with objects like four-legged animals. Google’s Astra, currently limited to a small group of testers, can analyze images and access services like Search and Maps but stumbled on more complex queries. Mariner, its other prototype, can perform tasks like filling an online shopping basket but cannot complete checkout. Silicon Valley sees agentic AI as a major breakthrough. The transition from “chatting to doing” could be transformative in 2025, boosting tech giants like Salesforce, which has already struck deals for its AI agent, Agentforce. Microsoft has also launched various AI agents.\n\nSeveral factors make creating agents harder than building chatbots. Agents require data on task performance, including sequences and reasoning, which can be hard to collect. Trust is another issue. Verifying chatbot answers is straightforward, but evaluating an agent’s decisions—like booking the best hotel—is complex. Users may also hesitate to share sensitive data necessary for these tools to function. Cost is another barrier. AI agents need sophisticated models, low latency, tool integration, and ample memory to handle complex tasks. This makes them expensive to develop and operate. On December 5th, OpenAI launched a “pro” version of ChatGPT with unlimited access to its features at $200 a month, ten times the cost of its basic subscription. Alphabet, Google’s parent company, may subsidize costs given its deep pockets. Despite these challenges, the potential of agentic AI continues to generate excitement. If these tools live up to their promise, users may decide they are worth the added expense, ushering in a new era of intelligent automation.",
+  "V4": "Not so long ago, the trailer for next year’s Minecraft movie seemed determined to become the ugliest thing ever witnessed. It featured real-life actors weaponizing the worst facets of their personae, while the CGI—caught between mimicking the source material and Pixar—ended up resembling creatures crafted in the glass boxes used to make square watermelons. However, the gauntlet has now been thrown down. Deadline announced that Paramount is making a movie based on the 1990s cartoon Rugrats. What might catapult this film into the ugly movie hall of fame is its live-action/CGI hybrid approach.\n\nNow, cast your mind back to what Rugrats looked like. Developed in the late 1980s by Gábor Csupó and Arlene Klasky, the show emerged during an era of non-traditional character design—think Ren and Stimpy or Beavis and Butt-Head. Even Mighty Mouse had been reimagined as warped and ironic. But even compared to these shows, Rugrats was strange to look at. Tommy Pickles, the one-year-old lead, had a huge, dented head resembling an overripe mango crossed with a brain. Chuckie Finster’s dot eyes and snake-nest hair were equally bizarre. Angelica tried to mask her pear-shaped head with her hair, but it was still obvious. This was deliberate—Csupó wanted the characters to look “strange” rather than “cute.” That changed in 2021, when Paramount+ launched an all-CGI version of Rugrats. Rendered in three dimensions, the reboot was initially off-putting but ultimately tolerable. The babies looked like testicle-headed figures in a 1996 Windows screensaver. Despite limited cultural impact compared to the original, the series was broadly successful. This worked because everything in the show—babies, parents, settings—was CGI. The uniformly weird aesthetic allowed viewers to quickly adjust.\n\nThe problem with Deadline’s announcement lies in the word “hybrid.” This film will combine real actors with computer-animated characters, as seen in Paddington, Sonic the Hedgehog, or Woody Woodpecker. But those succeeded because humans interacted with animals, not blob-headed babies with voices like chain-smoking old ladies and heads resembling cysts. Presumably, this is exactly what the Rugrats movie will deliver. Questions arise about the live-action/CGI balance. Will there be CGI babies and human adults? Or will the entire Pickles family be CGI in a world of human neighbors? Honestly, it likely won’t matter. Whatever the configuration, this will still be a film about humans sharing the screen with pulsating, blob-headed characters that appear to have passed through the Brundlefly teleporter.\n\nAlthough framed as new, the idea of a live-action/CGI Rugrats has been in limbo for six years. The project inches forward only to retreat, likely due to the difficulty of telling a feasible story about monstrous CGI babies crawling among real people. Perhaps the only viable narrative is akin to The Elephant Man. Tommy Pickles could find himself surrounded by people equally fascinated and horrified by his appearance, leading him to question humanity’s worth. This combination could provoke that story—and you know what? I’d watch it."
+ },
+ "q": {
+  "VARC": {
+   "1": {
+    "q": "Based on the passage, which of the following is the most plausible reason for the fruit bats' annual migration to Kasanka?",
+    "opts": [
+     "To escape predators that threaten them in other regions.",
+     "To benefit from the swamp forest's safer roosting habitat.",
+     "To access abundant local fruits that are essential for their diet.",
+     "To fulfill their ecological role of seed dispersal across distances."
+    ],
+    "ans": "3",
+    "raw": "Based on the passage, which of the following is the most plausible reason for the fruit bats' annual migration to Kasanka?"
+   },
+   "2": {
+    "q": "Scientists studying fruit bat migration face all the following challenges EXCEPT:",
+    "opts": [
+     "The limitations in technology to track bats’ migration patterns.",
+     "The lack of clarity about the reasons for the bats’ seasonal congregation.",
+     "The difficulty in estimating the number of bats involved in the migration.",
+     "The unpredictability of fruit bats’ migration routes."
+    ],
+    "ans": "4",
+    "raw": "Scientists studying fruit bat migration face all the following challenges EXCEPT:"
+   },
+   "3": {
+    "q": "According to the passage, the fruit bats' migration is a \"profound biological event\" because:",
+    "opts": [
+     "It highlights the ecological importance of seed dispersal by bats.",
+     "It highlights the synchronized migration of millions of birds.",
+     "It highlights the bats’ ability to travel significant distances.",
+     "It is the largest mammalian migration in the world."
+    ],
+    "ans": "4",
+    "raw": "According to the passage, the fruit bats' migration is a \"profound biological event\" because:"
+   },
+   "4": {
+    "q": "Scientists remain puzzled about the exact reasons for fruit bats' seasonal congregation in Kasanka National Park for all of the following reasons EXCEPT:",
+    "opts": [
+     "The limited lifespan of GPS tracking devices prevents full monitoring.",
+     "The bats disperse over vast regions after leaving the park.",
+     "The bats prefer swamp forests over urban environments.",
+     "The environmental cues triggering their migration are still unclear."
+    ],
+    "ans": "3",
+    "raw": "Scientists remain puzzled about the exact reasons for fruit bats' seasonal congregation in Kasanka National Park for all of the following reasons EXCEPT:"
+   },
+   "5": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nThe largest and most familiar sight in the night sky is the Moon. Its presence has likely bewitched observers since before the time of modern human beings, millions of years ago. Since then, the Moon has been regarded as a deity by many cultures, and stories have been told of its poetic beauty, its magic and power, its role in transforming people into werewolves and other beasts, and its ability to tip those on the brink over to the side of insanity. We have now traveled to the Moon, walked on its surface, and plan to return to the Moon as part of NASA’s Artemis space program. We have studied its rocks and interactions with our tides, but when it comes to how the Moon was created, we still have only a loose collection of theories. They are humankind’s best guesses.",
+    "opts": [
+     "The Moon has captivated humans for millennia, serving as a source of myths and scientific inquiry, but it still remains an unsolved mystery.",
+     "While the Moon’s influence on culture and science is immense, its creation remains speculative despite modern exploration efforts.",
+     "The Moon, long celebrated for its beauty and power in culture, continues to intrigue humanity, with plans for further exploration and lingering questions about its origin.",
+     "The Moon, a prominent figure in the night sky, has inspired myths, poetry, and scientific exploration, yet its origin remains uncertain."
+    ],
+    "ans": "4",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. The largest and most familiar sight in the night sky is the Moon. Its presence has likely bewitched observers since before the time of modern human beings, millions of years ago. Since then, the Moon has been regarded as a deity by many cultures, and stories have been told of its poetic beauty, its magic and power, its role in transforming people into werewolves and other beasts, and its ability to tip those on the brink over to the side of insanity. We have now traveled to the Moon, walked on its surface, and plan to return to the Moon as part of NASA’s Artemis space program. We have studied its rocks and interactions with our tides, but when it comes to how the Moon was created, we still have only a loose collection of theories. They are humankind’s best guesses."
+   },
+   "6": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: Activists blame environmental violations at disposal facilities, though authorities deny these claims.\n\nParagraph: Pollution remains a harsh reality for the residents of Pithampur, a town grappling with the environmental fallout of its rapid industrial expansion in the 1980s. ____1____. Hazardous waste from factories has severely contaminated the soil and water, with harmful substances like mercury and arsenic detected over the years. In 2017, the Central Pollution Control Bureau classified the area as critically polluted, yet residents continue to report worsening conditions. ____2____. Local allegations point to companies flouting waste disposal regulations by dumping non-hazardous materials into the soil and water, with 2024 tests revealing alarming contamination levels. ____3____. Villagers, like Pankaj Patel, describe a grim reality of recurring health issues and water filters that fail within months due to pollution. Despite such concerns, regional officials dismiss the situation, calling expectations of cleaner conditions \"unrealistic\" in a town shaped by industrial growth. ____4____.",
+    "opts": [
+     "Option 1",
+     "Option 2",
+     "Option 3",
+     "Option 4"
+    ],
+    "ans": "3",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: Activists blame environmental violations at disposal facilities, though authorities deny these claims. Paragraph: Pollution remains a harsh reality for the residents of Pithampur, a town grappling with the environmental fallout of its rapid industrial expansion in the 1980s. ___(1)___ Hazardous waste from factories has severely contaminated the soil and water, with harmful substances like mercury and arsenic detected over the years. In 2017, the Central Pollution Control Bureau classified the area as critically polluted, yet residents continue to report worsening conditions. ___(2)___ Local allegations point to companies flouting waste disposal regulations by dumping non-hazardous materials into the soil and water, with 2024 tests revealing alarming contamination levels. ___(3)___ Villagers, like Pankaj Patel, describe a grim reality of recurring health issues and water filters that fail within months due to pollution. Despite such concerns, regional officials dismiss the situation, calling expectations of cleaner conditions \"unrealistic\" in a town shaped by industrial growth. ___(4)___"
+   },
+   "7": {
+    "q": "The planetary perspective, as envisaged in the passage, aims to:",
+    "opts": [
+     "Promote technological advancements as the primary solution to planetary challenges.",
+     "Advocate for the replacement of localized ecological perspectives with global-scale governance systems.",
+     "Encourage humanity to adopt a more humble and interconnected approach to Earth's self-regulating systems.",
+     "Suggest that interplanetary exploration is the key to resolving Earth's ecological and governance issues."
+    ],
+    "ans": "3",
+    "raw": "The planetary perspective, as envisaged in the passage, aims to:"
+   },
+   "8": {
+    "q": "“These proposals suggest humanity now has the tools to manage Earth’s systems in ways that could ensure survival, even if it means embracing the very power Spivak once rejected.“ Which of the following best explains the quoted sentence?",
+    "opts": [
+     "Humanity is no longer opposed to advanced tools and governance to tackle planetary challenges.",
+     "The planetary perspective now fully endorses technological dominance over Earth's systems, contradicting earlier views.",
+     "Spivak’s approach to humility has been replaced by a preference for technologically driven solutions to ensure Earth's survival.",
+     "The planetary perspective highlights humanity’s growing skepticism toward power, in line with Spivak’s rejection of dominance over Earth's systems."
+    ],
+    "ans": "1",
+    "raw": "“These proposals suggest humanity now has the tools to manage Earth’s systems in ways that could ensure survival, even if it means embracing the very power Spivak once rejected.“ Which of the following best explains the quoted sentence?"
+   },
+   "9": {
+    "q": "The author refers to China’s green energy shift in order to highlight:",
+    "opts": [
+     "The potential of national interest to accelerate planetary goals.",
+     "The interconnectedness of climate issues at multiple planetary scales.",
+     "The necessity of global cooperation to address planetary challenges.",
+     "The tension between two competing visions in the planetary concept."
+    ],
+    "ans": "2",
+    "raw": "The author refers to China’s green energy shift in order to highlight:"
+   },
+   "10": {
+    "q": "Based on the last paragraph, which of the following CANNOT be inferred about interplanetary exploration?",
+    "opts": [
+     "It reflects humanity’s conflicting aspirations of survival and expansion beyond Earth.",
+     "Musk’s and Bezos’s visions reflect distinct approaches to safeguarding humanity’s future.",
+     "The vision of interplanetary exploration focuses more on space as an industrial asset than as a solution to Earth's problems.",
+     "Both Musk’s and Bezos’s perspectives converge on treating Earth and space as equally significant in resolving planetary challenges."
+    ],
+    "ans": "4",
+    "raw": "Based on the last paragraph, which of the following CANNOT be inferred about interplanetary exploration?"
+   },
+   "11": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: Celebrities have always been trendsetters, and their endorsement often propels accessories into must-have status.\n\nParagraph: If you’re someone who likes to be prepared for every eventuality, the latest accessory trend will delight you—supersized handbags are having a major moment. ____1____. These slouchy, voluminous hold-alls and totes are designed to carry everything from make-up bags and phone chargers to books, umbrellas, and water bottles, blending practicality with style. Fashion designers, not always associated with functionality, are embracing this trend wholeheartedly. ____2____. The spring/summer 2025 runway shows featured models from Miu Miu, Louis Vuitton, and Hermès showcasing spacious doctor holdalls, while Proenza Schouler highlighted giant totes. ____3____. Yves Saint Laurent’s autumn release, the oversized Y bag, has become a celebrity favorite, with stars like Angelina Jolie and Bella Hadid frequently spotted carrying this roomy statement piece. ____4____. This trend marks a refreshing fusion of fashion and function, proving that practicality doesn’t have to come at the expense of style.",
+    "opts": [
+     "Option 3",
+     "Option 2",
+     "Option 1",
+     "Option 4"
+    ],
+    "ans": "1",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: Celebrities have always been trendsetters, and their endorsement often propels accessories into must-have status. Paragraph: If you’re someone who likes to be prepared for every eventuality, the latest accessory trend will delight you—supersized handbags are having a major moment. ___(1)___ These slouchy, voluminous hold-alls and totes are designed to carry everything from make-up bags and phone chargers to books, umbrellas, and water bottles, blending practicality with style. Fashion designers, not always associated with functionality, are embracing this trend wholeheartedly. ___(2)___ The spring/summer 2025 runway shows featured models from Miu Miu, Louis Vuitton, and Hermès showcasing spacious doctor holdalls, while Proenza Schouler highlighted giant totes. ___(3)___ Yves Saint Laurent’s autumn release, the oversized Y bag, has become a celebrity favorite, with stars like Angelina Jolie and Bella Hadid frequently spotted carrying this roomy statement piece. ___(4)___ This trend marks a refreshing fusion of fashion and function, proving that practicality doesn’t have to come at the expense of style."
+   },
+   "12": {
+    "q": "Which of the following statements best captures the central theme of the passage?",
+    "opts": [
+     "Generative AI is developing more slowly because it’s hard to meet changing consumer needs and keep up with fast-evolving technology.",
+     "The rivalry between OpenAI and Google highlights the need for reliable and cost-effective generative AI tools that can meet user expectations.",
+     "The move from basic chatbots to agentic AI exposes both the limits of current technology and the high costs of creating advanced AI agents.",
+     "Tech companies’ focus on agentic AI shows both the challenges and opportunities they face as they move from research efforts to market-driven solutions."
+    ],
+    "ans": "4",
+    "raw": "Which of the following statements best captures the central theme of the passage?"
+   },
+   "13": {
+    "q": "The statement \"You are normally taught not to be a hammer looking for a nail\" implies which of the following?",
+    "opts": [
+     "Focus on consumer needs, not technology, when designing products.",
+     "Generative AI evolves so fast that old product development methods are outdated.",
+     "Developers are urged to innovate without fixed ideas about new tech.",
+     "Prioritizing tech advancements is seen as more important than meeting user needs."
+    ],
+    "ans": "1",
+    "raw": "The statement \"You are normally taught not to be a hammer looking for a nail\" implies which of the following?"
+   },
+   "14": {
+    "q": "Based on the passage, which one of the following would best illustrate the potential of agentic AI?",
+    "opts": [
+     "A chatbot that gives step-by-step instructions for assembling DIY furniture.",
+     "A generative AI that crafts a short story from user prompts and pictures.",
+     "An AI tool that fills and submits income tax returns along with documents.",
+     "A system that predicts stock market trends from historical data."
+    ],
+    "ans": "3",
+    "raw": "Based on the passage, which one of the following would best illustrate the potential of agentic AI?"
+   },
+   "15": {
+    "q": "Which of the following, if true, would most weaken the claim about the challenges in agentic AI adoption?",
+    "opts": [
+     "Data on AI performance and reasoning is easy to access and integrate.",
+     "People are now becoming more and more willing to share personal data for agentic AI.",
+     "Advances in tech have made agentic AI cheaper to develop and run.",
+     "Verifying agentic AI decisions is as simple as checking chatbot responses."
+    ],
+    "ans": "1",
+    "raw": "Which of the following, if true, would most weaken the claim about the challenges in agentic AI adoption?"
+   },
+   "16": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nThe concept of \"overcoming modernity\" remains one of the most provocative and controversial aspects of the Kyoto School's thought. For some, it offers a valuable East Asian perspective on postmodernism in philosophy and postcolonialism in cultural studies. However, this idea is deeply intertwined with their wartime political theories, which often positioned Japan as central to moving beyond Western modernity. As a result, it has faced significant criticism. Notably, postwar Japanese advocates of Western postmodernism often avoided linking their critique of modernity and Eurocentrism to the Kyoto School’s earlier work. Exceptions include thinkers like Nakamura Yūjirō and the neo-Marxist phenomenologist Hiromatsu Wataru, who revived interest in this legacy. Even after the Kyoto School moved away from political interpretations of \"overcoming modernity,\" the concept persisted in their postwar philosophies of religion and culture. This radical critique of Western modernity remains a defining feature of their intellectual identity.",
+    "opts": [
+     "The Kyoto School's concept of \"overcoming modernity\" critiques Western modernity but remains controversial due to its wartime political associations.",
+     "\"Overcoming modernity\" by the Kyoto School, despite being linked to wartime political theories, has influenced postwar thought on philosophy, religion, and culture.",
+     "The Kyoto School's radical critique of Western modernity has endured in postwar philosophy, despite its controversial wartime origins and selective revival by later thinkers.",
+     "While the Kyoto School's \"overcoming modernity\" critiques Western modernity, it has largely been avoided in postwar Japanese philosophical discourse due to its wartime context."
+    ],
+    "ans": "1",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. The concept of \"overcoming modernity\" remains one of the most provocative and controversial aspects of the Kyoto School's thought. For some, it offers a valuable East Asian perspective on postmodernism in philosophy and postcolonialism in cultural studies. However, this idea is deeply intertwined with their wartime political theories, which often positioned Japan as central to moving beyond Western modernity. As a result, it has faced significant criticism. Notably, postwar Japanese advocates of Western postmodernism often avoided linking their critique of modernity and Eurocentrism to the Kyoto School’s earlier work. Exceptions include thinkers like Nakamura Yūjirō and the neo-Marxist phenomenologist Hiromatsu Wataru, who revived interest in this legacy. Even after the Kyoto School moved away from political interpretations of \"overcoming modernity,\" the concept persisted in their postwar philosophies of religion and culture. This radical critique of Western modernity remains a defining feature of their intellectual identity."
+   },
+   "17": {
+    "q": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer.\n\nThey believed that the social sciences could help societies coordinate efforts to improve living standards and foster collective well-being.\n\nModern debates about the role of populist politics and its skepticism toward expertise challenge the Enlightenment's commitment to rationality and truth.\n\nThe Industrial Revolution, influenced by Enlightenment values, demonstrated how technological advancements could radically alter economies and societies.\n\nEnlightenment thinkers emphasized reason and scientific inquiry as tools for understanding nature and advancing human progress.\n\nAdherence to the rule of law and respect for truth were considered essential for maintaining stability and achieving meaningful progress.",
+    "opts": [],
+    "ans": "2",
+    "raw": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer. 1. They believed that the social sciences could help societies coordinate efforts to improve living standards and foster collective well-being. 2. Modern debates about the role of populist politics and its skepticism toward expertise challenge the Enlightenment's commitment to rationality and truth. 3. The Industrial Revolution, influenced by Enlightenment values, demonstrated how technological advancements could radically alter economies and societies. 4. Enlightenment thinkers emphasized reason and scientific inquiry as tools for understanding nature and advancing human progress. 5. Adherence to the rule of law and respect for truth were considered essential for maintaining stability and achieving meaningful progress."
+   },
+   "18": {
+    "q": "Which of the following statements is implied in the sentence “What might catapult this film into the ugly movie hall of fame is its live-action/CGI hybrid approach”?",
+    "opts": [
+     "The live-action/CGI hybrid format has proven to be visually unappealing in other similar projects, creating doubts about success for Rugrats.",
+     "The success of a live-action/CGI Rugrats movie depends on the balance between human actors and animated characters.",
+     "The aesthetic challenges posed by the hybrid format are particularly pronounced in the Rugrats movie due to the nature of its characters.",
+     "The live-action/CGI approach is inherently flawed for films involving animated characters, as demonstrated by the failure of such projects in the past."
+    ],
+    "ans": "3",
+    "raw": "Which of the following statements is implied in the sentence “What might catapult this film into the ugly movie hall of fame is its live-action/CGI hybrid approach”?"
+   },
+   "19": {
+    "q": "Which one of the following statements about live-action/CGI “hybrid” films best captures the arguments made in the passage?",
+    "opts": [
+     "Live-action/CGI hybrid films are inherently flawed, and struggle with storytelling and visual consistency.",
+     "Their success depends on seamlessly blending animated characters with real-world elements.",
+     "These films are popular for their creative exploration of interactions between animated and real-world elements.",
+     "They face poor execution risks and alienate audiences due to incompatibility between animated characters and humans."
+    ],
+    "ans": "2",
+    "raw": "Which one of the following statements about live-action/CGI “hybrid” films best captures the arguments made in the passage?"
+   },
+   "20": {
+    "q": "The mention of movies like Paddington and Sonic the Hedgehog in the passage serves to:",
+    "opts": [
+     "Show how successful hybrid films focus on human and animal character interactions.",
+     "Explain the challenges of combining live-action and animated elements.",
+     "Point out that hybrids work best when animated characters drive the story.",
+     "Compare successful hybrids to the Rugrats movie with its ‘strange’ character designs."
+    ],
+    "ans": "4",
+    "raw": "The mention of movies like Paddington and Sonic the Hedgehog in the passage serves to:"
+   },
+   "21": {
+    "q": "The author's overall tone in the passage can be described as:",
+    "opts": [
+     "Neutral and objective, evaluating the Rugrats live-action/CGI movie.",
+     "Critical and skeptical, pointing out flaws and challenges.",
+     "Humorous and ironic, mocking issues with exaggeration.",
+     "Nostalgic and regretful, mourning the loss of the original show's charm."
+    ],
+    "ans": "3",
+    "raw": "The author's overall tone in the passage can be described as:"
+   },
+   "22": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nThe Bugis ethnic group of South Sulawesi, Indonesia, recognizes three genders beyond the binary. Calalai refers to people who have female sexual characteristics but present in traditionally masculine ways, often cutting their hair short and dressing in men’s fashions. They also take on a social position similar to men’s, transcending some restrictions placed on women. Calabai are people who have male sexual characteristics but occupy a role like that traditionally occupied by women. Yet calabai don’t identify as women, reject the restrictions that women experience, and do not have their sexual characteristics altered. Calabai often oversee weddings and manage each aspect of the ceremonies. Bissu, another gender, embodies the totality of masculinity and femininity. Bugis people believe that bissu surpasses other genders, encapsulating a spiritual role. Bissu people often wear flowers and carry sacred daggers to symbolize their expansive identity. They perform spiritual rites and are thought to bridge the worldly and the divine.",
+    "opts": [
+     "The Bugis ethnic group recognizes and institutionalizes three genders beyond the binary, each fulfilling distinct societal and spiritual roles.",
+     "The Bugis ethnic group categorizes gender in unique ways, with calalai and calabai breaking traditional gender norms, and bissu serving as a spiritual symbol.",
+     "The Bugis people's gender system reflects a cultural recognition of gender diversity and spiritual duality through calalai, calabai, and bissu.",
+     "The Bugis ethnic group’s understanding of gender includes roles like calalai, calabai, and bissu, emphasizing gender fluidity and spiritual significance."
+    ],
+    "ans": "1",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. The Bugis ethnic group of South Sulawesi, Indonesia, recognizes three genders beyond the binary. Calalai refers to people who have female sexual characteristics but present in traditionally masculine ways, often cutting their hair short and dressing in men’s fashions. They also take on a social position similar to men’s, transcending some restrictions placed on women. Calabai are people who have male sexual characteristics but occupy a role like that traditionally occupied by women. Yet calabai don’t identify as women, reject the restrictions that women experience, and do not have their sexual characteristics altered. Calabai often oversee weddings and manage each aspect of the ceremonies. Bissu, another gender, embodies the totality of masculinity and femininity. Bugis people believe that bissu surpasses other genders, encapsulating a spiritual role. Bissu people often wear flowers and carry sacred daggers to symbolize their expansive identity. They perform spiritual rites and are thought to bridge the worldly and the divine."
+   },
+   "23": {
+    "q": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer.\n\nMonopoly power, particularly in the realm of economic ideas, shapes the way problems are identified and solutions are framed.\n\nTheories of equilibrium, often revered in traditional economics, are increasingly being recognized as outdated and insufficient for addressing real-world challenges.\n\nEconomists must embrace production as a central component of analysis, much like the natural and social sciences have incorporated dynamic systems into their frameworks.\n\nThe focus on global trade liberalization has led many economists to underemphasize the importance of domestic production and its role in economic resilience.\n\nRethinking economic frameworks requires abandoning comforting but outdated ideas and acknowledging the complex, non-linear nature of production systems.",
+    "opts": [],
+    "ans": "4",
+    "raw": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer. 1. Monopoly power, particularly in the realm of economic ideas, shapes the way problems are identified and solutions are framed. 2. Theories of equilibrium, often revered in traditional economics, are increasingly being recognized as outdated and insufficient for addressing real-world challenges. 3. Economists must embrace production as a central component of analysis, much like the natural and social sciences have incorporated dynamic systems into their frameworks. 4. The focus on global trade liberalization has led many economists to underemphasize the importance of domestic production and its role in economic resilience. 5. Rethinking economic frameworks requires abandoning comforting but outdated ideas and acknowledging the complex, non-linear nature of production systems."
+   },
+   "24": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: This skepticism is often fueled by perceived conflicts of interest and a lack of transparency in scientific research.\n\nParagraph: In recent years, trust in the moral integrity of scientists has declined among the public. ____1____. While the majority of researchers adhere to ethical standards, high-profile cases of misconduct can create a ripple effect of doubt. ____2____. The public often questions whether scientific discoveries are truly motivated by the pursuit of knowledge or influenced by financial and political interests. ____3____. To restore confidence, it is essential for the scientific community to engage more openly with the public, fostering understanding and addressing concerns head-on. ____4____.",
+    "opts": [
+     "Option 1",
+     "Option 2",
+     "Option 4",
+     "Option 3"
+    ],
+    "ans": "4",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: This skepticism is often fueled by perceived conflicts of interest and a lack of transparency in scientific research. Paragraph: In recent years, trust in the moral integrity of scientists has declined among the public. ___(1)___ While the majority of researchers adhere to ethical standards, high-profile cases of misconduct can create a ripple effect of doubt. ___(2)___ The public often questions whether scientific discoveries are truly motivated by the pursuit of knowledge or influenced by financial and political interests. ___(3)___ To restore confidence, it is essential for the scientific community to engage more openly with the public, fostering understanding and addressing concerns head-on. ___(4)___"
+   }
+  }
+ }
+}

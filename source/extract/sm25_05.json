@@ -1,0 +1,266 @@
+{
+ "passages": {
+  "V1": "Australia’s prime minister, Anthony Albanese, told parents on November 29th, “We’ve got your back,” after pushing through some of the world’s strictest screentime limits. One year from now, under-16s will be banned from using social media, to protect them from harm. Teenagers groaned, parents discreetly high-fived, and policymakers took notes. Most social-media platforms forbid under-13s, following America’s 1998 COPPA (Children’s Online Privacy Protection Act) law on children’s online privacy. Britain’s Ofcom reports that 22% of users aged eight to 17 have an adult’s birth date. TikTok (minimum age: 13) is used by half of British eight- to 11-year-olds. Parents and politicians once turned a blind eye. But concern over social media’s mental-health impact is pushing governments to get tougher. Several European countries require parental permission for younger teens. Some American states have tried to limit teen usage. Australia, cheered on by its domestic press, is the first to enact a blanket ban.\n\nEnforcement is the first challenge. Younger teenagers lack IDs like driving licences and credit cards, so companies often use machine learning to gauge age via selfies. Five years ago, such systems were off by about three years, says Tony Allen of the Age Check Certification Scheme, which works with the Australian government. Now, they can guess within about a year, better than most humans. Errors still happen, especially for people with darker skin, underrepresented in training data. Yoti, which checks ages for Meta, reports an average error of about a year for fair-skinned 13- to 17-year-olds, and 1.5 years for dark-skinned teens. Technical hurdles aside, how broad should the crackdown be? Social media spans everything from video to messaging. Australia says TikTok will fall under its ban, but YouTube will be exempt for its “significant” educational content. Video games are off the hook, though children now use platforms like Roblox to chat as well as play.\n\nAnother question is who should do the checks. Australia puts the onus on social-media platforms: “You create the risk, you’ve got to deal with it,” says Mr Allen. Meta and others argue operating systems or app stores should handle age verification. That would let phones vouch for users’ ages anonymously, instead of people handing over IDs to every network. But governments are wary of forcing Apple or Google to build global ID registries. Age limits will affect some platforms more than others. Checks will cost startups more (Yoti quotes 3-31 cents per check). Whereas only 5% of Facebook’s American users are under 18, 19% of Snapchat’s are. Young users are not especially valuable to advertisers: Brian Wieser of Madison and Wall estimates under-16 ads form a “low single-digit percentage” of spending. Meta has not shown ads to under-18s in the EU for more than a year, amid legal disputes, with little impact.\n\nNo one knows how much banning teens will reduce their interest as adults. But TikTok, already threatened with a US ban, could be disadvantaged if teenagers cannot use it while rivals like YouTube remain accessible. The big winners of this crackdown may be gaming, so long as the ban does not expand further. Many now watch to see its global impact.",
+  "V2": "[In 1968, Paul and Anne Ehrlich’s The Population Bomb predicted mass starvation due to overpopulation, yet by 1990, global famine had largely been averted, and living standards had improved.] … Yet one might also say, in hindsight, that the Ehrlichs were only wrong about which species would starve. In the second half of the 20th century, global human famine was averted by the Green Revolution’s formula of high-yield, semi-dwarf cereal varieties, synthetic fertilizers, chemical pesticides, monocrop agriculture, and intensified irrigation. These advances helped save perhaps two billion lives, yet the planet bears the costs of this so-called miracle. The Ehrlichs failed to predict that while humans survived, countless species and ecosystems would be pushed to the brink of collapse.\n\nThe Green Revolution’s reliance on pesticides and habitat destruction has triggered a mass die-off of insects at an alarming rate of 2.5 percent per year. This decline threatens birds, fish, amphibians, and mammals that rely on them. Meanwhile, carbon emissions have raised global temperatures by 0.15 to 0.20 degrees Celsius every decade since 1975. These emissions have also rendered the oceans 26 percent more acidic than they were in the Holocene, endangering marine life. Coral reefs, which support one in four marine species, are collapsing. Similarly, a fifth of the Amazon rainforest has been clear-cut, largely for cattle ranching. Today, eco-leftists acknowledge that population growth itself does not drive climate change. Instead, the primary driver is the Global North’s insatiable consumption, shaped by capitalism’s vision of the good life: suburban mansions, luxury vacations, airmailed delicacies, and oversized SUVs. Unlike the Ehrlichs, contemporary “degrowth” advocates … argue for reducing economic growth in wealthy nations while redistributing resources to the Global South.\n\nYet, the broader debate remains unresolved: Is our relationship with the planet primarily a story of scarcity, where insatiable human wants clash with finite resources? Or is it one of human ingenuity, where new technologies continuously unlock fresh abundance? This debate is overshadowed by its most infamous participants. Anyone who questions unchecked growth risks being labeled an “Ehrlichian” or a “neo-Malthusian”—a reference to the 19th-century demographer Thomas Malthus, who opposed aid to the poor, believing it would lead to overpopulation. To question economic expansion, then, is to risk association with historically discredited figures.\n\nThis is why Fredrik Albritton Jonsson and Carl Wennerlind’s new intellectual history, Scarcity: A History from the Origins of Capitalism to the Climate Crisis, is timely. The authors argue that discussions about scarcity have a much richer and more ethically nuanced history than contemporary economic debates suggest. Beyond pessimistic doomsayers like Ehrlich and Malthus, thinkers across centuries have grappled with how society should balance needs, desires, and available resources. One particularly striking example is John Stuart Mill. Unlike many classical economists, Mill envisioned a future where nations would eventually cease reinvesting profits in endless growth and instead embrace a “stationary state”—an economy of sufficiency rather than relentless expansion. He questioned the capitalist treadmill of competition, where people are condemned to a life of “trampling, crushing, elbowing, and treading on each other’s heels.” More than a century ago, Mill foresaw the dangers of unchecked industrial expansion—not just for humanity, but for the natural world.",
+  "V3": "All human languages follow the same pattern: The most common word is used twice as often as the second most common word, three times as often as the third… and so on. This statistical rule is called Zipf’s law, and now an interdisciplinary team of scientists has shown that humpback whale songs follow the same pattern. … Researchers suggest this might have developed because it makes culturally transmitted communication—such as language and whale song—easier to learn. “It strengthens the view that we should be thinking about human language not as a completely different phenomenon from other communication systems but instead think about what it shares with them,” says one psychologist involved in the research. How to search for the pattern in whale song wasn’t immediately clear. … First, the team had to identify the units within the song that would be equivalent to words. They were inspired by how babies learn language.\n\n“Speech is continuous… infants have to discover word boundaries,” one researcher explains. “They use low-level statistical information: sounds are more likely to occur together if they are part of the same word. Infants use dips in the probability that one sound follows another to discover word boundaries.” For example, children could identify the distinct words in the phrase “after dinner” by noting that certain syllables do not usually go together. … “If whale song has a similar statistical structure,” the researcher adds, “these cues should be useful for segmenting it as well.” Using this method, the team analyzed eight years of humpback whale song data, plotting the frequency of sounds and word-like sequences—including syllables described as “grunt,” “descending high squeak” and “ascending moan.” … They discovered that humpback whale songs also follow Zipf’s law. “I’ll never forget the moment that graph appeared, looking just like the one we know so well from human language,” says another researcher. “We realized we’d uncovered a deep commonality between two species separated by tens of millions of years of evolution.”\n\nWhy would two species both develop communication that follows Zipf’s law? … The researchers suggest it might be because it makes the form of communication—whether it’s language or song—easier to pass on to future generations. Their findings indicate that whale songs may have culturally evolved to be easier for novices to learn, echoing how human languages seem to evolve toward greater learnability. … With future research, scientists hope to find these properties in other culturally transmitted systems of sequential signaling, such as those of bats, songbirds, or elephants. In another study, researchers found two additional shared features between human language and whale communication: Menzerath’s law… which holds that longer sequences tend to have shorter words. Previously, scientists discovered similar patterns in jackass penguins… which were shown to follow these laws, too. However, whale song is not equivalent to human language, largely because it lacks expressive meaning. Humpback whale song could be comparable to human music, which also lacks semantic meaning while still adhering to Zipf’s law. But it challenges long-held assumptions about human language and reveals deep commonalities.",
+  "V4": "What is fantasy for? You do not suddenly start needing philosophy when you turn eighteen: you have always needed it. Fantasy is philosophy’s more gorgeously painted cousin. You can’t just tell a child a blunt fact about the human heart and expect them to believe you. That’s not how it works. You can’t scribble on a Post-it note for a 12-year-old: your strangeness is worth keeping, or your love will matter. You need to show it. And fantasy, with its limitless scope, gives us a way of offering longhand proof for otherwise inarticulable ideas: endurance, hatred, regret, power, passion, death. As Tolkien said, ‘human stories are practically always about one thing, aren’t they? Death. The inevitability of death.’\n\nFor more than three thousand years we have been inventing mythical creatures, though why is less clear. One theory is that we built creatures to match inexplicable remains we found. The Indigenous American mythological beast, the Thunder Bird, may have stemmed from T-Rex skeletons. Adrienne Mayor has pointed to many instances where fossil discoveries map onto local mythmaking: ‘Someone who discovered a tyrannosaurid forelimb... might well have identified the fossil as part of some mysterious bird.’ Shark teeth left over from Neanderthal meals have been read as dragon teeth.\n\nI’ve spent years reading about mythical beasts for my book Impossible Creatures, and what’s striking is how blurry the line has been between real and imagined. In Pliny the Elder’s Natural History - often called the first encyclopedia - there is a description of the jaculus dragon. The theologian Felix Fabri reported glimpsing a unicorn in the Sinai desert, its horn ‘wondrous brilliant.’ And if you lived back then, you might have believed griffins were real; King Charles I’s chaplain, Alexander Ross, said: ‘If any man say that now such animals are not to be seen; I answer... they may be removed to places inaccessible to men.’ Not everyone loves a dragon. There are many attacks you can level at fantasy: escapist, ridiculous, indulgent, coy, repetitive. One of the Inklings - nobody agrees which - is supposed to have groaned at Tolkien’s reading: ‘By god, not another bloody elf!’ With its limitless possibilities, fantasy has lured some of the worst writing. There are books that give you nothing except relentless battles, didactic hectoring or crass sentimentalism - but then there are many very bad songs, and it does not turn us off the concept of music. There are many bad dinners, but it does not turn us off feasting.\n\nAt its best, you can turn to fantasy, especially for children, for the essence of things. Ursula Le Guin takes her guiding line from Tolkien, who never sought to deny that fantasy is escapist: that is its power and glory. ‘If a soldier is imprisoned by the enemy, don’t we consider it his duty to escape? The moneylenders, the know-nothings, the authoritarians have us all in prison; if we value freedom of mind and soul, if we’re partisans of liberty, it’s our plain duty to escape, and to take as many people with us as we can.’"
+ },
+ "q": {
+  "VARC": {
+   "1": {
+    "q": "According to the passage, all of the following factors directly prompted governments worldwide to consider stricter regulations for teen social-media usage EXCEPT:",
+    "opts": [
+     "Worries about the mental-health effects of social-media use on minors.",
+     "The fact that underage users falsify their birthdates to bypass age limits.",
+     "The non-availability of more accurate AI-based age-verification systems.",
+     "Weak enforcement of current laws intended to protect children online."
+    ],
+    "ans": "3",
+    "raw": "According to the passage, all of the following factors directly prompted governments worldwide to consider stricter regulations for teen social-media usage EXCEPT:"
+   },
+   "2": {
+    "q": "The author’s reference to COPPA (the American children’s privacy law) in the passage serves which of the following purposes?",
+    "opts": [
+     "To illustrate how America’s regulations exceed Australia’s stricter stance.",
+     "To suggest that COPPA is adequate and can be replicated in other countries.",
+     "To show that weak legal restrictions prompt measures like Australia’s ban.",
+     "To demonstrate that COPPA effectively bars users under 13 from social media."
+    ],
+    "ans": "3",
+    "raw": "The author’s reference to COPPA (the American children’s privacy law) in the passage serves which of the following purposes?"
+   },
+   "3": {
+    "q": "Based on the passage, which statement does NOT accurately describe the issue of age verification for social media?",
+    "opts": [
+     "The voluntary, self-regulatory approach of social media platforms in age verification.",
+     "The accountability of developers for implementing age verification measures.",
+     "The government’s resistance towards a global identification register for age verification.",
+     "The financial impact of losing advertising revenue from young users on social media."
+    ],
+    "ans": "1",
+    "raw": "Based on the passage, which statement does NOT accurately describe the issue of age verification for social media?"
+   },
+   "4": {
+    "q": "If the crackdown on social-media usage expands to include messaging functions in video games, which of the following would be most consistent with the passage?",
+    "opts": [
+     "Gaming platforms would retain their big winner status.",
+     "Social-media platforms would relax restrictions to remain competitive.",
+     "Gaming platforms might face strict age-verification rules.",
+     "Advertisers would shift focus to targeting younger demographics."
+    ],
+    "ans": "3",
+    "raw": "If the crackdown on social-media usage expands to include messaging functions in video games, which of the following would be most consistent with the passage?"
+   },
+   "5": {
+    "q": "What is the primary purpose of the passage?",
+    "opts": [
+     "To criticize the Green Revolution for endangering countless species and ecosystems.",
+     "To explore differing perspectives on scarcity, growth, and the environment.",
+     "To prove that Malthus and Ehrlich were right about scarcity, growth, and population.",
+     "To promote degrowth and population control as viable solutions for climate change."
+    ],
+    "ans": "2",
+    "raw": "What is the primary purpose of the passage?"
+   },
+   "6": {
+    "q": "Based on the passage, which of the following statements would the author most likely agree with?",
+    "opts": [
+     "Modern environmental crises can be resolved by controlling population growth in poor nations.",
+     "John Stuart Mill’s belief in endless economic expansion represents the thought of classical economists.",
+     "The Green Revolution’s environmental impact is more significant compared to its humanitarian benefits.",
+     "The labeling of anyone who questions growth as “neo-Malthusian” oversimplifies the complex scarcity debate."
+    ],
+    "ans": "4",
+    "raw": "Based on the passage, which of the following statements would the author most likely agree with?"
+   },
+   "7": {
+    "q": "Based on the passage, which of the following best reflects the stance of contemporary eco-leftists?",
+    "opts": [
+     "They emphasize lowering consumption in developed nations while channelling greater support to poorer regions.",
+     "They believe population growth in the Global South is primarily responsible for climate change.",
+     "They advocate for economic expansion to ensure rising standards of living in the Global South as against the Global North.",
+     "They argue for a fundamental shift away from modern agricultural technologies to resolve current environmental crises."
+    ],
+    "ans": "1",
+    "raw": "Based on the passage, which of the following best reflects the stance of contemporary eco-leftists?"
+   },
+   "8": {
+    "q": "If John Stuart Mill’s “stationary state” were adopted globally, which of the following scenarios would most likely occur?",
+    "opts": [
+     "Governments would focus on increasing the GDP than on offering freebies.",
+     "Central banks would raise interest rates to spur infrastructure investments.",
+     "Societies would meet basic needs without endlessly expanding production.",
+     "Rapid industrialisation would be dismissed in favour of climate change concerns."
+    ],
+    "ans": "3",
+    "raw": "If John Stuart Mill’s “stationary state” were adopted globally, which of the following scenarios would most likely occur?"
+   },
+   "9": {
+    "q": "Which of the following sets of words/phrases most accurately encapsulates the key ideas of the passage?",
+    "opts": [
+     "Whale song, Statistical segmentation, Infant learning, Semantic meaning, Cultural transmission.",
+     "Zipf’s law, Whale behavior, Music, Learnability, Semantic meaning, Statistical outliers.",
+     "Menzerath’s law, Statistical segmentation, Semantic complexity, Music, Cultural evolution.",
+     "Zipf’s law, Whale song, Cultural transmission, Menzerath’s law, Statistical segmentation."
+    ],
+    "ans": "4",
+    "raw": "Which of the following sets of words/phrases most accurately encapsulates the key ideas of the passage?"
+   },
+   "10": {
+    "q": "The author uses the phrase “after dinner” to demonstrate all of the following EXCEPT:",
+    "opts": [
+     "The cues used by infants to associate words to semantic meaning.",
+     "Certain syllables do not typically occur together within a single word.",
+     "The statistical cues used by infants to discover word boundaries.",
+     "The statistical method used by researchers to identify whale words."
+    ],
+    "ans": "1",
+    "raw": "The author uses the phrase “after dinner” to demonstrate all of the following EXCEPT:"
+   },
+   "11": {
+    "q": "We can infer from the passage that, by comparing whale song to music, the author is primarily highlighting:",
+    "opts": [
+     "Their structural similarity in organized sound.",
+     "Their identical communicative function to convey ideas.",
+     "Their equivalent expressive and semantic meaning.",
+     "Their melodic features which match human melodies."
+    ],
+    "ans": "1",
+    "raw": "We can infer from the passage that, by comparing whale song to music, the author is primarily highlighting:"
+   },
+   "12": {
+    "q": "Which of the following, if true, would most undermine the claim that humpback whale songs follow Zipf-like patterns due to cultural transmission and learnability?",
+    "opts": [
+     "Humpbacks, like songbirds, use complex social hierarchies to spread vocal patterns.",
+     "Younger whales adapt their songs to older whales’, indicating generational transmission.",
+     "Whale vocal anatomy is so designed to inherently produce repeated sound patterns.",
+     "Without stable, multigenerational pods, no distinct frequency distribution emerges."
+    ],
+    "ans": "3",
+    "raw": "Which of the following, if true, would most undermine the claim that humpback whale songs follow Zipf-like patterns due to cultural transmission and learnability?"
+   },
+   "13": {
+    "q": "In the context of the passage, the quote “You can’t scribble on a Post-it note for a 12-year-old: your strangeness is worth keeping, or your love will matter.” implies all of the following EXCEPT:",
+    "opts": [
+     "Direct statements cannot sufficiently convey complex truths to children.",
+     "Children learn moral lessons when they experience them through a story.",
+     "Fantasy vividly conveys abstract concepts in ways children can easily relate to.",
+     "Children neither respond to nor relate to brief, straightforward messages."
+    ],
+    "ans": "4",
+    "raw": "In the context of the passage, the quote “You can’t scribble on a Post-it note for a 12-year-old: your strangeness is worth keeping, or your love will matter.” implies all of the following EXCEPT:"
+   },
+   "14": {
+    "q": "The example of the Thunder Bird in the passage is used to illustrate:",
+    "opts": [
+     "How ancient mythologies were created to explain mysterious natural phenomena.",
+     "The way archaeological discoveries may have influenced the creation of mythical creatures.",
+     "How ancient peoples interpreted fossil discoveries as evidence of real mythical creatures.",
+     "How mythical creatures were deliberately invented with connection to real-world findings."
+    ],
+    "ans": "3",
+    "raw": "The example of the Thunder Bird in the passage is used to illustrate:"
+   },
+   "15": {
+    "q": "According to the passage, all of the following arguments are made against fantasy literature EXCEPT:",
+    "opts": [
+     "It often relies on excessive sentimentality and moral preaching.",
+     "It is appealing more to immature minds than to serious readers.",
+     "It can become repetitive and filled with overused tropes.",
+     "It is sometimes dismissed as an escapist and unserious genre."
+    ],
+    "ans": "2",
+    "raw": "According to the passage, all of the following arguments are made against fantasy literature EXCEPT:"
+   },
+   "16": {
+    "q": "According to the passage, which statement best reflects Tolkien’s and Le Guin’s view of fantasy?",
+    "opts": [
+     "Fantasy serves a fleeting escape from hardships without addressing deeper issues.",
+     "Fantasy cultivates imagination while remaining distinct from real-world concerns.",
+     "Embracing fantasy as a form of escapism is an ethical duty that liberates the mind.",
+     "Escapism through fantasy is for children; adults should face societal challenges."
+    ],
+    "ans": "3",
+    "raw": "According to the passage, which statement best reflects Tolkien’s and Le Guin’s view of fantasy?"
+   },
+   "17": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nBuoyancy is the ability to navigate moral conflict without being overwhelmed, maintaining clarity and stability. It helps clinicians face ethical challenges without being debilitated and fosters growth through adversity. Cultivating self-regulation and awareness enhances buoyancy by enabling recognition of heightened emotional, mental, and physical states, allowing a shift toward insight and stability. Over time, this process strengthens neural pathways, improving resilience in ethical dilemmas. When clinicians’ nervous systems are dysregulated, they struggle to perceive ethical challenges clearly and act with integrity. Without mindfulness practices to stabilize their system, they become vulnerable to the effects of sustained stress, making ethical decision-making more difficult. Developing buoyancy ensures clinicians can maintain balance and respond effectively to moral adversity.",
+    "opts": [
+     "The concept of buoyancy helps clinicians manage ethical conflicts by fostering neural resilience, reducing the impact of stress on decision-making.",
+     "Buoyancy enables clinicians to navigate ethical dilemmas with clarity and stability, improving resilience through self-regulation and mindfulness.",
+     "Maintaining buoyancy in ethical dilemmas requires clinicians to develop self-regulation and mindfulness, preventing stress from impairing moral clarity.",
+     "Buoyancy, strengthened by self-regulation and neural adaptation, allows clinicians to maintain ethical integrity and resilience in the face of moral adversity."
+    ],
+    "ans": "2",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. Buoyancy is the ability to navigate moral conflict without being overwhelmed, maintaining clarity and stability. It helps clinicians face ethical challenges without being debilitated and fosters growth through adversity. Cultivating self-regulation and awareness enhances buoyancy by enabling recognition of heightened emotional, mental, and physical states, allowing a shift toward insight and stability. Over time, this process strengthens neural pathways, improving resilience in ethical dilemmas. When clinicians’ nervous systems are dysregulated, they struggle to perceive ethical challenges clearly and act with integrity. Without mindfulness practices to stabilize their system, they become vulnerable to the effects of sustained stress, making ethical decision-making more difficult. Developing buoyancy ensures clinicians can maintain balance and respond effectively to moral adversity."
+   },
+   "18": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nSocial change is rarely epochal, and epochs are bigger than presidential administrations. Decades of political policy create social structures that engender tendencies that are hard to break, even when we want to. Future events are deeply rooted in past conditions…In times of moral panic and ontological fear, it is only human to want to take control of time, to declare the end or beginning of something. Which is to say that, when our present feels disjointed, we try to break history at its joints.",
+    "opts": [
+     "While social change unfolds gradually over time, fear and moral panic push people to declare the beginning or end of an era, even when history resists such divisions.",
+     "Epochal change is rare, as deeply embedded social structures evolve over decades, though in uncertain times, people attempt to break history into distinct periods.",
+     "Despite history’s continuous nature, people in times of crisis seek control by creating artificial historical divides, believing they can separate the past from the present.",
+     "Social change is a gradual process shaped by political and historical forces, yet in moments of fear and crisis people try to impose artificial breaks in history."
+    ],
+    "ans": "4",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. Social change is rarely epochal, and epochs are bigger than presidential administrations. Decades of political policy create social structures that engender tendencies that are hard to break, even when we want to. Future events are deeply rooted in past conditions…In times of moral panic and ontological fear, it is only human to want to take control of time, to declare the end or beginning of something. Which is to say that, when our present feels disjointed, we try to break history at its joints."
+   },
+   "19": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nNegative theology is an outgrowth of mysticism. Mystical experiences, as defined by William James in The Varieties of Religious Experience, possess two seemingly contradictory properties. They are on the one hand “noetic,” that is, you feel you are gaining profound insight into and knowledge of reality. They are on the other hand “ineffable,” meaning you cannot convey your revelation in words. Mystical aphorisms often emphasize ineffability. “He who knows, does not speak,” the ancient Chinese sage Lao Tzu says, violating his own dictum. “He who speaks, does not know.” Pseudo-Dionysius the Areopagite, a medieval monk, describes mystical knowledge as being “at one with Him Who is indescribable.”",
+    "opts": [
+     "Mysticism, central to negative theology, involves experiences that are both profoundly revelatory and ineffable, as seen in the teachings of Lao Tzu and Pseudo-Dionysius.",
+     "Negative theology, rooted in mystical traditions, grapples with the paradox of mystical experiences being both illuminating and beyond verbal expression.",
+     "Negative theology emerges from mysticism, which presents a paradox: mystical experiences feel deeply insightful yet cannot be expressed in words.",
+     "The mystical foundation of negative theology lies in the tension between insight and ineffability, a contradiction explored in religious teachings."
+    ],
+    "ans": "3",
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. Negative theology is an outgrowth of mysticism. Mystical experiences, as defined by William James in The Varieties of Religious Experience, possess two seemingly contradictory properties. They are on the one hand “noetic,” that is, you feel you are gaining profound insight into and knowledge of reality. They are on the other hand “ineffable,” meaning you cannot convey your revelation in words. Mystical aphorisms often emphasize ineffability. “He who knows, does not speak,” the ancient Chinese sage Lao Tzu says, violating his own dictum. “He who speaks, does not know.” Pseudo-Dionysius the Areopagite, a medieval monk, describes mystical knowledge as being “at one with Him Who is indescribable.”"
+   },
+   "20": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: This alarming discovery raises urgent questions about the potential health impacts of microplastic accumulation in human organs.\n\nParagraph: Everything that goes into our bodies gets filtered through our livers and kidneys, so maybe it’s not a big surprise that bits of plastic find their way into those organs. Same with our hearts; microplastics end up in our blood and can get stuck in our clogged arteries. But our brains are designed to keep things out, through something called the blood-brain barrier. The researchers behind the brain plastics study think the tiny shards of plastic hitch a ride on fat molecules to get inside brain cells. ____1____. And what’s worse is how much microplastics the researchers think might be in a whole human brain: 10 grams. Imagine 2.5 teaspoons of sugar. Now sub in plastic. Gross. They looked at preserved brains from about a decade ago and compared them to brains from last year. The fresher brains had more plastic in them than the older brains. ____2____. And yes, they accounted for all the plastic needed to hold and manipulate the brains in their study, just in case those tubes and such were leaching plastic. ____3____. So, year after year, surrounded by more and more plastic, our bodies are at minimum, storage tanks, and at worst, under an unrelenting attack. ____4____.",
+    "opts": [
+     "Option 4",
+     "Option 2",
+     "Option 1",
+     "Option 3"
+    ],
+    "ans": "3",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: This alarming discovery raises urgent questions about the potential health impacts of microplastic accumulation in human organs. Paragraph: Everything that goes into our bodies gets filtered through our livers and kidneys, so maybe it’s not a big surprise that bits of plastic find their way into those organs. Same with our hearts; microplastics end up in our blood and can get stuck in our clogged arteries. But our brains are designed to keep things out, through something called the blood-brain barrier. The researchers behind the brain plastics study think the tiny shards of plastic hitch a ride on fat molecules to get inside brain cells. ___(1)___ And what’s worse is how much microplastics the researchers think might be in a whole human brain: 10 grams. Imagine 2.5 teaspoons of sugar. Now sub in plastic. Gross. They looked at preserved brains from about a decade ago and compared them to brains from last year. The fresher brains had more plastic in them than the older brains. ___(2)___ And yes, they accounted for all the plastic needed to hold and manipulate the brains in their study, just in case those tubes and such were leaching plastic. ___(3)___ So, year after year, surrounded by more and more plastic, our bodies are at minimum, storage tanks, and at worst, under an unrelenting attack. ___(4)___"
+   },
+   "21": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: The project highlights Dominica’s dedication to balancing tourism with environmental preservation.\n\nParagraph: ____1____. Ever wanted to swim alongside sperm whales? Dominica now offers the chance to do it in an ethical, sustainable way as part of the Caribbean island's groundbreaking commitment to marine conservation and regenerative tourism. The island nation recently established the world's first sperm whale reserve, a protected marine area designed to safeguard its resident giants. ____2____. Limited permits for whale swims ensure intimate, respectful encounters, offering visitors a once-in-a-lifetime experience to share the water with these incredible cetaceans while facilitating research and creating sustainable tourism opportunities for local residents. New for 2025, expanded infrastructure and systems are set to welcome visitors, including digital immigration forms to ease arrival and the development of a cable-car system taking riders from Roseau Valley up to Boiling Lake, one of the world's largest thermal springs. ____3____. This initiative reflects a growing global movement toward responsible wildlife tourism that prioritizes conservation and education. ____4____.",
+    "opts": [
+     "Option 1",
+     "Option 4",
+     "Option 3",
+     "Option 2"
+    ],
+    "ans": "4",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: The project highlights Dominica’s dedication to balancing tourism with environmental preservation. Paragraph: ___(1)___ Ever wanted to swim alongside sperm whales? Dominica now offers the chance to do it in an ethical, sustainable way as part of the Caribbean island's groundbreaking commitment to marine conservation and regenerative tourism. The island nation recently established the world's first sperm whale reserve, a protected marine area designed to safeguard its resident giants. ___(2)___ Limited permits for whale swims ensure intimate, respectful encounters, offering visitors a once-in-a-lifetime experience to share the water with these incredible cetaceans while facilitating research and creating sustainable tourism opportunities for local residents. New for 2025, expanded infrastructure and systems are set to welcome visitors, including digital immigration forms to ease arrival and the development of a cable-car system taking riders from Roseau Valley up to Boiling Lake, one of the world's largest thermal springs. ___(3)___ This initiative reflects a growing global movement toward responsible wildlife tourism that prioritizes conservation and education. ___(4)___"
+   },
+   "22": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: It also agrees with the U.S. that the rest of Europe should increase defense spending.\n\nParagraph: Poland has been a key supporter of Ukraine since Russia’s full-scale invasion began. ____1____. It serves as the main logistics hub for military and humanitarian aid entering Ukraine. Poland has also been a strong advocate that Russia must not be allowed to win, arguing that all of Europe’s security is at stake. There is growing concern that the U.S. appears to be conceding to Moscow’s key demands even before talks begin. ____2____. Poland sees Russia as the clear aggressor and a serious threat. This is why Poland invests heavily in its military, now spending nearly 5% of GDP. ____3____. Ahead of the Paris talks, Polish Prime Minister Donald Tusk wrote on X: \"If we, Europeans, fail to spend big on defence now, we will be forced to spend 10 times more if we don't prevent a wider war.\" ____4____. On the issue of sending Polish troops to Ukraine to help enforce a ceasefire, government officials remain cautious. For now, they have ruled it out.",
+    "opts": [
+     "Option 1",
+     "Option 2",
+     "Option 3",
+     "Option 4"
+    ],
+    "ans": "3",
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: It also agrees with the U.S. that the rest of Europe should increase defense spending. Paragraph: Poland has been a key supporter of Ukraine since Russia’s full-scale invasion began. ___(1)___ It serves as the main logistics hub for military and humanitarian aid entering Ukraine. Poland has also been a strong advocate that Russia must not be allowed to win, arguing that all of Europe’s security is at stake. There is growing concern that the U.S. appears to be conceding to Moscow’s key demands even before talks begin. ___(2)___ Poland sees Russia as the clear aggressor and a serious threat. This is why Poland invests heavily in its military, now spending nearly 5% of GDP. ___(3)___ Ahead of the Paris talks, Polish Prime Minister Donald Tusk wrote on X: \"If we, Europeans, fail to spend big on defence now, we will be forced to spend 10 times more if we don't prevent a wider war.\" ___(4)___ On the issue of sending Polish troops to Ukraine to help enforce a ceasefire, government officials remain cautious. For now, they have ruled it out."
+   },
+   "23": {
+    "q": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer.\n\nIts success would depend significantly on ensuring that people with disabilities participate in every phase of the design process.\n\nTo make the most of universal inclusion, financial institutions should embrace a new innovation framework built on accessibility.\n\nThis would represent a significant shift from today’s compliance-based approach, in which adjustments are often made after the fact to meet minimum accessibility standards.\n\nMeasuring our progress on overall financial inclusion is important, but so is collecting detailed data that differentiate among groups or segments.\n\nIn a universally inclusive design approach, accessibility considerations should shape solutions from the start.",
+    "opts": [],
+    "ans": "4",
+    "raw": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer. 1. Its success would depend significantly on ensuring that people with disabilities participate in every phase of the design process. 2. To make the most of universal inclusion, financial institutions should embrace a new innovation framework built on accessibility. 3. This would represent a significant shift from today’s compliance-based approach, in which adjustments are often made after the fact to meet minimum accessibility standards. 4. Measuring our progress on overall financial inclusion is important, but so is collecting detailed data that differentiate among groups or segments. 5. In a universally inclusive design approach, accessibility considerations should shape solutions from the start."
+   },
+   "24": {
+    "q": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer.\n\nThe second occurred in 1989, with the fall of the Berlin Wall marking the West’s victory in the Cold War.\n\nIt is a multipolar world, with China, Russia, India, Turkey, Brazil, South Africa, and the Gulf states challenging the old order, alongside other emerging powers demanding a greater voice in shaping the rules of the international system.\n\n“The old world is dying, and the new world struggles to be born: now is the time of monsters.”\n\nThat order has been shaped by two pivotal historical moments, the first came after 1945, when the current international system was established through the creation of the United Nations and the Bretton Woods institutions.\n\nThis famous quote, often attributed to Antonio Gramsci, feels particularly pertinent today, as the international order that has defined the past century undergoes a profound shift.",
+    "opts": [],
+    "ans": "2",
+    "raw": "Five jumbled-up sentences (labelled 1, 2, 3, 4, and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer. 1. The second occurred in 1989, with the fall of the Berlin Wall marking the West’s victory in the Cold War. 2. It is a multipolar world, with China, Russia, India, Turkey, Brazil, South Africa, and the Gulf states challenging the old order, alongside other emerging powers demanding a greater voice in shaping the rules of the international system. 3. “The old world is dying, and the new world struggles to be born: now is the time of monsters.” 4. That order has been shaped by two pivotal historical moments, the first came after 1945, when the current international system was established through the creation of the United Nations and the Bretton Woods institutions. 5. This famous quote, often attributed to Antonio Gramsci, feels particularly pertinent today, as the international order that has defined the past century undergoes a profound shift."
+   }
+  }
+ }
+}

@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.21.0
+
+Added Simp Mocks 5 and 6 (2025): 134 questions (48 VARC, 42 DILR, 44 QA) and 17 set cards.
+
+- Mock 5, DILR Set 2 (cousins in rows): the seating grid as a table, and the finished arrangement of all fifteen seats.
+- Mock 5, DILR Set 3 (shipping costs): the eight-country cost matrix is redrawn; tables of every two-stop route, every round trip and each country’s export and import totals.
+- Mock 5, DILR Set 4 (five tourists): the partial grid is given day by day; the solution lists each tourist’s country, agency and full five-day route.
+- Mock 5, QA Q9 and Q13: the triangle with a bisected median and the circle with two perpendicular chords are redrawn.
+- Mock 6, DILR Set 1: the dataset table is split into one table per format.
+- Mock 6, DILR Set 2: stacked bar chart of the four car types in each quarter.
+- Mock 6, DILR Set 3: the judges’ table in two halves, and a table of the cells fixed in every valid completion.
+- Mock 6, DILR Set 5: slot-by-slot colours for both possible parking arrangements.
+- Mock 6, QA Q2 and Q17: the three circles in a triangle and the shaded segment are redrawn.
+- Formulas and options that were images are typeset as maths.
+
 ## v0.20.0
 
 Added Simp Mocks 3 and 4 (2025): 134 questions (48 VARC, 42 DILR, 44 QA) and 17 set cards.
