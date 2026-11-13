@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.25.0
+
+Added CAT 2025 Slots 1, 2 and 3: 204 questions (72 VARC, 66 DILR, 66 QA), 27 set cards and three paper cards.
+
+- Slot 1, DILR Set 1 (train seats): the segment loads and every ticket count in one table.
+- Slot 1, DILR Sets 2 to 4: tables of each employee’s quarterly ratings, each friend’s chair after every turn, and the full yes/no/maybe tap grid.
+- Slot 1, DILR Set 5 (tariffs): the radar chart of tariff rates and the grouped bar chart of tariffs collected are redrawn; each country’s imports are listed.
+- Slot 2, DILR Set 1: the full four-musician, three-Guru timetable.
+- Slot 2, DILR Set 2: the scatter plot of index changes is redrawn with a 5% grid; a table of four countries’ index values in 2016, 2020 and 2024.
+- Slot 2, DILR Set 4: both bar charts of papers by author and by type are redrawn; both possible paper counts in one table.
+- Slot 2, DILR Set 5 (balls and hoops): the ping table for every ball and hoop.
+- Slot 3, DILR Set 1: the call-minutes table split into outgoing and incoming parts.
+- Slot 3, DILR Set 3: both step charts of puzzles solved are redrawn; each competitor’s solving times in a table.
+- Slot 3, DILR Sets 2, 4 and 5: exchange rates and travel costs, the full trade matrix, and the seating and passes for the circle game.
+- Missing-sentence and summary questions show their paragraphs and options in full; formulas in all three QA sections are typeset as maths.
+
 ## v0.24.0
 
 Added CAT 2024 Slots 1, 2 and 3: 204 questions (72 VARC, 66 DILR, 66 QA), 27 set cards and three paper cards.

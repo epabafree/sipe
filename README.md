@@ -8,6 +8,9 @@ An Anki deck of CAT previous-year questions. Each question is an interactive car
 
 | Paper | VARC | DILR | QA | Total |
 | --- | ---: | ---: | ---: | ---: |
+| CAT 2025 Slot 1 | 24 | 22 | 22 | 68 |
+| CAT 2025 Slot 2 | 24 | 22 | 22 | 68 |
+| CAT 2025 Slot 3 | 24 | 22 | 22 | 68 |
 | CAT 2024 Slot 1 | 24 | 22 | 22 | 68 |
 | CAT 2024 Slot 2 | 24 | 22 | 22 | 68 |
 | CAT 2024 Slot 3 | 24 | 22 | 22 | 68 |
@@ -26,7 +29,7 @@ An Anki deck of CAT previous-year questions. Each question is an interactive car
 | CAT 2019 Slot 1 | 20 | 32 | 32 | 84 |
 | CAT 2019 Slot 2 | 0 | 24 | 33 | 57 |
 | CAT 2018 Slot 1 | 21 | 32 | 33 | 86 |
-| | | | | **1253** |
+| | | | | **1457** |
 
 ### Simp Mocks
 

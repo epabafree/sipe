@@ -81,7 +81,7 @@ class Paper:
         i = s.index("Sentence:"); j = s.index("Paragraph")
         para = re.sub(r"_+\s*\(?\s*(\d)\s*\)?\s*_+", r"___(\1)___", s[j:].split(":", 1)[1].strip())
         para = re.sub(r"(___\(\d\)___)\s*—?\s*\.?", r"\1.", para)
-        para = re.sub(r"([^.\s])\s*(___\(\d\)___)", r"\1. \2", para)
+        para = re.sub(r"([^.\s'’”\"?!])\s*(___\(\d\)___)", r"\1. \2", para)
         para = re.sub(r"\.+\s*(___\(\d\)___)", r". \1", para).replace("far- flung", "far-flung")
         para = re.sub(r"(___\(\d\)___\.)(?=\S)", r"\1 ", para)
         return (f'<p>{self.MS_DIR}</p><p class="quote"><b>Sentence:</b> {s[i+9:j].strip()}</p>'
