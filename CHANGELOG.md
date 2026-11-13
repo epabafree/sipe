@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.23.1
+
+- Paper and mock cards now open their questions in Anki desktop as well as on mobile; topic practice cards too.
+- All past-paper cards sit together in one deck, `06 Papers & Mocks ▸ CAT Papers`, instead of one deck per year and slot.
+
 ## v0.23.0
 
 Added Simp Mocks 9 and 11 (2025): 136 questions (48 VARC, 44 DILR, 44 QA) and 18 set cards.

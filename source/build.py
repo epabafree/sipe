@@ -339,7 +339,7 @@ def main():
     topics = {s: topics[s] for s in ("VARC", "DILR", "QA") if s in topics}
     years = sorted({t.split("::")[1] for it in index for t in it["t"] if t.startswith("Year::")}, reverse=True)
     slots = sorted({t.split("::")[1] for it in index for t in it["t"] if t.startswith("Slot::")})
-    pdata = json.dumps({"root": ROOT, "topics": topics, "years": years, "slots": slots, "items": index}, ensure_ascii=False).replace("</", "<\\/")
+    pdata = json.dumps({"root": ROOT, "topics": topics, "years": years, "slots": slots, "items": index}, ensure_ascii=False).replace("<", "\\u003c")
     add(D_START, M_PLAN, ["planner", "Study Planner", pdata], ["Card::Guide"], "planner", 2, "start_here_planner")
     # papers: one card per paper, newest first
     def mock_q(q):
@@ -354,7 +354,7 @@ def main():
         full = {s: max(sum(1 for q in mq if q["section"] == s), MOCK_FULL[s]) for s in MOCK_FULL} if mn // 100 != 2023 else MOCK_FULL
         nfull = sum(full.values())
         ttl = f"{name} · full mock, {len(mq)} questions" if len(mq) >= nfull else f"{name} · {len(mq)} questions in this deck"
-        mdata = json.dumps({"title": ttl, "full": full, "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
+        mdata = json.dumps({"title": ttl, "full": full, "questions": mq}, ensure_ascii=False).replace("<", "\\u003c")
         gk = f"simpmock-{mn % 100:02d}" if mn // 100 == 2023 else f"simpmock-{mn // 100}-{mn % 100:02d}"
         add(mock_deck(mn), M_MOCK, [mock_qid(mn), name, mdata], ["Card::Mock", f"Source::{MOCK_TAG}", q_ptag({"mock": mn})], gk, 45_000_000 + (2100 - mn // 100) * 100 + mn % 100, "mock")
     for pi, (py, pn) in enumerate(sorted({(q["year"], q["slot"]) for q in PYQ}, reverse=True)):
@@ -366,13 +366,13 @@ def main():
         name = paper_name(py, pn)
         full = FULL_PAPER.get(py, {"VARC": 24, "DILR": 20, "QA": 22}); nfull = sum(full.values())
         ttl = f"{name} · full paper, {len(mq)} questions" if len(mq) >= nfull else f"{name} · {len(mq)} questions in this deck"
-        mdata = json.dumps({"title": ttl, "full": full, "questions": mq}, ensure_ascii=False).replace("</", "<\\/")
+        mdata = json.dumps({"title": ttl, "full": full, "questions": mq}, ensure_ascii=False).replace("<", "\\u003c")
         gkey = f"mock-{py}-S{pn}-pilot" if (py, pn) == (2023, 1) else f"mock-{py}-S{pn}"   # keep the v0.2 GUID
-        add(f"{D_PAPERS}::CAT {py}::Slot {pn}", M_MOCK, [f"{py}-S{pn}", name, mdata], ["Card::Mock", f"Year::{py}", f"Paper::{py}_S{pn}"], gkey, 40_000_000 + pi, "mock")
+        add(f"{D_PAPERS}::CAT Papers", M_MOCK, [f"{py}-S{pn}", name, mdata], ["Card::Mock", f"Year::{py}", f"Paper::{py}_S{pn}"], gkey, 40_000_000 + pi, "mock")
 
     # practice by topic: one tool card (in its own deck) per section area
     for i, (sec, area, title, intro, items) in enumerate(topic_groups()):
-        tdata = json.dumps({"title": title, "intro": intro, "subs": items["subs"], "questions": items["qs"]}, ensure_ascii=False).replace("</", "<\\/")
+        tdata = json.dumps({"title": title, "intro": intro, "subs": items["subs"], "questions": items["qs"]}, ensure_ascii=False).replace("<", "\\u003c")
         add(f"{D_TOPIC}::{SECN[sec]}::{title}", M_TOPIC, [f"topic-{sec}-{area}", title, SECN[sec], tdata],
             ["Card::Topic", f"Section::{sec}"], f"topic-{sec}-{area}", 35_000_000 + i, "topic_practice")
 
