@@ -68,6 +68,35 @@ class Paper:
         s = self.Q["VARC"][qno]["q"]; k = s.index(start)
         return f'<p>{s[:k].strip()}</p><p class="quote">{s[k:].strip()}</p>'
 
+
+    # ---------- VA html from the plain question text (2024 onwards) ----------
+    MS_DIR = "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide where (option 1, 2, 3, or 4) the following sentence would best fit."
+    SUM_DIR = "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage."
+    ODD_DIR = "Five jumbled up sentences (labelled 1, 2, 3, 4 and 5), related to a topic, are given below. Four of them can be put together to form a coherent paragraph. Identify the odd sentence and key in the number of that sentence as your answer."
+    PJ_DIR = "The four sentences (labelled 1, 2, 3, 4) below, when properly sequenced, would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer."
+
+    def ms(self, qno):
+        import re
+        s = self.Q["VARC"][qno]["q"]
+        i = s.index("Sentence:"); j = s.index("Paragraph")
+        para = re.sub(r"_+\s*\(?\s*(\d)\s*\)?\s*_+", r"___(\1)___", s[j:].split(":", 1)[1].strip())
+        para = re.sub(r"(___\(\d\)___)\s*—?\s*\.?", r"\1.", para)
+        para = re.sub(r"([^.\s])\s*(___\(\d\)___)", r"\1. \2", para)
+        para = re.sub(r"\.+\s*(___\(\d\)___)", r". \1", para).replace("far- flung", "far-flung")
+        para = re.sub(r"(___\(\d\)___\.)(?=\S)", r"\1 ", para)
+        return (f'<p>{self.MS_DIR}</p><p class="quote"><b>Sentence:</b> {s[i+9:j].strip()}</p>'
+                f'<p class="quote"><b>Paragraph:</b> {para}</p>')
+
+    def summ(self, qno):
+        return f'<p>{self.SUM_DIR}</p><p class="quote">{self.Q["VARC"][qno]["q"].strip()}</p>'
+
+    def sents(self, qno, direc=None):
+        import re
+        s = " " + self.Q["VARC"][qno]["q"].replace("\n", " ")
+        parts = [x.strip() for x in re.split(r"\s(?=[1-5]\.\s)", s) if x.strip()]
+        parts = [re.sub(r"^[1-5]\.\s*", "", x) for x in parts]
+        return f"<p>{direc or self.ODD_DIR}</p><ol class=\"sent\">" + "".join(f"<li>{x}</li>" for x in parts) + "</ol>"
+
     # ---------- DILR ----------
     def dilr_set(self, n, title, directions, context, topic, setsol, shortcut, concept):
         sid = f"{self.sid_prefix}_DILR_S{n}"

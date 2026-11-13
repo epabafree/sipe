@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.24.0
+
+Added CAT 2024 Slots 1, 2 and 3: 204 questions (72 VARC, 66 DILR, 66 QA), 27 set cards and three paper cards.
+
+- Slot 1, DILR Set 2 (countries visited): grouped bar chart redrawn; one table of countries by region and by who visited them.
+- Slot 1, DILR Set 3: the candlestick chart of seven shares is redrawn with a legend; tables of each share’s prices and price variability.
+- Slot 1, DILR Set 4 (stars to bloggers): bar chart redrawn; the full surfer-by-blogger table.
+- Slot 1, DILR Set 5 (two campaigns): every campaign outcome as a share of all students, in one table.
+- Slot 2, DILR Set 1: the staircase grid is drawn, with the finished arrangement as a table.
+- Slot 2, DILR Set 2: the walkway map with its three lakes is redrawn; routes are worked out edge by edge, including both diagonals.
+- Slot 2, DILR Set 3: horizontal bar chart of Day 2 ratings; the Day 3 distribution as a table.
+- Slot 2, DILR Set 4: both bubble charts (2019 and 2023) are redrawn on one scale; a table of employees, profit and R&D share for each firm.
+- Slot 3, DILR Set 1: the road grid with its distances and totals is redrawn; both valid ATM layouts are shown.
+- Slot 3, DILR Sets 2 and 4: bar chart of subscriber shares and line chart of the room temperature are redrawn.
+- Slot 3, DILR Sets 3 and 5: the country and food-grain data are typeset as tables, with the completed nutrient table in the solution.
+- Formulas, surds, logarithms and fractions in all three QA sections are typeset as maths.
+
 ## v0.23.1
 
 - Paper and mock cards now open their questions in Anki desktop as well as on mobile; topic practice cards too.

@@ -8,6 +8,9 @@ An Anki deck of CAT previous-year questions. Each question is an interactive car
 
 | Paper | VARC | DILR | QA | Total |
 | --- | ---: | ---: | ---: | ---: |
+| CAT 2024 Slot 1 | 24 | 22 | 22 | 68 |
+| CAT 2024 Slot 2 | 24 | 22 | 22 | 68 |
+| CAT 2024 Slot 3 | 24 | 22 | 22 | 68 |
 | CAT 2023 Slot 1 | 24 | 20 | 22 | 66 |
 | CAT 2023 Slot 2 | 24 | 20 | 22 | 66 |
 | CAT 2023 Slot 3 | 24 | 20 | 22 | 66 |
@@ -23,7 +26,7 @@ An Anki deck of CAT previous-year questions. Each question is an interactive car
 | CAT 2019 Slot 1 | 20 | 32 | 32 | 84 |
 | CAT 2019 Slot 2 | 0 | 24 | 33 | 57 |
 | CAT 2018 Slot 1 | 21 | 32 | 33 | 86 |
-| | | | | **1049** |
+| | | | | **1253** |
 
 ### Simp Mocks
 
@@ -63,7 +66,7 @@ sipe
 ├── 03 Quantitative Aptitude                   by year and slot
 ├── 04 Practice by Topic
 ├── 05 Formulas & Concepts
-└── 06 Papers & Mocks
+└── 06 Papers & Mocks                          CAT Papers (one card per paper), Simp Mocks
 ```
 
 Every card is tagged (`sipe::Topic::QA::Algebra::Quadratic_Equations`, `sipe::Paper::2023_S1`, `sipe::Format::TITA` and so on), which is what the Study Planner and the topic cards use.

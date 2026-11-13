@@ -14,7 +14,7 @@ from fmt import why as why_rows
 ROOT = "sipe"
 OUT = os.path.join(HERE, "out")
 YEAR = 2023
-FULL_PAPER = {2020: {"VARC": 26, "DILR": 24, "QA": 26}, 2019: {"VARC": 34, "DILR": 32, "QA": 34}, 2018: {"VARC": 34, "DILR": 32, "QA": 34}}
+FULL_PAPER = {2020: {"VARC": 26, "DILR": 24, "QA": 26}, 2019: {"VARC": 34, "DILR": 32, "QA": 34}, 2018: {"VARC": 34, "DILR": 32, "QA": 34}, 2024: {"VARC": 24, "DILR": 22, "QA": 22}, 2025: {"VARC": 24, "DILR": 22, "QA": 22}}
 
 def paper_name(y, n): return f"CAT {y} · Slot {n}"
 MOCK_SERIES = "Simp Mocks"          # display name of the mock series (one place to rename it)
@@ -93,7 +93,7 @@ SOURCES = [(ex_varc.VARC, data_varc.SOL, "VARC", "pilot"), (b2_varc.ITEMS, b2_va
 # Later papers: one module per paper (VARC) plus its _dilr / _qa add-on modules, all sharing one Paper object.
 import importlib
 MOCK_MODULES = [f"m{n:02d}" for n in range(1, 16)] + [f"m25_{n:02d}" for n in range(1, 20)]
-for base in MOCK_MODULES + ["b3_s2", "b4_s3", "b5_22s1", "b6_22s2", "b7_22s3", "b8_21s1", "b9_21s2", "b10_21s3", "b11_20s1", "b12_20s2", "b13_20s3", "b14_19s1", "b15_19s2", "b16_18s1"]:
+for base in MOCK_MODULES + ["b3_s2", "b4_s3", "b5_22s1", "b6_22s2", "b7_22s3", "b8_21s1", "b9_21s2", "b10_21s3", "b11_20s1", "b12_20s2", "b13_20s3", "b14_19s1", "b15_19s2", "b16_18s1", "b17_24s1", "b18_24s2", "b19_24s3", "b20_25s1", "b21_25s2", "b22_25s3"]:
     try: P = importlib.import_module(base).P
     except ModuleNotFoundError: continue
     for extra in ("_dilr", "_qa"): importlib.import_module(base + extra)
