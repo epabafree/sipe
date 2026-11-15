@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.26.0
+
+Added Simp Mocks 12 and 13 (2025): 136 questions (48 VARC, 44 DILR, 44 QA) and 17 set cards.
+
+- Mock 12, DILR Set 1 (quiz scores): a table of each contestant’s 1-mark and 2-mark answers and total marks.
+- Mock 12, DILR Set 2 (robots): every robot’s route in one table, and the four possible start orders.
+- Mock 12, DILR Set 3 (box office): each film’s opening, peak and closing week in a table; the solution lists every possible weekly path.
+- Mock 12, DILR Set 4 (food costs): the cost table split into cost components and prices, with the solved cost prices, selling prices and profits.
+- Mock 12, QA Q17, Q18 and Q19: the circle with its secant, the top face of the cut cube and the hexagon with its shaded quadrilateral are redrawn.
+- Mock 13, DILR Set 1 (ranking leaders): the grouped bar chart of points is redrawn; all four students’ weightages and all 40 scaled scores are tabulated.
+- Mock 13, DILR Set 2 (athletics): the event rota and the event-by-event medal table.
+- Mock 13, DILR Set 3 (three branches): the staff table by branch, sex and pay.
+- Mock 13, DILR Set 4 (estate): the 6 × 6 plot grid is drawn with its six land blocks; the solved grid is a table.
+- Mock 13, DILR Set 5 (critics’ predictions): a year-by-critic prediction table, and the four possible winner sequences with each critic’s score.
+- Mock 13, QA Q18: the right triangle with its two medians is redrawn.
+- Para-jumble and odd-sentence questions list their sentences in order; formulas and options that were images are typeset as maths.
+
 ## v0.25.0
 
 Added CAT 2025 Slots 1, 2 and 3: 204 questions (72 VARC, 66 DILR, 66 QA), 27 set cards and three paper cards.
