@@ -1,8 +1,23 @@
 # Changelog
 
+## v0.28.0
+
+Added Simp Mocks 17 and 18 (2025): 134 questions (48 VARC, 42 DILR, 44 QA) and 17 set cards.
+
+- Mock 17, DILR Set 1 (shirt outlets): the line chart of monthly profit percentages is redrawn; the six possible cost paths are listed.
+- Mock 17, DILR Set 2 (workshop languages): the full year-by-language table of participants.
+- Mock 17, DILR Set 3 (tournament): fixed results and the open triangle of matches in one table.
+- Mock 17, QA Q5: the three buildings and their sight lines are drawn in the solution.
+- Mock 18, DILR Set 1 (workshop ages): the bar chart of youngest and oldest ages is redrawn, with participant counts as a table.
+- Mock 18, DILR Set 2 (railway): up and down timetables as separate tables, and each leg’s real travel time and time-zone gap.
+- Mock 18, DILR Set 3 (coded subtraction): the letter sum laid out in columns.
+- Mock 18, DILR Set 5 (talent show): the five teams in performance order with every known role.
+- Mock 18, QA Q10: the hexagon with its perpendicular is redrawn.
+- Formulas, factorials and options that were images are typeset as maths.
+
 ## v0.27.0
 
-Added Simp Mocks 15 and 16 (2025): 136 questions (48 VARC, 44 DILR, 44 QA) and 19 set cards.
+Added Simp Mocks 15 and 16 (2025): 136 questions (48 VARC, 44 DILR, 44 QA) and 18 set cards.
 
 - Mock 15, DILR Set 1 (paint bottles): the brand-by-type table with brand and type totals for the worst-case questions.
 - Mock 15, DILR Set 3 (championship): a round-by-round points table showing which entries stay open.
