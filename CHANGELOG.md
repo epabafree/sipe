@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.29.0
+
+Added Simp Mock 19 (2025) and Simp Mock 2 (2023): 134 questions (48 VARC, 42 DILR, 44 QA) and 17 set cards.
+
+- 2025 Mock 19, DILR Set 1 (mock-test grades): the paper-by-grade table of 200 students, with row totals for the A− or better questions.
+- 2025 Mock 19, DILR Set 2 (stock portfolio): the partial sector table in thousands of rupees, and the worked Pharma and Auto values in the solution.
+- 2025 Mock 19, DILR Set 3 (shooting game): points for every number of hits with 4, 5 or 6 planes, and every possible two-round total.
+- 2025 Mock 19, DILR Set 4 (sorted digit codes): the word-and-code table and the digit-by-letter key with its three open pairs.
+- 2025 Mock 19, DILR Set 5 (hike): the three state groups with each member’s job.
+- 2025 Mock 19, QA Q1: the trapezium with its incircle is drawn.
+- 2023 Mock 2, DILR Set 1 (diesel locomotives): the year totals table and the grouped bar chart of zone shares, with the final zone-by-year table in the solution.
+- 2023 Mock 2, DILR Set 2 (bakery kitchen): the hour-by-item production table and the two possible staff line-ups.
+- 2023 Mock 2, DILR Set 3 (hidden mines): the 5 × 5 grid with its clues, and the completed grid in the solution.
+- 2023 Mock 2, DILR Set 4 (painted gold block): edge and corner counts laid out face by face.
+- 2023 Mock 2, QA Q3 and Q12: the hexagon with segment AB and the square with point X are drawn.
+- Formulas and options that were images are typeset as maths.
+
 ## v0.28.0
 
 Added Simp Mocks 17 and 18 (2025): 134 questions (48 VARC, 42 DILR, 44 QA) and 17 set cards.
