@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.27.0
+
+Added Simp Mocks 15 and 16 (2025): 136 questions (48 VARC, 44 DILR, 44 QA) and 19 set cards.
+
+- Mock 15, DILR Set 1 (paint bottles): the brand-by-type table with brand and type totals for the worst-case questions.
+- Mock 15, DILR Set 3 (championship): a round-by-round points table showing which entries stay open.
+- Mock 15, DILR Set 4 (caves): the cave map is redrawn, with every cave’s count written in terms of the smallest one.
+- Mock 15, DILR Set 5 (seminar week): the block layout of subjects and empty slots, and the possible arrangements as a list.
+- Mock 15, QA Q4, Q5 and Q19: the two right triangles, the circle with its chord and perpendicular, and the isosceles triangle are redrawn.
+- Mock 16, DILR Set 1 (night shift): the interval table and a full hour-by-hour grid of each line’s mode and the plant’s output.
+- Mock 16, DILR Set 2 (R&D outputs): the grouped bar chart and the revenue pie chart are redrawn; papers, patents and revenue by division in one table.
+- Mock 16, DILR Set 3 (film festival): the film-by-film genre and language table.
+- Mock 16, DILR Set 4 (shooting): the running totals after rounds 4, 7 and 10 as a grouped bar chart; the round-by-round score sheet in the solution.
+- Formulas, factorials, nested functions and options that were images are typeset as maths.
+
 ## v0.26.0
 
 Added Simp Mocks 12 and 13 (2025): 136 questions (48 VARC, 44 DILR, 44 QA) and 17 set cards.
