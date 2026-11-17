@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.30.0
+
+Added Simp Mocks 3 and 4 (2023): 132 questions (48 VARC, 40 DILR, 44 QA) and 16 set cards.
+
+- Mock 3, DILR Set 1 (mango orchards): the partial farmer-by-village table, and the completed table with village totals split into two halves in the solution.
+- Mock 3, DILR Set 2 (picking coins): the pick ranges for each step and the two-step and four-step finishes listed.
+- Mock 3, DILR Set 3 (restocking medicines): the opening-stock line chart is redrawn with its values as a table; daily sales and nightly purchases tabulated.
+- Mock 3, DILR Set 4 (consulting teams): the four candidate teams for each School R manager and the four ways to form the six teams.
+- Mock 3, QA Q2 and Q20: the cyclic quadrilateral and the two perpendiculars with crossing lines are drawn.
+- Mock 4, DILR Set 1 (martial-arts school): a participation table by gender and reason.
+- Mock 4, DILR Set 2 (coin game): the coin-and-points table.
+- Mock 4, DILR Set 3 (group photo): the three possible height arrangements.
+- Mock 4, DILR Set 4 (pre-poll survey): the partial urban table and the complete urban and rural table in the solution.
+- Mock 4, QA Q20: the two intersecting circles with tangent and secant are drawn.
+- Formulas and options that were images are typeset as maths.
+
 ## v0.29.0
 
 Added Simp Mock 19 (2025) and Simp Mock 2 (2023): 134 questions (48 VARC, 42 DILR, 44 QA) and 17 set cards.

@@ -56,6 +56,8 @@ Full-length practice mocks in the CAT pattern, under `06 Papers & Mocks ▸ Simp
 | 2025 · Mock 19 | 24 | 22 | 22 | 68 |
 | 2023 · Mock 1 | 24 | 10 | 22 | 56 |
 | 2023 · Mock 2 | 24 | 20 | 22 | 66 |
+| 2023 · Mock 3 | 24 | 20 | 22 | 66 |
+| 2023 · Mock 4 | 24 | 20 | 22 | 66 |
 
 Alongside the question cards there are set cards (a whole RC passage or DILR set on one card), formula and technique cards, a practice card for each topic area, and a card for each paper with a practice mode and a timed mock.
 
