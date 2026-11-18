@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.31.0
+
+Added Simp Mocks 5 and 6 (2023): 132 questions (48 VARC, 40 DILR, 44 QA) and 16 set cards.
+
+- Mock 5, DILR Set 1 (moving chairs): the birth-city table, the seating chart and a round-by-round table of chairs passed, safe and out.
+- Mock 5, DILR Set 2 (ten products): a bubble chart of revenue and cost changes drawn on a 5% grid, the 2020-21 cost table, and both years’ revenue and cost tabulated in the solution.
+- Mock 5, DILR Set 3 (five former presidents) and Set 4 (philosophers’ votes): the solution grid and the group-by-philosopher vote table.
+- Mock 5, QA Q7: the semicircle with the shaded crescent is drawn.
+- Mock 6, DILR Set 1 (ten houses on a road): the two rows laid out position by position.
+- Mock 6, DILR Set 2 (garment stock): women’s and men’s stock tabulated by source and material.
+- Mock 6, DILR Set 3 (betting game) and Set 4 (clean-up bots): money after key rounds, and bots cloned each day.
+- Formulas and options that were images are typeset as maths.
+
 ## v0.30.0
 
 Added Simp Mocks 3 and 4 (2023): 132 questions (48 VARC, 40 DILR, 44 QA) and 16 set cards.
