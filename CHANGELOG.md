@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.32.0
+
+Added Simp Mocks 7 and 8 (2023): 132 questions (48 VARC, 40 DILR, 44 QA) and 16 set cards.
+
+- Mock 7, DILR Set 1 (cube of coloured cubes): the numbered 5 × 5 colour grid is drawn.
+- Mock 7, DILR Set 2 (grocery sales): 2021 sales by subcategory tabulated, a bar chart of growth rates by category, and 2022 sales worked out in the solution.
+- Mock 7, DILR Set 3 (four friends on a grid) and Set 4 (courier hubs): the grid positions in each case, and the hubs with their pick-up points listed by zone.
+- Mock 8, DILR Set 1 (flats in two blocks): the floor-by-floor table of all four arrangements.
+- Mock 8, DILR Set 2 (gold coins): the partial table of three-at-a-time sums and the two possible sets of coins.
+- Mock 8, DILR Set 3 (football round robin): the partial goals-and-points table and all ten match scores.
+- Mock 8, DILR Set 4 (two schools): the board-by-section table in two unknowns.
+- Mock 8, QA Q19: the rectangle with two large circles and the small circle between them is drawn.
+- Formulas and options that were images are typeset as maths.
+
 ## v0.31.0
 
 Added Simp Mocks 5 and 6 (2023): 132 questions (48 VARC, 40 DILR, 44 QA) and 16 set cards.

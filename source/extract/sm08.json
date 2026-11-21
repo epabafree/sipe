@@ -1,0 +1,285 @@
+{
+ "passages": {
+  "V1": "The Future of Life Institute has garnered thousands of high-profile signatures, including Elon Musk's, in support of a six-month precautionary pause on artificial-intelligence development. The concern is that AI labs are racing to create increasingly powerful systems that no one can predict or control. While control and regulation are central to the issue, it is not clear whose they will be. The historian Yuval Harari predicted that AI will result in a stronger class divide within human society, creating a world where those who ride the train of progress will have divine abilities of creation and destruction, while those left behind will face extinction.\n\nThe fear reflected in the AI letter stems from the concern that even those who are on the \"train of progress\" will be unable to steer it. The end of capitalism is a serious threat to those in power, including those who develop, own, and control AI. The only choice left will be between a new form of communism and uncontrollable chaos. The new chatbots, as an example of AI, offer a structure of fetishist disavowal where people know they are not talking to real people but are still able to avoid accompanying risks.\n\nThe AI letter is an attempt to prohibit the impossible, as it is impossible for humans to participate in a post-human future. Instead of focusing on threats to our freedom and dignity, we should consider what freedom means now. Futurist Ray Kurzweil predicts that we will soon be dealing with \"spiritual\" machines that will surpass human intelligence. The \"post-human\" sciences are about surprise and emergent properties that AI models might acquire for themselves.\n\nPhilosopher-engineer Jean-Pierre Dupuy observed that science and technology have undergone an inversion of traditional anthropocentric arrogance. The emerging technology today aims at non-mastery, and the engineer of tomorrow will not be a sorcerer’s apprentice because of his negligence or ignorance, but by choice. Some top scientists believe science has become so risky that it poses the principal threat to humanity's survival, contrary to Descartes's dream of becoming the master of nature. Philosophers who advocate for returning to the mastery of mastery have misunderstood the technology profiled at the horizon.\n\nCreating \"post-humanity\" threatens to strip humanity, nature, and divinity of their meaning and identity. A fully controlled existence lacks meaning and wonder, while divinity is only meaningful to humans as finite beings. Once we create properties that seem supernatural, gods as we know them will disappear, leaving us to question what, if anything, will be left.\n\nThere is every reason to worry that tech-gnostic visions of a post-human world are ideological fantasies obfuscating the abyss that awaits us. Needless to say, it would take more than a six-month pause to ensure that humans do not become irrelevant, and their lives meaningless, in the not-too-distant future.",
+  "V2": "One tiny flick of a microscopic cellular hair, known as a cilium, can’t do much on its own. But together, these structures routinely pull off biological marvels within the body. Cilia remove inhaled pathogens from the respiratory tract, carry cerebrospinal fluid across brain cavities, transport eggs from the ovary to the uterus, and drain mucus from the middle ear to the nasal cavity. These tiny, extracellular organelles exert precise microfluidic control over life-sustaining liquids in the body. To better understand how these crucial wonders of nature work, scientists have been trying for years to mimic them.\n\nNow researchers [from Cornell University] have come close to doing so, creating a chip covered with artificial cilia that can precisely control the minuscule flow patterns of fluids… Researchers had previously tried to make artificial cilia that worked by means of pressure, light, electricity and even magnets. But a major hurdle remained: designing extremely tiny actuators—the motion-triggering parts of a machine—that can be controlled individually or in small clusters rather than all at once.\n\nThe Cornell researchers vaulted that hurdle by taking inspiration from some things they learned in their earlier work. In August 2020 Guinness World Records recognized Itai Cohen, a Cornell University physicist and senior author of [this] new Nature study, and his team for designing the world’s smallest walking robot, a machine that was just a fraction of a millimeter wide and could walk on four bendable legs. Much like those legs, the new artificial cilia are made of bendable, nanometer-thin film that can respond to electrical control. Each cilium is one-twentieth of a millimeter long and 10 nanometers thick, with a strip of platinum on one side and a coating of titanium film on the other.\n\nThe key to electrically controlling these artificial cilia comes from their metal makeup. Running a low positive voltage through a cilium triggers a chemical reaction: as a droplet of test fluid flows past, the electrified platinum breaks apart the water molecules within the droplet. This frees up oxygen atoms, which are absorbed into the platinum’s surface. The added oxygen stretches the strip, making it bend in one direction. Once the voltage is reversed, the oxygen is driven out of the platinum—and the cilium returns to its original shape. “So by oscillating the voltage back and forth, you can bend and unbend the strip, which will generate waves to drive the movement,” Cohen says. Meanwhile the electrically inert titanium film stabilizes the structure…\n\n[With] the new technology [imitating] biological structures, […] researchers envision a cilia-covered chip as the basis of a diagnostic device that could test any sample of water, blood or urine to find contaminants or markers of disease. A user would place a drop of blood or urine on the chip, and the artificial cilia would carry the sample—along with any chemicals or pathogens within it—from one spot to another, allowing it to mix and react with various testing agents as it moves. Biosensors built into the chip would measure the products of these chemical reactions and then direct the cilia to further manipulate the liquid’s flow, allowing the chip to perform additional tests to confirm the results…",
+  "V3": "…The ideas handed down to us can be very hard to shake off, but Joseph Schumpeter, was determined to do so, to make way for his own insights. As Schumpeter wrote in his 1954 History of Economic Analysis, ‘In practice we all start our own research from the work of our predecessors, that is, we hardly ever start from scratch. But suppose we did start from scratch, what are the steps we should have to take? Obviously, in order to be able to posit to ourselves any problems at all, we should first have to visualize a distinct set of coherent phenomena as a worthwhile object of our analytic effort. In other words, analytic effort is of necessity preceded by a pre-analytic cognitive act that supplies the raw material for the analytic effort.’ …\n\n…Schumpeter’s concept of pre-analytic vision was inspired by the ideas of sociologist Karl Mannheim whose observation in the late 1920s that, ‘every point of view is particular to a social situation’ led him to popularise the notion that we each have a ‘worldview’ which acts as the lens through which we interpret the world. In the 1960s, Thomas Kuhn turned scientific research upside down by pointing out that ‘scientists work from models acquired through education often without quite knowing or needing to know what characteristics have given these models the status of community paradigms.’ In the 1970s, sociologist Erving Goffmann introduced the concept of ‘framing’ – in the sense that each of us views the world through a mental picture frame – to show that the way we make sense out of our jumble of experience delineates what we can then see.\n\nPre-analytic vision. Worldview. Paradigm. Frame. These are cousin concepts. What matters more than the one you choose to use is to realise that you have one in the first place, because then you have the power to question and change it. In economics, that’s an open invitation to look afresh at the mental models we employ in describing and understanding the economy. But it is no easy thing to do… The difficulty lies not in the new ideas, but in the old ones which ramify, for those of us brought up as most of us have been, into every corner of our minds.’\n\nThe possibility of shaking off old mental models is enticing, but the quest for new ones comes with caveats. First, always remember that ‘the map is not the territory’, as the philosopher Alfred Korzybski put it: every model can only ever be a model, a necessary simplification of the world, and one that should never be mistaken for the real thing. Second, there is no correct pre-analytic vision, true paradigm or perfect frame out there to be discovered. In the deft words of the statistician George Box, ‘All models are wrong, but some are useful.’ Rethinking economics is not about finding the correct one (because it doesn’t exist), it’s about choosing or creating one that best serves our purpose – reflecting the context we face, the values we hold, and the aims we have. As humanity’s context, values, and aims continually evolve, so too should the way that we envision the economy.",
+  "V4": "…Man is not an ant, conveniently equipped with an inborn pattern of social instincts. On the contrary, he seems to be strongly endowed with a self-centered nature. If his relatively weak physique forces him to seek cooperation, his inner drives constantly threaten to disrupt his social working partnerships.\n\nIn primitive society, the struggle between self-centeredness and cooperation is taken care of by the environment; when the specter of starvation can look a community in the face—as with the Eskimos—the pure need to secure its own existence pushes society to the cooperative completion of its daily labors. Under less stringent conditions, anthropologists tell us, men and women perform their regular tasks under the powerful guidance of universally accepted norms of kinship and reciprocity… But in an advanced community […] when men and women no longer work shoulder to shoulder in tasks directly related to survival, the perpetuation of the human animal becomes a remarkable social feat.\n\nSo remarkable, in fact, that society’s existence hangs by a hair. A modern community is at the mercy of a thousand dangers: if its farmers should fail to plant enough crops; if its railroad men should take it into their heads to become bookkeepers; if too few should offer their services as miners, puddlers of steel, and candidates for engineering degrees, industrial life would soon become hopelessly disorganized. Every day the community faces the possibility of breakdown from sheer human unpredictability.\n\nOver the centuries man has found only three ways of guarding against this calamity. He has ensured his continuity by organizing his society around tradition, by handing down the varied and necessary tasks from generation to generation according to custom and usage.\n\nOr society can solve the problem differently. It can use the whip of authoritarian rule to see that its tasks get done. The pyramids of ancient Egypt did not get built because some enterprising contractor took it into his head to build them, nor did the Five Year Plans of the Soviet Union get carried out because they happened to accord with hand-me-down custom or individual self-interest. Both Russia and Egypt were Command societies; they ensured their economic survival by the edicts of one authority…\n\nFor countless centuries man dealt with the problem of survival according to one or the other of these solutions. It never gave rise to that special field of study called “economics.” For the economists waited upon the invention of a third solution to the problem of survival - the development of an astonishing arrangement in which society assured its own continuance by allowing each individual to do exactly as he saw fit, provided he followed a central guiding rule. The arrangement was called the “market system,” and the rule was deceptively simple: each should do what was to his best monetary advantage. In the market system the lure of gain steered the great majority to his (or her) task. And yet, although each was free to go wherever his acquisitive nose directed him, the interplay of one person against another resulted in the necessary tasks of society getting done. It was this paradoxical, subtle, and difficult solution to the problem of survival that called forth the economists."
+ },
+ "q": {
+  "VARC": {
+   "1": {
+    "q": "Which of the following DOES NOT describe the post-human society as envisaged in the passage?",
+    "opts": [
+     "A society in which technology allows humans to transcend their current limitations and become godlike beings.",
+     "A society where there is a significant class divide between those who control advanced technology and those who do not.",
+     "A society in which humans have lost their sense of identity and divinity due to the creation of supernatural-like properties.",
+     "A society where humans have become irrelevant and their lives meaningless in an existence fully controlled by AI."
+    ],
+    "ans": "1",
+    "pkey": "V1",
+    "raw": "Which of the following DOES NOT describe the post-human society as envisaged in the passage?"
+   },
+   "2": {
+    "q": "The primary concern behind “the support for a six-month precautionary pause on artificial-intelligence development” is that:",
+    "opts": [
+     "AI will lead to destabilization of the current economic and political structures and lead to a new form of communism.",
+     "AI development is advancing rapidly and without adequate understanding or control, which could result in unintended consequences.",
+     "AI will create a world where those who ride the train of progress will have divine abilities of creation and destruction, while those left behind will face extinction.",
+     "AI will lead to the end of capitalism and the power equation which now favors the elites will change to their disadvantage."
+    ],
+    "ans": "2",
+    "pkey": "V1",
+    "raw": "The primary concern behind “the support for a six-month precautionary pause on artificial-intelligence development” is that:"
+   },
+   "3": {
+    "q": "“Philosopher-engineer Jean-Pierre Dupuy observed that science and technology have undergone an inversion of traditional anthropocentric arrogance.”\nIn the context of the passage, which one of the following is NOT a possible implication of the quoted statement?",
+    "opts": [
+     "Science and technology are no longer solely centered around human beings and their mastery over nature.",
+     "Science and technology have their own emergent properties and potential risks that cannot be fully understood by humans.",
+     "Science and technology may have advanced beyond the point where they can be completely controlled or mastered by their creators.",
+     "Tomorrow’s engineers will be preoccupied with developing ways not only to counter the power of technology but also to mitigate its power and risks."
+    ],
+    "ans": "4",
+    "pkey": "V1",
+    "raw": "“Philosopher-engineer Jean-Pierre Dupuy observed that science and technology have undergone an inversion of traditional anthropocentric arrogance.” In the context of the passage, which one of the following is NOT a possible implication of the quoted statement?"
+   },
+   "4": {
+    "q": "In the context of the passage, which of the following statements best describes the main argument presented in the last paragraph of the passage?",
+    "opts": [
+     "Tech-gnostic visions of a post-human world are necessary for humanity to evolve beyond its current limitations.",
+     "The creation of supernatural-like properties will render traditional concepts of divinity and humanity meaningless.",
+     "A fully controlled existence lacks meaning and wonder, making it a threat to humanity's identity and purpose.",
+     "The fear of becoming irrelevant and meaningless in a post-human world is unfounded and misplaced."
+    ],
+    "ans": "2",
+    "pkey": "V1",
+    "raw": "In the context of the passage, which of the following statements best describes the main argument presented in the last paragraph of the passage?"
+   },
+   "5": {
+    "q": "The first paragraph supports all of the following inferences about cilia EXCEPT:",
+    "opts": [
+     "Cilia move substances across parts of the body.",
+     "They manipulate motion of vital fluids in the body.",
+     "They transport cells from the sperm to the egg.",
+     "They expel pathogens away from the cell."
+    ],
+    "ans": "3",
+    "pkey": "V2",
+    "raw": "The first paragraph supports all of the following inferences about cilia EXCEPT:"
+   },
+   "6": {
+    "q": "Which of the following best represents the main purpose of the Cornell University research explained in the passage?",
+    "opts": [
+     "To gain precise microfluidic control over life-sustaining liquids in the body.",
+     "To create diagnostic devices that could test samples of water, blood or urine.",
+     "To electronically control the precise flow of fluids using microfluidic devices.",
+     "To understand how biological organisms manipulated fluids at the microscale."
+    ],
+    "ans": "3",
+    "pkey": "V2",
+    "raw": "Which of the following best represents the main purpose of the Cornell University research explained in the passage?"
+   },
+   "7": {
+    "q": "According to the passage, the bending and unbending of the artificial cilia is caused by all of the following EXCEPT:",
+    "opts": [
+     "The low positive voltage generated by its contact with the test fluid.",
+     "Running a low positive voltage through the metal strip and reversing it.",
+     "Its metal makeup of platinum on one side with a titanium film on the other.",
+     "A chemical reaction triggered by the artificial cilia’s contact with water."
+    ],
+    "ans": "1",
+    "pkey": "V2",
+    "raw": "According to the passage, the bending and unbending of the artificial cilia is caused by all of the following EXCEPT:"
+   },
+   "8": {
+    "q": "Which of the following, if FALSE, could lead to the failure of the diagnostic device mentioned in the last paragraph?",
+    "opts": [
+     "A cilia-covered chip would not enable field testing that are more efficient than lab-based tests.",
+     "Biosensors are enzymes or antibodies that can be incorporated into the cilia-covered chip.",
+     "The markers of human diseases can be detected only in laboratories with large equipment.",
+     "The fine strips of artificial cilia cannot drive microscopic amounts of fluid in set directions."
+    ],
+    "ans": "2",
+    "pkey": "V2",
+    "raw": "Which of the following, if FALSE, could lead to the failure of the diagnostic device mentioned in the last paragraph?"
+   },
+   "9": {
+    "q": "Which of the following is the main point of the passage?",
+    "opts": [
+     "While one may not be able to shake off old mental models, rethinking economics involves accepting old models as simplifications of reality and creating new models that best serve the current context, values and aims.",
+     "The way we understand the economy is influenced by our pre-existing mental models, which may be difficult to change, but it is difficult only as long as we lack a vision based on our current context, values and aims.",
+     "Economists, sociologists and scientists have explored the concept of \"pre-analytic vision\" and the idea that our perception of the world is shaped by mental frameworks or \"paradigms\" that reflect our context, values and aims.",
+     "Rethinking economics is about creating models that best serve our current understanding of the context, values and aims while keeping in mind that old models, though simplified versions of the real world, are all equally wrong."
+    ],
+    "ans": "1",
+    "pkey": "V3",
+    "raw": "Which of the following is the main point of the passage?"
+   },
+   "10": {
+    "q": "All of the following can be inferred from the first paragraph EXCEPT:",
+    "opts": [
+     "All economic analyses necessarily reflect the researchers’ underlying bias.",
+     "A pre-analytic identification of a problem must precede the analytic effort.",
+     "The analytical effort must be based on the observation of a real problem.",
+     "Most research works merely build on the already existing studies in the field."
+    ],
+    "ans": "1",
+    "pkey": "V3",
+    "raw": "All of the following can be inferred from the first paragraph EXCEPT:"
+   },
+   "11": {
+    "q": "“Pre-analytic vision. Worldview. Paradigm. Frame. These are cousin concepts.”\nWhich one of the following statements best explains the point being made by the author here?",
+    "opts": [
+     "They refer to the initial understanding of a subject that the researchers’ predecessors had acquired which influences the direction of the research.",
+     "They refer to the dominant system of understanding within a particular field based on which the researchers can use to make of the world around them.",
+     "Though they are related concepts, their difference will guide the researchers’ questions, methodology, and approach to study a subject matter.",
+     "They are the set of assumptions, beliefs, and perspectives that shape the way individuals understand and interpret the world around them."
+    ],
+    "ans": "4",
+    "pkey": "V3",
+    "raw": "“Pre-analytic vision. Worldview. Paradigm. Frame. These are cousin concepts.” Which one of the following statements best explains the point being made by the author here?"
+   },
+   "12": {
+    "q": "In the last paragraph, the author compares mental models to maps for all of the following reasons EXCEPT:",
+    "opts": [
+     "They are tools used to represent and understand complex systems.",
+     "They are all necessarily wrong and the correct ones do not exist.",
+     "They are used to highlight certain features while disregarding others.",
+     "They are simplifications of reality and are subject to errors and uncertainty."
+    ],
+    "ans": "2",
+    "pkey": "V3",
+    "raw": "In the last paragraph, the author compares mental models to maps for all of the following reasons EXCEPT:"
+   },
+   "13": {
+    "q": "Which of the following statements best represents the essence of the passage?",
+    "opts": [
+     "Large, cooperative societies that characterize modern humans became possible only with the emergence of “economics” and the “market system”.",
+     "The perpetuation of the human animal is a social feat achieved through cooperative behavior that was borne out of tradition, authoritarian rule, or economics.",
+     "Large human societies result from the cooperative tactics of the human animal for survival rather than from an inborn pattern of social instincts.",
+     "Economics and the market system have roots in tradition and authoritarian rule which arose from man’s fundamental desire to cooperate and form large societies."
+    ],
+    "ans": "3",
+    "pkey": "V4",
+    "raw": "Which of the following statements best represents the essence of the passage?"
+   },
+   "14": {
+    "q": "All of the following, if true, would undermine the arguments in the first paragraph EXCEPT:",
+    "opts": [
+     "In pre-society state of nature, man’s life was poor, solitary, brutish and short.",
+     "Children brought up in isolation, display a natural tendency to form social bonds and to cooperate with their peers when exposed to others.",
+     "Social behavior is a complex aspect of human nature, and is influenced by genetics, environment, culture, and personal experience.",
+     "Humans adapt easily to social environments and possess herd-instinct as a basic quality."
+    ],
+    "ans": "1",
+    "pkey": "V4",
+    "raw": "All of the following, if true, would undermine the arguments in the first paragraph EXCEPT:"
+   },
+   "15": {
+    "q": "All of the following arguments are made in the passage EXCEPT:",
+    "opts": [
+     "Social instincts form the basis of our cooperative strategies.",
+     "Market system reconciles purely selfish behavior with social interest.",
+     "Advanced societies risk obliteration in the face of human unpredictability.",
+     "Our social behaviors come into play when it is a question of our survival."
+    ],
+    "ans": "1",
+    "pkey": "V4",
+    "raw": "All of the following arguments are made in the passage EXCEPT:"
+   },
+   "16": {
+    "q": "“It was this paradoxical, subtle, and difficult solution to the problem of survival that called forth the economists.”\nWhich one of the following statements best explains this quote, in the context of the passage?",
+    "opts": [
+     "The market system which ensured the continuation of society was far more complex than traditional and command systems and demanded the attention of experts.",
+     "The market system and the central guiding rule of pursuing one's own monetary advantage created the need for economists to study and understand this new approach.",
+     "The market system \"called forth\" the economists, as it presented a new and complex area of study called “economics” that required their expertise and attention.",
+     "Economists became necessary in the market system as individuals were free to pursue their own monetary gain, but it resulted in the necessary tasks of society getting done."
+    ],
+    "ans": "1",
+    "pkey": "V4",
+    "raw": "“It was this paradoxical, subtle, and difficult solution to the problem of survival that called forth the economists.” Which one of the following statements best explains this quote, in the context of the passage?"
+   },
+   "17": {
+    "q": "The four sentences (labelled 1, 2, 3 and 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer.\n\n1. Agape meant unconditional love, unaffected by the vicissitudes of existence.\n2. In early Christianity, agape was interpreted as the love that God has for humans, and the reciprocal love that humans have for God.\n3. Over time the meaning of agape was extended to encompass the sense of compassion and empathy which binds together, or ought to bind together, all of humanity.\n4. The ancient Greeks used the term agape to denote the ‘highest form of love’, and distinguished it from philia, brotherly love.",
+    "opts": [],
+    "ans": "4213",
+    "pkey": null,
+    "raw": "The four sentences (labelled 1, 2, 3 and 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer. 1. Agape meant unconditional love, unaffected by the vicissitudes of existence. 2. In early Christianity, agape was interpreted as the love that God has for humans, and the reciprocal love that humans have for God. 3. Over time the meaning of agape was extended to encompass the sense of compassion and empathy which binds together, or ought to bind together, all of humanity. 4. The ancient Greeks used the term agape to denote the ‘highest form of love’, and distinguished it from philia, brotherly love."
+   },
+   "18": {
+    "q": "The four sentences (labelled 1, 2, 3 and 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer.\n\n1. When using balance-of-payments statistics, it is important to understand their basic concepts.\n2. To be more specific, some authorities use the expression ‘merchandise balance,’ which refers to trade in goods and excludes services and other international payments.\n3. These are often referred to as the balance of trade, but the expression has been used in a variety of ways.\n4. The balance of payments includes, among other things, payments for goods and services between the residents of one country and the residents of foreign nations.",
+    "opts": [],
+    "ans": "1432",
+    "pkey": null,
+    "raw": "The four sentences (labelled 1, 2, 3 and 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer. 1. When using balance-of-payments statistics, it is important to understand their basic concepts. 2. To be more specific, some authorities use the expression ‘merchandise balance,’ which refers to trade in goods and excludes services and other international payments. 3. These are often referred to as the balance of trade, but the expression has been used in a variety of ways. 4. The balance of payments includes, among other things, payments for goods and services between the residents of one country and the residents of foreign nations."
+   },
+   "19": {
+    "q": "The four sentences (labelled 1, 2, 3 and 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer.\n1. In recent decades the concept has been broadened in recognition of the strategic role of land and agriculture in development.\n2. It also deals with the state of technology, or with any combination of these factors, as shown by modern reform movements, regardless of the political or ideological orientation of the reformers.\n3. Historically, land reform meant reform of the tenure system or redistribution of the land ownership rights.\n4. Land reform has therefore become synonymous with agrarian reform or a rapid improvement of the agrarian structure, including the pattern of cultivation and farm organization, the institutions of rural credit, marketing, and education.",
+    "opts": [],
+    "ans": "3142",
+    "pkey": null,
+    "raw": "The four sentences (labelled 1, 2, 3 and 4) below, when properly sequenced would yield a coherent paragraph. Decide on the proper sequencing of the order of the sentences and key in the sequence of the four numbers as your answer. 1. In recent decades the concept has been broadened in recognition of the strategic role of land and agriculture in development. 2. It also deals with the state of technology, or with any combination of these factors, as shown by modern reform movements, regardless of the political or ideological orientation of the reformers. 3. Historically, land reform meant reform of the tenure system or redistribution of the land ownership rights. 4. Land reform has therefore become synonymous with agrarian reform or a rapid improvement of the agrarian structure, including the pattern of cultivation and farm organization, the institutions of rural credit, marketing, and education."
+   },
+   "20": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide in which blank (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: Even after recognizing a technology’s transformative potential, the shape of the transformation tends to surprise us.\nParagraph: There is no doubt that AI poses a daunting set of operational, ethical, and regulatory challenges. And addressing them will be far from straightforward. _____1_____. Although AI development dates back to the 1950s, the technology’s contours and likely impact remain hazy. Of course, recent breakthroughs – from the almost chillingly human-like text produced by OpenAI’s ChatGPT to applications that may shave years off the drug-discovery process – shed light on some dimensions of AI’s immense potential. _____2_____. But it remains impossible to predict all the ways AI will reshape human lives and civilization. This uncertainty is nothing new. _____3_____. Social media, for example, was initially touted as an innovation that would strengthen democracy but has done far more to destabilize it by facilitating the spread of disinformation. _____4_____.",
+    "opts": [
+     "Option 1",
+     "Option 2",
+     "Option 3",
+     "Option 4"
+    ],
+    "ans": "3",
+    "pkey": null,
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide in which blank (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: Even after recognizing a technology’s transformative potential, the shape of the transformation tends to surprise us. Paragraph: There is no doubt that AI poses a daunting set of operational, ethical, and regulatory challenges. And addressing them will be far from straightforward. ___(1)___  Although AI development dates back to the 1950s, the technology’s contours and likely impact remain hazy. Of course, recent breakthroughs – from the almost chillingly human-like text produced by OpenAI’s ChatGPT to applications that may shave years off the drug-discovery process – shed light on some dimensions of AI’s immense potential. ___(2)___  But it remains impossible to predict all the ways AI will reshape human lives and civilization. This uncertainty is nothing new. ___(3)___  Social media, for example, was initially touted as an innovation that would strengthen democracy but has done far more to destabilize it by facilitating the spread of disinformation. ___(4)___  1. Option 1 2. Option 2 3. Option 3 4. Option 4"
+   },
+   "21": {
+    "q": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide in which blank (option 1, 2, 3, or 4) the following sentence would best fit.\n\nSentence: These same forces are confronting banking and financial services.\nParagraph: Without Uber, would many taxi services have developed their own ride-hailing apps or started accepting credit cards when they did? . _____1_____. In static industries with little competition, it takes new competitors and technologies to drive change. And, if managed well, this change need not even threaten incumbents, because they can adopt the new technologies and business models to keep pace with what consumers have come to expect from the new entrants. . _____2_____. Just as Uber and Lyft built a new model for on-demand consumer mobility, the emerging world of blockchain-based financial services has propelled mobile device-centric banking and payments as well as software-powered capital markets. . _____3_____. While mobile and electronic banking have been around for a while, the emergence of crypto is enabling new levels of user control and access with little more than a personal digital wallet. _____4_____.",
+    "opts": [
+     "Option 1",
+     "Option 2",
+     "Option 3",
+     "Option 4"
+    ],
+    "ans": "2",
+    "pkey": null,
+    "raw": "There is a sentence that is missing in the paragraph below. Look at the paragraph and decide in which blank (option 1, 2, 3, or 4) the following sentence would best fit. Sentence: These same forces are confronting banking and financial services. Paragraph: Without Uber, would many taxi services have developed their own ride-hailing apps or started accepting credit cards when they did? . ___(1)___  In static industries with little competition, it takes new competitors and technologies to drive change. And, if managed well, this change need not even threaten incumbents, because they can adopt the new technologies and business models to keep pace with what consumers have come to expect from the new entrants. . ___(2)___  Just as Uber and Lyft built a new model for on-demand consumer mobility, the emerging world of blockchain-based financial services has propelled mobile device-centric banking and payments as well as software-powered capital markets. . ___(3)___  While mobile and electronic banking have been around for a while, the emergence of crypto is enabling new levels of user control and access with little more than a personal digital wallet. ___(4)___  1. Option 1 2. Option 2 3. Option 3 4. Option 4"
+   },
+   "22": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nAlthough the public relations industry is a recent phenomenon, the art of influencing opinion has a long history, dating in fact to the days of ancient Athens. Aristotle's Rhetoric remains one of the most insightful books ever written on the subject. Aristotle argues that rhetoric is an \"art\" as opposed to the sciences, which are governed by logic. The sciences deal with measurable quantities, facts, and principles of proof based on propositions which can definitely be labeled \"true\" or \"false.\" In social life, however, people are often confronted with situations in which many of the facts are unknown and unknowable. Scientific logic is incapable of evaluating statements whose degree of truth can only be approximated using concepts like \"maybe,\" \"probably,\" or \"probably not.\" Instead of logic, therefore, people turn to rhetoric, the art of communication and persuasion.",
+    "opts": [
+     "In social life, people turn to rhetoric, the art of communication and persuasion, when facts are unknown and unknowable, rather than to sciences that deal with facts, proof, and logic.",
+     "Aristotle argues that rhetoric is an art of communication and persuasion where facts are often unknown and unknowable, unlike the sciences which are governed by logic.",
+     "Public relations industry has roots in rhetoric outlined by Aristotle as the art of persuasion in social situations where facts are unknown and unknowable, instead of logic.",
+     "Rhetoric, according to Aristotle, is an art of persuasion and communication in social situations where facts are uncertain and it differs from the sciences governed by facts and logic."
+    ],
+    "ans": "4",
+    "pkey": null,
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. Although the public relations industry is a recent phenomenon, the art of influencing opinion has a long history, dating in fact to the days of ancient Athens. Aristotle's Rhetoric remains one of the most insightful books ever written on the subject. Aristotle argues that rhetoric is an \"art\" as opposed to the sciences, which are governed by logic. The sciences deal with measurable quantities, facts, and principles of proof based on propositions which can definitely be labeled \"true\" or \"false.\" In social life, however, people are often confronted with situations in which many of the facts are unknown and unknowable. Scientific logic is incapable of evaluating statements whose degree of truth can only be approximated using concepts like \"maybe,\" \"probably,\" or \"probably not.\" Instead of logic, therefore, people turn to rhetoric, the art of communication and persuasion."
+   },
+   "23": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nIt is worth noting that in most past and present societies, “repression” of private feelings has often been regarded as a social virtue. From a historical perspective, the burden of proof rests on those who believe that being openly expressive makes people better and healthier. That view has become a dogma of contemporary American popular culture, but in most cultures—including, until quite recently, our own—reticence and stoicism are regarded as commendable, while the free expression of emotions is often seen as self-centred and immature. These reform-minded experts should seriously consider the possibility that American children may in fact need more, not less, self-control and less, not more, self-involvement.",
+    "opts": [
+     "Contemporary American culture which views open expression as better and healthier must consider if American children need more self-control and less self-involvement.",
+     "It has been traditionally viewed as virtuous to repress emotions, but contemporary American children need more self-control and less self-involvement.",
+     "Modern American popular culture that emphasizes open expression is questionable, as historically, repression of private feelings was viewed as a positive trait.",
+     "American culture, which promotes open expression instead of traditionally regarded virtue of reticence and stoicism, must consider if American children need more self-control."
+    ],
+    "ans": "4",
+    "pkey": null,
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. It is worth noting that in most past and present societies, “repression” of private feelings has often been regarded as a social virtue. From a historical perspective, the burden of proof rests on those who believe that being openly expressive makes people better and healthier. That view has become a dogma of contemporary American popular culture, but in most cultures—including, until quite recently, our own—reticence and stoicism are regarded as commendable, while the free expression of emotions is often seen as self-centred and immature. These reform-minded experts should seriously consider the possibility that American children may in fact need more, not less, self-control and less, not more, self-involvement."
+   },
+   "24": {
+    "q": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage.\n\nThe perception of a news show as a stylized dramatic performance whose content has been staged largely to entertain is reinforced by the fact that the average length of any story is forty-five seconds. While brevity does not always suggest triviality, in this case it clearly does. It is simply not possible to convey a sense of seriousness about any event if its implications are exhausted in less than one minute's time. In fact, it is quite obvious that TV news has no intention of suggesting that any story has any implications, for that would require viewers to continue to think about it when it is done and therefore obstruct their attending to the next story that waits, panting in the wings.",
+    "opts": [
+     "TV news stories are made so brief and trivial that they prevent any serious viewer reflection and merely want viewers to move on to the next story in less than a minute.",
+     "TV news is staged performance for entertainment as stories are made brief and trivial to prevent viewer reflection and pressure viewers to move on to the next story.",
+     "TV news is perceived as entertainment due to its short story lengths and lack of emphasis on serious implications, preventing viewers from thinking critically.",
+     "TV news is a performance with staged content, stories are brief and trivial, bereft of serious implications encouraging viewers to move on to the next story."
+    ],
+    "ans": "2",
+    "pkey": null,
+    "raw": "The passage given below is followed by four alternate summaries. Choose the option that best captures the essence of the passage. The perception of a news show as a stylized dramatic performance whose content has been staged largely to entertain is reinforced by the fact that the average length of any story is forty-five seconds. While brevity does not always suggest triviality, in this case it clearly does. It is simply not possible to convey a sense of seriousness about any event if its implications are exhausted in less than one minute's time. In fact, it is quite obvious that TV news has no intention of suggesting that any story has any implications, for that would require viewers to continue to think about it when it is done and therefore obstruct their attending to the next story that waits, panting in the wings."
+   }
+  }
+ }
+}
