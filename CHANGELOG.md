@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.33.0
+
+Added Simp Mocks 9 and 10 (2023): 132 questions (48 VARC, 40 DILR, 44 QA) and 16 set cards.
+
+- Mock 9, DILR Set 1 (nine friends at the movies): the 70-seat hall plan with seat types is drawn, and the final seats are tabulated.
+- Mock 9, DILR Set 2 (board marks): all six score sheets set out in one table.
+- Mock 9, DILR Set 3 (ten-day film festival): the films by language and sub-category, and the two possible schedules.
+- Mock 9, DILR Set 4 (consultancy staff): office-by-office counts by gender and role.
+- Mock 10, DILR Set 1 (truth teller, liar and alternators): the answer sheet of all five students, and a right/wrong grid in the solution.
+- Mock 10, DILR Set 2 (panipuri stall): plates sold by ingredient, size, taste and flavour.
+- Mock 10, DILR Set 3 (names and surnames) and Set 4 (business-school specialisations): the full rank table, and the foreign-student table split by work experience.
+- Mock 10, QA Q18: four candidate log graphs are drawn.
+- Formulas and options that were images are typeset as maths.
+
 ## v0.32.0
 
 Added Simp Mocks 7 and 8 (2023): 132 questions (48 VARC, 40 DILR, 44 QA) and 16 set cards.
