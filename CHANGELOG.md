@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.34.0
+
+Added Simp Mocks 11 and 12 (2023): 132 questions (48 VARC, 40 DILR, 44 QA) and 16 set cards.
+
+- Mock 11, DILR Set 1 (four share prices): the day-by-day price grid in the solution.
+- Mock 11, DILR Set 2 (marks as fractions): the fraction table, the four possible sets of maximum marks, and one student's totals across them.
+- Mock 11, DILR Set 3 (digit codes for states and UTs) and Set 4 (tokens on a number line): the full code list, and worked extreme paths.
+- Mock 12, DILR Set 2 (doctors in five specialities): a bar chart of the ten three-category totals, and the category counts.
+- Mock 12, DILR Set 3 (barter among five tribes): per-tribe goods and outcome tables, and all ten barters.
+- Mock 12, DILR Set 4 (a café's servings): the coffee × type × container table.
+- Mock 12, QA Q14: the triangle-and-chord figure is drawn.
+- Long fractions and polynomial expressions are typeset as maths and split to fit narrow screens.
+
 ## v0.33.0
 
 Added Simp Mocks 9 and 10 (2023): 132 questions (48 VARC, 40 DILR, 44 QA) and 16 set cards.
